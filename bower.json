@@ -8,6 +8,7 @@
   "homepage": "http://developers.taxjar.com",
   "private": true,
   "dependencies": {
-    "particles.js": "~2.0.0"
+    "particles.js": "~2.0.0",
+    "walkway.js": "~0.0.5"
   }
 }

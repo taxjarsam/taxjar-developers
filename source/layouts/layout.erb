@@ -12,7 +12,40 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <header>
+      <div class="logo">
+        <a href="http://www.taxjar.com"><%= image_tag "logo.svg", :width => 126 %></a>
+        <span>Developers</span>
+      </div>
+      <div class="menu menu--main">
+        <nav>
+          <ul>
+            <li><a href="http://taxjar.com/api#features">Features</a></li>
+            <li><a href="http://taxjar.com/api#pricing">Pricing</a></li>
+            <li><a href="/api">API Reference</a></li>
+            <!-- <li><a href="/community">Community</a></li> -->
+            <!-- <li><a href="/blog">Blog</a></li> -->
+          </ul>
+        </nav>
+      </div>
+      <div class="menu menu--actions">
+        <nav>
+          <ul>
+            <li><a href="https://app.taxjar.com/sign_in/" class="btn">Log In</a></li>
+            <li><a href="https://app.taxjar.com/api_sign_up/plus/" class="btn cta">Get API Token</a></li>
+          </ul>
+        </nav>
+        <a href="#" id="nav-button">
+          <%= image_tag "menu.svg", :width => 22 %>
+        </a>
+      </div>
+    </header>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+    <footer>
+      <span>&copy; 2015 TaxJar</span>
+    </footer>
     <%= javascript_include_tag  "all" %>
   </body>
 </html>

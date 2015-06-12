@@ -1,0 +1,13 @@
+{
+  "name": "taxjar-developers",
+  "version": "0.0.1",
+  "authors": [
+    "Jake Johnson <jake@taxjar.com>"
+  ],
+  "description": "Developer portal for TaxJar",
+  "homepage": "http://developers.taxjar.com",
+  "private": true,
+  "dependencies": {
+    "particles.js": "~2.0.0"
+  }
+}

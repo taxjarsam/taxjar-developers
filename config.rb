@@ -51,6 +51,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+sprockets.append_path File.join "#{root}", "source/bower_components"
+
 # Build-specific configuration
 configure :build do
   activate :minify_css

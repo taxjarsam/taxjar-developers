@@ -7,10 +7,10 @@ Developer portal for TaxJar, powered by Middleman. Future home of the developer 
 Clone the repo and simply run the following command:
 
 ```
-bundle install
+bundle install && bower install
 ```
 
-This should install the Ruby dependencies you need to get up and going.
+This should install the Ruby and Bower dependencies you need to get up and going.
 
 ## Development
 

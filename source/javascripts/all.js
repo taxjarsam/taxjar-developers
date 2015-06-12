@@ -5,8 +5,8 @@
 (function() {
   var svg = new Walkway({
     selector: '#jar',
-    duration: 800,
-    easing: 'easeInOutCubic'
+    duration: 1000,
+    easing: 'easeOutCubic'
   });
 
   particlesJS.load('particles-js', '/javascripts/particles.json', function() {

@@ -149,20 +149,16 @@ header {
   width: 120px;
   height: 120px;
   margin: 0 auto 20px;
-  background: #fff;
+  background: transparent;
   border-radius: 50%;
-  transform: scale(0) translateY(280px);
-  opacity: 0;
 }
 
 .hero__icon.active {
-  transform: scale(1) translateY(0);
-  opacity: 0.8;
-  transition: all 250ms ease-out;
+  transition: all 80ms ease-out;
 }
 
 .active .hero__icon.active {
-  opacity: 1;
+  background: #fff;
 }
 
 .hero__icon svg {
@@ -186,12 +182,12 @@ header {
 }
 
 .active .hero__icon svg {
-  animation: shake 300ms;
+  animation: shake 300ms 100ms;
   transition: all 320ms ease-out;
 }
 
 .hero__icon svg path {
-  stroke: #3FAE2A;
+  stroke: #fff;
   stroke-width: 2px;
   transition: fill 250ms ease-in-out;
 }
@@ -209,10 +205,12 @@ header {
   padding: 0;
   opacity: 0;
   text-shadow: 0 1px 2px rgba(0,0,0,.12);
+  transform: translateY(10px);
 }
 
 .hero.active h1 {
   opacity: 1;
+  transform: translateY(0);
   transition: all 320ms 250ms ease-in-out;
 }
 
@@ -224,10 +222,12 @@ header {
   padding: 0;
   opacity: 0;
   text-shadow: 0 1px 1px rgba(0,0,0,.12);
+  transform: translateY(10px);
 }
 
 .hero.active h2 {
   opacity: 1;
+  transform: translateY(0);
   transition: all 320ms 700ms ease-in-out;
 }
 

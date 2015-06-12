@@ -151,12 +151,12 @@ header {
   margin: 0 auto 20px;
   background: #fff;
   border-radius: 50%;
-  -webkit-transform: scale(0) translateY(280px);
+  transform: scale(0) translateY(280px);
   opacity: 0;
 }
 
 .hero__icon.active {
-  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
   opacity: 0.8;
   transition: all 250ms ease-out;
 }
@@ -172,16 +172,16 @@ header {
 
 @keyframes shake {
   0% {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
   50% {
-    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -273,12 +273,12 @@ header {
   background: url('/images/chevron-right.svg') top right no-repeat;
   background-size: 20px;
   opacity: 0;
-  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
   transition: all 120ms ease-in-out;
 }
 
 .home__toc__item:hover:after {
-  -webkit-transform: translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 

@@ -3,6 +3,7 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.11"
+gem "middleman-meta-tags"
 gem "s3_website"
 
 # Live-reloading plugin

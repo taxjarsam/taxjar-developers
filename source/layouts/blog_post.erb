@@ -1,5 +1,33 @@
 <% wrap_layout :layout do %>
   <article class="post">
-    <%= yield %>
+    <div class="post__banner">
+      <div class="post__avatar">
+        <img src="<%= data['authors'][current_article.data.author]['avatar'] %>" width="60" height="60">
+      </div>
+    </div>
+    <div class="post__details">
+      <h1><%= current_article.title %></h1>
+      <div class="post__meta">
+        by <span class="author"><%= data['authors'][current_article.data.author]['name'] %></span>
+        <b>•</b>
+        <time><%= current_article.date.strftime('%b %e, %Y') %></time>
+      </div>
+    </div>
+    <div class="post__entry">
+      <%= yield %>
+    </div>
   </article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'taxjar';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_identifier = "<%= current_article.slug %>";
+    var disqus_title = "<%= current_article.title %>";
+    var disqus_url = "http://developers.taxjar.com<%= current_article.url %>";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
 <% end %>

@@ -1,21 +1,21 @@
 <% blog.articles[0...5].each do |article| %>
   <article>
-    <div class="article__details">
-      <div class="article__avatar">
+    <div class="post__details">
+      <div class="post__avatar">
         <img src="<%= data['authors'][article.data.author]['avatar'] %>" width="60" height="60">
       </div>
       <h1>
         <a href="<%= article.url %>"><%= article.title %></a>
       </h1>
-      <div class="article__meta">
+      <div class="post__meta">
         by <span class="author"><%= data['authors'][article.data.author]['name'] %></span><b>•</b>
         <time><%= article.date.strftime('%b %e, %Y') %></time>
       </div>
     </div>
-    <div class="article__summary">
+    <div class="post__summary">
       <%= article.summary %>
     </div>
-    <div class="article__more">
+    <div class="post__more">
       <a href="<%= article.url %>">Read more</a>
     </div>
   </article>

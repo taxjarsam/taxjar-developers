@@ -3,14 +3,20 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.11"
+gem "middleman-blog"
 gem "middleman-meta-tags"
-gem "s3_website"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
 # Autoprefixer
 gem "middleman-autoprefixer", "~> 2.4.4"
+
+# Blog post summaries
+gem "nokogiri"
+
+# Deployment
+gem "s3_website"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]

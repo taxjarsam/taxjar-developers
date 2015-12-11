@@ -4,6 +4,12 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
+activate :blog do |blog|
+  blog.prefix = 'blog'
+  blog.layout = 'layout'
+  blog.permalink = '{title}.html'
+end
+
 activate :directory_indexes
 activate :meta_tags
 

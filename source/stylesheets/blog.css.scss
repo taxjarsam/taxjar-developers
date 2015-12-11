@@ -32,7 +32,8 @@
       font-family: "Source Code Pro";
     }
     
-    p > code {
+    p > code,
+    li > code {
       font-size: .9375em;
       font-weight: bold;
       color: #000;
@@ -46,6 +47,12 @@
       margin: 20px 0;
       background: #fafafb;
       border: 1px solid #f3f3f3;
+    }
+    
+    blockquote {
+      border-left: 3px solid #EAEAEA;
+      margin-left: 20px;
+      padding-left: 20px;
     }
   }
   
@@ -82,7 +89,7 @@
   .post__details {
     max-width: 600px;
     text-align: center;
-    padding-top: 130px;
+    padding-top: 120px;
     margin: 0 auto 40px;
   }
   
@@ -125,7 +132,7 @@
   }
   
   #disqus_thread {
-    max-width: 600px;
+    max-width: 780px;
     margin: 0 auto;
     padding-bottom: 40px;
   }

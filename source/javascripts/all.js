@@ -4,7 +4,8 @@
 
 (function() {
   var path = window.location.pathname;
-  var activeLink = document.querySelector('.menu a[href="' + path + '"]');
+  var bodyClass = document.body.classList[0];
+  var activeLink = document.querySelector('.menu a[href="' + path + '"], .menu a[href*="' + bodyClass + '"]');
   
   if (activeLink) {
     activeLink.classList.add('active');

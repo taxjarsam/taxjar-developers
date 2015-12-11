@@ -5,12 +5,16 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.3.11"
 gem "middleman-blog"
 gem "middleman-meta-tags"
+gem "middleman-syntax"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 
 # Autoprefixer
 gem "middleman-autoprefixer", "~> 2.4.4"
+
+# Syntax highlighting
+gem "redcarpet"
 
 # Blog post summaries
 gem "nokogiri"

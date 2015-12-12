@@ -4,7 +4,7 @@ author: jake_johnson
 date: 2015-12-11 00:11 UTC
 category: stripe
 tags: stripe
-published: false
+published: true
 ---
 
 If you’ve done any research into handling sales tax with Stripe, you’ve probably discovered it’s going to be your next super fun DIY project. Congratulations! Stripe makes payments easier for developers, but they leave the sales tax to you. And for good reason — rates can vary by jurisdiction across the entire United States based on many factors. That’s why I’m writing this guide. First we’re going to learn how to add sales tax for charges and subscriptions using Stripe’s API. Next, we’ll jump into an implementation using [SmartCalcs](http://www.taxjar.com/smartcalcs/) for calculating sales tax.

@@ -1,0 +1,24 @@
+<% blog.articles[0...5].each do |article| %>
+  <article>
+    <div class="post__banner" style="background-color: <%= data['categories'][article.data.category]['color'] %>">
+      <div class="post__avatar">
+        <img src="<%= data['authors'][article.data.author]['avatar'] %>" width="60" height="60">
+      </div>
+    </div>
+    <div class="post__details">
+      <div class="post__category" style="color: <%= data['categories'][article.data.category]['color'] %>"><%= article.data.category.capitalize %></div>
+      <h1><a href="<%= article.url %>"><%= article.title %></a></h1>
+      <div class="post__meta">
+        by <span class="author"><%= data['authors'][article.data.author]['name'] %></span>
+        <b>•</b>
+        <time><%= article.date.strftime('%b %e, %Y') %></time>
+      </div>
+    </div>
+    <div class="post__summary">
+      <%= article.summary %>
+    </div>
+    <div class="post__more">
+      <a href="<%= article.url %>">Read More</a>
+    </div>
+  </article>
+<% end %>

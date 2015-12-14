@@ -24,6 +24,6 @@ configure :build do
   activate :autoprefixer
   activate :minify_css
   activate :minify_javascript
-  # activate :asset_hash
-  # activate :relative_assets
+  activate :asset_hash
+  activate :relative_assets
 end

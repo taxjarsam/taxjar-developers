@@ -19,7 +19,11 @@ html, body {
 }
 
 body {
-  background: linear-gradient(darken(#3EB049, 14%), #3EB049);
+  background: #EFEFEF;
+  
+  &.index {
+    background: linear-gradient(darken(#3EB049, 14%), #3EB049);
+  }
 }
 
 header {
@@ -113,6 +117,10 @@ header {
   color: #fff;
 }
 
+.text-center {
+  text-align: center;
+}
+
 #nav-button {
   display: none;
   position: fixed;
@@ -129,10 +137,24 @@ header {
 .wrapper {
   position: relative;
   padding-top: 69px;
+  height: 100%;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+  height: 100%;
+  
+  &.vertical-center {
+    align-items: center;
+    display: flex;
+  }
 }
 
 .content {
   position: relative;
+  width: 100%;
   z-index: 3;
 }
 

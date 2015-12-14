@@ -50,6 +50,7 @@
     }
     
     .highlight {
+      font-size: .9em;
       margin: 20px 0;
       background: #fafafb;
       border: 1px solid #f3f3f3;
@@ -151,6 +152,7 @@
 
 @media (max-width: 960px) {
   .blog article {
+    margin-top: 0;
     padding: 0 40px 20px;
   }
   

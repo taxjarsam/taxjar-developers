@@ -18,6 +18,9 @@ activate :meta_tags
 activate :syntax
 
 sprockets.append_path File.join "#{root}", "source/bower_components"
+ignore 'bower_components/*'
+
+page '/error.html', :directory_index => false
 
 # Build-specific configuration
 configure :build do

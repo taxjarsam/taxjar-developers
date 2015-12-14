@@ -1,9 +1,9 @@
 ---
 title: Handling Sales Tax with Stripe
 author: jake_johnson
-date: 2015-12-11 00:11 UTC
+date: 2015-12-14 00:11 UTC
 category: stripe
-tags: stripe
+tags: smartcalcs, stripe, api 
 published: true
 ---
 

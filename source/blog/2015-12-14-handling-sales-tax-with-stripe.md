@@ -67,7 +67,7 @@ customer.subscriptions.create(
 
 When viewing a customer in the Stripe dashboard you'll be able to see `tax_percent` under Subscriptions as "Tax Percent":
 
-![Stripe Dashboard: Subscription](https://draftin.com:443/images/34627?token=8WyDEpXMBluqLANa4AE6NShrVtWDLzo01thDWoyoeI5p5I2Z3lP_lqnPh_la6vWv3lqtxnvK1oBk7DQHjOvpKYg) 
+![Stripe Dashboard: Subscription](/images/blog/handling-sales-tax-with-stripe/stripe-subscriptions.png) 
 
 Similar to charges, you can use the `metadata` attribute to break down the sales tax for your own reference later. Most sales tax APIs will show you tax rates and amounts by jurisdiction.
 
@@ -75,7 +75,7 @@ Similar to charges, you can use the `metadata` attribute to break down the sales
 
 Stripe provides a couple ways of handling payments in your application or website. You can either use an embedded form via [Stripe Checkout](https://stripe.com/docs/checkout) or a [custom form with Stripe.js](https://stripe.com/docs/stripe.js) to collect and tokenize a customer’s credit card. Checkout is beautifully designed and mobile-friendly, but it's fairly high-level and difficult to customize. Although it now supports billing/shipping addresses, you'll have more control over displaying order tax and totals with a custom form.
 
-![stripe-checkouts.jpg](https://draftin.com:443/images/34749?token=y2v0X-yVb9YX-Xna-dc6U_hAN1vZC1vSpJhF5ZQTHmEPTYdl91kKY3LtrppiwSY8uzVmnB3YQyWo7ZQGRX4-5Q4) 
+![Stripe Checkout vs. Stripe Custom Checkout](/images/blog/handling-sales-tax-with-stripe/stripe-checkouts.jpg) 
 
 Sales tax calculation can be done on the client-side via AJAX or entirely on the server-side. It’s your call. For a great user experience, you’ll probably want to show the amount of sales tax immediately after an address is provided and prior to completing the purchase. After generating a single-use token with the customer’s credit card, you can send the token and custom form parameters to your server to complete the charge or subscription using Stripe’s API.
 
@@ -108,7 +108,7 @@ If there’s a language you’d like us to support, leave a comment. There’s a
 
 If you’re starting from scratch or just want a feel for how everything works, I created an [example app](https://github.com/taxjar/rails-stripe-sales-tax-sample) that can be one-click deployed to Heroku. It’s built on top of [rails-stripe-membership-saas](https://github.com/RailsApps/rails-stripe-membership-saas) and uses [Payola](https://github.com/peterkeen/payola), a drop-in Rails engine for accepting payments with Stripe.
 
-![winebox.jpg](https://draftin.com:443/images/34750?token=VwGHZuJUDgA5Q5jS5KuPJ1x3hoeCA8uKBkG4snyAXV4paqv0tUThm-2c_S_gNCrVhrnzPe8MaAxFRjHVNdO3oPc) 
+![Winebox](/images/blog/handling-sales-tax-with-stripe/winebox.jpg)
 
 You’ll need to provide the following environment keys for Heroku:
 
@@ -126,7 +126,7 @@ This is an end-to-end solution using Rails and [taxjar-ruby](https://github.com/
 4. Customer submits the order and Stripe generates a single-use token based on the credit card.
 5. Our Rails app creates a new subscription using Stripe’s API client based on the submitted form fields (including the tax).
 
-![winebox-checkout.jpg](https://draftin.com:443/images/34751?token=8iIGifgx1H7Y7hjJERDQJ3OceJGgbeXhcwFpD1-gMkKEH3V08GOWwXYrM7OvG16z8XU19TgwFxQ3V30Yd1WAJho) 
+![Winebox Checkout](/images/blog/handling-sales-tax-with-stripe/winebox-checkout.jpg) 
 
 Check out the [example app](https://github.com/taxjar/rails-stripe-sales-tax-sample) and learn how to calculate and apply sales tax for recurring subscriptions in Stripe.
 

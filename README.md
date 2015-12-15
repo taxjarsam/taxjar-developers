@@ -35,6 +35,7 @@ Open the generated Markdown file and use the frontmatter template below:
 ```
 ---
 title: Handling Sales Tax with Stripe
+description: Learn how to add sales tax to charges and subscriptions in Stripe along with a Rails example for calculating sales tax using SmartCalcs.
 author: jake_johnson
 date: 2015-12-14 00:11 UTC
 category: stripe

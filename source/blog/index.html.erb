@@ -1,3 +1,6 @@
+<% set_meta_tags title: "Blog" %>
+<% set_meta_tags description: "Updates from the TaxJar product development team behind SmartCalcs, a sales tax API." %>
+
 <% blog.articles[0...5].each do |article| %>
   <article>
     <div class="post__banner" style="background-color: <%= data['categories'][article.data.category]['color'] %>">

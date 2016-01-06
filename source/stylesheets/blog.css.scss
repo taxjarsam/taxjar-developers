@@ -9,7 +9,6 @@
   
   article {
     position: relative;
-    font-size: 1.1em;
     line-height: 1.9;
     background: #fff;
     max-width: 960px;
@@ -95,7 +94,7 @@
   }
   
   .post__category {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 22px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -108,7 +107,7 @@
   
   .post__meta {
     color: #999;
-    font-size: 12px;
+    font-size: 13px;
     
     b {
       color: #D8D8D8;
@@ -137,9 +136,11 @@
     margin-top: 30px;
     padding: 10px;
     border-radius: 3px;
+    transition: color 120ms ease-out;
     
     &:hover {
-      background: #F6F6F6;
+      color: #fff;
+      background: #3FAE2A;
     }
   }
   

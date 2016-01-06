@@ -8,8 +8,8 @@
 }
 
 html, body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  font-size: 14px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 17px;
   color: #333;
   margin: 0;
   padding: 0;
@@ -40,7 +40,7 @@ header {
 
 .logo {
   float: left;
-  padding: 17px 20px;
+  padding: 16px 20px;
 }
 
 .logo span {
@@ -55,18 +55,23 @@ header {
 
 .menu--main {
   float: left;
-  margin: 5px 0 0 110px;
+  margin: 0 0 0 110px;
   padding: 0 0 0 10px;
   border-left: 1px solid #f7f7f7;
 }
 
 .menu--actions {
   float: right;
-  margin: 5px 20px 0 0;
+  margin: 0 20px 0 0;
 }
 
 .menu nav ul {
+  margin: 20px 0;
   padding-left: 0;
+}
+
+.menu--actions nav ul {
+  margin: 17px 0;
 }
 
 .menu nav li {
@@ -81,18 +86,21 @@ header {
 
 .menu nav li a {
   display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 13px;
   padding: 6px 15px;
   color: #333;
   text-decoration: none;
+  text-transform: uppercase;
   letter-spacing: -0.25px;
 }
 
 .menu nav li .active {
-  font-weight: bold;
+  color: #3FAE2A;
 }
 
 .menu nav li a:hover {
-  color: #000;
+  color: #3FAE2A;
 }
 
 .btn {
@@ -101,16 +109,25 @@ header {
   color: #333;
   text-decoration: none;
   letter-spacing: -0.25px;
+  line-height: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
+  
+  &:hover {
+    border-color: #3FAE2A;
+  }
 }
 
 .btn.cta {
   color: #fff;
   background: linear-gradient(#f39c12, darken(#f39c12, 3%));
   border: 1px solid transparent;
+  
+  &:hover {
+    background: linear-gradient(#f5ac39, #ea940c);
+  }
 }
 
 .menu nav li .cta:hover {

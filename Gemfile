@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.3.11"
 gem "middleman-blog"
 gem "middleman-meta-tags"
+gem "middleman-react"
 gem "middleman-syntax"
 
 # Live-reloading plugin

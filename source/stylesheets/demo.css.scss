@@ -48,6 +48,7 @@
 .request, .response {
   display: flex;
   flex-direction: column;
+  color: #fff;
   background: #343434;
   box-shadow: inset -4px 0 0 #222;
   flex: 1;
@@ -75,5 +76,21 @@
   
   h3 {
     margin: 0;
+  }
+}
+
+.response {
+  .state {
+    .empty {
+      
+    }
+    
+    .loader {
+      
+    }
+    
+    .error {
+      
+    }  
   }
 }

@@ -80,6 +80,8 @@ var Sandbox = React.createClass({
     if (apiData.tasks[method]) {
       var self = this;
       var request = apiData.tasks[method];
+      
+      this.setState({ loadingResponse: true });
 
       reqwest({
         url: request.url,
@@ -91,12 +93,12 @@ var Sandbox = React.createClass({
           'Authorization': 'Bearer ' + window.apiToken
         },
         error: function(err) {
-          console.error(err.responseText);
+          self.setState({ errorResponse: err.responseText, loadingResponse: false });
         },
         success: function(res) {
           res = _.result(res, Object.keys(res)[0]);
           responseText = JSON.stringify(res, null, 2);
-          self.setState({ presetResponse: responseText });
+          self.setState({ presetResponse: responseText, loadingResponse: false });
         }
       });  
     }
@@ -128,7 +130,7 @@ var Sandbox = React.createClass({
           <button onClick={this.send}>Send Response</button>
           <div className="split-pane">
             <Request prefill={this.state.presetCode} onChange={this.handleRequest} />
-            <Response prefill={this.state.presetResponse} />
+            <Response prefill={this.state.presetResponse} loading={this.state.loadingResponse} error={this.state.errorResponse} />
           </div>
         </div>
       </div>

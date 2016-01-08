@@ -22,3 +22,6 @@
 
 # Ignore Bower
 /source/bower_components
+
+# Ignore Env.js
+/source/javascripts/env.js

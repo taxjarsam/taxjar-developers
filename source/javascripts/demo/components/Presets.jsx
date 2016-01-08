@@ -89,13 +89,13 @@ var Presets = React.createClass({
         <div key={'preset-' + key} className="preset">
           <h3>{preset._name}</h3>
           <p>{preset._description}</p>
-          {options}
+          <div className="optionGroup">{options}</div>
         </div>
       );
     });
 
     return (
-      <div>{presets}</div>
+      <div className="presets">{presets}</div>
     );
   },
   renderAddress: function(option, presetKey) {
@@ -103,7 +103,7 @@ var Presets = React.createClass({
     var checked = (this.state.preset[presetKey]._name === option._name) ? true : false;
 
     return (
-      <div>
+      <div className="option">
         <input type="radio" checked={checked} value={option._name} readOnly />
         <h4>{option._name}</h4>
         <p>{option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
@@ -114,7 +114,7 @@ var Presets = React.createClass({
     var checked = (this.state.preset[presetKey]._name === option._name) ? true : false;
 
     return (
-      <div>
+      <div className="option">
         <input type="radio" checked={checked} value={option._name} readOnly />
         <h4>{option._name}</h4>
         <p>{option.city} {option.zip}</p>
@@ -125,7 +125,7 @@ var Presets = React.createClass({
     var checked = (_.some(this.state.preset[presetKey], { id: option.id })) ? true : false;
 
     return (
-      <div>
+      <div className="option">
         <input type="checkbox" checked={checked} value={option.id} readOnly />
         <h4>{option._name}</h4>
         <p>${option.unit_price}</p>

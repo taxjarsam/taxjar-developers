@@ -21,7 +21,7 @@
               {
                 "_name": "California",
                 "_type": "location",
-                "zip": "90404-3370",
+                "zip": "90404",
                 "city": "Santa Monica",
                 "country": "US"
               },
@@ -80,7 +80,7 @@
           },
           "line_items": {
             "_name": "Products",
-            "_description": "Build a customer order! Choose the products to calculate sales tax for.",
+            "_description": "Build a customer order! Choose products to calculate sales tax for.",
             "_multiple": true,
             "data": [
               {

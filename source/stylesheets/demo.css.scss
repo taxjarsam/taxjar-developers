@@ -21,13 +21,57 @@
 }
 
 .sidebar {
-  width: 276px;
+  width: 320px;
   height: 100%;
   background: #EFEFEF;
   left: 0;
   bottom: 0;
   overflow: auto;
+  padding: 20px;
   z-index: 2;
+  box-shadow: 1px 0 3px rgba(0, 0, 0, 0.12);
+  
+  .preset {
+    margin: 20px 0 0;
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #666;
+  }
+  
+  .optionGroup {
+    padding: 10px 0;
+  }
+  
+  .option {
+    margin: 0 0 20px;
+    cursor: pointer;
+    
+    &:hover {
+      // background: #fff;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      
+      + p {
+        margin: 5px 0 0 30px;
+      }
+    }
+    
+    input {
+      float: left;
+      margin: 3px 15px 0 0;
+    }
+  }
 }
 
 .editor {
@@ -148,6 +192,8 @@
 
 .response {
   .state {
+    display: none;
+    
     .empty {
       
     }

@@ -36,8 +36,16 @@ var Sandbox = React.createClass({
       _.merge(data, preset);
     });
     
-    data = _.omit(data, function(prop, key) { return (key === 'name'); });
+    data = _.omit(data, function(prop, key) { return (_.startsWith(key, '_')); });
     
+    _.each(data, function(prop, key) {
+      if (_.isObject(prop) || _.isArray(prop)) {
+        _.each(prop, function(subprop, subkey) {
+          data[key][subkey] = _.omit(subprop, function(p, k) { return (_.startsWith(k, '_')); });
+        });
+      }
+    });
+
     code += JSON.stringify(data, null, 2);
     code += ');';
 
@@ -69,15 +77,16 @@ var Sandbox = React.createClass({
       }
     });
     
-    if (presets.requests[method]) {
+    if (apiData.tasks[method]) {
       var self = this;
-      var request = presets.requests[method];
+      var request = apiData.tasks[method];
 
       reqwest({
         url: request.url,
         type: 'json',
         method: request.method,
-        data: methodParams,
+        contentType: 'application/json',
+        data: JSON.stringify(methodParams),
         headers: {
           'Authorization': 'Bearer ' + window.apiToken
         },

@@ -1,72 +1,107 @@
 var Presets = React.createClass({
   getInitialState: function() {
+    this.data = apiData.tasks.taxForOrder;
+
     return {
-      nexus: _.first(presets.nexus_addresses),
-      // line_items: [_.first(presets.line_items)],
-      to_addresses: _.first(presets.to_addresses),
-      amount: 19.99,
-      shipping: 10 // Flat Shipping
+      task: 'taxForOrder',
+      preset: {
+        nexus_address: _.first(this.data.presets.nexus_address),
+        line_items: [_.first(this.data.presets.line_items)],
+        to_addresses: _.first(this.data.presets.to_addresses),
+        amount: this.data.defaults.amount,
+        shipping: this.data.defaults.shipping
+      }
     };
   },
-  componentDidMount: function() {
-
-  },
-  selectNexus: function(nexus) {
-    this.setState({ nexus: nexus });
-    _.defer(function() { this.props.onChange(this.state); }.bind(this));
-  },
-  selectItem: function(item) {
-    var items = this.state.items;
-    var amount = 0;
-
-    items[item.name] = item.amount;
+  selectTask: function(e) {
+    var preset = {};
+    this.data = apiData.tasks[e.target.value];
     
-    _.each(items, function(item) {
-      amount += item.unit_price;
+    _.merge(preset, this.data.defaults || {});
+    _.each(this.data.presets, function(preset) {
+      if (_.isArray(preset)) {
+        var firstPreset = (preset._multiple) ? [_.first(preset)] : _.first(preset);
+        _.merge(preset, firstPreset);
+      }
     });
     
-    this.setState({ line_items: items, amount: amount.toFixed(2) });
-    _.defer(function() { this.props.onChange(this.state); }.bind(this));
+    this.setState({ task: e.target.value, preset: preset });
   },
-  renderNexus: function() {
-    var self = this;
-    return (
-      <div>
-        {presets.nexus_addresses.map(function(nexus, i) {
-          return (
-            <div key={'nexus-' + i} onClick={self.selectNexus.bind(self, nexus)}>
-              <h4>{nexus.name}</h4>
-              <p>{nexus.from_street}<br/>{nexus.from_city}, {nexus.from_state} {nexus.from_zip}</p>
-            </div>
-          );
-        })}
-      </div>
-    );
-  },
-  renderItems: function() {
-    var self = this;
-    return (
-      <div>
-        {presets.line_items.map(function(item, i) {
-          return (
-            <div key={'item-' + i} onClick={self.selectItem.bind(self, item)}>
-              <h4>{item.name}</h4>
-              <p>${item.unit_price}</p>
-            </div>
-          );
-        })}
-      </div>
-    );
-  },
-  renderDestinations: function() {
+  selectOption: function(data) {
+    var preset = this.state.preset;
     
+    if (data.option._type === 'product') {
+      var items = this.state.preset.line_items;
+      var amount = 0;
+
+      if (!_.some(items, { id: data.option.id })) items.push(data.option);
+      
+      _.each(items, function(item) {
+        amount += item.unit_price;
+      });
+      
+      preset.line_items = items;
+      preset.amount = amount;
+    } else {
+      preset[data.preset] = data.option;
+    }
+    
+    // this.setState({ preset: preset });
+    _.defer(function() { this.props.onChange(this.state.preset); }.bind(this));
+  },
+  renderPresets: function() {
+    var self = this;
+    var presets = [];
+    
+    _.each(this.data.presets, function(preset, key) {
+      var options = [];
+
+      _.each(preset, function(option) {
+        switch(option._type) {
+          case 'address':
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderAddress(option)}</div>);
+            break;
+          case 'product':
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderProduct(option)}</div>);
+            break;
+        }
+      });
+
+      presets.push(<div key={'preset-' + key} className="preset">{options}</div>);
+    });
+
+    return (
+      <div>{presets}</div>
+    );
+  },
+  renderAddress: function(option) {
+    var fromOrTo = (option.from_country) ? 'from_' : 'to_';
+    return (
+      <div>
+        <h4>{option.name}</h4>
+        <p>{option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
+      </div>
+    );
+  },
+  renderProduct: function(option) {
+    return (
+      <div>
+        <h4>{option.name}</h4>
+        <p>${option.unit_price}</p>
+      </div>
+    );
   },
   render: function() {
     return (
       <div className="presets">
-        {this.renderNexus()}
-        {this.renderItems()}
-        {this.renderDestinations()}
+        <select onChange={this.selectTask}>
+          <option value="categories">List tax categories</option>
+          <option value="ratesForLocation">Show tax rates for a location</option>
+          <option value="taxForOrder">Calculate sales tax for an order</option>
+          <option value="listOrders">List orders</option>
+          <option value="createOrder">Create an order</option>
+        </select>
+        {this.renderPresets()}
       </div>
     );
   }

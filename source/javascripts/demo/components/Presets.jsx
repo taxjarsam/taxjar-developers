@@ -2,15 +2,14 @@ var Presets = React.createClass({
   getInitialState: function() {
     return {
       nexus: _.first(presets.nexus_addresses),
-      line_items: [_.first(presets.line_items)],
-      to_addresses: _.first(presets.to_addresses)
+      // line_items: [_.first(presets.line_items)],
+      to_addresses: _.first(presets.to_addresses),
+      amount: 19.99,
+      shipping: 10 // Flat Shipping
     };
   },
-  componentWillMount: function() {
-    
-  },
   componentDidMount: function() {
-    console.log(this.state);
+
   },
   selectNexus: function(nexus) {
     this.setState({ nexus: nexus });
@@ -18,8 +17,15 @@ var Presets = React.createClass({
   },
   selectItem: function(item) {
     var items = this.state.items;
+    var amount = 0;
+
     items[item.name] = item.amount;
-    this.setState({ line_items: items });
+    
+    _.each(items, function(item) {
+      amount += item.unit_price;
+    });
+    
+    this.setState({ line_items: items, amount: amount.toFixed(2) });
     _.defer(function() { this.props.onChange(this.state); }.bind(this));
   },
   renderNexus: function() {

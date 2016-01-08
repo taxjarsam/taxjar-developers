@@ -12,7 +12,6 @@
     "walkway.js": "~0.0.5",
     "classnames": "~2.2.3",
     "esprima": "~2.0.0",
-    "lodash": "~3.10.1",
-    "is_js": "~0.7.6"
+    "lodash": "~3.10.1"
   }
 }

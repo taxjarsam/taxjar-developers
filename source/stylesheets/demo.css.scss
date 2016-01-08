@@ -44,7 +44,7 @@
   flex: 1;
 }
 
-.request {
+.request, .response {
   display: flex;
   flex-direction: column;
   background: #343434;
@@ -65,11 +65,6 @@
       background: #343434;
     }
   }
-}
-
-.response {
-  background: #343434;
-  flex: 1;
 }
 
 .header {

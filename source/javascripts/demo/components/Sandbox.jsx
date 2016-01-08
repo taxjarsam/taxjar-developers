@@ -1,5 +1,5 @@
-var fmt = require('demo/fmt');
-var rocambole = require('demo/rocambole');
+var fmt = require('demo/vendor/fmt');
+var rocambole = require('demo/vendor/rocambole');
 
 var Sandbox = React.createClass({
   getInitialState: function() {
@@ -30,8 +30,13 @@ var Sandbox = React.createClass({
       if (presetKey === 'line_items') {
         preset = { 'line_items': preset };
       }
+      if (!_.isObject(preset)) {
+        preset = _.pick(presets, presetKey);
+      }
       _.merge(data, preset);
     });
+    
+    data = _.omit(data, function(prop, key) { return (key === 'name'); });
     
     code += JSON.stringify(data, null, 2);
     code += ');';
@@ -64,12 +69,28 @@ var Sandbox = React.createClass({
       }
     });
     
-    console.log({
-      'method': method,
-      'methodArgs': methodArgs,
-      'methodParams': methodParams
-    });
+    if (presets.requests[method]) {
+      var request = presets.requests[method];
 
+      reqwest({
+        url: request.url,
+        type: 'json',
+        method: request.method,
+        data: methodParams,
+        headers: {
+          'Authorization': 'Bearer ' + window.apiToken
+        },
+        error: function(err) {
+          console.error(err.responseText);
+        },
+        success: function(res) {
+          res = _.result(res, Object.keys(res)[0]);
+          console.log(res);
+        }
+      });  
+    }
+
+    // Update map markers
     if (method === 'taxForOrder') {
       var fromAddress = [];
       var toAddress = [];

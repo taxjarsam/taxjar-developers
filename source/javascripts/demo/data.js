@@ -1,5 +1,11 @@
 (function (window, document) {
   window.presets = {
+    "requests": {
+      "taxForOrder": {
+        "method": "POST",
+        "url": "https://api.taxjar.com/v2/taxes"
+      }
+    },
     "nexus_addresses": [
       {
         "name": "New York",
@@ -29,7 +35,7 @@
     "line_items": [
       {
         "name": "T-Shirt",
-        "id": "t-shirt",
+        "id": "123456",
         "quantity": "1",
         "unit_price": 19.99
       }

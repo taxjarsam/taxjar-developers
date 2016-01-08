@@ -1,7 +1,7 @@
 var Request = React.createClass({
   getInitialState: function() {
     return {
-      code: "// Code"
+      code: "// Request"
     };
   },
   componentDidUpdate: function() {

@@ -75,8 +75,8 @@ var Map = React.createClass({
         },
         properties: {
           // 'title': 'Here I am!',
-          'marker-color': '#ff8888',
-          'marker-symbol': 'star'
+          'marker-color': '#3FAE2A',
+          'marker-symbol': 'industrial'
         }
       },
       {
@@ -87,7 +87,7 @@ var Map = React.createClass({
         },
         properties: {
           // 'title': 'Here I am!',
-          'marker-color': '#ff8888',
+          'marker-color': '#EF9A04',
           'marker-symbol': 'star'
         }
       },

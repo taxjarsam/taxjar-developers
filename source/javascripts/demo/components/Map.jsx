@@ -131,7 +131,7 @@ var Map = React.createClass({
       features: features
     });
     
-    if (features.length === 1) {
+    if (features.length === 1 && this.state.locationCoords) {
       this.map.setView(_(this.state.locationCoords).reverse().value(), 12);
     } else {
       this.map.fitBounds(this.layer.getBounds());

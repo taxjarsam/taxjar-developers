@@ -33,6 +33,11 @@
   
   .preset {
     margin: 20px 0 0;
+    border-bottom: 1px solid #E5E5E5;
+    
+    &:last-child {
+      border-bottom: 0;
+    }
   }
   
   h3 {

@@ -45,6 +45,12 @@ var Map = React.createClass({
   },
   setLocation: function(location) {
     var self = this;
+
+    if (!location) {
+      self.setState({ locationCoords: null });
+      return _.defer(self.updateMap);
+    }
+    
     this.geocoder.query(location, function(err, data) {
       if (data.latlng) {
         // coordinates here are in longitude, latitude order because
@@ -56,6 +62,12 @@ var Map = React.createClass({
   },
   setDestination: function(destination) {
     var self = this;
+    
+    if (!destination) {
+      self.setState({ destinationCoords: null });
+      return _.defer(self.updateMap);
+    }
+    
     this.geocoder.query(destination, function(err, data) {
       if (data.latlng) {
         // coordinates here are in longitude, latitude order because
@@ -66,8 +78,10 @@ var Map = React.createClass({
     });
   },
   updateMap: function() {
-    var features = [
-      {
+    var features = [];
+    
+    if (this.state.locationCoords) {
+      features.push({
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -78,8 +92,11 @@ var Map = React.createClass({
           'marker-color': '#3FAE2A',
           'marker-symbol': 'industrial'
         }
-      },
-      {
+      });
+    }
+    
+    if (this.state.destinationCoords) {
+      features.push({
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -90,8 +107,11 @@ var Map = React.createClass({
           'marker-color': '#EF9A04',
           'marker-symbol': 'star'
         }
-      },
-      {
+      });
+    }
+    
+    if (this.state.locationCoords && this.state.destinationCoords) {
+      features.push({
         type: 'Feature',
         properties: {
           color: '#000'
@@ -103,15 +123,19 @@ var Map = React.createClass({
             this.state.destinationCoords
           ]
         }
-      }
-    ];
+      });
+    }
     
     this.layer.setGeoJSON({
       type: 'FeatureCollection',
       features: features
     });
-
-    this.map.fitBounds(this.layer.getBounds());
+    
+    if (features.length === 1) {
+      this.map.setView(_(this.state.locationCoords).reverse().value(), 12);
+    } else {
+      this.map.fitBounds(this.layer.getBounds());
+    }
   },
   render: function() {
     var mapStyle = {

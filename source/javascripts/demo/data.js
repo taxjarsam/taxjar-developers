@@ -3,8 +3,8 @@
     "tasks": {
       "ratesForLocation": {
         "method": "GET",
-        "url": "https://api.taxjar.com/v2/rates/:zip",
-        "args": [ "zip" ],
+        "url": "https://api.taxjar.com/v2/rates",
+        "args": ["zip"],
         "presets": {
           "location": {
             "_name": "Location",
@@ -13,23 +13,23 @@
               {
                 "_name": "New York",
                 "_type": "location",
-                "city": "New York",
                 "zip": "10118",
+                "city": "New York",
                 "country": "US"
               },
               {
                 "_name": "California",
                 "_type": "location",
-                "city": "Santa Monica",
                 "zip": "90404-3370",
-                "country": "US",
+                "city": "Santa Monica",
+                "country": "US"
               },
               {
                 "_name": "Florida",
                 "_type": "location",
-                "city": "Miami",
                 "zip": "33132",
-                "country": "US",
+                "city": "Miami",
+                "country": "US"
               }
             ]
           }

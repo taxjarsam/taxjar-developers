@@ -85,7 +85,15 @@ var Sandbox = React.createClass({
     if (apiData.tasks[method]) {
       var self = this;
       var request = apiData.tasks[method];
+      var args = {};
+      var params = (request.method === 'POST') ? JSON.stringify(methodParams) : methodParams;
+
+      _.each(apiData.tasks[method].args, function(argKey, i) {
+        args[argKey] = methodArgs[i];
+      });
       
+      if (args) _.merge(params, args);
+
       this.setState({ loadingResponse: true });
 
       reqwest({
@@ -93,7 +101,7 @@ var Sandbox = React.createClass({
         type: 'json',
         method: request.method,
         contentType: 'application/json',
-        data: JSON.stringify(methodParams),
+        data: params,
         headers: {
           'Authorization': 'Bearer ' + window.apiToken
         },
@@ -121,6 +129,14 @@ var Sandbox = React.createClass({
       this.setState({
         location: fromAddress.join(' '),
         destination: toAddress.join(' ')
+      });
+    }
+    
+    if (method === 'ratesForLocation') {
+      var extraParams = (methodParams) ? _.flatten(methodParams).join(' ') : '';
+      this.setState({
+        location: methodArgs[0] + extraParams,
+        destination: null
       });
     }
   },

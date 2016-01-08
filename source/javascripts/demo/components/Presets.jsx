@@ -20,20 +20,24 @@ var Presets = React.createClass({
     var preset = {};
     this.data = apiData.tasks[e.target.value];
     
-    _.merge(preset, this.data.defaults || {});
-    _.each(this.data.presets, function(preset) {
-      if (_.isArray(preset)) {
-        var firstPreset = (preset._multiple) ? [_.first(preset)] : _.first(preset);
-        _.merge(preset, firstPreset);
-      }
-    });
-    
+    if (this.data) {
+      _.merge(preset, this.data.defaults || {});
+      _.each(this.data.presets, function(p, key) {
+        if (_.isArray(p.data)) {
+          var firstPreset = {};
+          firstPreset[key] = (p._multiple) ? [_.first(p.data)] : _.first(p.data);
+          _.merge(preset, firstPreset);
+        }
+      });
+    }
+
     this.setState({ task: e.target.value, preset: preset });
+    _.defer(function() { this.props.onChange(this.state.task, this.state.preset); }.bind(this));
   },
   selectOption: function(data) {
     var preset = this.state.preset;
     
-    if (data.option._multiple === true) {
+    if (this.data.presets[data.preset]._multiple === true) {
       var items = preset[data.preset];
 
       if (!_.some(items, { id: data.option.id })) {
@@ -131,12 +135,9 @@ var Presets = React.createClass({
   render: function() {
     return (
       <div className="presets">
-        <select onChange={this.selectTask}>
-          <option value="categories">List tax categories</option>
+        <select onChange={this.selectTask} value={this.state.task}>
           <option value="ratesForLocation">Show tax rates for a location</option>
           <option value="taxForOrder">Calculate sales tax for an order</option>
-          <option value="listOrders">List orders</option>
-          <option value="createOrder">Create an order</option>
         </select>
         {this.renderPresets()}
       </div>

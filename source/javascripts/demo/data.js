@@ -4,33 +4,35 @@
       "ratesForLocation": {
         "method": "GET",
         "url": "https://api.taxjar.com/v2/rates/:zip",
-        "defaults": {
-          "zip": "90404"
-        },
+        "args": [ "zip" ],
         "presets": {
-          "location": [
-            {
-              "_name": "New York",
-              "_type": "location",
-              "city": "New York",
-              "zip": "10118",
-              "country": "US"
-            },
-            {
-              "_name": "California",
-              "_type": "location",
-              "city": "San Francisco",
-              "zip": "94111",
-              "country": "US",
-            },
-            {
-              "_name": "Florida",
-              "_type": "location",
-              "city": "Miami",
-              "zip": "33132",
-              "country": "US",
-            }
-          ]
+          "location": {
+            "_name": "Location",
+            "_description": "Tell TaxJar where to calculate sales tax.",
+            "data": [
+              {
+                "_name": "New York",
+                "_type": "location",
+                "city": "New York",
+                "zip": "10118",
+                "country": "US"
+              },
+              {
+                "_name": "California",
+                "_type": "location",
+                "city": "Santa Monica",
+                "zip": "90404-3370",
+                "country": "US",
+              },
+              {
+                "_name": "Florida",
+                "_type": "location",
+                "city": "Miami",
+                "zip": "33132",
+                "country": "US",
+              }
+            ]
+          }
         }
       },
       "taxForOrder": {
@@ -77,11 +79,11 @@
           "line_items": {
             "_name": "Products",
             "_description": "Build a customer order! Choose the products to calculate sales tax for.",
+            "_multiple": true,
             "data": [
               {
                 "_name": "T-Shirt",
                 "_type": "product",
-                "_multiple": true,
                 "id": 1,
                 "quantity": 1,
                 "unit_price": 19.99
@@ -89,7 +91,6 @@
               {
                 "_name": "Designer Boots",
                 "_type": "product",
-                "_multiple": true,
                 "id": 2,
                 "quantity": 1,
                 "unit_price": 199.85
@@ -97,7 +98,6 @@
               {
                 "_name": "Gaming Console",
                 "_type": "product",
-                "_multiple": true,
                 "id": 3,
                 "quantity": 1,
                 "unit_price": 399.95

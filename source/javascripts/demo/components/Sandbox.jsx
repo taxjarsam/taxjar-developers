@@ -20,11 +20,16 @@ var Sandbox = React.createClass({
   handlePresets: function(task, presets) {
     var newLine = '\n';
     var code = ['taxjar.' + task + '('];
+    var args = apiData.tasks[task].args || [];
     var propCount;
     var presetCount = 1;
     var trailing;
     
     var data = {};
+    
+    _.each(args, function(arg) {
+      code += fmt('"%s", ', _.find(presets, arg)[arg]);
+    });
     
     _.each(presets, function(preset, presetKey) {
       if (presetKey === 'line_items') {
@@ -36,7 +41,7 @@ var Sandbox = React.createClass({
       _.merge(data, preset);
     });
     
-    data = _.omit(data, function(prop, key) { return (_.startsWith(key, '_')); });
+    data = _.omit(data, function(prop, key) { return (_.startsWith(key, '_') || _.includes(args, key)); });
     
     _.each(data, function(prop, key) {
       if (_.isObject(prop) || _.isArray(prop)) {

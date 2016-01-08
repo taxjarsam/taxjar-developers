@@ -1,5 +1,6 @@
 @import "./components/codemirror";
 @import "./components/codemirror-theme";
+@import "./components/codemirror-scrollbars";
 
 #demo {
   display: block;
@@ -43,19 +44,25 @@
 .split-pane {
   display: flex;
   flex: 1;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.request, .request .header {
+  box-shadow: inset -4px 0 0 #222;
 }
 
 .request, .response {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: #fff;
-  background: #343434;
-  box-shadow: inset -4px 0 0 #222;
+  background: #2D2D2D;
   flex: 1;
   
   .ReactCodeMirror {
     position: relative;
-    margin: 0 20px;
+    margin: 10px 20px;
     flex: 1;
     
     .CodeMirror {
@@ -64,18 +71,78 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: #343434;
+      background: #2D2D2D;
     }
+  }
+  
+  &:before {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 4px;
+    content: " ";
+    background: linear-gradient(#2D2D2D 0, rgba(45, 45, 45, 0.5) 20%, rgba(45, 45, 45, 0) 100%);
+    height: 10px;
+    z-index: 3;
+  }
+  
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 4px;
+    bottom: 0;
+    content: " ";
+    background: linear-gradient(rgba(45, 45, 45, 0) 0, rgba(45, 45, 45, 0.5) 20%, #2D2D2D 50%);
+    height: 16px;
+    z-index: 2;
   }
 }
 
 .header {
   color: #fff;
-  // background: #222;
+  background: #343434;
   padding: 20px;
   
   h3 {
+    float: left;
     margin: 0;
+  }
+  
+  .toolbar {
+    float: right;
+    
+    .toolbar__btn {
+      font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+      font-size: 13px;
+      color: #fff;
+      background: #222222;
+      margin-right: 5px;
+      padding: 5px 10px;
+      border: 0;
+      border-radius: 3px;
+      opacity: 0.5;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: opacity 220ms ease-out;
+      outline: none;
+      
+      i {
+        margin-right: 4px;
+      }
+      
+      &:hover {
+        opacity: 1;
+      }
+      
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    .toolbar__btn--primary {
+      background: linear-gradient(#47C052, #38B243);
+      opacity: 1;
+    }
   }
 }
 

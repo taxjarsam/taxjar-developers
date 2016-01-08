@@ -1,22 +1,12 @@
 var fmt = require('demo/vendor/fmt');
-var rocambole = require('demo/vendor/rocambole');
 
 var Sandbox = React.createClass({
   getInitialState: function() {
     return {
-      location: 'Santa Monica, CA 90404',
-      destination: 'Kansas City, MO 64155'
+      location: '350 5th Avenue, New York, NY 10118',
+      destination: '45 Rockefeller Plaza New York, NY'
     };
   },
-  // componentWillUpdate: function() {
-  //   console.log('component will update!');
-  // },
-  componentWillUpdate: function(nextProps, nextState) {
-
-  },
-  // componentWillReceiveProps: function() {
-  //   console.log('component will receive props!');
-  // },
   handlePresets: function(task, presets) {
     var newLine = '\n';
     var code = ['taxjar.' + task + '('];
@@ -54,91 +44,10 @@ var Sandbox = React.createClass({
     code += JSON.stringify(data, null, 2);
     code += ');';
 
-    this.setState({ presetCode: code });
+    this.setState({ presetCode: code, task: task });
   },
-  handleRequest: function(code) {
-    this.setState({ code: code });
-  },
-  send: function() {
-    var editor = document.querySelector('.CodeMirror').CodeMirror;
-    var ast = rocambole.parse(this.state.code);
-    var method = '';
-    var methodArgs = [];
-    var methodParams = {};
-    var allowedMethods = ['categories', 'ratesForLocation', 'taxForOrder', 'listOrders', 'showOrder', 'createOrder', 'updateOrder', 'deleteOrder', 'listRefunds', 'showRefund', 'createRefund', 'updateRefund', 'deleteRefund'];
-    
-    rocambole.moonwalk(ast, function(node) {
-      if (node.type === 'Identifier' && _.includes(allowedMethods, node.name)) {
-        method = node.name;
-      }
-      if (node.type === 'Literal' && node.parent.startToken.value === 'taxjar') {
-        methodArgs.push(node.value);
-      }
-      if (node.type === 'ObjectExpression' && node.parent.type === 'CallExpression') {
-        var object = node.toString()
-          .replace(/([\$\w]+)\s*:/g, function(_, $1) { return '"'+$1+'":'; })
-          .replace(/'([^']+)'/g, function(_, $1) { return '"' + $1 + '"'; });
-        methodParams = JSON.parse(object);
-      }
-    });
-    
-    if (apiData.tasks[method]) {
-      var self = this;
-      var request = apiData.tasks[method];
-      var args = {};
-      var params = (request.method === 'POST') ? JSON.stringify(methodParams) : methodParams;
-
-      _.each(apiData.tasks[method].args, function(argKey, i) {
-        args[argKey] = methodArgs[i];
-      });
-      
-      if (args) _.merge(params, args);
-
-      this.setState({ loadingResponse: true });
-
-      reqwest({
-        url: request.url,
-        type: 'json',
-        method: request.method,
-        contentType: 'application/json',
-        data: params,
-        headers: {
-          'Authorization': 'Bearer ' + window.apiToken
-        },
-        error: function(err) {
-          self.setState({ errorResponse: err.responseText, loadingResponse: false });
-        },
-        success: function(res) {
-          res = _.result(res, Object.keys(res)[0]);
-          responseText = JSON.stringify(res, null, 2);
-          self.setState({ presetResponse: responseText, loadingResponse: false });
-        }
-      });  
-    }
-
-    // Update map markers
-    if (method === 'taxForOrder') {
-      var fromAddress = [];
-      var toAddress = [];
-
-      _.each(methodParams, function(param, key) {
-        if (key.indexOf('from_') !== -1) fromAddress.push(param);
-        if (key.indexOf('to_') !== -1) toAddress.push(param);
-      });
-
-      this.setState({
-        location: fromAddress.join(' '),
-        destination: toAddress.join(' ')
-      });
-    }
-    
-    if (method === 'ratesForLocation') {
-      var extraParams = (methodParams) ? _.flatten(methodParams).join(' ') : '';
-      this.setState({
-        location: methodArgs[0] + extraParams,
-        destination: null
-      });
-    }
+  handleRequest: function(requestState) {
+    this.setState(requestState);
   },
   render: function() {
     return (
@@ -148,10 +57,9 @@ var Sandbox = React.createClass({
         </div>
         <div className="editor">
           <Preview type="map" location={this.state.location} destination={this.state.destination} />
-          <button onClick={this.send}>Send Response</button>
           <div className="split-pane">
-            <Request prefill={this.state.presetCode} onChange={this.handleRequest} />
-            <Response prefill={this.state.presetResponse} loading={this.state.loadingResponse} error={this.state.errorResponse} />
+            <Request prefill={this.state.presetCode} task={this.state.task} onChange={this.handleRequest} />
+            <Response prefill={this.state.presetResponse} task={this.state.task} loading={this.state.loadingResponse} error={this.state.errorResponse} />
           </div>
         </div>
       </div>

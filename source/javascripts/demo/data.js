@@ -4,6 +4,7 @@
       "ratesForLocation": {
         "method": "GET",
         "url": "https://api.taxjar.com/v2/rates",
+        "docs": "http://developers.taxjar.com/api/#get-show-tax-rates-for-a-location",
         "args": ["zip"],
         "presets": {
           "location": {
@@ -38,6 +39,7 @@
       "taxForOrder": {
         "method": "POST",
         "url": "https://api.taxjar.com/v2/taxes",
+        "docs": "http://developers.taxjar.com/api/#post-calculate-sales-tax-for-an-order",
         "defaults": {
           "amount": 19.99,
           "shipping": 10
@@ -50,7 +52,7 @@
               {
                 "_name": "New York",
                 "_type": "address",
-                "from_street": "350 5th Ave",
+                "from_street": "350 5th Avenue",
                 "from_city": "New York",
                 "from_state": "NY",
                 "from_zip": "10118",
@@ -111,10 +113,10 @@
               {
                 "_name": "New York",
                 "_type": "address",
-                "to_street": "350 5th Ave",
+                "to_street": "45 Rockefeller Plaza",
                 "to_city": "New York",
                 "to_state": "NY",
-                "to_zip": "10118",
+                "to_zip": "10111",
                 "to_country": "US"
               },
               {

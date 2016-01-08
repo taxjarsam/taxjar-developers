@@ -28,6 +28,7 @@ var Response = React.createClass({
     var options = {
       mode: 'javascript',
       theme: 'railscasts',
+      scrollbarStyle: 'overlay',
       readOnly: true
     };
     
@@ -35,6 +36,9 @@ var Response = React.createClass({
       <div className="response">
         <div className="header">
           <h3>Response</h3>
+          <div className="toolbar">
+            <CopyButton text={this.state.response} />
+          </div>
         </div>
         <div className="state">
           {this.renderState()}

@@ -2,6 +2,7 @@
 
 <% content_for :css do %>
   <%= stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css" %>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" %>
 <% end %>
 
 <div id="demo"></div>
@@ -12,6 +13,7 @@
   <% #javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react.min.js" %>
   <%= javascript_include_tag "https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js" %>
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/addon/scroll/simplescrollbars.js" %>
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/javascript/javascript.min.js" %>
   <%= javascript_include_tag "demo" %>
 <% end %>

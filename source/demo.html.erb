@@ -1,7 +1,17 @@
 <% set_meta_tags description: "Sales Tax API Demo" %>
 
+<% content_for :css do %>
+  <%= stylesheet_link_tag "https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css" %>
+<% end %>
+
 <div id="demo"></div>
 
 <% content_for :js do %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react-dom.js" %>
+  <% #javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/react/0.14.5/react.min.js" %>
+  <%= javascript_include_tag "https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js" %>
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/javascript/javascript.min.js" %>
   <%= javascript_include_tag "demo" %>
 <% end %>

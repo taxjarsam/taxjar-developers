@@ -1,0 +1,83 @@
+@import "./components/codemirror";
+@import "./components/codemirror-theme";
+
+#demo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.sandbox {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sidebar {
+  width: 276px;
+  height: 100%;
+  background: #EFEFEF;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.preview {
+  min-height: 320px;
+  height: 320px;
+}
+
+.split-pane {
+  display: flex;
+  flex: 1;
+}
+
+.request {
+  display: flex;
+  flex-direction: column;
+  background: #343434;
+  box-shadow: inset -4px 0 0 #222;
+  flex: 1;
+  
+  .ReactCodeMirror {
+    position: relative;
+    margin: 0 20px;
+    flex: 1;
+    
+    .CodeMirror {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #343434;
+    }
+  }
+}
+
+.response {
+  background: #343434;
+  flex: 1;
+}
+
+.header {
+  color: #fff;
+  // background: #222;
+  padding: 20px;
+  
+  h3 {
+    margin: 0;
+  }
+}

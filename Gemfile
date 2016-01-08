@@ -20,6 +20,9 @@ gem "redcarpet"
 # Blog post summaries
 gem "nokogiri"
 
+# CommonJS
+gem "sprockets-commonjs"
+
 # Deployment
 gem "s3_website"
 

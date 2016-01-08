@@ -70,6 +70,7 @@ var Sandbox = React.createClass({
     });
     
     if (presets.requests[method]) {
+      var self = this;
       var request = presets.requests[method];
 
       reqwest({
@@ -85,7 +86,8 @@ var Sandbox = React.createClass({
         },
         success: function(res) {
           res = _.result(res, Object.keys(res)[0]);
-          console.log(res);
+          responseText = JSON.stringify(res, null, 2);
+          self.setState({ presetResponse: responseText });
         }
       });  
     }
@@ -117,7 +119,7 @@ var Sandbox = React.createClass({
           <button onClick={this.send}>Send Response</button>
           <div className="split-pane">
             <Request prefill={this.state.presetCode} onChange={this.handleRequest} />
-            <Response />
+            <Response prefill={this.state.presetResponse} />
           </div>
         </div>
       </div>

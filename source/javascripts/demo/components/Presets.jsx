@@ -5,9 +5,9 @@ var Presets = React.createClass({
     return {
       task: 'taxForOrder',
       preset: {
-        nexus_address: _.first(this.data.presets.nexus_address),
-        line_items: [_.first(this.data.presets.line_items)],
-        to_addresses: _.first(this.data.presets.to_addresses),
+        nexus_address: _.first(this.data.presets.nexus_address.data),
+        line_items: [_.first(this.data.presets.line_items.data)],
+        to_addresses: _.first(this.data.presets.to_addresses.data),
         amount: this.data.defaults.amount,
         shipping: this.data.defaults.shipping
       }
@@ -67,7 +67,7 @@ var Presets = React.createClass({
     _.each(this.data.presets, function(preset, key) {
       var options = [];
 
-      _.each(preset, function(option) {
+      _.each(preset.data, function(option) {
         switch(option._type) {
           case 'address':
             options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderAddress(option)}</div>);
@@ -81,7 +81,13 @@ var Presets = React.createClass({
         }
       });
 
-      presets.push(<div key={'preset-' + key} className="preset">{options}</div>);
+      presets.push(
+        <div key={'preset-' + key} className="preset">
+          <h3>{preset._name}</h3>
+          <p>{preset._description}</p>
+          {options}
+        </div>
+      );
     });
 
     return (

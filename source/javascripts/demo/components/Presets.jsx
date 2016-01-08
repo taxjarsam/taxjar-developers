@@ -70,13 +70,13 @@ var Presets = React.createClass({
       _.each(preset.data, function(option) {
         switch(option._type) {
           case 'address':
-            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderAddress(option)}</div>);
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderAddress(option, key)}</div>);
             break;
           case 'location':
-            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderLocation(option)}</div>);
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderLocation(option, key)}</div>);
             break;
           case 'product':
-            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderProduct(option)}</div>);
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderProduct(option, key)}</div>);
             break;
         }
       });
@@ -94,26 +94,35 @@ var Presets = React.createClass({
       <div>{presets}</div>
     );
   },
-  renderAddress: function(option) {
+  renderAddress: function(option, presetKey) {
     var fromOrTo = (option.from_country) ? 'from_' : 'to_';
+    var checked = (this.state.preset[presetKey]._name === option._name) ? true : false;
+
     return (
       <div>
+        <input type="radio" checked={checked} value={option._name} readOnly />
         <h4>{option._name}</h4>
         <p>{option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
       </div>
     );
   },
-  renderLocation: function(option) {
+  renderLocation: function(option, presetKey) {
+    var checked = (this.state.preset[presetKey]._name === option._name) ? true : false;
+
     return (
       <div>
+        <input type="radio" checked={checked} value={option._name} readOnly />
         <h4>{option._name}</h4>
         <p>{option.city} {option.zip}</p>
       </div>
     );
   },
-  renderProduct: function(option) {
+  renderProduct: function(option, presetKey) {
+    var checked = (_.some(this.state.preset[presetKey], { id: option.id })) ? true : false;
+
     return (
       <div>
+        <input type="checkbox" checked={checked} value={option.id} readOnly />
         <h4>{option._name}</h4>
         <p>${option.unit_price}</p>
       </div>

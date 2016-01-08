@@ -1,6 +1,38 @@
 (function (window, document) {
   window.apiData = {
     "tasks": {
+      "ratesForLocation": {
+        "method": "GET",
+        "url": "https://api.taxjar.com/v2/rates/:zip",
+        "defaults": {
+          "zip": "90404"
+        },
+        "presets": {
+          "location": [
+            {
+              "_name": "New York",
+              "_type": "location",
+              "city": "New York",
+              "zip": "10118",
+              "country": "US"
+            },
+            {
+              "_name": "California",
+              "_type": "location",
+              "city": "San Francisco",
+              "zip": "94111",
+              "country": "US",
+            },
+            {
+              "_name": "Florida",
+              "_type": "location",
+              "city": "Miami",
+              "zip": "33132",
+              "country": "US",
+            }
+          ]
+        }
+      },
       "taxForOrder": {
         "method": "POST",
         "url": "https://api.taxjar.com/v2/taxes",
@@ -43,9 +75,25 @@
               "_name": "T-Shirt",
               "_type": "product",
               "_multiple": true,
-              "id": 123456,
+              "id": 1,
               "quantity": 1,
               "unit_price": 19.99
+            },
+            {
+              "_name": "Designer Boots",
+              "_type": "product",
+              "_multiple": true,
+              "id": 2,
+              "quantity": 1,
+              "unit_price": 199.85
+            },
+            {
+              "_name": "Gaming Console",
+              "_type": "product",
+              "_multiple": true,
+              "id": 3,
+              "quantity": 1,
+              "unit_price": 399.95
             }
           ],
           "to_addresses": [

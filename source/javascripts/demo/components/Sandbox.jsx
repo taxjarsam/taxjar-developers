@@ -17,9 +17,9 @@ var Sandbox = React.createClass({
   // componentWillReceiveProps: function() {
   //   console.log('component will receive props!');
   // },
-  handlePresets: function(presets) {
+  handlePresets: function(task, presets) {
     var newLine = '\n';
-    var code = ['taxjar.taxForOrder('];
+    var code = ['taxjar.' + task + '('];
     var propCount;
     var presetCount = 1;
     var trailing;

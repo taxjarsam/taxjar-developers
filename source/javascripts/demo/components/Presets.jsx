@@ -13,6 +13,9 @@ var Presets = React.createClass({
       }
     };
   },
+  componentDidMount: function() {
+    this.props.onChange(this.state.task, this.state.preset);
+  },
   selectTask: function(e) {
     var preset = {};
     this.data = apiData.tasks[e.target.value];
@@ -30,24 +33,32 @@ var Presets = React.createClass({
   selectOption: function(data) {
     var preset = this.state.preset;
     
-    if (data.option._type === 'product') {
-      var items = this.state.preset.line_items;
-      var amount = 0;
+    if (data.option._multiple === true) {
+      var items = preset[data.preset];
 
-      if (!_.some(items, { id: data.option.id })) items.push(data.option);
+      if (!_.some(items, { id: data.option.id })) {
+        items.push(data.option);
+      } else {
+        _.remove(items, { id: data.option.id });
+      }
       
-      _.each(items, function(item) {
-        amount += item.unit_price;
-      });
+      if (data.option.unit_price) {
+        var amount = 0;
+
+        _.each(items, function(item) {
+          amount += item.unit_price;
+        });
+
+        preset.amount = amount;
+      }
       
-      preset.line_items = items;
-      preset.amount = amount;
+      preset[data.preset] = items;
     } else {
       preset[data.preset] = data.option;
     }
     
-    // this.setState({ preset: preset });
-    _.defer(function() { this.props.onChange(this.state.preset); }.bind(this));
+    this.setState({ preset: preset });
+    _.defer(function() { this.props.onChange(this.state.task, this.state.preset); }.bind(this));
   },
   renderPresets: function() {
     var self = this;
@@ -60,6 +71,9 @@ var Presets = React.createClass({
         switch(option._type) {
           case 'address':
             options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderAddress(option)}</div>);
+            break;
+          case 'location':
+            options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderLocation(option)}</div>);
             break;
           case 'product':
             options.push(<div key={'option-' + option._name} onClick={self.selectOption.bind(self, { option: option, preset: key })}>{self.renderProduct(option)}</div>);
@@ -78,15 +92,23 @@ var Presets = React.createClass({
     var fromOrTo = (option.from_country) ? 'from_' : 'to_';
     return (
       <div>
-        <h4>{option.name}</h4>
+        <h4>{option._name}</h4>
         <p>{option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
+      </div>
+    );
+  },
+  renderLocation: function(option) {
+    return (
+      <div>
+        <h4>{option._name}</h4>
+        <p>{option.city} {option.zip}</p>
       </div>
     );
   },
   renderProduct: function(option) {
     return (
       <div>
-        <h4>{option.name}</h4>
+        <h4>{option._name}</h4>
         <p>${option.unit_price}</p>
       </div>
     );

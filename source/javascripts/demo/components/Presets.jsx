@@ -106,7 +106,7 @@ var Presets = React.createClass({
       <div className="option">
         <input type="radio" checked={checked} value={option._name} readOnly />
         <h4>{option._name}</h4>
-        <p>{option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
+        <p><i className={'fa fa-map-marker ' + fromOrTo + 'address' } />&nbsp; {option[fromOrTo+'street']}<br/>{option[fromOrTo+'city']}, {option[fromOrTo+'state']} {option[fromOrTo+'zip']}</p>
       </div>
     );
   },

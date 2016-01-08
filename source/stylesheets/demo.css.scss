@@ -66,15 +66,24 @@
     h4 {
       margin: 0;
       padding: 0;
+      font-size: 15px;
       
       + p {
         margin: 5px 0 0 30px;
+        
+        i {
+          color: #3EAD29;
+          
+          &.to_address {
+            color: #ED9903;
+          }
+        }
       }
     }
     
     input {
       float: left;
-      margin: 3px 15px 0 0;
+      margin: 2px 15px 0 0;
     }
   }
 }

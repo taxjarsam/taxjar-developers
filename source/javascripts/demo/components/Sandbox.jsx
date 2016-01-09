@@ -4,7 +4,7 @@ var Sandbox = React.createClass({
   getInitialState: function() {
     return {
       location: '350 5th Avenue, New York, NY 10118',
-      destination: '45 Rockefeller Plaza New York, NY'
+      destination: '668 Route Six, Mahopac, NY 10541'
     };
   },
   handlePresets: function(task, presets) {

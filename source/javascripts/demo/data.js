@@ -88,21 +88,31 @@
                 "_type": "product",
                 "id": 1,
                 "quantity": 1,
-                "unit_price": 19.99
+                "unit_price": 19.95,
+                "product_tax_code": "20010"
               },
               {
                 "_name": "Designer Boots",
                 "_type": "product",
                 "id": 2,
                 "quantity": 1,
-                "unit_price": 199.85
+                "unit_price": 199.85,
+                "product_tax_code": "20010"
               },
               {
-                "_name": "Gaming Console",
+                "_name": "Case of Hint Water",
                 "_type": "product",
                 "id": 3,
                 "quantity": 1,
-                "unit_price": 399.95
+                "unit_price": 16.95,
+                "product_tax_code": "40030"
+              },
+              {
+                "_name": "Playstation 4",
+                "_type": "product",
+                "id": 3,
+                "quantity": 1,
+                "unit_price": 499.95
               }
             ],
           },
@@ -113,30 +123,30 @@
               {
                 "_name": "New York",
                 "_type": "address",
-                "to_street": "45 Rockefeller Plaza",
-                "to_city": "New York",
+                "to_street": "668 Route Six",
+                "to_city": "Mahopac",
                 "to_state": "NY",
-                "to_zip": "10111",
+                "to_zip": "10541",
                 "to_country": "US"
               },
               {
-                "_name": "Kansas City",
+                "_name": "California",
                 "_type": "address",
-                "to_street": "30 W Pershing Rd",
-                "to_city": "Kansas City",
-                "to_state": "MO",
-                "to_zip": "64108",
+                "to_street": "33 N. First Street",
+                "to_city": "Campbell",
+                "to_state": "CA",
+                "to_zip": "95008",
                 "to_country": "US"
               },
               {
-                "_name": "Seattle",
+                "_name": "Florida",
                 "_type": "address",
-                "to_street": "400 Broad St",
-                "to_city": "Seattle",
-                "to_state": "WA",
-                "to_zip": "98109",
+                "to_street": "200 S Orange Ave",
+                "to_city": "Orlando",
+                "to_state": "FL",
+                "to_zip": "32801",
                 "to_country": "US"
-              }    
+              } 
             ]
           }
         }

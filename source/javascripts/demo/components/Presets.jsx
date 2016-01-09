@@ -95,7 +95,7 @@ var Presets = React.createClass({
     });
 
     return (
-      <div className="presets">{presets}</div>
+      <div>{presets}</div>
     );
   },
   renderAddress: function(option, presetKey) {

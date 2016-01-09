@@ -80,7 +80,7 @@
           },
           "line_items": {
             "_name": "Products",
-            "_description": "Build a customer order! Choose products to calculate sales tax for.",
+            "_description": "Build a customer order! Choose products to calculate sales tax for. $10 flat shipping applied to all orders.",
             "_multiple": true,
             "data": [
               {

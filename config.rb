@@ -19,7 +19,9 @@ activate :react
 activate :syntax
 
 ignore 'bower_components/*'
-ignore 'javascripts/components/*'
+ignore 'javascripts/demo/*'
+ignore 'javascripts/demo/**'
+ignore 'stylesheets/*/**'
 
 after_configuration do
   sprockets.register_postprocessor 'application/javascript', ::Sprockets::CommonJS

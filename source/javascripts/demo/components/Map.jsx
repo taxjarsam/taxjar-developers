@@ -97,8 +97,7 @@ var Map = React.createClass({
           coordinates: this.state.locationCoords
         },
         properties: {
-          'title': (this.state.metadata) ? this.state.metadata.location.title : null,
-          'address': (this.state.metadata) ? this.state.metadata.location.address : null,
+          'tooltip': (this.state.metadata) ? this.state.metadata.location.tooltip : null,
           'marker-color': '#3FAE2A',
           'marker-symbol': 'industrial'
         }
@@ -113,8 +112,7 @@ var Map = React.createClass({
           coordinates: this.state.destinationCoords
         },
         properties: {
-          'title': (this.state.metadata) ? this.state.metadata.destination.title : null,
-          'address': (this.state.metadata) ? this.state.metadata.destination.address : null,
+          'tooltip': (this.state.metadata) ? this.state.metadata.destination.tooltip : null,
           'marker-color': '#EF9A04',
           'marker-symbol': 'star'
         }
@@ -148,9 +146,8 @@ var Map = React.createClass({
     
     this.layer.on('mouseover', function(e) {
       var feature = e.layer.feature;
-      var context = '';
       
-      if (!feature.properties.address) return;
+      if (!feature.properties.tooltip) return;
       
       _.each(features, function(feature) {
         feature.properties['marker-size'] = 'medium';
@@ -162,23 +159,8 @@ var Map = React.createClass({
         type: 'FeatureCollection',
         features: features
       });
-      
-      _.each(apiData.tasks.taxForOrder.presets, function(preset) {
-        _.each(preset.data, function(item) {
-          if (item._type === 'address') {
-            if ((item.from_street && item.from_street === feature.properties.address[0]) || (item.to_street && item.to_street === feature.properties.address[0])) {
-              context = item._context;
-            }
-          }
-        });
-      });
-      
-      var content = '<div>';
-      content += '<h6>' + feature.properties.title + '</h6>';
-      content += '<p><i class="fa fa-map-marker"></i>&nbsp; ' + feature.properties.address[0] + '<br/>' + feature.properties.address[1] + ', ' + feature.properties.address[2] + ' ' + feature.properties.address[3] + '</p>';
-      if (context) content += '<p class="context">' + context + '</p>';
-      content += '</div>';
-      self.setState({ tooltip: content });
+
+      self.setState({ tooltip: feature.properties.tooltip });
     });
     
     if (features.length === 1 && this.state.locationCoords) {

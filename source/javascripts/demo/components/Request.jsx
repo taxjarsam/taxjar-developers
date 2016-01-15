@@ -1,4 +1,5 @@
 var rocambole = require('demo/vendor/rocambole');
+var fmt = require('demo/vendor/fmt');
 
 var Request = React.createClass({
   getInitialState: function() {
@@ -123,12 +124,10 @@ var Request = React.createClass({
         destination: toAddress.join(' '),
         mapData: {
           location: {
-            title: 'Origin',
-            address: fromAddress
+            tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressContext(method, fromAddress[0]))
           },
           destination: {
-            title: 'Destination',
-            address: toAddress
+            tooltip: fmt('<div><h6>Destination</h6><p><i class="fa fa-map-marker"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', toAddress[0], toAddress[1], toAddress[2], toAddress[3], this.findAddressContext(method, toAddress[0]))
           }
         }
       });
@@ -140,6 +139,25 @@ var Request = React.createClass({
         location: methodArgs[0] + extraParams,
         destination: null
       });
+    }
+  },
+  findAddressContext: function(method, address) {
+    var matches = [];
+    
+    _.each(apiData.tasks[method].presets, function(preset) {
+      matches = _.filter(preset.data, function(item) {
+        if (item._type === 'address') {
+          if ((item.from_street && item.from_street === address) || (item.to_street && item.to_street === address)) {
+            return true;
+          }
+        }
+      });
+    });
+    
+    if (matches.length) {
+      return _.head(matches)._context;
+    } else {
+      return '';
     }
   },
   render: function() {

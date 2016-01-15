@@ -1,7 +1,6 @@
 //= require classnames
 //= require esprima
 //= require lodash
-//= require lodash-deep
 //= require clipboard
 //= require env
 //= require ./demo/data

@@ -5,6 +5,7 @@ var Map = React.createClass({
     };
   },
   componentDidMount: function(argument) {
+    var self = this;
     var props = this.props;
     var mapId = props.mapId || props.src || 'mapbox.streets';
     var options = {};
@@ -19,6 +20,7 @@ var Map = React.createClass({
     this.map = L.mapbox.map(ReactDOM.findDOMNode(this), mapId, options);
     this.layer = L.mapbox.featureLayer().addTo(this.map);
     this.geocoder = L.mapbox.geocoder('mapbox.places');
+    this.features = [];
 
     if (this.props.disableDragAndZoom) {
       this.map.dragging.disable();
@@ -39,6 +41,29 @@ var Map = React.createClass({
     if (this.props.destination) {
       this.setDestination(this.props.destination);
     }
+    
+    this.layer.on('click', function(e) {
+      e.layer.closePopup();
+    });
+    
+    this.layer.on('mouseover', function(e) {
+      var feature = e.layer.feature;
+      
+      if (!feature.properties.tooltip) return;
+      
+      _.each(self.features, function(feature) {
+        feature.properties['marker-size'] = 'medium';
+      });
+
+      feature.properties['marker-size'] = 'large';
+
+      self.layer.setGeoJSON({
+        type: 'FeatureCollection',
+        features: self.features
+      });
+
+      self.setState({ tooltip: feature.properties.tooltip });
+    });
   },
   componentWillUpdate: function(nextProps) {
     if (nextProps.location !== this.props.location) {
@@ -87,10 +112,11 @@ var Map = React.createClass({
   },
   updateMap: function() {
     var self = this;
-    var features = [];
+    
+    this.features = [];
     
     if (this.state.locationCoords) {
-      features.push({
+      this.features.push({
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -105,7 +131,7 @@ var Map = React.createClass({
     }
     
     if (this.state.destinationCoords) {
-      features.push({
+      this.features.push({
         type: 'Feature',
         geometry: {
           type: 'Point',
@@ -120,7 +146,7 @@ var Map = React.createClass({
     }
     
     if (this.state.locationCoords && this.state.destinationCoords) {
-      features.push({
+      this.features.push({
         type: 'Feature',
         properties: {
           color: '#000'
@@ -137,33 +163,10 @@ var Map = React.createClass({
     
     this.layer.setGeoJSON({
       type: 'FeatureCollection',
-      features: features
+      features: this.features
     });
     
-    this.layer.on('click', function(e) {
-      e.layer.closePopup();
-    });
-    
-    this.layer.on('mouseover', function(e) {
-      var feature = e.layer.feature;
-      
-      if (!feature.properties.tooltip) return;
-      
-      _.each(features, function(feature) {
-        feature.properties['marker-size'] = 'medium';
-      });
-
-      feature.properties['marker-size'] = 'large';
-
-      self.layer.setGeoJSON({
-        type: 'FeatureCollection',
-        features: features
-      });
-
-      self.setState({ tooltip: feature.properties.tooltip });
-    });
-    
-    if (features.length === 1 && this.state.locationCoords) {
+    if (this.features.length === 1 && this.state.locationCoords) {
       var location = this.state.locationCoords.slice().reverse();
       this.map.setView(location, 12);
     } else {
@@ -186,7 +189,7 @@ var Map = React.createClass({
     };
 
     return (
-      <div style={mapStyle}>
+      <div className="map" style={mapStyle}>
         {this.renderTooltip()}
       </div>
     );

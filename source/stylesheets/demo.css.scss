@@ -74,14 +74,6 @@
       
       + p {
         margin: 5px 0 0 30px;
-        
-        i {
-          color: #3EAD29;
-          
-          &.to_address {
-            color: #ED9903;
-          }
-        }
       }
     }
     
@@ -90,6 +82,14 @@
       margin: 2px 15px 0 0;
     }
   }
+}
+
+.fa-map-marker.from_address {
+  color: #3EAD29;
+}
+
+.fa-map-marker.to_address {
+  color: #ED9903;
 }
 
 .editor {
@@ -160,33 +160,36 @@
   }
 }
 
+.map {
+  cursor: default;
+}
+
 .map__tooltip {
   position: absolute;
   top: 10px;
   right: 20px;
   width: 280px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  color: #fff;
-  padding: 10px;
+  color: #ddd;
+  padding: 20px 20px 10px;
   background: rgba(52, 52, 52, 0.92);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 3px;
   z-index: 2;
   cursor: default;
+  // pointer-events: none;
+  
+  h6 {
+    color: #fff;
+  }
   
   p {
     font-size: 13px !important;
     
-    &:last-child {
-      margin-bottom: 0;
-    }
-    
-    &.context {
-      opacity: 0.8;
-    }
-    
     a {
-      color: #47C052;
+      color: #fff;
+      font-weight: bold;
+
       &:hover {
         color: #47C052;
       }

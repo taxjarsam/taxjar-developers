@@ -124,10 +124,10 @@ var Request = React.createClass({
         destination: toAddress.join(' '),
         metadata: {
           location: {
-            tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressContext(method, fromAddress[0]))
+            tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker from_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressContext(method, fromAddress[0]))
           },
           destination: {
-            tooltip: fmt('<div><h6>Destination</h6><p><i class="fa fa-map-marker"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', toAddress[0], toAddress[1], toAddress[2], toAddress[3], this.findAddressContext(method, toAddress[0]))
+            tooltip: fmt('<div><h6>Destination</h6><p><i class="fa fa-map-marker to_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', toAddress[0], toAddress[1], toAddress[2], toAddress[3], this.findAddressContext(method, toAddress[0]))
           }
         }
       });

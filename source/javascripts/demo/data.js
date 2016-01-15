@@ -65,7 +65,7 @@
                 "from_city": "San Francisco",
                 "from_state": "CA",
                 "from_zip": "94111",
-                "from_country": "US",
+                "from_country": "US"
               },
               {
                 "_name": "Florida",
@@ -74,7 +74,16 @@
                 "from_city": "Miami",
                 "from_state": "FL",
                 "from_zip": "33132",
-                "from_country": "US",
+                "from_country": "US"
+              },
+              {
+                "_name": "British Columbia",
+                "_type": "address",
+                "from_street": "845 Avison Way",
+                "from_city": "Vancouver",
+                "from_state": "BC",
+                "from_zip": "V6G 3E2",
+                "from_country": "CA"
               }
             ]
           },
@@ -146,7 +155,16 @@
                 "to_state": "FL",
                 "to_zip": "32801",
                 "to_country": "US"
-              } 
+              },
+              {
+                "_name": "Ontario",
+                "_type": "address",
+                "to_street": "301 Front St W",
+                "to_city": "Toronto",
+                "to_state": "ON",
+                "to_zip": "M5V 2T6",
+                "to_country": "CA"
+              }
             ]
           }
         }

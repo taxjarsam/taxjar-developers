@@ -103,11 +103,12 @@ var Request = React.createClass({
           self.setState({ runStatus: 'Done' });
           _.delay(function() { self.setState({ runStatus: 'Run' }); }, 1000);
           self.props.onChange({ presetResponse: responseText, errorResponse: null, loadingResponse: false });
+          self.updateMarkers(method, methodParams, res);
         }
       });  
     }
-
-    // Update map markers
+  },
+  updateMarkers: function(method, methodParams, response) {
     if (method === 'taxForOrder') {
       var fromAddress = [];
       var toAddress = [];
@@ -119,7 +120,17 @@ var Request = React.createClass({
 
       this.props.onChange({
         location: fromAddress.join(' '),
-        destination: toAddress.join(' ')
+        destination: toAddress.join(' '),
+        mapData: {
+          location: {
+            title: 'Origin',
+            address: fromAddress
+          },
+          destination: {
+            title: 'Destination',
+            address: toAddress
+          }
+        }
       });
     }
     

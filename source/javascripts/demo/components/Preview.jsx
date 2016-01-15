@@ -6,6 +6,7 @@ var Preview = React.createClass({
           mapId="mapbox.streets"
           location={this.props.location}
           destination={this.props.destination}
+          metadata={this.props.metadata}
           disableDragAndZoom={true}
           zoomControl={false}
           center={[59.907433, 30.299848]}

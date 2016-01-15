@@ -1,4 +1,9 @@
 var Map = React.createClass({
+  getInitialState: function() {
+    return {
+      tooltip: ''
+    };
+  },
   componentDidMount: function(argument) {
     var props = this.props;
     var mapId = props.mapId || props.src || 'mapbox.streets';
@@ -42,6 +47,9 @@ var Map = React.createClass({
     if (nextProps.destination !== this.props.destination) {
       this.setDestination(nextProps.destination);
     }
+    if (nextProps.metadata !== this.props.metadata) {
+      this.setState({ metadata: nextProps.metadata });
+    }
   },
   setLocation: function(location) {
     var self = this;
@@ -78,6 +86,7 @@ var Map = React.createClass({
     });
   },
   updateMap: function() {
+    var self = this;
     var features = [];
     
     if (this.state.locationCoords) {
@@ -88,7 +97,8 @@ var Map = React.createClass({
           coordinates: this.state.locationCoords
         },
         properties: {
-          // 'title': 'Here I am!',
+          'title': (this.state.metadata) ? this.state.metadata.location.title : null,
+          'address': (this.state.metadata) ? this.state.metadata.location.address : null,
           'marker-color': '#3FAE2A',
           'marker-symbol': 'industrial'
         }
@@ -103,7 +113,8 @@ var Map = React.createClass({
           coordinates: this.state.destinationCoords
         },
         properties: {
-          // 'title': 'Here I am!',
+          'title': (this.state.metadata) ? this.state.metadata.destination.title : null,
+          'address': (this.state.metadata) ? this.state.metadata.destination.address : null,
           'marker-color': '#EF9A04',
           'marker-symbol': 'star'
         }
@@ -131,11 +142,59 @@ var Map = React.createClass({
       features: features
     });
     
+    this.layer.on('click', function(e) {
+      e.layer.closePopup();
+    });
+    
+    this.layer.on('mouseover', function(e) {
+      var feature = e.layer.feature;
+      var context = '';
+      
+      if (!feature.properties.address) return;
+      
+      _.each(features, function(feature) {
+        feature.properties['marker-size'] = 'medium';
+      });
+
+      feature.properties['marker-size'] = 'large';
+
+      self.layer.setGeoJSON({
+        type: 'FeatureCollection',
+        features: features
+      });
+      
+      _.each(apiData.tasks.taxForOrder.presets, function(preset) {
+        _.each(preset.data, function(item) {
+          if (item._type === 'address') {
+            if ((item.from_street && item.from_street === feature.properties.address[0]) || (item.to_street && item.to_street === feature.properties.address[0])) {
+              context = item._context;
+            }
+          }
+        });
+      });
+      
+      var content = '<div>';
+      content += '<h6>' + feature.properties.title + '</h6>';
+      content += '<p><i class="fa fa-map-marker"></i>&nbsp; ' + feature.properties.address[0] + '<br/>' + feature.properties.address[1] + ', ' + feature.properties.address[2] + ' ' + feature.properties.address[3] + '</p>';
+      if (context) content += '<p class="context">' + context + '</p>';
+      content += '</div>';
+      self.setState({ tooltip: content });
+    });
+    
     if (features.length === 1 && this.state.locationCoords) {
       var location = this.state.locationCoords.slice().reverse();
       this.map.setView(location, 12);
     } else {
-      this.map.fitBounds(this.layer.getBounds());
+      this.map.fitBounds(this.layer.getBounds(), {
+        padding: [25, 25]
+      });
+    }
+  },
+  renderTooltip: function() {
+    if (this.state.tooltip) {
+      return (
+        <div ref="tooltip" className="map__tooltip"><div dangerouslySetInnerHTML={{__html: this.state.tooltip}} /></div>
+      );
     }
   },
   render: function() {
@@ -145,7 +204,9 @@ var Map = React.createClass({
     };
 
     return (
-      <div style={mapStyle}></div>
+      <div style={mapStyle}>
+        {this.renderTooltip()}
+      </div>
     );
   }
 });

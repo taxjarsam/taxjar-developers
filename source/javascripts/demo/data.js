@@ -132,6 +132,7 @@
               {
                 "_name": "New York",
                 "_type": "address",
+                "_context": "Clothing items sold in New York under $110 are exempt from the state tax rate, but only exempt from county taxes in certain jurisdictions. <a href='http://developers.taxjar.com/api/guides/#product-exemptions' target='_blank'>Learn More</a>",
                 "to_street": "668 Route Six",
                 "to_city": "Mahopac",
                 "to_state": "NY",

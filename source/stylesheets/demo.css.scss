@@ -160,6 +160,40 @@
   }
 }
 
+.map__tooltip {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 280px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  color: #fff;
+  padding: 10px;
+  background: rgba(52, 52, 52, 0.92);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  z-index: 2;
+  cursor: default;
+  
+  p {
+    font-size: 13px !important;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &.context {
+      opacity: 0.8;
+    }
+    
+    a {
+      color: #47C052;
+      &:hover {
+        color: #47C052;
+      }
+    }
+  }
+}
+
 .header {
   color: #fff;
   background: #343434;

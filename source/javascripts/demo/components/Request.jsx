@@ -122,7 +122,7 @@ var Request = React.createClass({
       this.props.onChange({
         location: fromAddress.join(' '),
         destination: toAddress.join(' '),
-        mapData: {
+        metadata: {
           location: {
             tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressContext(method, fromAddress[0]))
           },

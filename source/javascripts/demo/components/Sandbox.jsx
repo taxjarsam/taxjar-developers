@@ -56,7 +56,7 @@ var Sandbox = React.createClass({
           <Presets onChange={this.handlePresets} />
         </div>
         <div className="editor">
-          <Preview type="map" location={this.state.location} destination={this.state.destination} metadata={this.state.mapData} />
+          <Preview type="map" location={this.state.location} destination={this.state.destination} metadata={this.state.metadata} />
           <div className="split-pane">
             <Request prefill={this.state.presetCode} task={this.state.task} onChange={this.handleRequest} />
             <Response prefill={this.state.presetResponse} task={this.state.task} loading={this.state.loadingResponse} error={this.state.errorResponse} />

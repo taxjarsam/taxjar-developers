@@ -10,17 +10,17 @@ var Response = React.createClass({
     }
   },
   renderState: function() {
-    if (this.props.loading) {
+    if (this.props.error) {
       return (
-        <div className="loader">Loading!</div>
-      );
-    } else if (this.props.error) {
-      return (
-        <div className="error">{this.props.error}</div>
+        <div className="state">
+          <div className="error">{this.props.error}.</div>
+        </div>
       );
     } else if (_.isEmpty(this.state.response)) {
       return (
-        <div className="empty">Do something!</div>
+        <div className="state">
+          <div className="empty"><p>Click <RunButton /> to calculate sales tax for this order.</p></div>
+        </div>
       );
     }
   },
@@ -40,9 +40,7 @@ var Response = React.createClass({
             <CopyButton text={this.state.response} />
           </div>
         </div>
-        <div className="state">
-          {this.renderState()}
-        </div>
+        {this.renderState()}
         <Editor ref="editor" value={this.state.response} options={options} />
       </div>
     );

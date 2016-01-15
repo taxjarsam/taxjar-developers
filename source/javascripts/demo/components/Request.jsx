@@ -92,14 +92,17 @@ var Request = React.createClass({
           'Authorization': 'Bearer ' + window.apiToken
         },
         error: function(err) {
-          self.props.onChange({ errorResponse: err.responseText, loadingResponse: false });
+          err = JSON.parse(err.responseText);
+          self.props.onChange({ errorResponse: err.detail, loadingResponse: false });
+          self.setState({ runStatus: 'Error' });
+          _.delay(function() { self.setState({ runStatus: 'Run' }); }, 3000);
         },
         success: function(res) {
           res = _.result(res, Object.keys(res)[0]);
           responseText = JSON.stringify(res, null, 2);
           self.setState({ runStatus: 'Done' });
           _.delay(function() { self.setState({ runStatus: 'Run' }); }, 1000);
-          self.props.onChange({ presetResponse: responseText, loadingResponse: false });
+          self.props.onChange({ presetResponse: responseText, errorResponse: null, loadingResponse: false });
         }
       });  
     }

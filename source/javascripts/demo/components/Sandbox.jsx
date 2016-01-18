@@ -40,8 +40,11 @@ var Sandbox = React.createClass({
         });
       }
     });
+    
+    var dataJson = JSON.stringify(data, null, 2);
+    dataJson = dataJson.replace(/\"([^(\")"]+)\":/g, "$1:");
 
-    code += JSON.stringify(data, null, 2);
+    code += dataJson;
     code += ');';
 
     this.setState({ presetCode: code, task: task });

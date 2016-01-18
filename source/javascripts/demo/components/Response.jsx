@@ -27,7 +27,7 @@ var Response = React.createClass({
   render: function() {
     var options = {
       mode: 'javascript',
-      theme: 'railscasts',
+      theme: 'taxjar',
       scrollbarStyle: 'overlay',
       readOnly: true
     };

@@ -43,6 +43,7 @@ var Sandbox = React.createClass({
     
     var dataJson = JSON.stringify(data, null, 2);
     dataJson = dataJson.replace(/\"([^(\")"]+)\":/g, "$1:");
+    dataJson = dataJson.replace(/([^(\")"]+):\s\"([^(\")"]+)\"/g, "$1: '$2'");
 
     code += dataJson;
     code += ');';

@@ -46,6 +46,10 @@ var Map = React.createClass({
       e.layer.closePopup();
     });
     
+    this.map.on('mouseover', function(e) {
+      self.setState({ tooltip: self.props.tooltip });
+    });
+    
     this.layer.on('mouseover', function(e) {
       var feature = e.layer.feature;
       

@@ -44,6 +44,11 @@
           "amount": 19.99,
           "shipping": 10
         },
+        "contexts": {
+          "NY": "<ul><li>Food & grocery items are exempt from all sales tax.</li><li>Clothing items sold in New York under $110 are exempt from the state tax rate, but only exempt from county taxes in certain jurisdictions. <a href='http://developers.taxjar.com/api/guides/#product-exemptions' target='_blank'>Learn More &raquo;</a></li><li>Shipping costs are taxable.</li></ul>",
+          "CA": "<ul><li>Food & grocery items are exempt from all sales tax.</li><li>Shipping costs, if stated separately, are exempt from sales tax.</li><li>While you have the option to collect all state and local taxes based on the address of delivery, you technically only need to collect local taxes in jurisdictions you share.</li></ul>",
+          "FL": "<ul><li>All of the product categories listed are fully taxable in Florida, as is shipping.</li></ul>"
+        },
         "presets": {
           "nexus_address": {
             "_name": "Nexus Address",
@@ -132,7 +137,6 @@
               {
                 "_name": "New York",
                 "_type": "address",
-                "_context": "Clothing items sold in New York under $110 are exempt from the state tax rate, but only exempt from county taxes in certain jurisdictions. <a href='http://developers.taxjar.com/api/guides/#product-exemptions' target='_blank'>Learn More &raquo;</a>",
                 "to_street": "668 Route Six",
                 "to_city": "Mahopac",
                 "to_state": "NY",

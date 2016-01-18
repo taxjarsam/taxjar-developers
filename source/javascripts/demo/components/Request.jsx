@@ -113,21 +113,33 @@ var Request = React.createClass({
     if (method === 'taxForOrder') {
       var fromAddress = [];
       var toAddress = [];
+      var tooltip = '';
 
       _.each(methodParams, function(param, key) {
         if (key.indexOf('from_') !== -1) fromAddress.push(param);
         if (key.indexOf('to_') !== -1) toAddress.push(param);
       });
+      
+      if (methodParams.from_state === methodParams.to_state) {
+        if (apiData.tasks[method].contexts[methodParams.from_state]) {
+          var stateName = this.findAddressParam(method, methodParams.from_street, '_name');
+          tooltip = '<div>';
+          if (stateName) tooltip += '<h6>' + stateName + '</h6>';
+          tooltip += apiData.tasks[method].contexts[methodParams.from_state];
+          tooltip += '</div>';
+        }
+      }
 
       this.props.onChange({
         location: fromAddress.join(' '),
         destination: toAddress.join(' '),
+        tooltip: tooltip,
         metadata: {
           location: {
-            tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker from_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressContext(method, fromAddress[0]))
+            tooltip: fmt('<div><h6>Origin</h6><p><i class="fa fa-map-marker from_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', fromAddress[0], fromAddress[1], fromAddress[2], fromAddress[3], this.findAddressParam(method, fromAddress[0], 'context'))
           },
           destination: {
-            tooltip: fmt('<div><h6>Destination</h6><p><i class="fa fa-map-marker to_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', toAddress[0], toAddress[1], toAddress[2], toAddress[3], this.findAddressContext(method, toAddress[0]))
+            tooltip: fmt('<div><h6>Destination</h6><p><i class="fa fa-map-marker to_address"></i>&nbsp; %s<br/>%s, %s %s</p><p class="context">%s</p></div>', toAddress[0], toAddress[1], toAddress[2], toAddress[3], this.findAddressParam(method, toAddress[0], 'context'))
           }
         }
       });
@@ -141,21 +153,21 @@ var Request = React.createClass({
       });
     }
   },
-  findAddressContext: function(method, address) {
+  findAddressParam: function(method, address, param) {
     var matches = [];
     
     _.each(apiData.tasks[method].presets, function(preset) {
-      matches = _.filter(preset.data, function(item) {
+      _.each(preset.data, function(item) {
         if (item._type === 'address') {
-          if ((item.from_street && item.from_street === address) || (item.to_street && item.to_street === address)) {
-            return true;
+          if ((item.from_street && item.from_street == address) || (item.to_street && item.to_street == address)) {
+            matches.push(item);
           }
         }
       });
     });
     
     if (matches.length) {
-      return _.head(matches)._context || '';
+      return _.head(matches)[param] || '';
     } else {
       return '';
     }

@@ -75,6 +75,9 @@ var Map = React.createClass({
     if (nextProps.metadata !== this.props.metadata) {
       this.setState({ metadata: nextProps.metadata });
     }
+    if (nextProps.tooltip != this.props.tooltip) {
+      this.setState({ tooltip: nextProps.tooltip });
+    }
   },
   setLocation: function(location) {
     var self = this;

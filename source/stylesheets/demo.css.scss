@@ -31,10 +31,6 @@
   z-index: 2;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.12);
   
-  .presets > select {
-    display: none;
-  }
-  
   .preset {
     margin: 20px 0 0;
     border-bottom: 1px solid #E5E5E5;
@@ -179,19 +175,40 @@
   cursor: default;
   // pointer-events: none;
   
+  a {
+    color: #fff !important;
+    font-weight: bold !important;
+
+    &:hover {
+      color: #47C052 !important;
+    }
+  }
+  
   h6 {
     color: #fff;
   }
   
-  p {
+  p, li {
     font-size: 13px !important;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0 0 0 16px;
     
-    a {
-      color: #fff;
-      font-weight: bold;
-
-      &:hover {
+    li {
+      position: relative;
+      list-style: none;
+      margin-bottom: 10px;
+      
+      &:before {
+        position: absolute;
+        display: block;
+        font-family: FontAwesome;
         color: #47C052;
+        content: "\f00c";
+        top: 0;
+        left: -20px;
       }
     }
   }

@@ -155,7 +155,7 @@ var Request = React.createClass({
     });
     
     if (matches.length) {
-      return _.head(matches)._context;
+      return _.head(matches)._context || '';
     } else {
       return '';
     }

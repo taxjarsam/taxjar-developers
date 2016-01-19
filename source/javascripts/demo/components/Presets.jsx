@@ -135,10 +135,12 @@ var Presets = React.createClass({
   render: function() {
     return (
       <div className="presets">
-        <select onChange={this.selectTask} value={this.state.task}>
-          <option value="ratesForLocation">Show tax rates for a location</option>
-          <option value="taxForOrder">Calculate sales tax for an order</option>
-        </select>
+        <div className="presets__menu">
+          <select onChange={this.selectTask} value={this.state.task}>
+            <option value="ratesForLocation">Show tax rates for a location</option>
+            <option value="taxForOrder">Calculate sales tax for an order</option>
+          </select>
+        </div>
         {this.renderPresets()}
       </div>
     );

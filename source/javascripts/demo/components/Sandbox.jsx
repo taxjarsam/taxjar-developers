@@ -4,7 +4,13 @@ var Sandbox = React.createClass({
   getInitialState: function() {
     return {
       location: '350 5th Avenue, New York, NY 10118',
-      destination: '668 Route Six, Mahopac, NY 10541'
+      destination: '668 Route Six, Mahopac, NY 10541',
+      initialMarkers: [
+        '350 5th Avenue, New York, NY 10118',
+        '600 Montgomery St, San Francisco, CA 94111',
+        '200 S Orange Ave, Orlando, FL 32801'
+      ],
+      tooltip: "<div><h6>Getting Started</h6><p>We chose these states and products to illustrate how varied sales tax treatments can be. Some products are exempt in certain states, but not others. Sometimes, they're exempt in some local jurisdictions within a state, but not all. In some states, shipping is taxable, in others it's not.</p><p><b>Play around with different options on the left and click \"Run\" to get started!</b></p>"
     };
   },
   handlePresets: function(task, presets) {
@@ -60,7 +66,7 @@ var Sandbox = React.createClass({
           <Presets onChange={this.handlePresets} />
         </div>
         <div className="editor">
-          <Preview type="map" location={this.state.location} destination={this.state.destination} metadata={this.state.metadata} tooltip={this.state.tooltip} />
+          <Preview type="map" location={this.state.location} destination={this.state.destination} metadata={this.state.metadata} tooltip={this.state.tooltip} initialMarkers={this.state.initialMarkers} />
           <div className="split-pane">
             <Request prefill={this.state.presetCode} task={this.state.task} onChange={this.handleRequest} />
             <Response prefill={this.state.presetResponse} task={this.state.task} loading={this.state.loadingResponse} error={this.state.errorResponse} />

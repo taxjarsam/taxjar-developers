@@ -8,6 +8,7 @@ var Preview = React.createClass({
           destination={this.props.destination}
           metadata={this.props.metadata}
           tooltip={this.props.tooltip}
+          initialMarkers={this.props.initialMarkers}
           disableDragAndZoom={true}
           zoomControl={false}
           center={[59.907433, 30.299848]}

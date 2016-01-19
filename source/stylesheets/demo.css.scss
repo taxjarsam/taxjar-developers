@@ -94,6 +94,12 @@
   flex: 1;
 }
 
+.presets {
+  .presets__menu {
+    display: none;
+  }
+}
+
 .preview {
   min-height: 320px;
   height: 320px;

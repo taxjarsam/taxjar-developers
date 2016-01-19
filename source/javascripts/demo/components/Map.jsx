@@ -34,12 +34,12 @@ var Map = React.createClass({
       this.props.onMapCreated(this.map, L);
     }
     
-    if (this.props.location) {
-      this.setLocation(this.props.location);
+    if (this.props.initialMarkers) {
+      this.setInitialMarkers();
     }
     
-    if (this.props.destination) {
-      this.setDestination(this.props.destination);
+    if (this.props.tooltip) {
+      this.setState({ tooltip: this.props.tooltip });
     }
     
     this.layer.on('click', function(e) {
@@ -82,6 +82,43 @@ var Map = React.createClass({
     if (nextProps.tooltip != this.props.tooltip) {
       this.setState({ tooltip: nextProps.tooltip });
     }
+  },
+  setInitialMarkers: function() {
+    var self = this;
+    var addresses = this.props.initialMarkers;
+    var addressPromises = [];
+    
+    _.each(addresses, function(address, i) {
+      addressPromises.push(new Promise(function(resolve, reject) {
+        self.geocoder.query(address, function(err, data) {
+          if (data.latlng) {
+            var feature = {
+              type: 'Feature',
+              geometry: {
+                type: 'Point',
+                coordinates: [data.latlng[1], data.latlng[0]]
+              },
+              properties: {
+                'marker-color': '#3FAE2A',
+                'marker-symbol': 'circle'
+              }
+            };
+            resolve(feature);
+          } else {
+            reject();
+          }
+        });
+      }));
+    });
+    
+    Promise.all(addressPromises).then(function(features) {
+      self.layer.setGeoJSON({
+        type: 'FeatureCollection',
+        features: features
+      });
+
+      self.map.setView([36.795132, -82.402986], 4);
+    });
   },
   setLocation: function(location) {
     var self = this;

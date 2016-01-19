@@ -15,10 +15,19 @@ end
 
 activate :directory_indexes
 activate :meta_tags
+activate :react
 activate :syntax
 
-sprockets.append_path File.join "#{root}", "source/bower_components"
 ignore 'bower_components/*'
+ignore 'javascripts/demo/*'
+ignore 'javascripts/demo/**'
+ignore 'stylesheets/*/**'
+
+after_configuration do
+  sprockets.register_postprocessor 'application/javascript', ::Sprockets::CommonJS
+  sprockets.append_path File.join "#{root}", "source/bower_components"
+  sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
+end
 
 page '/error.html', :directory_index => false
 

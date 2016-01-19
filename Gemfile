@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem "middleman", "~>3.3.11"
 gem "middleman-blog"
 gem "middleman-meta-tags"
+gem "middleman-react"
 gem "middleman-syntax"
 
 # Live-reloading plugin
@@ -18,6 +19,9 @@ gem "redcarpet"
 
 # Blog post summaries
 gem "nokogiri"
+
+# CommonJS
+gem "sprockets-commonjs"
 
 # Deployment
 gem "s3_website"

@@ -1,4 +1,3 @@
-//= require_tree .
 //= require particles.js/particles.js
 //= require walkway.js/src/walkway.js
 

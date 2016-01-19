@@ -12,6 +12,7 @@
 .sandbox {
   display: flex;
   position: relative;
+  min-width: 900px;
   width: 100%;
   height: 100%;
   top: 0;
@@ -301,5 +302,19 @@
       opacity: 0.6;
       cursor: default;
     }
+  }
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    width: 260px;
+  }
+  
+  .map__tooltip {
+    display: none;
+  }
+  
+  .request .toolbar .toolbar__btn:nth-child(2) {
+    display: none;
   }
 }

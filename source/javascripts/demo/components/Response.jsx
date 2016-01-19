@@ -37,7 +37,7 @@ var Response = React.createClass({
         <div className="header">
           <h3>Response</h3>
           <div className="toolbar">
-            <CopyButton text={this.state.response} />
+            <CopyButton text={this.state.response || ' '} />
           </div>
         </div>
         {this.renderState()}

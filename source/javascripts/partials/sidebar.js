@@ -20,7 +20,7 @@
   $(window).resize(function() {
     var viewportWidth = $(window).outerWidth();
 
-    if (viewportWidth > 768) {
+    if (viewportWidth > 1140) {
       sidebar.parent().removeClass('collapsed');
     }
   });

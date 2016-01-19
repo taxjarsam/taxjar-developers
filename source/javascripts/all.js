@@ -1,5 +1,6 @@
 //= require particles.js/particles.js
 //= require walkway.js/src/walkway.js
+//= require_tree ./partials
 
 (function() {
   var path = window.location.pathname;

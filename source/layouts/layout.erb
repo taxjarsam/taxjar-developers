@@ -11,45 +11,53 @@
     <%= yield_content :css %>
   </head>
   <body class="<%= page_classes %>">
-    <header>
-      <div class="logo">
-        <a href="http://developers.taxjar.com">
-          <%= image_tag "logo.svg", :width => 126 %>
-          <span>Developers</span>
-        </a>
+    <div class="wrap">
+      <div class="wrap__content">
+        <header>
+          <div class="logo">
+            <a href="http://developers.taxjar.com">
+              <%= image_tag "logo.svg", :width => 126 %>
+              <span class="long">Developers</span>
+              <span class="short">Devs</span>
+            </a>
+          </div>
+          <div class="menu menu--main">
+            <nav>
+              <ul>
+                <li><a href="http://taxjar.com/api">Pricing</a></li>
+                <li><a href="/demo/">API Demo</a></li>
+                <li><a href="/api/">API Reference</a></li>
+                <li><a href="/api/guides/">API Guides</a></li>
+                <li><a href="http://status.taxjar.com">API Status</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <!-- <li><a href="/community">Community</a></li> -->
+              </ul>
+            </nav>
+          </div>
+          <div class="menu menu--actions">
+            <nav>
+              <ul>
+                <li><a href="https://app.taxjar.com/sign_in/" class="btn">Log In</a></li>
+                <li><a href="https://app.taxjar.com/api_sign_up/basic/" class="btn cta">Get API Token</a></li>
+              </ul>
+              <ul class="navbar-responsive">
+                <li><a href="#" class="btn navbar-toggle">Menu</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <div class="wrapper">
+          <%= yield %>
+        </div>
+        <footer>
+          <span>&copy; 2016 TaxJar</span>
+        </footer>
       </div>
-      <div class="menu menu--main">
-        <nav>
-          <ul>
-            <li><a href="http://taxjar.com/api#features">Features</a></li>
-            <li><a href="http://taxjar.com/api#pricing">Pricing</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/demo/">API Demo</a></li>
-            <li><a href="/api/">API Reference</a></li>
-            <li><a href="/api/guides/">API Guides</a></li>
-            <li><a href="http://status.taxjar.com">API Status</a></li>
-            <!-- <li><a href="/community">Community</a></li> -->
-          </ul>
-        </nav>
+      <div class="wrap__sidebar">
+        <%= partial "partials/sidebar" %>
       </div>
-      <div class="menu menu--actions">
-        <nav>
-          <ul>
-            <li><a href="https://app.taxjar.com/sign_in/" class="btn">Log In</a></li>
-            <li><a href="https://app.taxjar.com/api_sign_up/plus/" class="btn cta">Get API Token</a></li>
-          </ul>
-        </nav>
-        <a href="#" id="nav-button">
-          <%= image_tag "menu.svg", :width => 22 %>
-        </a>
-      </div>
-    </header>
-    <div class="wrapper">
-      <%= yield %>
     </div>
-    <footer>
-      <span>&copy; 2016 TaxJar</span>
-    </footer>
+    <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" %>
     <%= javascript_include_tag "all" %>
     <%= yield_content :js %>
     <script>

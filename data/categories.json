@@ -1,5 +1,8 @@
 {
-  "stripe": {
+  "Stripe": {
     "color": "#008cdd"
+  },
+  "SmartCalcs": {
+    "color": "#3FAE2A"
   }
 }

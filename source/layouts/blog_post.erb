@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="post__details">
-      <div class="post__category" style="color: <%= data['categories'][current_article.data.category]['color'] %>"><%= current_article.data.category.capitalize %></div>
+      <div class="post__category" style="color: <%= data['categories'][current_article.data.category]['color'] %>"><%= current_article.data.category %></div>
       <h1><%= current_article.title %></h1>
       <div class="post__meta">
         by <span class="author"><%= data['authors'][current_article.data.author]['name'] %></span>

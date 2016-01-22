@@ -3,7 +3,7 @@ title: Handling Sales Tax with Stripe
 description: Learn how to add sales tax to charges and subscriptions in Stripe along with a Rails example for calculating sales tax using SmartCalcs.
 author: jake_johnson
 date: 2015-12-15 00:11 UTC
-category: stripe
+category: Stripe
 tags: smartcalcs, stripe, api 
 published: true
 ---

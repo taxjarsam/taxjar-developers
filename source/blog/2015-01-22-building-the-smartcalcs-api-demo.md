@@ -4,15 +4,15 @@ description: In-depth walkthrough of how TaxJar's API demo was built with React 
 author: jake_johnson
 date: 2015-01-22 00:11 UTC
 category: SmartCalcs
-tags: smartcalcs, api, demo 
+tags: smartcalcs, api, demo
 published: true
 ---
 
-Recently I had the opportunity to build TaxJar's [new API demo](http://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](http://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](http://www.taxjar.com/smartcalcs/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
+Recently I built TaxJar's [new API demo](http://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](http://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](http://www.taxjar.com/smartcalcs/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
 
 ![TaxJar API Demo](/images/blog/building-the-smartcalcs-api-demo/api-demo.jpg) 
 
-Using [React](https://facebook.github.io/react/docs/why-react.html), [CodeMirror](https://codemirror.net/), and [Mapbox](https://www.mapbox.com/) I built an incredible first impression for developers new to our platform. In this article I'm going to show you how it was built and the tools I used to make it happen. If you'd like to check it out for yourself, it's completely open source and [available on GitHub](https://github.com/taxjar/taxjar-developers).
+Using [React](https://facebook.github.io/react/docs/why-react.html), [CodeMirror](https://codemirror.net/), and [Mapbox](https://www.mapbox.com/) I created an incredible first impression for developers new to our platform. In this article I'm going to show you how it was built and the tools I used to make it happen. If you'd like to check it out for yourself, it's completely open source and [available on GitHub](https://github.com/taxjar/taxjar-developers).
 
 END_SUMMARY
 
@@ -86,7 +86,7 @@ Preset data and tooltip content were stored in a separate file as a JSON object 
 
 ## Generating & Parsing JavaScript
 
-CodeMirror is an open source text editor used in thousand of sites and apps, including Adobe Brackets and Bitbucket. It's lightweight and easy to customize. Check out [react-codemirror](https://github.com/JedWatson/react-codemirror) to use it as a component in React. For the API demo, I wanted a quasi-editable text editor that could generate code based on presets but also allow developers to experiment with different values.
+CodeMirror is an open source text editor used in thousands of sites and apps, including Adobe Brackets and Bitbucket. It's lightweight and easy to customize. Check out [react-codemirror](https://github.com/JedWatson/react-codemirror) to use it as a component in React. For the API demo, I wanted a quasi-editable text editor that could generate code based on presets but also allow developers to experiment with different values.
 
 [Generating the code](https://github.com/taxjar/taxjar-developers/blob/master/source/javascripts/demo/components/Sandbox.jsx#L16) was straightforward. I used a simple [string format utility](https://github.com/yields/fmt) and `JSON.stringify` to build a sample API call.
 

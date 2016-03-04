@@ -1,0 +1,30 @@
+.blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.blog-header__title {
+  flex: 1;
+}
+
+.blog-header__follow {
+  padding-right: 2rem;
+}
+
+.blog-header__follow-link {
+  font-size: 1.5rem;
+  text-align: right;
+  text-decoration: none;
+  color: $c_twitter;
+  
+  &:hover {
+    color: #000;
+  }
+  
+  img {
+    float: right;
+    margin: 4px 0 0 6px;
+  }
+}

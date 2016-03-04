@@ -1,27 +1,50 @@
 <% set_meta_tags title: "Dev Blog" %>
 <% set_meta_tags description: "Updates from the TaxJar product development team behind SmartCalcs, a sales tax API." %>
 
-<% blog.articles[0...5].reverse.each do |article| %>
-  <article>
-    <div class="post__banner" style="background-color: <%= data['categories'][article.data.category]['color'] %>">
-      <div class="post__avatar">
-        <img src="<%= data['authors'][article.data.author]['avatar'] %>" width="60" height="60">
-      </div>
+<div class="blog-index">
+  <div class="blog-header">
+    <div class="blog-header__title">
+      <h1>Developer Blog</h1>
     </div>
-    <div class="post__details">
-      <div class="post__category" style="color: <%= data['categories'][article.data.category]['color'] %>"><%= article.data.category %></div>
-      <h1><a href="<%= article.url %>"><%= article.title %></a></h1>
-      <div class="post__meta">
-        by <span class="author"><%= data['authors'][article.data.author]['name'] %></span>
-        <b>•</b>
-        <time><%= article.date.strftime('%b %e, %Y') %></time>
-      </div>
+    <div class="blog-header__follow">
+      <a href="http://twitter.com/TaxJarDev" target="_blank" class="blog-header__follow-link">Follow Us on Twitter <img src="/images/twitter.svg" width="20" height="16"></a>
     </div>
-    <div class="post__summary">
-      <%= article.summary %>
-    </div>
-    <div class="post__more">
-      <a href="<%= article.url %>">Read More</a>
-    </div>
-  </article>
-<% end %>
+  </div>
+  <div class="blog-list">
+    <% blog.articles[0...5].reverse.each do |article| %>
+      <article class="post post--preview">
+        <div class="post__banner" style="background-color: <%= data['categories'][article.data.category]['color'] %>">
+          <div class="post__avatar">
+            <img src="<%= data['authors'][article.data.author]['avatar'] %>" width="60" height="60">
+          </div>
+        </div>
+        <div class="post__details">
+          <div class="post__category" style="color: <%= data['categories'][article.data.category]['color'] %>"><%= article.data.category %></div>
+          <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+          <div class="post__meta">
+            by <span class="author"><%= data['authors'][article.data.author]['name'] %></span>
+            <b>•</b>
+            <time><%= article.date.strftime('%b %e, %Y') %></time>
+          </div>
+        </div>
+        <div class="post__summary">
+          <%= article.summary %>
+        </div>
+        <div class="post__more">
+          <a href="<%= article.url %>">Read More</a>
+        </div>
+      </article>
+    <% end %>
+  </div>
+  <div class="blog-sidebar">
+    <h4>About</h4>
+    <p>Updates from the TaxJar product development team behind <a href="http://www.taxjar.com/smartcalcs/">SmartCalcs</a>, a sales tax API. We share what we've learned building TaxJar, API updates, and technical content around eCommerce / sales tax.</p>
+    
+    <h4>Newsletter</h4>
+    <p>Stay connected by signing up for our dev newsletter. Get product updates and articles on building great eCommerce websites:</p>
+    <form class="form">
+      <input class="form__input form__input--block" type="email" placeholder="developer@gmail.com">
+      <button type="submit" class="btn cta">Subscribe</button>
+    </form>
+  </div>
+</div>

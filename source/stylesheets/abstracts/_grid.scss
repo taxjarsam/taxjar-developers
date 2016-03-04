@@ -1,0 +1,13 @@
+$susy: (
+  container: 960px,
+  columns: 12
+);
+
+$breakpoint_sm: 768px;
+$breakpoint_md: 992px;
+$breakpoint_lg: 1200px;
+
+@include breakpoint-set('to ems', true);
+@include add-breakpoint('sm', $breakpoint_sm);
+@include add-breakpoint('md', $breakpoint_md);
+@include add-breakpoint('lg', $breakpoint_lg);

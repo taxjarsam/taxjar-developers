@@ -14,13 +14,21 @@
 }
 
 .post--preview {
+  margin: 0 0 6rem;
   border: 1px solid #ccc;
   border-top: 0;
   box-shadow: 0 2px 2px rgba(0,0,0,.1);
   
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
   @include respond-to('sm') {
-    margin: 0 0 6rem;
-    padding: 0 40px 40px;
+    padding: 0 4rem 4rem;
+    
+    &:last-child {
+      margin-bottom: 4rem;
+    }
   }
 }
 

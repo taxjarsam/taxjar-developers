@@ -4,6 +4,14 @@
 .blog-index {
   @include container;
   margin-top: 2rem;
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    padding: 0 2rem;
+  }
+  
+  @include susy-breakpoint($breakpoint_md, $susy) {
+    padding: 0;
+  }
 }
 
 .blog-list {

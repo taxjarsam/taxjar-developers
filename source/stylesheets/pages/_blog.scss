@@ -1,0 +1,50 @@
+@import "components/blog/header";
+@import "components/blog/post";
+
+.blog-index {
+  @include container;
+  margin-top: 2rem;
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    padding: 0 2rem;
+  }
+  
+  @include susy-breakpoint($breakpoint_md, $susy) {
+    padding: 0;
+  }
+}
+
+.blog-list {
+  @include span(12);
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    @include span(8 first);
+  }
+}
+
+.blog-sidebar {
+  @include span(12);
+  padding: 2rem 2rem 4rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    @include span(4 last);
+    padding: 0 2rem;
+  }
+  
+  a {
+    color: $c_green;
+    border-bottom: 1px dotted $c_green;
+    text-decoration: none;
+    
+    &:hover {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+  
+  p {
+    color: #666;
+  }
+}

@@ -8,6 +8,10 @@ gem "middleman-meta-tags"
 gem "middleman-react"
 gem "middleman-syntax"
 
+# Sass libraries
+gem "susy"
+gem "breakpoint"
+
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 

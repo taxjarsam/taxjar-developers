@@ -7,7 +7,7 @@
     <%= display_meta_tags site: 'TaxJar Developers', separator: '-' %>
     <link rel="shortcut icon" href="<%= image_path "favicon.png" %>">
     <link href="http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= stylesheet_link_tag "main" %>
     <%= yield_content :css %>
   </head>
   <body class="<%= page_classes %>">
@@ -25,12 +25,12 @@
             <nav>
               <ul>
                 <li><a href="http://taxjar.com/api">Pricing</a></li>
-                <li><a href="/demo/">API Demo</a></li>
-                <li><a href="/api/">API Reference</a></li>
-                <li><a href="/api/guides/">API Guides</a></li>
-                <li><a href="http://status.taxjar.com">API Status</a></li>
+                <li><a href="/demo/"><span>API</span> Demo</a></li>
+                <li><a href="/api/"><span>API</span> Reference</a></li>
+                <li><a href="/api/guides/"><span>API</span> Guides</a></li>
+                <li><a href="http://status.taxjar.com"><span>API</span> Status</a></li>
                 <li><a href="/blog/">Dev Blog</a></li>
-                <!-- <li><a href="/community">Community</a></li> -->
+                <li><a href="http://support.taxjar.com/knowledge_base/categories/smartcalcs" target="_blank">Support</a></li>
               </ul>
             </nav>
           </div>

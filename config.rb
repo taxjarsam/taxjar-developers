@@ -14,6 +14,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
+activate :livereload
 activate :meta_tags
 activate :react
 activate :syntax

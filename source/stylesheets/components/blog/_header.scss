@@ -1,0 +1,44 @@
+.blog-header {
+  display: block;
+  text-align: center;
+  margin: 3rem;
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 2rem 0;
+  }
+}
+
+.blog-header__title {
+  flex: 1;
+}
+
+.blog-header__follow {
+  width: 16.5rem;
+  margin: -1rem auto 3rem auto;
+  
+  @include susy-breakpoint($breakpoint_sm, $susy) {
+    width: auto;
+    margin: 0;
+    padding-right: 2rem;
+  }
+}
+
+.blog-header__follow-link {
+  font-size: 1.5rem;
+  text-align: right;
+  text-decoration: none;
+  color: $c_twitter;
+  
+  &:hover {
+    color: #000;
+  }
+  
+  img {
+    float: right;
+    margin: 4px 0 0 6px;
+  }
+}

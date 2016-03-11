@@ -2,7 +2,7 @@
 title: Building the SmartCalcs API Demo
 description: In-depth walkthrough of how TaxJar's API demo was built with React to create a component-based, single-page app.
 author: jake_johnson
-date: 2015-01-22 00:11 UTC
+date: 2016-01-22 00:11 UTC
 category: SmartCalcs
 tags: smartcalcs, api, demo
 published: true

@@ -7,7 +7,7 @@
     <%= display_meta_tags site: 'TaxJar Developers', separator: '-' %>
     <link rel="shortcut icon" href="<%= image_path "favicon.png" %>">
     <link href="http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
-    <% if current_page.path.include? 'blog' %>
+    <% if current_page.try(:path).include? 'blog' %>
       <link rel="alternate" type="application/rss+xml" title="TaxJar Dev Blog RSS Feed" href="http://developers.taxjar.com/blog/feed.xml">
     <% end %>
     <%= stylesheet_link_tag "main" %>

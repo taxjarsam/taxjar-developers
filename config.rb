@@ -30,6 +30,7 @@ after_configuration do
   sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
 end
 
+page '/blog/feed.xml', :layout => false
 page '/error.html', :directory_index => false
 
 # Build-specific configuration

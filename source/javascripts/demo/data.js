@@ -41,7 +41,7 @@
         "url": "https://api.taxjar.com/v2/taxes",
         "docs": "http://developers.taxjar.com/api/#post-calculate-sales-tax-for-an-order",
         "defaults": {
-          "amount": 19.99,
+          "amount": 19.95,
           "shipping": 10
         },
         "contexts": {

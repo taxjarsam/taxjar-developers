@@ -53,7 +53,7 @@ var Presets = React.createClass({
           amount += item.unit_price;
         });
 
-        preset.amount = amount;
+        preset.amount = Math.round(amount * 100) / 100;
       }
       
       preset[data.preset] = items;

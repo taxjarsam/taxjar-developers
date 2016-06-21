@@ -12,6 +12,8 @@ If you’ve done any research into handling sales tax with Stripe, you’ve prob
 
 We’ll cover payments for products and subscriptions in the United States, Canada, and European Union. If you’re using Stripe with an existing eCommerce platform such as [Magento](https://github.com/taxjar/taxjar-magento-extension), [WooCommerce](https://github.com/taxjar/taxjar-woocommerce-plugin), or [Shopify](https://apps.shopify.com/taxjar), there’s plenty of plugins and extensions out there that don’t require any additional work. This guide is strictly for developers looking to calculate sales tax in their own custom applications and services.
 
+**Update June 2016:** TaxJar is now fully integrated with Stripe's product and order APIs. [Check out the Stripe documentation](https://stripe.com/docs/relay/taxjar) to learn more!
+
 END_SUMMARY
 
 ## Adding Sales Tax to Charges in Stripe

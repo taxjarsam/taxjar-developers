@@ -8,7 +8,7 @@ tags: smartcalcs, stripe, api
 published: true
 ---
 
-If you’ve done any research into handling sales tax with Stripe, you’ve probably discovered it’s going to be your next super fun DIY project. Congratulations! Stripe makes payments easier for developers, but they leave the sales tax to you. And for good reason — rates can vary by jurisdiction across the entire United States based on many factors. That’s why I’m writing this guide. First we’re going to learn how to add sales tax for charges and subscriptions using Stripe’s API. Next, we’ll jump into an implementation using [SmartCalcs](http://www.taxjar.com/smartcalcs/) for calculating sales tax.
+If you’ve done any research into handling sales tax with Stripe, you’ve probably discovered it’s going to be your next super fun DIY project. Congratulations! Stripe makes payments easier for developers, but they leave the sales tax to you. And for good reason — rates can vary by jurisdiction across the entire United States based on many factors. That’s why I’m writing this guide. First we’re going to learn how to add sales tax for charges and subscriptions using Stripe’s API. Next, we’ll jump into an implementation using [SmartCalcs](https://www.taxjar.com/smartcalcs/) for calculating sales tax.
 
 We’ll cover payments for products and subscriptions in the United States, Canada, and European Union. If you’re using Stripe with an existing eCommerce platform such as [Magento](https://github.com/taxjar/taxjar-magento-extension), [WooCommerce](https://github.com/taxjar/taxjar-woocommerce-plugin), or [Shopify](https://apps.shopify.com/taxjar), there’s plenty of plugins and extensions out there that don’t require any additional work. This guide is strictly for developers looking to calculate sales tax in their own custom applications and services.
 
@@ -82,7 +82,7 @@ Stripe provides a couple ways of handling payments in your application or websit
 
 Sales tax calculation can be done on the client-side via AJAX or entirely on the server-side. It’s your call. For a great user experience, you’ll probably want to show the amount of sales tax immediately after an address is provided and prior to completing the purchase. After generating a single-use token with the customer’s credit card, you can send the token and custom form parameters to your server to complete the charge or subscription using Stripe’s API.
 
-If you intend to use a sales tax API such as [SmartCalcs](http://www.taxjar.com/smartcalcs/) to calculate sales tax, you’ll want to be mindful of how many calls you make to save money. You can avoid unnecessary API calls by understanding the concept of [sales tax nexus](http://blog.taxjar.com/sales-tax-nexus-definition/). If the delivery address falls in a different state than those in which a company has nexus, no sales tax needs to be collected. In other words, you should speak with your accountant to determine where you have nexus and if the types of products you sell actually require collecting sales tax. For [marketplaces with many individual merchants](http://developers.taxjar.com/api/guides/#marketplaces), you’ll want to track addresses for each merchant and compare them against the customer's delivery address. *Keep in mind this only works for US-based sales. Overseas sales have different rules.*
+If you intend to use a sales tax API such as [SmartCalcs](https://www.taxjar.com/smartcalcs/) to calculate sales tax, you’ll want to be mindful of how many calls you make to save money. You can avoid unnecessary API calls by understanding the concept of [sales tax nexus](http://blog.taxjar.com/sales-tax-nexus-definition/). If the delivery address falls in a different state than those in which a company has nexus, no sales tax needs to be collected. In other words, you should speak with your accountant to determine where you have nexus and if the types of products you sell actually require collecting sales tax. For [marketplaces with many individual merchants](https://developers.taxjar.com/api/guides/#marketplaces), you’ll want to track addresses for each merchant and compare them against the customer's delivery address. *Keep in mind this only works for US-based sales. Overseas sales have different rules.*
 
 ## Implementing Stripe Sales Tax Calculation at Checkout
 
@@ -103,9 +103,9 @@ If there’s a language you’d like us to support, leave a comment. There’s a
 - Go: [https://github.com/bndr/gopencils](https://github.com/bndr/gopencils)
 - C#: [https://github.com/restsharp/RestSharp](https://github.com/restsharp/RestSharp)
 
-**For more information about our sales tax API, [view the documentation here.](http://developers.taxjar.com/api/)**
+**For more information about our sales tax API, [view the documentation here.](https://developers.taxjar.com/api/)**
 
-**To get your API token, [sign up for a free 30 day trial.](http://www.taxjar.com/api/)**
+**To get your API token, [sign up for a free 30 day trial.](https://www.taxjar.com/api/)**
 
 ## Stripe Sales Tax on Rails
 
@@ -135,4 +135,4 @@ Check out the [example app](https://github.com/taxjar/rails-stripe-sales-tax-sam
 
 ## Wrapping Up
 
-This article gave you a basic introduction to handling sales tax with Stripe and ways you can get started with [SmartCalcs](http://www.taxjar.com/smartcalcs/), a sales tax API from TaxJar. If you have any questions about sales tax we’re here to help! Leave a comment or contact us at [support@taxjar.com](mailto:support@taxjar.com).
+This article gave you a basic introduction to handling sales tax with Stripe and ways you can get started with [SmartCalcs](https://www.taxjar.com/smartcalcs/), a sales tax API from TaxJar. If you have any questions about sales tax we’re here to help! Leave a comment or contact us at [support@taxjar.com](mailto:support@taxjar.com).

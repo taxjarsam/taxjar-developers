@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= display_meta_tags site: 'TaxJar Developers', separator: '-' %>
     <link rel="shortcut icon" href="<%= image_path "favicon.png" %>">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat|Lato:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat|Lato:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
     <% if current_page.try(:path).include? 'blog' %>
-      <link rel="alternate" type="application/rss+xml" title="TaxJar Dev Blog RSS Feed" href="http://developers.taxjar.com/blog/feed.xml">
+      <link rel="alternate" type="application/rss+xml" title="TaxJar Dev Blog RSS Feed" href="https://developers.taxjar.com/blog/feed.xml">
     <% end %>
     <%= stylesheet_link_tag "main" %>
     <%= yield_content :css %>
@@ -18,7 +18,7 @@
       <div class="wrap__content">
         <header>
           <div class="logo">
-            <a href="http://developers.taxjar.com">
+            <a href="https://developers.taxjar.com">
               <%= image_tag "logo.svg", :width => 126 %>
               <span class="long">Developers</span>
               <span class="short">Devs</span>
@@ -27,13 +27,13 @@
           <div class="menu menu--main">
             <nav>
               <ul>
-                <li><a href="http://taxjar.com/api">Pricing</a></li>
+                <li><a href="https://www.taxjar.com/api">Pricing</a></li>
                 <li><a href="/demo/"><span>API</span> Demo</a></li>
                 <li><a href="/api/"><span>API</span> Reference</a></li>
                 <li><a href="/api/guides/"><span>API</span> Guides</a></li>
-                <li><a href="http://status.taxjar.com"><span>API</span> Status</a></li>
+                <li><a href="https://status.taxjar.com"><span>API</span> Status</a></li>
                 <li><a href="/blog/">Dev Blog</a></li>
-                <li><a href="http://support.taxjar.com/knowledge_base/categories/smartcalcs" target="_blank">Support</a></li>
+                <li><a href="https://support.taxjar.com/knowledge_base/categories/smartcalcs" target="_blank">Support</a></li>
               </ul>
             </nav>
           </div>

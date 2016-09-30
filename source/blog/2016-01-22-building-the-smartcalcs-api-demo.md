@@ -8,7 +8,7 @@ tags: smartcalcs, api, demo
 published: true
 ---
 
-Recently I built TaxJar's [new API demo](http://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](http://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](http://www.taxjar.com/smartcalcs/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
+Recently I built TaxJar's [new API demo](https://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](https://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](https://www.taxjar.com/smartcalcs/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
 
 ![TaxJar API Demo](/images/blog/building-the-smartcalcs-api-demo/api-demo.jpg) 
 
@@ -122,7 +122,7 @@ rocambole.moonwalk(ast, function(node) {
 
 Using Rocambole's `moonwalk` method I can traverse the JavaScript code and pull out the method name, arguments, and parameters. I'm using JavaScript to parse JavaScript and make AJAX calls. Awesome!
 
-From there, I just had to make an AJAX request to our [sales tax API](http://www.taxjar.com/api/) using a lightweight wrapper such as [reqwest](https://github.com/ded/reqwest).
+From there, I just had to make an AJAX request to our [sales tax API](https://www.taxjar.com/api/) using a lightweight wrapper such as [reqwest](https://github.com/ded/reqwest).
 
 ## Displaying the Response
 
@@ -136,4 +136,4 @@ Copy buttons are available for both the response and request using [clipboard.js
 
 ## Wrapping Up
 
-Building the [API Demo](/demo/) with React was an absolute blast. I hope you learned something new and discovered a couple tools for your next project. Have any questions or feedback? Leave them in the comments or [contact us](http://www.taxjar.com/contact/)!
+Building the [API Demo](/demo/) with React was an absolute blast. I hope you learned something new and discovered a couple tools for your next project. Have any questions or feedback? Leave them in the comments or [contact us](https://www.taxjar.com/contact/)!

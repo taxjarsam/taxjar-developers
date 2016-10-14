@@ -3,5 +3,10 @@
     "name": "Jake Johnson",
     "avatar": "/images/authors/jake_johnson.png",
     "twitter": "jakejohnson"
+  },
+  "bernd_ustorf": {
+    "name": "Bernd Ustorf",
+    "avatar": "/images/authors/bernd_ustorf.jpeg",
+    "twitter": "burntkraut"
   }
 }

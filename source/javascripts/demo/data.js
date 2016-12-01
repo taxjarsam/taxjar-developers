@@ -31,6 +31,13 @@
                 "zip": "33132",
                 "city": "Miami",
                 "country": "US"
+              },
+              {
+                "_name": "Illinois",
+                "_type": "location",
+                "zip": "60613",
+                "city": "Chicago",
+                "country": "US"
               }
             ]
           }
@@ -47,7 +54,8 @@
         "contexts": {
           "NY": "<ul><li>Food & grocery items are exempt from all sales tax.</li><li>Clothing items sold in New York under $110 are exempt from the state tax rate, but only exempt from county taxes in certain jurisdictions.<br/><a href='https://developers.taxjar.com/api/guides/#product-exemptions' target='_blank'>Learn More &raquo;</a></li><li>Shipping costs are taxable.</li></ul>",
           "CA": "<ul><li>Food and grocery items are exempt from all sales tax.</li><li>Shipping costs, if stated separately, are exempt from sales tax.</li><li>While you have the option to collect all state and local taxes based on the address of delivery, you technically only need to collect local taxes in jurisdictions you share.</li></ul>",
-          "FL": "<ul><li>All of the product categories listed are fully taxable in Florida, as is shipping.</li></ul>"
+          "FL": "<ul><li>All of the product categories listed are fully taxable in Florida, as is shipping.</li><li>Florida is a destination-based state, so sales tax is calculated based on the destination of the order or the buyer's shipping address.</li></ul>",
+          "IL": "<ul><li>Illinois is an origin-based state, so sales tax is calculated where your business is located if shipping within the state.</li><li>If you have nexus in Illinois but you're shipping from outside of the state (interstate order), Illinois becomes destination-based.</li></ul>"
         },
         "presets": {
           "nexus_address": {
@@ -79,6 +87,15 @@
                 "from_city": "Miami",
                 "from_state": "FL",
                 "from_zip": "33132",
+                "from_country": "US"
+              },
+              {
+                "_name": "Illinois",
+                "_type": "address",
+                "from_street": "1060 W Addison St.",
+                "from_city": "Chicago",
+                "from_state": "IL",
+                "from_zip": "60613",
                 "from_country": "US"
               },
               {
@@ -159,6 +176,15 @@
                 "to_city": "Orlando",
                 "to_state": "FL",
                 "to_zip": "32801",
+                "to_country": "US"
+              },
+              {
+                "_name": "Illinois",
+                "_type": "address",
+                "to_street": "207 South Club House Drive",
+                "to_city": "Springfield",
+                "to_state": "IL",
+                "to_zip": "62701",
                 "to_country": "US"
               },
               {

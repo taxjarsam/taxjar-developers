@@ -55,7 +55,7 @@
           "NY": "<ul><li>Food & grocery items are exempt from all sales tax.</li><li>Clothing items sold in New York under $110 are exempt from the state tax rate, but only exempt from county taxes in certain jurisdictions.<br/><a href='https://developers.taxjar.com/api/guides/#product-exemptions' target='_blank'>Learn More &raquo;</a></li><li>Shipping costs are taxable.</li></ul>",
           "CA": "<ul><li>Food and grocery items are exempt from all sales tax.</li><li>Shipping costs, if stated separately, are exempt from sales tax.</li><li>While you have the option to collect all state and local taxes based on the address of delivery, you technically only need to collect local taxes in jurisdictions you share.</li></ul>",
           "FL": "<ul><li>All of the product categories listed are fully taxable in Florida, as is shipping.</li><li>Florida is a destination-based state, so sales tax is calculated based on the destination of the order or the buyer's shipping address.</li></ul>",
-          "IL": "<ul><li>Illinois is an origin-based state, so sales tax is calculated where your business is located if shipping within the state.</li><li>If you have nexus in Illinois but you're shipping from outside of the state (interstate order), Illinois becomes destination-based.</li></ul>"
+          "IL": "<ul><li>Illinois is an origin-based state, so sales tax is calculated where your business is located if you're based in Illinois.</li><li>If you have nexus in Illinois but you made a sale from outside of the state, you would charge a flat state tax rate. You are not required to charge any local sales tax rates.</li></ul>"
         },
         "presets": {
           "nexus_address": {

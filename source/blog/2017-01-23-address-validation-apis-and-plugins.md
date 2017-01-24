@@ -12,9 +12,9 @@ Here at TaxJar, customers occasionally ask us if we support address validation t
 
 In this guide I’ll show you where to find these address verification APIs for your eCommerce website or app. I’ll also cover several plugins / extensions for handling address verification on popular eCommerce platforms.
 
-[Skip to Plugins & Extensions](#address-validation-plugins)
-
 END_SUMMARY
+
+[Skip to Plugins & Extensions](#address-validation-plugins)
 
 ## Address Validation APIs
 

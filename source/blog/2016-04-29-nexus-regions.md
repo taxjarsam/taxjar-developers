@@ -16,7 +16,7 @@ END_SUMMARY
 
 So now you’re comparing states to save on API calls. However, you’d rather not hard-code those nexus states when determining whether or not to calculate sales tax at checkout.
 
-With our new [nexus regions endpoint](https://developers.taxjar.com/api/reference/#nexus), you can use TaxJar as the source of truth and pull your nexus states down periodically to sync with your app. If an accountant or someone else on your team [adds a new state](https://app.taxjar.com/account#states) in TaxJar, things should continue to hum along with minimal effort. This is also a useful way to list nexus regions in a custom interface such as a plugin configuration or reporting view.
+With our new [nexus regions endpoint](https://developers.taxjar.com/api/reference/#nexus), you can use TaxJar as the source of truth and pull your nexus states down periodically to sync with your app. If an accountant or someone else on your team adds a new state in TaxJar, things should continue to hum along with minimal effort. This is also a useful way to list nexus regions in a custom interface such as a plugin configuration or reporting view.
 
 To get up and going, make a GET request to `https://api.taxjar.com/v2/nexus/regions` with your API token:
 

@@ -2,7 +2,7 @@
 title: Address Validation APIs and Plugins
 description: Guide to the best free and paid address validation APIs, services, and plugins on the market.
 author: jake_johnson
-date: 2017-01-20 12:00 UTC
+date: 2017-01-23 12:00 UTC
 category: SmartCalcs
 tags: address-validation
 published: true

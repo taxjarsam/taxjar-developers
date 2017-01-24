@@ -8,9 +8,11 @@ tags: address-validation
 published: true
 ---
 
-Here at TaxJar, customers occasionally ask us if we support address validation through our SmartCalcs API or cart integrations such as WooCommerce or Magento. In order to provide the most affordable and fastest sales tax calculations, we opted to keep this out of our API in favor of lighter validation around states and zip codes. This way you have the opportunity to save money and take advantage of free or low-cost address validation APIs already on the market, usually provided by shipping services such as Shippo and carriers like UPS.
+Here at TaxJar, customers occasionally ask us if we support address validation through our SmartCalcs API or cart integrations such as WooCommerce or Magento. In order to provide the most affordable and fastest sales tax calculations, we opted to keep this out of our API in favor of lighter validation around states and zip codes. This way you have the opportunity to save money and take advantage of free or low-cost address validation APIs already on the market, usually provided by shipping services such as Shippo and carriers like UPS / USPS.
 
 In this guide I’ll show you where to find these address verification APIs for your eCommerce website or app. I’ll also cover several plugins / extensions for handling address verification on popular eCommerce platforms.
+
+[Skip to Plugins & Extensions](#address-validation-plugins)
 
 END_SUMMARY
 
@@ -54,23 +56,32 @@ Documentation: [https://www.ups.com/upsdeveloperkit/downloadresource?loc=en_US](
 
 ### SmartyStreets
 
-Since [SmartyStreets](https://smartystreets.com) isn’t 100% free for US addresses, I decided to mention them last. However, it’s the best address validation API on the market and deserves a shoutout. If you’re looking for a CASS-Certified and highly performant solution then SmartyStreets is your best bet. They provide much more than just USPS data and cool features like autocompletion — [take a look for yourself](https://smartystreets.com/features).
+Since [SmartyStreets](https://smartystreets.com) isn’t 100% free for US addresses, I decided to mention them last. However, it’s one of the best address validation APIs on the market and deserves a shoutout. If you’re looking for a CASS-Certified and highly performant solution then SmartyStreets is your best bet. They provide much more than just USPS data and cool features like autocompletion — [take a look for yourself](https://smartystreets.com/features).
 
 Pricing: **250 Lookups Free** / Month<br>
-Countries: US, International (Truly Everywhere)<br>
+Countries: US, International<br>
 API Clients: Python, Java, C#, Go, iOS, Android<br>
 Documentation: [https://smartystreets.com/docs](https://smartystreets.com/docs)
 
+<div id="address-validation-plugins"></div>
 ## Address Validation Plugins & Extensions
 
-If you’re using a popular eCommerce platform like WooCommerce or Magento, you shouldn’t have to write a single line of code to validate addresses in your checkout. Here’s what I usually I recommend to merchants:
+If you’re using a popular eCommerce platform like WooCommerce or Magento, you shouldn’t have to write a single line of code to validate addresses at checkout. Here’s what I usually I recommend to merchants:
 
-### ShipperHQ
+### Addressy (Multi-Platform)
+
+[Addressy](https://www.addressy.com) provides an address autocomplete widget with powerful features such as [fuzzy error correction](https://www.addressy.com/features/fuzzy-matching/) and [location biasing](https://www.addressy.com/features/location-biasing/). It's a simple JavaScript snippet you can copy and paste into any web form that requires an address. They also provide official integrations for [Magento](https://www.addressy.com/integrations/address-verification-magento/) and WooCommerce (by SkyVerge listed below), with more platforms such as Shopify on the way. Thanks to its multilingual capabilities, Addressy works great for international addresses too.
+
+Pricing: Free Magento Extension + **100 US Lookups Free** / Month<br>
+Platforms: Web, Magento, Magento 2, WooCommerce<br>
+Website: [https://www.addressy.com/](https://www.addressy.com/)
+
+### ShipperHQ (Multi-Platform)
 
 The team at [ShipperHQ](https://shipperhq.com/) provide a fantastic all-in-one service for all things related to shipping. Address validation is deeply integrated into their plugins and extensions beyond checkout — validation also occurs in customer address books and customers can override the validation results if incorrect. ShipperHQ is a great solution if you’re looking for accurate shipping rates among a variety of carriers and also happen to be looking for address verification.
 
 Pricing: $50+ / Month<br>
-Platforms: Magento, Magento 2, Bigcommerce, Shopify WooCommerce, Zoey<br>
+Platforms: Magento, Magento 2, Bigcommerce, Shopify, WooCommerce, Zoey<br>
 Website: [https://shipperhq.com/](https://shipperhq.com/)
 
 ### IWD UPS/USPS Address Validation (Magento)

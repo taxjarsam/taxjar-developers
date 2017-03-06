@@ -90,7 +90,7 @@ header {
 }
 
 .menu nav ul {
-  margin: 20px 0;
+  margin: 20px 0 19px;
   padding-left: 0;
 }
 
@@ -118,13 +118,15 @@ header {
 
 .menu nav li a {
   display: block;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   padding: 6px 15px;
   color: #333;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: -0.25px;
+
+  &.btn {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
 }
 
 .menu nav li .active {
@@ -138,11 +140,10 @@ header {
 .btn {
   display: inline-block;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  font-size: 13px;
-  padding: 6px 15px;
+  font-size: 14px;
+  padding: 7px 15px;
   color: #333;
   text-decoration: none;
-  letter-spacing: -0.25px;
   line-height: 20px;
   border: 1px solid #d9d9d9;
   border-radius: 5px;

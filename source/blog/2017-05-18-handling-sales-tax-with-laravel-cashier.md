@@ -2,7 +2,7 @@
 title: Handling Sales Tax with Laravel Cashier
 description: Learn how to add sales tax to subscriptions and single charges using Laravel Cashier + TaxJar.
 author: jake_johnson
-date: 2017-05-16 12:00 UTC
+date: 2017-05-18 12:00 UTC
 category: Laravel
 tags: smartcalcs, laravel, api
 published: true
@@ -80,19 +80,18 @@ class User extends Authenticatable
 }
 ```
 
-Next, let's import `TaxJar\Client` into the `User` model namespace and instantiate the client with your API token:
+Next, let's import `\TaxJar\Client` into the `User` model namespace and instantiate the client with your API token:
 
 ```php
 <?php
 use Laravel\Cashier\Billable;
-use TaxJar\Client;
 
 class User extends Authenticatable
 {
     use Billable;
 
     public function taxPercentage() {
-        $client = TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
+        $client = \TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
 
         if (in_array($this->address_state, ['NY', 'WA'])) {
             // Request rates if user resides in NY or WA
@@ -110,14 +109,13 @@ The `zip` argument is always required. At a minimum, make sure you have the user
 ```php
 <?php
 use Laravel\Cashier\Billable;
-use TaxJar\Client;
 
 class User extends Authenticatable
 {
     use Billable;
 
     public function taxPercentage() {
-        $client = TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
+        $client = \TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
 
         if (in_array($this->address_state, ['NY', 'WA'])) {
             try {
@@ -159,9 +157,7 @@ Unfortunately, there's no tax parameters to be found in Stripe's [charge object]
 
 ```php
 <?php
-use TaxJar\Client;
-
-$client = TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
+$client = \TaxJar\Client::withApiKey(env('TAXJAR_API_TOKEN'));
 
 try {
     $tax = $client->taxForOrder([

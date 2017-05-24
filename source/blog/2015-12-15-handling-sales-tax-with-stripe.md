@@ -70,7 +70,7 @@ customer.subscriptions.create(
 
 When viewing a customer in the Stripe dashboard you'll be able to see `tax_percent` under Subscriptions as "Tax Percent":
 
-![Stripe Dashboard: Subscription](/images/blog/handling-sales-tax-with-stripe/stripe-subscriptions.png) 
+![Stripe Dashboard: Subscription](/images/blog/handling-sales-tax-with-stripe/stripe-subscriptions.png)
 
 Similar to charges, you can use the `metadata` attribute to break down the sales tax for your own reference later. Most sales tax APIs will show you tax rates and amounts by jurisdiction.
 
@@ -82,7 +82,7 @@ Stripe provides a couple ways of handling payments in your application or websit
 
 Sales tax calculation can be done on the client-side via AJAX or entirely on the server-side. It’s your call. For a great user experience, you’ll probably want to show the amount of sales tax immediately after an address is provided and prior to completing the purchase. After generating a single-use token with the customer’s credit card, you can send the token and custom form parameters to your server to complete the charge or subscription using Stripe’s API.
 
-If you intend to use a sales tax API such as [SmartCalcs](https://www.taxjar.com/smartcalcs/) to calculate sales tax, you’ll want to be mindful of how many calls you make to save money. You can avoid unnecessary API calls by understanding the concept of [sales tax nexus](http://blog.taxjar.com/sales-tax-nexus-definition/). If the delivery address falls in a different state than those in which a company has nexus, no sales tax needs to be collected. In other words, you should speak with your accountant to determine where you have nexus and if the types of products you sell actually require collecting sales tax. For [marketplaces with many individual merchants](https://developers.taxjar.com/api/guides/#marketplaces), you’ll want to track addresses for each merchant and compare them against the customer's delivery address. *Keep in mind this only works for US-based sales. Overseas sales have different rules.*
+If you intend to use a sales tax API such as [SmartCalcs](https://www.taxjar.com/smartcalcs/) to calculate sales tax, you’ll want to be mindful of how many calls you make to save money. You can avoid unnecessary API calls by understanding the concept of [sales tax nexus](https://blog.taxjar.com/sales-tax-nexus-definition/). If the delivery address falls in a different state than those in which a company has nexus, no sales tax needs to be collected. In other words, you should speak with your accountant to determine where you have nexus and if the types of products you sell actually require collecting sales tax. For [marketplaces with many individual merchants](https://developers.taxjar.com/api/guides/#marketplaces), you’ll want to track addresses for each merchant and compare them against the customer's delivery address. *Keep in mind this only works for US-based sales. Overseas sales have different rules.*
 
 ## Implementing Stripe Sales Tax Calculation at Checkout
 

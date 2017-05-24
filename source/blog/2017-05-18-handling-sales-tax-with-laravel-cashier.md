@@ -10,7 +10,7 @@ published: true
 
 Building a SaaS application with Laravel and wondering how to collect sales tax? You’ve come to the right place! In this guide we’ll cover how to use TaxJar’s sales tax API with [Laravel Cashier](https://github.com/laravel/cashier), an interface to Stripe's subscription billing services. After including TaxJar’s API client in your Laravel project, you’ll be able to calculate sales tax on the fly when creating a new subscription or single charge.
 
-If you’re not familiar with SaaS taxability in the United States, [review this blog post](http://blog.taxjar.com/saas-sales-tax/) first to determine if you actually need to collect sales tax in the states where you have nexus. At this time, only a handful of states consider SaaS products taxable. We update our posts frequently to reflect new changes, so make sure to keep an eye on it. Remember, always [ask your accountant](https://www.taxjar.com/sales-tax-accountant-directory/) for advice if you have unique sales tax requirements you’re unsure about.
+If you’re not familiar with SaaS taxability in the United States, [review this blog post](https://blog.taxjar.com/saas-sales-tax/) first to determine if you actually need to collect sales tax in the states where you have nexus. At this time, only a handful of states consider SaaS products taxable. We update our posts frequently to reflect new changes, so make sure to keep an eye on it. Remember, always [ask your accountant](https://www.taxjar.com/sales-tax-accountant-directory/) for advice if you have unique sales tax requirements you’re unsure about.
 
 END_SUMMARY
 
@@ -104,7 +104,7 @@ class User extends Authenticatable
 
 Finally, we’ll make a request to the [`/rates/:zip`](https://developers.taxjar.com/api/reference/#rates) endpoint using `ratesForLocation` with the following parameters: `street`, `city`, and `country`. These parameters are optional, but important for accurate rates. For example, if a street address is provided, we'll return back *rooftop* accurate rates in states where we have the necessary boundary data, such as Washington.
 
-The `zip` argument is always required. At a minimum, make sure you have the user's zip code on file. If you only provide a `zip`, [read this blog post](http://blog.taxjar.com/zip-codes-sales-tax/) regarding sales tax accuracy around zip-based rates.
+The `zip` argument is always required. At a minimum, make sure you have the user's zip code on file. If you only provide a `zip`, [read this blog post](https://blog.taxjar.com/zip-codes-sales-tax/) regarding sales tax accuracy around zip-based rates.
 
 ```php
 <?php
@@ -135,7 +135,7 @@ class User extends Authenticatable
 }
 ```
 
-Notice we're using the `combined_rate` attribute to return the tax percentage in Laravel Cashier, rounded to two decimal places as required. This works great for NY and WA because they’re both [destination-based states](http://blog.taxjar.com/charging-sales-tax-rates/) and we’re collecting sales tax based on the user’s address. If you have an [origin-based](http://blog.taxjar.com/charging-sales-tax-rates/) nexus state, you’ll want to collect sales tax based on your business address instead.
+Notice we're using the `combined_rate` attribute to return the tax percentage in Laravel Cashier, rounded to two decimal places as required. This works great for NY and WA because they’re both [destination-based states](https://blog.taxjar.com/charging-sales-tax-rates/) and we’re collecting sales tax based on the user’s address. If you have an [origin-based](https://blog.taxjar.com/charging-sales-tax-rates/) nexus state, you’ll want to collect sales tax based on your business address instead.
 
 Another thing you’ll want to consider is how to handle API errors beyond logging. We provide a [summarized rates](https://developers.taxjar.com/api/reference/?php#get-summarize-tax-rates-for-all-regions) endpoint with average and minimum rates for each state/region. This means you can store the average rate for NY and WA somewhere in your database just in case you’re unable to retrieve a rate from our API, reducing the likelihood of under-collecting sales tax.
 

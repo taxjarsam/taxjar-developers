@@ -4,7 +4,8 @@ description: Learn how to add sales tax to charges and subscriptions in Stripe a
 author: jake_johnson
 date: 2015-12-15 00:11 UTC
 category: Stripe
-tags: smartcalcs, stripe, api 
+tags: smartcalcs, stripe, api
+preferred_url: https://developers.taxjar.com/blog/handling-sales-tax-with-stripe/
 published: true
 ---
 

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= display_meta_tags site: 'TaxJar Developers', separator: '-' %>
     <link rel="shortcut icon" href="<%= image_path "favicon.png" %>">
+    <%- if current_page.data.preferred_url %>
+    <link rel="canonical" href="<%= current_page.data.preferred_url %>">
+    <%- end %>
     <link href="//fonts.googleapis.com/css?family=Montserrat|Lato:400,700|Source+Code+Pro:400,600" rel="stylesheet" type="text/css">
     <% if current_page.try(:path).include? 'blog' %>
       <link rel="alternate" type="application/rss+xml" title="TaxJar Dev Blog RSS Feed" href="https://developers.taxjar.com/blog/feed.xml">

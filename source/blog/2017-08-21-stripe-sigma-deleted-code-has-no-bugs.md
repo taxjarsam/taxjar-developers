@@ -2,7 +2,7 @@
 title: "Stripe Sigma: Deleted code has no bugs."
 description: Replacing Amazon Athena with Stripe Sigma for querying TaxJar metrics.
 author: bernd_ustorf
-date: 2017-08-22 12:00 UTC
+date: 2017-08-21 12:00 UTC
 category: Stripe
 tags: stripe, metrics, analytics
 published: true

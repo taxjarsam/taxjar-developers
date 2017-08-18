@@ -16,11 +16,15 @@ But as TaxJar grew, decisions got harder, and our need to be data driven became 
 
 END_SUMMARY
 
+![Hey Bernd Index == 0](/images/blog/stripe-sigma-deleted-code-has-no-bugs/hbi-zero.jpg)
+
 Some time in the last year, HBI hit an inflection point. I started getting questions like:
 
 > “Hey Bernd, how many AutoFile enrollees collected sales tax in California last month?”
 
-This sort of question required one off code and iteration on queries that took an hour or more per run — *HBI > 0*. 
+This sort of question required one off code and iteration on queries that took an hour or more per run — *HBI > 0*.
+
+![Hey Bernd Index > 0](/images/blog/stripe-sigma-deleted-code-has-no-bugs/hbi-greater-than-zero.jpg)
 
 Our decision making ability was impeded. To address this, I first tried [Amazon Redshift](https://aws.amazon.com/redshift/). By dumping CSV from our app database to S3 and loading it into Redshift, I was able to provision the data and run any query quickly. This was amazing.  Our team at TaxJar was happy to get new answers. 
 
@@ -36,9 +40,13 @@ Then it dawned on me. I was using a wizard in [Amazon Athena](https://aws.amazon
 
 HBI went down. I created Athena tables to read all of the CSV and JSON that I had stored on S3 and I cut Redshift out of the picture. I was very pleased with myself and finishing up this effort when I learned about [Stripe Sigma](https://stripe.com/us/sigma). 😳
 
+![Stripe Sigma](/images/blog/stripe-sigma-deleted-code-has-no-bugs/stripe-sigma.png)
+
 Sigma was quite interesting to me to say the least. I had just finished loading Stripe data into an architecture which allowed me to query it quickly using regular SQL. Sigma offered literally the same thing. Of course I checked it out immediately (and somewhat nervously).
 
 I felt like a cold-war engineer examining the MiG of a Soviet defector. What I saw was strange, familiar and awesome. The German side of me was so interested in the engineering I completely forgot it rendered months of my own work redundant.
+
+![Ausgezeichnet!](/images/blog/stripe-sigma-deleted-code-has-no-bugs/ausgezeichnet.jpg)
 
 I was able to run the queries I had created for our home-grown system with small modifications. It was performant and it gave access to all of the Stripe schema — even the parts I didn’t know if I would need. This is critical, because being able to explore the data without any setup time leads to paths you could never have known of.
 

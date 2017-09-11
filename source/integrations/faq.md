@@ -6,7 +6,7 @@ title: Frequently Asked Questions
 
 At this time, we don't have a sandbox environment for developing purposes, but know it is important and plan to have one soon. Please [contact our support team](https://www.taxjar.com/contact/) to add your name to a list of customers to be notified when this feature is available.
 
-In the meantime, we recommned that you create a free trial account and use this account to work against production. We're also happy to provide trial extensions if necessary to work on development of a new site. We suggest mocks / stubs for your tests until we provide a sandbox.
+In the meantime, we recommend that you create a free trial account and use this account to work against production. We're also happy to provide trial extensions if necessary to work on development of a new site. We suggest mocks / stubs for your tests until we provide a sandbox.
 
 ---
 

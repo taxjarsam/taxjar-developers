@@ -16,7 +16,7 @@ Transactions are imported into TaxJar either one of two ways:
 
 ---
 
-## Orders Transactions
+## Order Transactions
 
 **While you can import orders at any time, we recommend importing an order once it’s been shipped and paid/invoiced.** If an order is canceled, you can avoid having to delete the order from TaxJar if you wait until it’s been paid. There’s a couple ways you may want to do this:
 
@@ -92,7 +92,7 @@ The first line item you send in an API request will always be used for the trans
 
 If you provide line items in a transaction API request, SmartCalcs will always defer to line item data over the total `amount`, `shipping`, and `sales_tax`. This means if the sum of your line item amounts via `line_items[]` is higher than the `amount` param, TaxJar will use the total amount calculated from your line items. Same for sales tax.
 
-Remember, discounts are provided at the line item level factoring in the quantity, not per unit.
+Remember, discounts are provided at the line item level factoring in the quantity, **not per unit.**
 
 ```json
 {

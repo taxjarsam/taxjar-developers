@@ -66,7 +66,10 @@ Further out, we provide [VAT rates](https://blog.taxjar.com/european-vat-us-ecom
 
 When determining the address to populate in the `from_` parameters, we generally recommend using the store’s location or shipping origin. Here’s what Graham our sales tax analyst has to say:
 
-> **Most origin states consider the location at which the seller received the order from the customer the situs of the sale.** If the location at which the seller receives the order is in the state, then it trumps the ship-from location. If the location at which the seller receives the order is located outside the state, some states will source the sale to the ship-from location if that location is in the state (example: CA), and some will source it to destination (example: TX). Sales for which the order was received at a location in state but shipped from a location outside the state are virtually always sourced to the location at which the seller receives the order. Sales for which the order was received out of state and shipped from out of state are always destination.
+<div class="quote">
+  <img class="quote-author" src="/images/guides/authors/graham.png" width="100" alt="Graham at TaxJar">
+  <b>Most origin states consider the location at which the seller received the order from the customer the situs of the sale.</b> If the location at which the seller receives the order is in the state, then it trumps the ship-from location. If the location at which the seller receives the order is located outside the state, some states will source the sale to the ship-from location if that location is in the state (example: CA), and some will source it to destination (example: TX). Sales for which the order was received at a location in state but shipped from a location outside the state are virtually always sourced to the location at which the seller receives the order. Sales for which the order was received out of state and shipped from out of state are always destination.
+</div>
 
 ---
 
@@ -271,7 +274,7 @@ This guideline may save your merchants some money on API calculations, so take n
 * Provide as much data as you can to ensure accurate calculations.
 * If possible, cache your calculation API responses until an order detail changes (line item, address, shipping, etc).
 * Review your code to ensure you’re conservatively making requests to SmartCalcs and avoiding duplicate calls.
-* Always catch API request errors. Ideally, fall back to your tax rate system so merchants can utilize their own backup rates. If you see an ongoing problem, reach out to our support team.
+* Always catch API request errors. Ideally, fall back to your tax rate system so merchants can utilize their own backup rates. If you see an ongoing problem, [reach out to our support team](https://www.taxjar.com/contact/).
 * Log API requests and responses on your end for easy debugging.
 
 ---

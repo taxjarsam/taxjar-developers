@@ -1,0 +1,16 @@
+.flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.flexbox-col {
+  padding-right: 20px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.flexbox-col-flex {
+  flex: 1;
+}

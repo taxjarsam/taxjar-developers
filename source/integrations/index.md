@@ -6,6 +6,18 @@ Building a custom integration with TaxJar? In these guides, we’ll cover everyt
 
 If you have any questions or feedback, please reach out to [support@taxjar.com](mailto:support@taxjar.com).
 
+Thanks for choosing TaxJar!
+
+<div class="flexbox author">
+  <div class="flexbox-col">
+    <img src="/images/guides/authors/jake.png" width="50" alt="Jake Johnson">
+  </div>
+  <div class="flexbox-col">
+    <b>Jake Johnson</b><br>
+    <em>Developer Advocate</em>
+  </div>
+</div>
+
 ---
 
 ## Recommendations

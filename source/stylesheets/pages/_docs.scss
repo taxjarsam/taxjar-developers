@@ -50,6 +50,7 @@ body.integrations {
           text-overflow: ellipsis;
           border-radius: 3px;
           transition: all 120ms ease-out;
+          outline: none;
 
           &:hover {
             color: #000;
@@ -59,8 +60,8 @@ body.integrations {
           &.active {
             color: #3FAE2A;
             background: #fff;
-            // border-left: 3px solid green;
             box-shadow: 1px 3px 7px rgba(0,0,0,.04);
+            outline: none;
           }
         }
       }
@@ -247,15 +248,43 @@ body.integrations {
 
     blockquote {
       border-left: 3px solid #3FAE2A;
-      margin-left: 20px;
+      margin-left: 0;
       padding-left: 20px;
+    }
+
+    .quote {
+      position: relative;
+      margin: 1.5em 0;
+      padding: 0 20px;
+      border-left: 3px solid #3FAE2A;
+    }
+
+    .quote-author {
+      float: left;
+      margin: 10px 20px;
+    }
+
+    .quote:before {
+      position: absolute;
+      display: block;
+      content: '';
+      background: url(/images/quote.svg) top left no-repeat;
+      background-size: 100%;
+      width: 22px;
+      height: 45px;
+      top: 0;
+      left: 20px;
+    }
+
+    .author em {
+      font-style: normal;
+      color: #999;
     }
   }
 
   .docs-badge {
     display: inline;
     font-weight: bold;
-
     padding: 2px 5px;
     color: #fff;
     background: #ccc;

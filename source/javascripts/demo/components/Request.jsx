@@ -90,7 +90,8 @@ var Request = React.createClass({
         contentType: 'application/json',
         data: params,
         headers: {
-          'Authorization': 'Bearer ' + window.apiToken
+          'Authorization': 'Bearer ' + window.apiToken,
+          'User-Agent': 'TaxJarAPIDemo/1.0'
         },
         error: function(err) {
           err = JSON.parse(err.responseText);

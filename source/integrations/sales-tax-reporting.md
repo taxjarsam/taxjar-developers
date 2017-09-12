@@ -8,7 +8,7 @@ Transactions are imported into TaxJar either one of two ways:
 
 * From the TaxJar app using an in-house integration, such as Amazon, eBay, or Walmart. TaxJar queues up workers behind-the-scenes to go out and import transactions from a merchant’s store on a nightly basis. Merchants can backfill transactions from previous dates.
 ![TaxJar Welcome Dialog](/images/guides/taxjar-welcome.png)
-<small>**Note:** Only in-house integrations are shown in the TaxJar welcome dialog. Custom integrations can be found on our integrations page. We hope to provide more opportunities for exposure inside the TaxJar app soon. [Contact us](https://www.taxjar.com/contact/) for more information.</small>
+<small>**Note:** Only in-house integrations are shown in the TaxJar welcome dialog. Custom integrations can be found on our [sales tax integrations](https://www.taxjar.com/sales-tax-integrations/) page. We hope to provide more opportunities for exposure inside the TaxJar app soon. [Contact us](https://www.taxjar.com/contact/) for more information.</small>
 
 * In real-time through SmartCalcs using the API transaction endpoints. When to import a merchant’s transactions and supporting backfills is provided at the discretion of the platform.
 

@@ -29,6 +29,16 @@ TaxJar does not yet provide oAuth-based authentication, so you will be responsib
 
 ---
 
+## Security Requirements
+
+If you allow merchants to use their own TaxJar accounts, it's your responsibility to store their TaxJar API tokens in your system securely. **Always encrypt sensitive merchant data both in transit and storage over SSL.** Additionally, we recommend the following:
+
+* Use access control on data storage where merchant / customer data is kept
+* Maintain a regular cadence of security testing in production environments
+* Perform adequate logging of events and API calls
+
+---
+
 ## Branding Guidelines
 
 * Always use the phrase “API token” when mentioning TaxJar API credentials, do not use “API key”.

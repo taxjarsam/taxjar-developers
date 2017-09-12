@@ -44,7 +44,7 @@ However, it gets trickier in the US. [Individual states in the US handle sales t
 
 If you ship an order from out of state into an origin-based state, that state may effectively become destination-based.
 
-*Based on this scenario, we highly recommend using the `from_` parameters to ensure the correct sourcing logic for a state.*
+**Based on this scenario, we highly recommend using the `from_` parameters to ensure the correct sourcing logic for a state.**
 
 Using our [state guides](https://www.taxjar.com/states/), you can find out the sourcing of a state and how we handle interstate orders.
 
@@ -91,7 +91,7 @@ The more data you put into these parameters, the more you’ll get back. If you 
 
 **We recommend providing the customer’s shipping address for the `to_` parameters.**
 
-There are scenarios when this may not apply:
+There are a couple scenarios when this may not apply:
 
 * If you’re selling [digital / virtual products](https://blog.taxjar.com/sales-tax-digital-products/) or SaaS subscriptions, consider using the customer’s billing address.
 
@@ -206,7 +206,7 @@ Fully taxable products don’t require a `product_tax_code`. We’ll automatical
 
 ## Product Exemptions
 
-To handle product taxability, you’ll need to allow merchants to assign their products to a TaxJar product category. If you have a product tax class system built into your platform, consider associating a TaxJar product category with a tax class.
+To handle product taxability, you’ll need to allow merchants to assign their products to a [TaxJar product category](https://developers.taxjar.com/api/reference/#get-list-tax-categories). If you have a product tax class system built into your platform, consider associating a TaxJar product category with a tax class.
 
 Our `/v2/categories` endpoint is provided so you can pull down our product categories and keep them updated in your system. You can retrieve the category name and tax code for each category:
 
@@ -236,7 +236,9 @@ Exempting customers is similar to fully exempting line items — if a customer i
 
 If your platform doesn’t provide customer tax classes, you may want to consider an option for exempting individual customers or customer groups from sales tax.
 
-### Handling the Response
+---
+
+## Response
 
 Use the `amount_to_collect` attribute to return back the amount of sales tax to collect in your platform.
 
@@ -281,10 +283,22 @@ This guideline may save your merchants some money on API calculations, so take n
 
 ## Branding Guidelines
 
+* Sales tax calculations are powered by TaxJar SmartCalcs. Generally, we use "SmartCalcs by TaxJar" or "TaxJar SmartCalcs" for headlines. Feel free to use "powered by TaxJar SmartCalcs" in explanation text.
+
+* Always capitalize the "S" and "C" in SmartCalcs. Combine the "Smart" and "Calcs" into one word. Do not use "Smartcalcs", "Smart calcs", or "Smart Calcs".
+
+* For calculation checkbox and toggle switch fields, we generally use "Enabled for Checkout", "Sales Tax Calculations", or "Checkout Calculations" as the field label:
+![TaxJar Calculations Config](/images/guides/taxjar-calculations-config.png)
+
 ---
 
-
 ## Testing Guidelines
+
+* Use a separate TaxJar account for testing calculations.
+
+* Write integration tests between your platform and SmartCalcs integration to ensure your checkout process properly handles sales tax. [Review a checklist of scenarios to test.](/integrations/testing/)
+
+* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing SmartCalcs responses for ongoing use. Tax rates are subject to change, so using fixtures will help prevent tests from randomly breaking.
 
 ---
 

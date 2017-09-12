@@ -7,7 +7,7 @@ When testing an integration with SmartCalcs, we want to be confident that your p
 * Passing the correct data to SmartCalcs in the API request
 * Returning the correct data from SmartCalcs using the API response
 
-In this guide, we'll provide some high-level guidelines on how to test your integration effectively and a list of common testing scenarios.
+In this guide, we'll provide some high-level guidelines on how to test your integration effectively and a checklist of common testing scenarios.
 
 ---
 

@@ -111,6 +111,8 @@ The `amount` param is always the total amount of the order, excluding shipping. 
 
 **We recommend providing both params or simply `line_items[]` for the most flexibility.**
 
+You'll notice our API documentation classifies amounts as `long`, referring to the `long double` data type from languages such as C. Behind the scenes we use BigDecimal when working with monetary values for highly accurate calculations.
+
 ---
 
 ## Shipping
@@ -146,13 +148,13 @@ Without providing nexus addresses, SmartCalcs will assume the merchant only has 
 }
 ```
 
-Depending on your requirements, it may be fine to only support one nexus address per merchant using the `from_` address. Merchants with multiple nexus addresses will need to sign up for a TaxJar account and manage their states inside the TaxJar app.
+Depending on your requirements, it may be fine to only support one nexus address per merchant using the `from_` address. Merchants with multiple nexus addresses will need to sign up for a TaxJar account and manage their nexus states inside the TaxJar app.
 
 In order to support `nexus_addresses[]` on your platform, you may need to introduce a way for merchants to manage multiple business addresses. Ideally, provide a way to manage nexus addresses directly through SmartCalcs similar to our Magento integrations:
 
 ![Magento 2 Nexus Addresses](/images/guides/nexus-addresses.png)
 
-SmartCalcs provides a set of nexus address endpoints that we’ll cover later.
+Use our [nexus regions endpoint](https://developers.taxjar.com/api/reference/#get-list-nexus-regions) to pull down a merchant's nexus addresses from TaxJar and store them locally to pass via `nexus_addresses[]`.
 
 ### International Limitations
 
@@ -278,6 +280,8 @@ This guideline may save your merchants some money on API calculations, so take n
 * Review your code to ensure you’re conservatively making requests to SmartCalcs and avoiding duplicate calls.
 * Always catch API request errors. Ideally, fall back to your tax rate system so merchants can utilize their own backup rates. If you see an ongoing problem, [reach out to our support team](https://www.taxjar.com/contact/).
 * Log API requests and responses on your end for easy debugging.
+
+As a backup we also provide minimum and average sales tax rates by region, in case our API becomes unavailable. You're welcome to use our [summarized rates endpoint](https://developers.taxjar.com/api/reference/#summarized-rates) to periodically pull down these rates to ensure sales tax is always collected.
 
 ---
 

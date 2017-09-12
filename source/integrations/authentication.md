@@ -39,7 +39,7 @@ TaxJar does not yet provide oAuth-based authentication, so you will be responsib
 
 * The very first thing you should ask for is the merchant’s TaxJar API token.
 * If possible, TaxJar-related settings should be hidden or out of focus until a TaxJar API token is provided by the merchant.
-* Provide a link for merchants to sign up for TaxJar through our API flow in a new window / tab: app.taxjar.com/api_sign_up
+* Provide a link for merchants to sign up for TaxJar through our API flow in a new window / tab: [https://app.taxjar.com/api\_sign\_up](https://app.taxjar.com/api_sign_up)
 * Point merchants to this article for additional help generating an API token: [How do I get a SmartCalcs sales tax API token? | TaxJar Support](https://support.taxjar.com/knowledge_base/topics/how-do-i-get-a-smartcalcs-sales-tax-api-token)
 
 ---

@@ -298,7 +298,7 @@ This guideline may save your merchants some money on API calculations, so take n
 
 * Set some intelligent defaults if certain settings don’t apply to SmartCalcs. For example, the merchant should usually use the customer’s shipping address when calculating tax, not the billing address or store location.
 
-* In addition to all of the above, make enabling sales tax calculations as simple as possible. It should only require a checkbox to activate.
+* In addition to all of the above, make enabling sales tax calculations as simple as possible. It should only require a checkbox or toggle switch to activate.
 
 * Point merchants in the right direction to configure product exemptions, customer exemptions, and nexus address management if you plan to add this functionality.
 

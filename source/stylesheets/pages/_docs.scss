@@ -309,7 +309,22 @@ body.integrations {
 }
 
 @media (max-width: 1180px) {
-  .docs-toc {
-    display: none;
+  .docs {
+    .docs-toc {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .docs {
+    .docs-sidebar {
+      display: none;
+    }
+
+    .docs-title,
+    .docs-content {
+      margin-left: 0;
+    }
   }
 }

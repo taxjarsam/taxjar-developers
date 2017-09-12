@@ -106,6 +106,22 @@
                 "from_state": "BC",
                 "from_zip": "V6G 3E2",
                 "from_country": "CA"
+              },
+              {
+                "_name": "Île-de-France",
+                "_type": "address",
+                "from_street": "55 Rue du Faubourg Saint-Honoré",
+                "from_city": "Paris",
+                "from_zip": "75008",
+                "from_country": "FR"
+              },
+              {
+                "_name": "New South Wales",
+                "_type": "address",
+                "from_street": "483 George St",
+                "from_city": "Sydney",
+                "from_zip": "NSW 2000",
+                "from_country": "AU"
               }
             ]
           },
@@ -195,6 +211,22 @@
                 "to_state": "ON",
                 "to_zip": "M5V 2T6",
                 "to_country": "CA"
+              },
+              {
+                "_name": "Provence-Alpes-Côte d'Azur",
+                "_type": "address",
+                "to_street": "Rue Fort du Sanctuaire",
+                "to_city": "Marseille",
+                "to_zip": "13281",
+                "to_country": "FR"
+              },
+              {
+                "_name": "Victoria",
+                "_type": "address",
+                "to_street": "Brunton Ave",
+                "to_city": "Richmond",
+                "to_zip": "VIC 3002",
+                "to_country": "AU"
               }
             ]
           }

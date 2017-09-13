@@ -234,4 +234,4 @@ Along the way, we check each transaction to ensure it adheres to the API guideli
 
 ---
 
-<a href="/integrations/testing/" class="btn">Next: Testing &amp; Security</a>
+<a href="/integrations/testing/" class="btn">Next: Testing &amp; Scenarios</a>

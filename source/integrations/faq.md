@@ -12,7 +12,7 @@ In the meantime, we recommend that you create a free trial account and use this 
 
 ## What is your API uptime and response times?
 
-Our sales tax API clocks in at sub-75ms with 99.99% uptime. Check our [status page](https://status.taxjar.com/) for the breakdown.
+Our sales tax API clocks in at sub-75ms with 99.99% uptime. Check our [status page](https://status.taxjar.com/) for more information.
 
 ---
 

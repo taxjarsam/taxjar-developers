@@ -147,6 +147,10 @@ body.integrations {
           &:active {
             outline: none;
           }
+
+          &.active {
+            color: #3FAE2A;
+          }
         }
       }
 

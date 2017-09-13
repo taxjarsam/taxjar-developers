@@ -354,7 +354,7 @@ footer {
   color: rgba(255,255,255,.8);
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1446px) {
   .logo .long {
     display: none;
   }
@@ -365,6 +365,16 @@ footer {
 
   .menu--main {
     margin-left: 55px;
+  }
+
+  .menu--main li a span {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .menu--actions ul li:first-child {
+    display: none;
   }
 }
 
@@ -377,17 +387,15 @@ footer {
     display: none;
   }
 
+  .menu--actions ul li:first-child {
+    display: block;
+  }
+
   .menu--actions .navbar-responsive {
     display: block;
   }
 
   .content {
     padding: 0 20px;
-  }
-}
-
-@media (max-width: 1348px) {
-  .menu--main li a span {
-    display: none;
   }
 }

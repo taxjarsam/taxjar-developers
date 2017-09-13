@@ -24,4 +24,20 @@
   if (!tocGuidelines.length) {
     toc.find('> ol').first().nextAll().remove();
   }
+
+  ScrollSpy.prototype.isInView = function (el) {
+    var winH = this.winH,
+      scrollTop = (this.doc.documentElement.scrollTop || this.doc.body.scrollTop),
+      scrollBottom = scrollTop + winH,
+      rect = el.getBoundingClientRect(),
+      elTop = rect.top + scrollTop - 69,
+      elBottom = elTop + el.offsetHeight;
+
+    return (elTop < scrollBottom) && (elBottom > scrollTop);
+  };
+
+  var scrollSpy = new ScrollSpy('.docs', {
+    nav: '.docs-toc li > a',
+    className: 'active'
+  });
 })(jQuery);

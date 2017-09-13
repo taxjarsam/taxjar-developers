@@ -8,10 +8,6 @@
   var path = window.location.pathname;
   var bodyClass = document.body.classList[0];
   var activeLink = document.querySelector('.menu a[href="' + path + '"], .menu a[href*="' + bodyClass + '"]');
-  var scrollSpy = new ScrollSpy('.docs', {
-    nav: '.docs-toc li > a',
-    className: 'active'
-  });
 
   FastClick.attach(document.body);
 

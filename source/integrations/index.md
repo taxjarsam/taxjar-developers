@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-Building a custom integration with TaxJar? In these guides, we’ll cover everything you need to know about handling sales tax calculations, reporting, and filing for your own platform. Along the way you’ll learn the basics of sales tax. Before you build a new integration from scratch, we recommend reading these guides and browsing our [API documentation](/api/reference/) so you fully understand what can be accomplished through [SmartCalcs](https://www.taxjar.com/smartcalcs/), our sales tax API.
+Building a custom integration with TaxJar? In these guides, we’ll cover everything you need to know about handling sales tax calculations, reporting, and filing for your own platform. Before you build a new integration from scratch, we recommend reading these guides and browsing our [API documentation](/api/reference/) so you fully understand what can be accomplished through [SmartCalcs](https://www.taxjar.com/smartcalcs/), our sales tax API.
 
 If you have any questions or feedback, please reach out to [support@taxjar.com](mailto:support@taxjar.com).
 

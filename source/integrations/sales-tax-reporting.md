@@ -179,17 +179,17 @@ To backfill transactions through SmartCalcs, you should filter a collection of o
 
 Our in-house Magento 2 integration is a good example to follow for backfilling transactions. For each transaction, we set a sync date for each order and credit memo (refund) in the merchant’s database:
 
-* No sync date? Create the transaction in TaxJar (POST request).
+* No sync date? Create the transaction in TaxJar (`POST` request).
 * Transaction hasn’t been updated since sync date? Skip the transaction.
-* Transaction updated? Update the transaction in TaxJar (PUT request).
+* Transaction updated? Update the transaction in TaxJar (`PUT` request).
 
 ![Magento 2 Transaction Sync Date](/images/guides/transaction-sync-date.png)
 
 ![Magento 2 Transaction Sync](/images/guides/transaction-sync.png)
 
-If we encounter a 422 error when attempting to create a new transaction that exists, we fallback to an update (PUT) request.
+If we encounter a `422` error when attempting to create a new transaction that exists, we fallback to an update (PUT) request.
 
-If we encounter a 404 error when attempting to update an existing transaction that does not exist, we fallback to a create (POST) request.
+If we encounter a `404` error when attempting to update an existing transaction that does not exist, we fallback to a create (POST) request.
 
 Along the way, we check each transaction to ensure it adheres to the API guidelines. Only `complete` and `closed` transactions are imported from Magento 2. Each API request and response is logged for the merchant to review later if needed.
 
@@ -197,9 +197,29 @@ Along the way, we check each transaction to ensure it adheres to the API guideli
 
 ## API Guidelines
 
-* We recommend only importing US-based transactions for merchants. At this time, our reporting app only supports US state reports.
+* Import order transactions after they've been shipped and paid/invoiced.
+
+* We recommend only importing US-based transactions for merchants. At this time, our reporting app only supports US sales tax reports.
 
 * Additionally, only import USD currency transactions.
+
+---
+
+## Branding Guidelines
+
+* Use "Transaction Sync" when referring to real-time importing of order and refund transactions into TaxJar.
+
+* If you support importing older transactions within a date range, use the term "backfill" in headlines and action buttons such as "Backfill Transactions".
+
+---
+
+## Testing Guidelines
+
+* Use a separate TaxJar account for testing transactions.
+
+* Write integration tests between your platform and SmartCalcs integration to ensure your transaction import process properly handles order and refund transactions. [Review a checklist of scenarios to test.](/integrations/testing/)
+
+* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing SmartCalcs responses for ongoing use. If a transaction already exists in TaxJar, you'll receive an error if you attempt to re-create it using a `POST` request.
 
 ---
 

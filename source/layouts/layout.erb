@@ -34,6 +34,7 @@
                 <li><a href="/demo/"><span>API</span> Demo</a></li>
                 <li><a href="/api/"><span>API</span> Reference</a></li>
                 <li><a href="/api/guides/"><span>API</span> Guides</a></li>
+                <li><a href="/integrations/">Integrations</a></li>
                 <li><a href="https://status.taxjar.com"><span>API</span> Status</a></li>
                 <li><a href="/blog/">Dev Blog</a></li>
                 <li><a href="https://support.taxjar.com/knowledge_base/categories/smartcalcs" target="_blank">Support</a></li>
@@ -63,7 +64,7 @@
         <%= partial "partials/sidebar" %>
       </div>
     </div>
-    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" %>
+    <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" %>
     <%= javascript_include_tag "all" %>
     <%= yield_content :js %>
     <script>

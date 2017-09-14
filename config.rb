@@ -1,4 +1,5 @@
 require 'autoprefixer-rails'
+require 'lib/nav_helpers'
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -30,8 +31,11 @@ after_configuration do
   sprockets.append_path File.dirname(::React::Source.bundled_path_for('react.js'))
 end
 
+helpers NavHelpers
+
 page '/blog/feed.xml', :layout => false
 page '/error.html', :directory_index => false
+page '/integrations/*', :layout => 'docs'
 
 # Build-specific configuration
 configure :build do

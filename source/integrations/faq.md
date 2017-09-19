@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions
+description: "FAQs for custom integrations using TaxJar's sales tax API."
 ---
 
 ## How do I get a sandbox account?

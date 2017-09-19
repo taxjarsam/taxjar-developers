@@ -1,5 +1,6 @@
 ---
 title: Sales Tax Calculations
+description: "Set up sales tax calculations in your eCommerce platform using TaxJar's sales tax API."
 ---
 
 Every platform handles sales tax calculations differently with a varying degree of accuracy. Most commonly you’ll find zip-based tax rates, allowing merchants to set up a tax rate by 5-digit postal code. These rates [work fine in certain scenarios](https://blog.taxjar.com/zip-codes-sales-tax/), but ideally you want to collect sales tax based on the street address for US calculations:

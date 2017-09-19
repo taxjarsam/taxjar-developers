@@ -1,5 +1,6 @@
 ---
 title: Testing & Scenarios
+description: "Learn best practices for testing your custom integration with TaxJar's sales tax API."
 ---
 
 When testing an integration with SmartCalcs, we want to be confident that your platform correctly handles sales tax both ways:

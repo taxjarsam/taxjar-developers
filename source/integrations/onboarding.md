@@ -1,5 +1,6 @@
 ---
 title: Merchant Onboarding
+description: "Learn how to onboard new merchants for sales tax in your eCommerce platform."
 ---
 
 There’s no “one size fits all” approach for onboarding new users to sales tax in your platform, but we’ll provide you with some guidelines.

@@ -1,5 +1,6 @@
 ---
 title: Authentication
+description: "Learn how to authenticate TaxJar accounts in your eCommerce platform."
 ---
 
 In order to make API requests to SmartCalcs, you’ll need to authenticate a TaxJar account using the `Authorization` header. We currently provide two choices for integrations based on whether you’d like to provide sales tax calculations, reporting, or both:

@@ -1,5 +1,6 @@
 ---
 title: Sales Tax Reporting
+description: "Import transactions from your eCommerce platform into TaxJar for automated sales tax reporting and filing."
 ---
 
 TaxJar provides automated sales tax reports and filing for online merchants in the United States. To generate state-based reports and determine how much sales tax a merchant has collected vs. how much they ought to have collected, we need their order and refund transactions.

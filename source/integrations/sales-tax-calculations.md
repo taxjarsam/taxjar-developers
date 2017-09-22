@@ -227,9 +227,11 @@ Our `/v2/categories` endpoint is provided so you can pull down our product categ
 
 Using this data, you could populate a dropdown for merchants to select a TaxJar product category when managing tax classes or individual products.
 
-In most of our implementations, we associate our tax codes with the notion of a tax class. This may differ based on your internal requirements. For example, a merchant selling clothing would create a “Clothing” tax class and assign it to “Clothing - 20010”, the category provided by TaxJar. When a clothing product is added to the cart, the tax class and associated tax code is retrieved. If a tax code is found, it’s passed via `product_tax_code`.
+In most of our integrations we associate our tax codes with the notion of a tax class. This may differ based on your internal requirements. For example, a merchant selling clothing would create a “Clothing” tax class and assign it to “Clothing - 20010”, the category provided by TaxJar. When a clothing product is added to the cart, the tax class and associated tax code is retrieved. If a tax code is found, it’s passed via `product_tax_code`.
 
-We have a limited set of categories, but we’re planning to expand the list over time. If a product doesn’t have a category, we’ll assume it’s always taxable. Our “exempt” category can be used to fully exempt certain types of products if the merchant must exempt.
+Currently we provide a [subset of common product categories](https://developers.taxjar.com/api/reference/#get-list-tax-categories) and we’re planning to expand the list over time. If a product doesn’t have a category, we’ll assume it’s always taxable. Our “Other Exempt” category can be used to fully exempt certain types of products if the merchant must exempt them.
+
+Depending on your requirements, you may need to add some custom logic to your integration as a workaround if TaxJar does not yet support a specific product category. Usually this involves applying a `product_tax_code` of `99999` if the order is shipped to a specific state where the exemption occurs. For partial exemptions, you may need to add a discount or reduce the total amount on your end before making a request to SmartCalcs.
 
 ---
 

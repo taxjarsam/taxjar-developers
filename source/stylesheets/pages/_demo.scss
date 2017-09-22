@@ -31,35 +31,35 @@
   padding: 20px;
   z-index: 2;
   box-shadow: 1px 0 3px rgba(0, 0, 0, 0.12);
-  
+
   .preset {
     margin: 20px 0 0;
     border-bottom: 1px solid #E5E5E5;
-    
+
     &:last-child {
       border-bottom: 0;
     }
   }
-  
+
   h3 {
     margin: 0;
     padding: 0;
   }
-  
+
   p {
     font-size: 13px;
     line-height: 22px;
     color: #666;
   }
-  
+
   .optionGroup {
     padding: 10px 0;
   }
-  
+
   .option {
     margin: 0 0 20px;
     cursor: pointer;
-    
+
     &:hover {
       // background: #fff;
     }
@@ -68,12 +68,12 @@
       margin: 0;
       padding: 0;
       font-size: 15px;
-      
+
       + p {
         margin: 5px 0 0 30px;
       }
     }
-    
+
     input {
       float: left;
       margin: 2px 15px 0 0;
@@ -124,12 +124,12 @@
   color: #fff;
   background: #2D2D2D;
   flex: 1;
-  
+
   .ReactCodeMirror {
     position: relative;
     margin: 10px 20px;
     flex: 1;
-    
+
     .CodeMirror {
       position: absolute;
       top: 0;
@@ -139,7 +139,7 @@
       background: #2D2D2D;
     }
   }
-  
+
   &:before {
     position: absolute;
     top: 66px;
@@ -150,7 +150,7 @@
     height: 10px;
     z-index: 3;
   }
-  
+
   &:after {
     position: absolute;
     left: 0;
@@ -178,10 +178,10 @@
   background: rgba(52, 52, 52, 0.92);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 3px;
-  z-index: 2;
+  z-index: 9999;
   cursor: default;
   // pointer-events: none;
-  
+
   a {
     color: #fff !important;
     font-weight: bold !important;
@@ -190,24 +190,24 @@
       color: #47C052 !important;
     }
   }
-  
+
   h6 {
     color: #fff;
   }
-  
+
   p, li {
     font-size: 13px !important;
   }
-  
+
   ul {
     margin: 10px 0 0 0;
     padding: 0 0 0 16px;
-    
+
     li {
       position: relative;
       list-style: none;
       margin-bottom: 10px;
-      
+
       &:before {
         position: absolute;
         display: block;
@@ -225,7 +225,7 @@
   color: #fff;
   background: #343434;
   padding: 20px;
-  
+
   h3 {
     float: left;
     margin: 0;
@@ -250,15 +250,15 @@
   text-transform: uppercase;
   transition: opacity 220ms ease-out;
   outline: none;
-  
+
   i {
     margin-right: 4px;
   }
-  
+
   &:hover {
     opacity: 1;
   }
-  
+
   &:last-child {
     margin-right: 0;
   }
@@ -284,7 +284,7 @@
     background: #2D2D2D;
     z-index: 7;
     opacity: 0.92;
-    
+
     .empty, .error {
       position: absolute;
       top: 50%;
@@ -296,7 +296,7 @@
       text-align: center;
       z-index: 8;
     }
-    
+
     .empty .toolbar__btn {
       margin: 0 8px;
       opacity: 0.6;
@@ -309,11 +309,11 @@
   .sidebar {
     width: 260px;
   }
-  
+
   .map__tooltip {
     display: none;
   }
-  
+
   .request .toolbar .toolbar__btn:nth-child(2) {
     display: none;
   }

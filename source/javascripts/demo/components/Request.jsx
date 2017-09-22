@@ -24,12 +24,12 @@ var Request = React.createClass({
   lockCode: function() {
     var editor = document.querySelector('.CodeMirror').CodeMirror;
     var code = esprima.parse(this.state.code, { loc: true, tokens: true });
-    
+
     _.each(code.tokens, function(token) {
       var startPos = { line: token.loc.start.line - 1, ch: token.loc.start.column };
       var endPos = { line: token.loc.end.line - 1, ch: token.loc.end.column };
       var editableTypes = ['String', 'Numeric'];
-      
+
       if (_.includes(editableTypes, token.type)) {
         editor.doc.markText(startPos, endPos, {
           className: 'editable'
@@ -51,7 +51,7 @@ var Request = React.createClass({
     var methodArgs = [];
     var methodParams = {};
     var allowedMethods = ['categories', 'ratesForLocation', 'taxForOrder', 'listOrders', 'showOrder', 'createOrder', 'updateOrder', 'deleteOrder', 'listRefunds', 'showRefund', 'createRefund', 'updateRefund', 'deleteRefund'];
-    
+
     rocambole.moonwalk(ast, function(node) {
       if (node.type === 'Identifier' && _.includes(allowedMethods, node.name)) {
         method = node.name;
@@ -66,7 +66,7 @@ var Request = React.createClass({
         methodParams = JSON.parse(object);
       }
     });
-    
+
     if (apiData.tasks[method]) {
       var self = this;
       var request = apiData.tasks[method];
@@ -76,11 +76,11 @@ var Request = React.createClass({
       _.each(apiData.tasks[method].args, function(argKey, i) {
         args[argKey] = methodArgs[i];
       });
-      
+
       if (args) _.merge(params, args);
 
       this.props.onChange({ loadingResponse: true });
-      
+
       this.setState({ runStatus: 'Running' });
 
       reqwest({
@@ -107,7 +107,7 @@ var Request = React.createClass({
           self.props.onChange({ presetResponse: responseText, errorResponse: null, loadingResponse: false });
           self.updateMarkers(method, methodParams, res);
         }
-      });  
+      });
     }
   },
   updateMarkers: function(method, methodParams, response) {
@@ -120,7 +120,7 @@ var Request = React.createClass({
         if (key.indexOf('from_') !== -1) fromAddress.push(param);
         if (key.indexOf('to_') !== -1) toAddress.push(param);
       });
-      
+
       if (methodParams.from_state === methodParams.to_state) {
         if (apiData.tasks[method].contexts[methodParams.from_state]) {
           var stateName = this.findAddressParam(method, methodParams.from_street, '_name');
@@ -129,6 +129,11 @@ var Request = React.createClass({
           tooltip += apiData.tasks[method].contexts[methodParams.from_state];
           tooltip += '</div>';
         }
+      } else {
+        tooltip = '<div>';
+        tooltip += '<h6>No Nexus</h6>';
+        tooltip += apiData.tasks[method].contexts['No Nexus'];
+        tooltip += '</div>';
       }
 
       this.props.onChange({
@@ -145,7 +150,7 @@ var Request = React.createClass({
         }
       });
     }
-    
+
     if (method === 'ratesForLocation') {
       var extraParams = (methodParams) ? _.flatten(methodParams).join(' ') : '';
       this.props.onChange({
@@ -156,7 +161,7 @@ var Request = React.createClass({
   },
   findAddressParam: function(method, address, param) {
     var matches = [];
-    
+
     _.each(apiData.tasks[method].presets, function(preset) {
       _.each(preset.data, function(item) {
         if (item._type === 'address') {
@@ -166,7 +171,7 @@ var Request = React.createClass({
         }
       });
     });
-    
+
     if (matches.length) {
       return _.head(matches)[param] || '';
     } else {
@@ -179,7 +184,7 @@ var Request = React.createClass({
       theme: 'taxjar',
       scrollbarStyle: 'overlay'
     };
-    
+
     return (
       <div className="request">
         <div className="header">

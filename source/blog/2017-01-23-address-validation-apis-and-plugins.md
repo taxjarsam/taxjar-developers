@@ -27,15 +27,6 @@ Countries: US, Australia<br>
 API Clients: Ruby, Python, Node, C#, PHP<br>
 Documentation: [https://goshippo.com/docs/address-validation](https://goshippo.com/docs/address-validation)
 
-### EasyPost
-
-Similar to Shippo, [EasyPost](https://www.easypost.com) makes it easy to programmatically generate shipping labels and track packages across 60+ carriers. For US addresses, EasyPost provides free domestic address verification using their proprietary API. If you sign up for their shipping API, you’ll get full access with international coverage. EasyPost can validate US addresses to the unit level and mark them as residential or commercial.
-
-Pricing: **Free** (US Only)<br>
-Countries: US, International<br>
-API Clients: Ruby, Python, Java, Node, C#, PHP<br>
-Documentation: [https://www.easypost.com/docs/api/curl#addresses](https://www.easypost.com/docs/api/curl#addresses)
-
 ### Lob
 
 Unlike the first two services I’ve mentioned, [Lob](https://lob.com) provides an API for sending physical mail such as postcards, letters, and checks. Their address verification API is free for all US addresses and $0.15 per international verification. Lob also has a [tutorial on how to verify addresses](https://lob.com/blog/verify-shipping-addresses-in-python-for-free/) using their Python client.
@@ -62,6 +53,15 @@ Pricing: **250 Lookups Free** / Month<br>
 Countries: US, International<br>
 API Clients: Python, Java, C#, Go, iOS, Android<br>
 Documentation: [https://smartystreets.com/docs](https://smartystreets.com/docs)
+
+### EasyPost
+
+Similar to Shippo, [EasyPost](https://www.easypost.com) makes it easy to programmatically generate shipping labels and track packages across 60+ carriers. If you sign up for their shipping API, you’ll get full access to their address verification API for free. EasyPost can validate US addresses to the unit level and mark them as residential or commercial.
+
+Pricing: $15+ / Month<br>
+Countries: US, International<br>
+API Clients: Ruby, Python, Java, Node, C#, PHP<br>
+Documentation: [https://www.easypost.com/docs/api/curl#addresses](https://www.easypost.com/docs/api/curl#addresses)
 
 <div id="address-validation-plugins"></div>
 ## Address Validation Plugins & Extensions

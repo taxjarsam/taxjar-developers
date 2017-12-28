@@ -62,7 +62,7 @@ Since we’re using a read-only API key with limited access, we can safely inclu
 import axios from 'axios';
 
 axios({
-  url: 'https://api.airtable.com/v0/appPQ2yJdnvqXADnw/clothing',
+  url: 'https://api.airtable.com/v0/YOUR_BASE',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY'
   }
@@ -105,7 +105,7 @@ export default {
     return {
       apiUrl: 'https://api.airtable.com/v0/',
       apiKey: 'YOUR_API_KEY', // Always use a read-only account token
-      base: 'appPQ2yJdnvqXADnw/clothing',
+      base: 'YOUR_BASE',
       records: []
     };
   },
@@ -193,6 +193,10 @@ Lastly, let’s update our `getData` method to use the `base` prop and pass some
   }
 ```
 
-Easy! We now have a dynamic filterable sortable Airtable component that we can use anywhere in our static website. You could take this component even further by supporting `fields`, `maxRecords`, `pageSize`, and other parameters from the Airtable record list endpoints.
+Easy! We now have a dynamic filterable sortable Airtable component that we can use anywhere in our static website. You could take this component even further by supporting `fields`, `maxRecords`, `pageSize`, and other parameters from the Airtable record list endpoints. Use the additional props for your `<vue-airtable>` markup if needed:
+
+```html
+<vue-airtable base="YOUR_BASE" :columns="['Warehouse Code', 'Street Address', 'County', 'Sales Tax Rate']" filter="AND({State} = 'CA', {Status} = 'Open', {Type} = 'Fulfillment')" :sort="[{field: 'Warehouse Code', direction: 'asc'}]"></vue-airtable>
+```
 
 That's a quick rundown of how we use Airtable at TaxJar. If you have any questions or ideas for other Airtable use cases, let me know in the comments below!

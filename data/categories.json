@@ -10,5 +10,8 @@
   },
   "Laravel": {
     "color": "#e74430"
+  },
+  "JavaScript": {
+    "color": "#3FAE2A"
   }
 }

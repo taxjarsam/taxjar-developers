@@ -91,8 +91,6 @@ Since transactions are shown directly in the TaxJar app for merchants to review,
 
 The first line item you send in an API request will always be used for the transaction’s title in TaxJar.  If multiple line items are included, the merchant will see a “[+ X more]” appended to the title.
 
-If you provide line items in a transaction API request, SmartCalcs will always defer to line item data over the total `amount`, `shipping`, and `sales_tax`. This means if the sum of your line item amounts via `line_items[]` is higher than the `amount` param, TaxJar will use the total amount calculated from your line items. Same for sales tax.
-
 Remember, discounts are provided at the line item level factoring in the quantity, **not per unit.**
 
 ```json

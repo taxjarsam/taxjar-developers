@@ -133,7 +133,7 @@ Since we currently do not support a `handling` param, you’ll need to add any h
   "line_items": [
     {
       "description": "Handling Fee",
-      "discount": 3.5
+      "unit_price": 3.5
     }
   ]
 }

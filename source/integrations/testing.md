@@ -14,9 +14,7 @@ In this guide, we'll provide some high-level guidelines on how to test your inte
 
 ## Sandbox Environment
 
-At this time we don't provide sandbox accounts but it's on our roadmap. We recommend [creating a separate TaxJar account](https://app.taxjar.com/api_sign_up) with a 30 day trial to test things out. If you need more time, we're happy to extend your trial.
-
-When creating a new TaxJar account, you can either use a new email or simply append "+dev" or "+testing" to your existing email address. Afterwards, generate a new API token and you're ready to begin testing!
+TaxJar provides a sandbox environment on all [TaxJar Plus](https://www.taxjar.com/plus/) plans for automated testing and development. You can generate a sandbox API token inside the TaxJar app under **Account > SmartCalcs API**. From there, you can [point your API client](/api/reference/#sandbox-environment) to our sandbox URL at `https://api.sandbox.taxjar.com`.
 
 ---
 

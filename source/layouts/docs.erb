@@ -16,12 +16,13 @@
       <h6>Directory</h6>
       <ol>
         <li><%= nav_link('Sales Tax Integrations', 'https://www.taxjar.com/sales-tax-integrations/', { target: '_blank' }) %></li>
-        <li><%= nav_link('Submit Your Integration', 'https://www.taxjar.com/contact/', { target: '_blank' }) %></li>
+        <li><%= nav_link('Submit Your Integration', '/integrations/submit/') %></li>
       </ol>
       <h6>Resources</h6>
       <ol>
         <li><%= nav_link('API Clients', '/api/guides/#quickstart-guides') %></li>
         <li><%= nav_link('Brand Assets', 'https://www.taxjar.com/brand/', { target: '_blank' }) %></li>
+        <li><%= nav_link('Contact Us', '/integrations/contact/') %></li>
         <li><%= nav_link('FAQs', '/integrations/faq/') %></li>
       </ol>
       <div class="docs-sidebar-footer">
@@ -30,19 +31,23 @@
         <small>&copy; <%= Date.today.year %> TaxJar. TaxJar is a trademark of TPS Unlimited, Inc. <a href="https://www.taxjar.com/privacy-policy/" target="_blank">Privacy Policy</a> &amp; <a href="https://www.taxjar.com/terms-of-service/" target="_blank">Terms of Service</a></small>
       </div>
     </div>
-    <div class="docs-title">
-      <h1 id="section-intro"><%= current_page.data.title %></h1>
-    </div>
+    <% unless current_page.data.hide_title %>
+      <div class="docs-title">
+        <h1 id="section-intro"><%= current_page.data.title %></h1>
+      </div>
+    <% end %>
     <div class="docs-content">
       <article class="doc">
-        <div class="docs-toc">
-          <h6>Table of Contents</h6>
-          <ol>
-            <li><a href="#section-intro">Introduction</a></li>
-          </ol>
-          <h6>Guidelines</h6>
-          <ol></ol>
-        </div>
+        <% unless current_page.data.hide_toc %>
+          <div class="docs-toc">
+            <h6>Table of Contents</h6>
+            <ol>
+              <li><a href="#section-intro">Introduction</a></li>
+            </ol>
+            <h6>Guidelines</h6>
+            <ol></ol>
+          </div>
+        <% end %>
         <div class="doc__entry">
           <%= yield %>
         </div>

@@ -86,7 +86,7 @@ This call to action button should stand out from other elements on the page to e
 	* TaxJar Reports (Reporting)
 	* TaxJar SmartCalcs (Calculations)
 
-* Use the logos provided in our `taxjar/brand` [repository on GitHub](https://github.com/taxjar/brand).
+* Use the logos provided on our branding page at [TaxJar.com](https://www.taxjar.com/brand/).
 
 * Do not change the aspect ratio of our logos or screenshots.
 

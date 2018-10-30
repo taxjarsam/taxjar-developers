@@ -273,7 +273,7 @@ For Canada, we’ll return back the GST and PST rates. Elsewhere, we’ll return
 
 Here’s the most important takeaway for calculating sales tax: **Only make US-based calculation requests where the merchant has nexus.**
 
-* If an order is shipping to a merchant’s nexus state, make a request to `/v2/rates`.
+* If an order is shipping to a merchant’s nexus state, make a request to `/v2/taxes`.
 * If an order is **not** shipping to a merchant’s nexus state, do not make a request. Ideally, fall back to your tax rate system.
 
 This guideline may save your merchants some money on API calculations, so take note to implement. Here’s several more:

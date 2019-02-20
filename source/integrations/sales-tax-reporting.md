@@ -108,20 +108,11 @@ Remember, discounts are provided at the line item level factoring in the quantit
 }
 ```
 
-### Shipping Discounts
+To support product exemptions for reporting and filing, line items are required for transactions. Parameters should be sent over as absolute values for both orders and refunds.
 
-SmartCalcs doesn’t provide an order-level discount param for shipping. To handle shipping discounts, use a separate line item. At a minimum, you only need to provide the `discount` parameter. You may want to consider providing a `description` as well.
+### Order-Level & Shipping Discounts
 
-```json
-{
-  "line_items": [
-    {
-      "description": "Shipping Discount",
-      "discount": 5
-    }
-  ]
-}
-```
+SmartCalcs doesn’t provide an order-level discount param for shipping or other discounts. To handle shipping discounts, subtract the absolute discount amount from the shipping amount. To handle fixed order-level discounts, distribute the total discount amount between line items.
 
 ### Handling Fees
 

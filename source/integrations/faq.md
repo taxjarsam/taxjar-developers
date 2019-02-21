@@ -19,8 +19,8 @@ Our sales tax API clocks in at sub-75ms with 99.99% uptime. Check our [status pa
 
 Yes, we do enforce rate limits for SmartCalcs API requests:
 
-- 500 requests per minute on [standard plans](https://www.taxjar.com/pricing/)
-- 5,000 requests per minute on [enterprise plans](https://www.taxjar.com/pricing/)
+- 500 requests per minute on [TaxJar Basic](https://www.taxjar.com/pricing/)
+- 10,000 requests per minute on [TaxJar Plus](https://www.taxjar.com/plus/)
 
 If you have any concerns about rate limiting, please [contact us](https://www.taxjar.com/contact/).
 

@@ -237,9 +237,15 @@ Depending on your requirements, you may need to add some custom logic to your in
 
 ## Customer Exemptions
 
-Exempting customers is similar to fully exempting line items — if a customer is designated as exempt, you’ll want to pass a `product_tax_code` of `99999` for each line item in the order. Generally we provide an option to exempt a customer by a customer tax class, but not all platforms support tax classes for customers.
+When exempting orders from sales tax for a given customer, your merchants will expect TaxJar to recognize the order as exempt for reporting and filing as well. To support end-to-end customer exemptions, you'll need to use our [customer endpoints](https://developers.taxjar.com/api/reference/#customers) to sync a merchant's customers when they're created or updated. After creating a customer in TaxJar with a designated exemption type such as `wholesale` or `government`, you can pass a `customer_id` to our tax calculation and transaction endpoints. This allows us to determine whether or not the customer should be exempt from sales tax.
 
-If your platform doesn’t provide customer tax classes, you may want to consider an option for exempting individual customers or customer groups from sales tax.
+```json
+{
+  "customer_id": "123"
+}
+```
+
+If your merchant already has exempt customers, you'll need to backfill these customers using our API to make sure they're in our system prior to calculating sales tax or pushing a transaction with the `customer_id`.
 
 ---
 

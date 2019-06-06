@@ -110,16 +110,11 @@ Remember, discounts are provided at the line item level factoring in the quantit
 
 ### Shipping Discounts
 
-SmartCalcs doesn’t provide an order-level discount param for shipping. To handle shipping discounts, use a separate line item. At a minimum, you only need to provide the `discount` parameter. You may want to consider providing a `description` as well.
+SmartCalcs doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.
 
 ```json
 {
-  "line_items": [
-    {
-      "description": "Shipping Discount",
-      "discount": 5
-    }
-  ]
+  "shipping": 0
 }
 ```
 

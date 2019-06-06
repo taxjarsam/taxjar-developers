@@ -125,13 +125,15 @@ At this time we only provide a `shipping` param to cover freight tax. If you nee
   "shipping": 1.5,
   "line_items": [
     {
-      "description": "handling",
+      "description": "Handling Fee",
       "quantity": 1,
       "unit_price": 0.5
     }
   ]
 }
 ```
+
+Shipping discounts should be deducted from the `shipping` param. For free shipping, pass $0 in the `shipping` param.
 
 [Shipping taxability](https://blog.taxjar.com/sales-tax-and-shipping/) is automatically determined by state / region in SmartCalcs. If you need to override this functionality to always collect freight tax, consider using a separate line item for shipping and passing $0 in the `shipping` param.
 

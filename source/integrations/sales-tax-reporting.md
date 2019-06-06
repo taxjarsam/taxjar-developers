@@ -112,6 +112,31 @@ Discount: $1.00 each
 }
 ```
 
+Similar to [sales tax calculations](/integrations/sales-tax-calculations/), remember to distribute order-level discounts across line items proportionally or evenly.
+
+<pre>
+Discount: 50%
+</pre>
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 2,
+      "unit_price": 5,
+      "discount": 5
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "unit_price": 10,
+      "discount": 5
+    }
+  ]
+}
+```
+
 ### Shipping Discounts
 
 SmartCalcs doesn’t provide an order-level discount param for shipping. To handle shipping discounts, use a separate line item. At a minimum, you only need to provide the `discount` parameter. You may want to consider providing a `description` as well.

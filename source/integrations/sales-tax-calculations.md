@@ -122,7 +122,14 @@ At this time we only provide a `shipping` param to cover freight tax. If you nee
 
 ```json
 {
-  "shipping": 1.5
+  "shipping": 1.5,
+  "line_items": [
+    {
+      "description": "handling",
+      "quantity": 1,
+      "unit_price": 0.5
+    }
+  ]
 }
 ```
 

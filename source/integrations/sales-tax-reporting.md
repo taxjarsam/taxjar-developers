@@ -93,15 +93,19 @@ The first line item you send in an API request will always be used for the trans
 
 Remember, discounts are provided at the line item level factoring in the quantity, **not per unit.**
 
+<pre>
+Discount: $1.00 each
+</pre>
+
 ```json
 {
   "line_items": [
     {
-      "quantity": 1,
+      "quantity": 3,
       "product_identifier": "12-34234-9",
       "description": "Fuzzy Widget",
-      "unit_price": 15,
-      "discount": 1,
+      "unit_price": 5,
+      "discount": 3,
       "sales_tax": 0.95
     }
   ]

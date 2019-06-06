@@ -192,10 +192,23 @@ Pay special attention to the `discount` param. Pass the **total** discount of th
 <pre>
 Unit Price: $5.00
 Quantity: 3
-Discount: 20%
+Discount: $1.00 each
 </pre>
 
 The `discount` param would be **$3.00**, not $1.00.
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 3,
+      "unit_price": 5,
+      "discount": 3
+    }
+  ]
+}
+```
 
 ---
 

@@ -199,14 +199,6 @@ The `discount` param would be **$3.00**, not $1.00.
 
 ---
 
-## Tax Status
-
-If products on your platform have a tax status, you’ll want to exempt non-taxable products. In the `line_items[]` collection, pass a `product_tax_code` of `99999` for each non-taxable product to exempt it from sales tax.
-
-Fully taxable products don’t require a `product_tax_code`. We’ll automatically assume it’s taxable.
-
----
-
 ## Product Exemptions
 
 To handle product taxability, you’ll need to allow merchants to assign their products to a [TaxJar product category](https://developers.taxjar.com/api/reference/#get-list-tax-categories). If you have a product tax class system built into your platform, consider associating a TaxJar product category with a tax class.
@@ -229,9 +221,9 @@ Using this data, you could populate a dropdown for merchants to select a TaxJar 
 
 In most of our integrations we associate our tax codes with the notion of a tax class. This may differ based on your internal requirements. For example, a merchant selling clothing would create a “Clothing” tax class and assign it to “Clothing - 20010”, the category provided by TaxJar. When a clothing product is added to the cart, the tax class and associated tax code is retrieved. If a tax code is found, it’s passed via `product_tax_code`.
 
-Currently we provide a [subset of common product categories](https://developers.taxjar.com/api/reference/#get-list-tax-categories) and we’re planning to expand the list over time. If a product doesn’t have a category, we’ll assume it’s always taxable. Our “Other Exempt” category can be used to fully exempt certain types of products if the merchant must exempt them.
+Currently we provide a [subset of common product categories](https://developers.taxjar.com/api/reference/#get-list-tax-categories) and we’re planning to expand the list over time. Fully taxable products don’t require a `product_tax_code`. We’ll automatically assume it’s taxable.
 
-Depending on your requirements, you may need to add some custom logic to your integration as a workaround if TaxJar does not yet support a specific product category. Usually this involves applying a `product_tax_code` of `99999` if the order is shipped to a specific state where the exemption occurs. For partial exemptions, you may need to add a discount or reduce the total amount on your end before making a request to SmartCalcs.
+If a product category is non-taxable and TaxJar does not yet support a specific `product_tax_code` for that type of product, `99999` `Other Exempt` may be used. However, usage of `product_tax_code` `99999` [prevents merchants from using AutoFile](https://support.taxjar.com/article/362-smartcalcs-product-categories) so we advise to use a more specific `product_tax_code`, if available.
 
 ---
 

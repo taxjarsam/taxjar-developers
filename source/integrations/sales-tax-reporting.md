@@ -31,6 +31,8 @@ When you import an order into TaxJar, it will show up as an “API Transaction�
 
 ![TaxJar API Transaction](/images/guides/api-transaction.png)
 
+Import **all US-based transactions**, not just where the merchant has nexus. Your merchants may reach [economic nexus thresholds](https://blog.taxjar.com/economic-nexus-laws/) based on their total revenue or number of transactions in a given state without a physical presence. Our [sales and transactions checker](https://www.taxjar.com/sales-and-transactions-checker/) helps them determine if they hit these thresholds and need to register in additional states.
+
 ### Transaction ID & Date
 
 When providing a `transaction_id` for an order transaction, use the unique increment identifier associated with the order. If it’s possible that this ID can overlap between multiple stores or different types of transactions for this merchant, you may want to prepend or append a unique string on the ID.

@@ -31,6 +31,8 @@ When you import an order into TaxJar, it will show up as an “API Transaction�
 
 ![TaxJar API Transaction](/images/guides/api-transaction.png)
 
+Import **all US-based transactions**, not just where the merchant has nexus. Your merchants may reach [economic nexus thresholds](https://blog.taxjar.com/economic-nexus-laws/) based on their total revenue or number of transactions in a given state without a physical presence. Our [sales and transactions checker](https://www.taxjar.com/sales-and-transactions-checker/) helps them determine if they hit these thresholds and need to register in additional states.
+
 ### Transaction ID & Date
 
 When providing a `transaction_id` for an order transaction, use the unique increment identifier associated with the order. If it’s possible that this ID can overlap between multiple stores or different types of transactions for this merchant, you may want to prepend or append a unique string on the ID.
@@ -93,16 +95,45 @@ The first line item you send in an API request will always be used for the trans
 
 Remember, discounts are provided at the line item level factoring in the quantity, **not per unit.**
 
+<pre>
+Discount: $1.00 each
+</pre>
+
 ```json
 {
   "line_items": [
     {
-      "quantity": 1,
+      "quantity": 3,
       "product_identifier": "12-34234-9",
       "description": "Fuzzy Widget",
-      "unit_price": 15,
-      "discount": 1,
+      "unit_price": 5,
+      "discount": 3,
       "sales_tax": 0.95
+    }
+  ]
+}
+```
+
+Similar to [sales tax calculations](/integrations/sales-tax-calculations/), remember to distribute order-level discounts across line items proportionally or evenly.
+
+<pre>
+Discount: 50%
+</pre>
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 2,
+      "unit_price": 5,
+      "discount": 5
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "unit_price": 10,
+      "discount": 5
     }
   ]
 }
@@ -110,16 +141,11 @@ Remember, discounts are provided at the line item level factoring in the quantit
 
 ### Shipping Discounts
 
-SmartCalcs doesn’t provide an order-level discount param for shipping. To handle shipping discounts, use a separate line item. At a minimum, you only need to provide the `discount` parameter. You may want to consider providing a `description` as well.
+SmartCalcs doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.
 
 ```json
 {
-  "line_items": [
-    {
-      "description": "Shipping Discount",
-      "discount": 5
-    }
-  ]
+  "shipping": 0
 }
 ```
 

@@ -201,10 +201,87 @@ Pay special attention to the `discount` param. Pass the **total** discount of th
 <pre>
 Unit Price: $5.00
 Quantity: 3
-Discount: 20%
+Discount: $1.00 each
 </pre>
 
 The `discount` param would be **$3.00**, not $1.00.
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 3,
+      "unit_price": 5,
+      "discount": 3
+    }
+  ]
+}
+```
+
+For order-level discounts, distribute the total discount across line items. Try to match the way your platform handles this. For example:
+
+<pre>
+Discount: 20%
+</pre>
+
+One way is to distribute the discount across line items evenly.
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 3,
+      "unit_price": 5,
+      "discount": 2
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "unit_price": 10,
+      "discount": 2
+    },
+    {
+      "id": "3",
+      "quantity": 1,
+      "unit_price": 5,
+      "discount": 2
+    }
+  ]
+}
+```
+
+Another way is to distribute the discount across line items proportionally.
+
+```json
+{
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 3,
+      "unit_price": 5,
+      "discount": 3
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "unit_price": 10,
+      "discount": 2
+    },
+    {
+      "id": "3",
+      "quantity": 1,
+      "unit_price": 5,
+      "discount": 1
+    }
+  ]
+}
+```
+
+If the platform does not distribute order-level discounts across line items, or if you're not sure, apply either method consistently.
+
+For example, some platforms might add the total discount as a separate line item rather than distributing it. In this case, distribute the discount proportionally or evenly in requests to the SmartCalcs API.
 
 ---
 

@@ -50,69 +50,69 @@ We've provided a list of testing scenarios for both sales tax calculations and r
 
 ### Sales Tax Calculations
 
-<label><input type="checkbox" id="testing-stc-0">&nbsp;&nbsp; Calculation for `from_` and `to_` address in same state / region</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for `from_` and `to_` address in same state / region</label>
 
-<label><input type="checkbox" id="testing-stc-1">&nbsp;&nbsp; Calculation for `from_` and `to_` address in different states, both nexus states</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for `from_` and `to_` address in different states, both nexus states</label>
 
-<label><input type="checkbox" id="testing-stc-2">&nbsp;&nbsp; No calculation for `from_` and `to_` address in different states, one nexus state</label>
+<label><input type="checkbox">&nbsp;&nbsp; No calculation for `from_` and `to_` address in different states, one nexus state</label>
 
-<label><input type="checkbox" id="testing-stc-3">&nbsp;&nbsp; No calculation for `from_` and `to_` address in different states, no nexus</label>
+<label><input type="checkbox">&nbsp;&nbsp; No calculation for `from_` and `to_` address in different states, no nexus</label>
 
-<label><input type="checkbox" id="testing-stc-4">&nbsp;&nbsp; Calculation for intrastate order in origin-based nexus state</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for intrastate order in origin-based nexus state</label>
 
-<label><input type="checkbox" id="testing-stc-5">&nbsp;&nbsp; Calculation for interstate order shipped to an origin-based state, both nexus states</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for interstate order shipped to an origin-based state, both nexus states</label>
 
-<label><input type="checkbox" id="testing-stc-6">&nbsp;&nbsp; Rooftop calculation for order in SST state (e.g. WA, KS, etc)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Rooftop calculation for order in SST state (e.g. WA, KS, etc)</label>
 
-<label><input type="checkbox" id="testing-stc-7">&nbsp;&nbsp; Calculation for [clothing product in NY](https://blog.taxjar.com/the-new-york-clothing-sales-tax-exemption-demystified/)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for [clothing product in NY](https://blog.taxjar.com/the-new-york-clothing-sales-tax-exemption-demystified/)</label>
 
-<label><input type="checkbox" id="testing-stc-8">&nbsp;&nbsp; Calculation for [food and grocery product](https://blog.taxjar.com/states-grocery-items-tax-exempt/) in CA, TX, NY, etc</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for [food and grocery product](https://blog.taxjar.com/states-grocery-items-tax-exempt/) in CA, TX, NY, etc</label>
 
-<label><input type="checkbox" id="testing-stc-9">&nbsp;&nbsp; Calculations for each product type (e.g. configurable / variable, bundle, virtual, etc)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculations for each product type (e.g. configurable / variable, bundle, virtual, etc)</label>
 
-<label><input type="checkbox" id="testing-stc-10">&nbsp;&nbsp; No calculation for non-taxable or exempt products using `99999` tax code</label>
+<label><input type="checkbox">&nbsp;&nbsp; No calculation for non-taxable or exempt products using `99999` tax code</label>
 
-<label><input type="checkbox" id="testing-stc-11">&nbsp;&nbsp; [No shipping / freight tax](https://blog.taxjar.com/sales-tax-and-shipping/) for orders in CA, AZ, MA, VA, etc</label>
+<label><input type="checkbox">&nbsp;&nbsp; [No shipping / freight tax](https://blog.taxjar.com/sales-tax-and-shipping/) for orders in CA, AZ, MA, VA, etc</label>
 
-<label><input type="checkbox" id="testing-stc-12">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in same province / region</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in same province / region</label>
 
-<label><input type="checkbox" id="testing-stc-13">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in [different provinces](https://canadabusiness.ca/government/taxes-gst-hst/federal-tax-information/overview-of-charging-and-collecting-sales-tax/#toc1), both nexus provinces</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in [different provinces](https://canadabusiness.ca/government/taxes-gst-hst/federal-tax-information/overview-of-charging-and-collecting-sales-tax/#toc1), both nexus provinces</label>
 
-<label><input type="checkbox" id="testing-stc-14">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in [different provinces](https://canadabusiness.ca/government/taxes-gst-hst/federal-tax-information/overview-of-charging-and-collecting-sales-tax/#toc1), one nexus province</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in [different provinces](https://canadabusiness.ca/government/taxes-gst-hst/federal-tax-information/overview-of-charging-and-collecting-sales-tax/#toc1), one nexus province</label>
 
-<label><input type="checkbox" id="testing-stc-15">&nbsp;&nbsp; Calculations for [EU Standard and Reduced VAT](https://en.wikipedia.org/wiki/European_Union_value_added_tax#VAT_rates)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculations for [EU Standard and Reduced VAT](https://en.wikipedia.org/wiki/European_Union_value_added_tax#VAT_rates)</label>
 
-<label><input type="checkbox" id="testing-stc-16">&nbsp;&nbsp; Calculation for [Australia GST](https://www.ato.gov.au/Business/GST/)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation for [Australia GST](https://www.ato.gov.au/Business/GST/)</label>
 
-<label><input type="checkbox" id="testing-stc-17">&nbsp;&nbsp; Calculation using CAD currency</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation using CAD currency</label>
 
-<label><input type="checkbox" id="testing-stc-18">&nbsp;&nbsp; Calculation using EUR currency</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation using EUR currency</label>
 
-<label><input type="checkbox" id="testing-stc-19">&nbsp;&nbsp; Calculation using AUD currency</label>
+<label><input type="checkbox">&nbsp;&nbsp; Calculation using AUD currency</label>
 
-<label><input type="checkbox" id="testing-stc-20">&nbsp;&nbsp; Discount calculation for coupon percentage discount</label>
+<label><input type="checkbox">&nbsp;&nbsp; Discount calculation for coupon percentage discount</label>
 
-<label><input type="checkbox" id="testing-stc-21">&nbsp;&nbsp; Discount calculation for coupon fixed amount discount</label>
+<label><input type="checkbox">&nbsp;&nbsp; Discount calculation for coupon fixed amount discount</label>
 
-<label><input type="checkbox" id="testing-stc-22">&nbsp;&nbsp; Discount calculation for volume discount</label>
+<label><input type="checkbox">&nbsp;&nbsp; Discount calculation for volume discount</label>
 
-<label><input type="checkbox" id="testing-stc-23">&nbsp;&nbsp; Discount calculation for shipping discount</label>
+<label><input type="checkbox">&nbsp;&nbsp; Discount calculation for shipping discount</label>
 
 ### Sales Tax Reporting
 
-<label><input type="checkbox" id="testing-str-0">&nbsp;&nbsp; Create a new order transaction after order updates to a `complete` state</label>
+<label><input type="checkbox">&nbsp;&nbsp; Create a new order transaction after order updates to a `complete` state</label>
 
-<label><input type="checkbox" id="testing-str-1">&nbsp;&nbsp; Update an existing order transaction after a `complete` order is changed</label>
+<label><input type="checkbox">&nbsp;&nbsp; Update an existing order transaction after a `complete` order is changed</label>
 
-<label><input type="checkbox" id="testing-str-2">&nbsp;&nbsp; Create a new refund transaction when a refund is created for a `complete` order</label>
+<label><input type="checkbox">&nbsp;&nbsp; Create a new refund transaction when a refund is created for a `complete` order</label>
 
-<label><input type="checkbox" id="testing-str-3">&nbsp;&nbsp; Update an existing refund transaction after a refund is changed if applicable</label>
+<label><input type="checkbox">&nbsp;&nbsp; Update an existing refund transaction after a refund is changed if applicable</label>
 
-<label><input type="checkbox" id="testing-str-4">&nbsp;&nbsp; Backfill a collection of `complete` orders with refunds inside a given date range</label>
+<label><input type="checkbox">&nbsp;&nbsp; Backfill a collection of `complete` orders with refunds inside a given date range</label>
 
-<label><input type="checkbox" id="testing-str-5">&nbsp;&nbsp; Order transactions include line item discounts</label>
+<label><input type="checkbox">&nbsp;&nbsp; Order transactions include line item discounts</label>
 
-<label><input type="checkbox" id="testing-str-6">&nbsp;&nbsp; Order transactions include shipping discounts</label>
+<label><input type="checkbox">&nbsp;&nbsp; Order transactions include shipping discounts</label>
 
 ---
 

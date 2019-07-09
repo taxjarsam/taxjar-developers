@@ -1,15 +1,29 @@
 (function() {
-  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  'use-strict';
+  var checkboxes = Array.prototype.slice.call(document.querySelectorAll('input[type="checkbox"]'));
+
+  // retrieve checkbox state after refresh
+  var state = JSON.parse(localStorage.getItem('integration_guide_checklists')) || {};
 
   checkboxes.forEach(function(checkbox) {
-    // retrieve state of each checkbox after refresh
-    var wasChecked = localStorage.getItem(checkbox.id);
-    if (wasChecked === 'true') checkbox.checked = true;
+    // recheck the checkboxes based on state
+    var wasChecked = state[getHash(checkbox)];
+    if (wasChecked) checkbox.checked = true;
 
-    // save state of each checkbox when clicked
+    // update state when any checkbox is clicked
     checkbox.addEventListener('click', function(e) {
-        var clickedCheckbox = e.target;
-        localStorage.setItem(clickedCheckbox.id, clickedCheckbox.checked);
+      localStorage.setItem('integration_guide_checklists', updateState(e.target));
     });
   });
+
+  function getHash(checkbox) {
+    // concatenate pathname (e.g., /integrations/testing/) and checkbox label
+    // in case the same label appears on multiple checklists
+    return window.location.pathname + checkbox.parentNode.innerText.trim();
+  };
+
+  function updateState(checkbox) {
+    state[getHash(checkbox)] = checkbox.checked;
+    return JSON.stringify(state);
+  };
 })();

@@ -139,6 +139,12 @@ Discount: 50%
 }
 ```
 
+### Order-level Exemptions
+
+Transactions may also be marked as tax-exempt at the order-level by passing the `exemption_type` param in [calculations](https://developers.taxjar.com/api/reference/#taxes) as well as when creating or updating [transactions](https://developers.taxjar.com/api/reference/#transactions). Allowable values are `government`, `wholesale`, `other`, and `non_exempt`.
+
+One use case is to mark a single transaction as taxable for an otherwise exempt customer by passing `non_exempt`. With the exception of `non_exempt`, a customer exemption type takes precedence over an order-level exemption type. In other words, when usage of the `customer_id` param qualifies the transaction as exempt, the customer's exemption type will be applied, rather than the value of `exemption_type` sent in the request.
+
 ### Shipping Discounts
 
 SmartCalcs doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.

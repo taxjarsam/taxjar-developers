@@ -139,6 +139,18 @@ Discount: 50%
 }
 ```
 
+### Customer Exemptions
+
+When exempting orders from sales tax for a given customer, your merchants will expect TaxJar to recognize the order as exempt for reporting and filing as well. To support customer exemptions, use our [customer endpoints](https://developers.taxjar.com/api/reference/#customers) to sync a merchant's customers when they're created or updated. After creating a customer in TaxJar with a designated exemption type such as `wholesale` or `government`, you can pass a `customer_id` to our tax calculation and transaction endpoints. This allows us to determine whether or not the customer should be exempt from sales tax.
+
+```json
+{
+  "customer_id": "123"
+}
+```
+
+If your merchant already has exempt customers, you'll need to backfill these customers using our API to make sure they're in our system prior to calculating sales tax or pushing a transaction with the `customer_id`.
+
 ### Order-level Exemptions
 
 Transactions may also be marked as tax-exempt at the order-level by passing the `exemption_type` param in [calculations](https://developers.taxjar.com/api/reference/#taxes) as well as when creating or updating [transactions](https://developers.taxjar.com/api/reference/#transactions). Allowable values are `government`, `wholesale`, `other`, and `non_exempt`.

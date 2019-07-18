@@ -3,6 +3,8 @@ title: Certification Checklist
 description: "Learn what we look for in a certified TaxJar integration."
 ---
 
+When building a TaxJar integration, use this checklist as a guide to what we look for during the certification process. If you check everything off on this list, chances are you're ready to [submit your integration](/integrations/submit/). 🎉
+
 ## Onboarding & Authentication
 
 <label><input type="checkbox">&nbsp;&nbsp; Adhere to our [branding guidelines](/integrations/onboarding/#section-branding-guidelines)</label>

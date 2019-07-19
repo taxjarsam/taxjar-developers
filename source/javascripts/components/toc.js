@@ -10,7 +10,7 @@
 
   $.merge(tocHeadlines, tocGuidelines).each(function() {
     var header = $(this).text();
-    var id = header.replace(/\s/g, '-').replace(/[?]/g, '').toLowerCase();
+    var id = header.replace(/\s/g, '-').replace(/[?]/g, '').replace(/&/g, 'and').toLowerCase();
 
     $(this).attr('id', prependText + '-' + id);
 

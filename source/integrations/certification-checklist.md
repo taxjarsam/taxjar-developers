@@ -111,21 +111,21 @@ Pass the following required params for transactions:
 
 - <label><input type="checkbox">&nbsp;&nbsp; `transaction_date` for each transaction</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; Full from address via `from_` params</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [Full from address via **from_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; Full to address via `to_` params</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [Full to address via **to_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; Order-level `amount` param</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [Order-level **amount** param](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">
   <li><small>Reminder: <code>amount</code> should equal the total amount of the order, including <code>shipping</code>. Exclude <code>sales_tax</code>.</small></li>
 </ul>
 
-- <label><input type="checkbox">&nbsp;&nbsp; `shipping`</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [**shipping**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; Order-level `sales_tax`</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [Order-level **sales_tax**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; `line_items[]` including:</label>
+- <label><input type="checkbox">&nbsp;&nbsp; [**line_items[]** including:](/integrations/sales-tax-reporting/#section-line-items)</label>
 
   - <label><input type="checkbox">&nbsp;&nbsp; `quantity`</label>
 
@@ -139,9 +139,9 @@ Pass the following required params for transactions:
 
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Include **customer_id** for exempt customers](/integrations/sales-tax-calculations/#section-customer-exemptions)</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; Distribute order-level discounts across line items</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Distribute order-level discounts across line items](/integrations/sales-tax-reporting/#section-line-items)</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; Deduct shipping discounts from the `shipping` param</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Deduct shipping discounts from the **shipping** param](/integrations/sales-tax-reporting/#section-shipping-discounts)</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; Use positive decimals in monetary values for order transactions</label>
 
@@ -149,7 +149,7 @@ Pass the following required params for transactions:
 
 <label><input type="checkbox">&nbsp;&nbsp; Pass absolute values to the line item `discount` param</label>
 
-Push **all orders** to TaxJar including:
+Push [**all US-based transactions to TaxJar**](/integrations/sales-tax-reporting/#section-order-transactions) including:
 
 - <label><input type="checkbox">&nbsp;&nbsp; Orders to customers where the merchant does **_not_** have nexus</label>
 

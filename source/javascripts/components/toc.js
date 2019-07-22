@@ -23,9 +23,7 @@
 
     if ($(this).prop('tagName') === 'H3') {
       var subheading = tocList.find('> li').last();
-      subheading.prev().prop('tagName') !== 'UL' && tocList.append(
-        '<ul type="none" style="margin-left: -2.5rem"></ul>'
-      );
+      subheading.prev().prop('tagName') !== 'UL' && tocList.append('<ul type="none"></ul>');
       toc.find('ul').last().append(subheading);
     }
   });

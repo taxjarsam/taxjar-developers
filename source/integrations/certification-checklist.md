@@ -3,7 +3,7 @@ title: Certification Checklist
 description: "Learn what we look for in a certified TaxJar integration."
 ---
 
-When building a TaxJar integration, use this checklist as a guide to what we look for during the certification process. If you check everything off on this list, chances are you're ready to [submit your integration](/integrations/submit/). 🎉
+When building a TaxJar integration, use this checklist as a guide to what we look for during the certification process. If you check everything off on this list, chances are you're ready to [submit your integration](/integrations/submit/).&nbsp;&nbsp;🎉
 
 ## Onboarding & Authentication
 
@@ -16,7 +16,7 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 <label><input type="checkbox">&nbsp;&nbsp; Adhere to our [UX guidelines](/integrations/authentication/#section-ux-guidelines)</label>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">
-  <li><small>Follow all UX guidelines. Please also:<small></li>
+  <li><small>Follow all UX guidelines. Please also:</small></li>
 </ul>
 
 - <small>**Introduce the integration in the right context.** Take an approach that fits with the platform. For example, if you're developing a shopping cart integration and there is a Sales Tax Processors admin menu: it may make sense to place TaxJar settings in **Sales Tax Processors > TaxJar**.</small>
@@ -98,7 +98,7 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; Checkout doesn't break with an invalid TaxJar API token or if the <a href="https://status.taxjar.com/" target=_blank>API is down</a></label><br>&emsp;&nbsp;<small>*Required for shopping cart integrations</small>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">
-  <li><small>For these cases, you could periodically <a href="/integrations/sales-tax-calculations/#section-api-guidelines">pull down backup tax rates</a> from our <strong><a href="/api/reference/#summarized-rates">v2/summary_rates</a></strong> endpoint. At a minimum, make sure customers are still able to check out &mdash; even if $0 of sales tax is collected.</small></li>
+  <li><small>For these cases, you can periodically <a href="/integrations/sales-tax-calculations/#section-api-guidelines">pull down backup tax rates</a> from our <strong><a href="/api/reference/#summarized-rates">v2/summary_rates</a></strong> endpoint. At a minimum, make sure customers are still able to check out &mdash; even if $0 of sales tax is collected.</small></li>
 </ul>
 
 ## Sales Tax Reporting & Filing
@@ -116,7 +116,6 @@ Pass the following required params for transactions:
 - <label><input type="checkbox">&nbsp;&nbsp; [Full to address via **to_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
 
 - <label><input type="checkbox">&nbsp;&nbsp; [Order-level **amount** param](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
-
 <ul style="list-style-type: none; margin-left: -1.5rem">
   <li><small>Reminder: <code>amount</code> should equal the total amount of the order, including <code>shipping</code>. Exclude <code>sales_tax</code>.</small></li>
 </ul>

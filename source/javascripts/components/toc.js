@@ -4,7 +4,8 @@
   }
 
   var toc = $('.docs-toc');
-  var tocHeadlines = $('h2').not(':contains("Guidelines")');
+  var tocList = toc.find('> ol').first();
+  var tocHeadlines = $('h2, h3').not(':contains("Guidelines")');
   var tocGuidelines = $('h2').filter(':contains("Guidelines")');
   var prependText = 'section';
 
@@ -15,14 +16,22 @@
     $(this).attr('id', prependText + '-' + id);
 
     if (header.indexOf('Guidelines') === -1) {
-      toc.find('> ol').first().append('<li><a href="#' + prependText + '-' + id + '">' + header + '</a></li>');
+      tocList.append('<li><a href="#' + prependText + '-' + id + '">' + header + '</a></li>');
     } else {
       toc.find('> ol').last().append('<li><a href="#' + prependText + '-' + id + '">' + header + '</a></li>');
+    }
+
+    if ($(this).prop('tagName') === 'H3') {
+      var subheading = tocList.find('> li').last();
+      subheading.prev().prop('tagName') !== 'UL' && tocList.append(
+        '<ul type="none" style="margin-left: -2.5rem"></ul>'
+      );
+      toc.find('ul').last().append(subheading);
     }
   });
 
   if (!tocGuidelines.length) {
-    toc.find('> ol').first().nextAll().remove();
+    tocList.nextAll().remove();
   }
 
   ScrollSpy.prototype.isInView = function (el) {

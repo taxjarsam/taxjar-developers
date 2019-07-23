@@ -139,6 +139,24 @@ Discount: 50%
 }
 ```
 
+### Customer Exemptions
+
+When exempting orders from sales tax for a given customer, your merchants will expect TaxJar to recognize the order as exempt for reporting and filing as well. To support customer exemptions, use our [customer endpoints](https://developers.taxjar.com/api/reference/#customers) to sync a merchant's customers when they're created or updated. After creating a customer in TaxJar with a designated exemption type such as `wholesale` or `government`, you can pass a `customer_id` to our tax calculation and transaction endpoints. This allows us to determine whether or not the customer should be exempt from sales tax.
+
+```json
+{
+  "customer_id": "123"
+}
+```
+
+If your merchant already has exempt customers, you'll need to backfill these customers using our API to make sure they're in our system prior to calculating sales tax or pushing a transaction with the `customer_id`.
+
+### Order-level Exemptions
+
+Transactions may also be marked as tax-exempt at the order-level by passing the `exemption_type` param in [calculations](https://developers.taxjar.com/api/reference/#taxes) as well as when creating or updating [transactions](https://developers.taxjar.com/api/reference/#transactions). Allowable values are `government`, `wholesale`, `other`, and `non_exempt`.
+
+One use case is to mark a single transaction as taxable for an otherwise exempt customer by passing `non_exempt`. With the exception of `non_exempt`, a customer exemption type takes precedence over an order-level exemption type. In other words, when usage of the `customer_id` param qualifies the transaction as exempt, the customer's exemption type will be applied, rather than the value of `exemption_type` sent in the request.
+
 ### Shipping Discounts
 
 SmartCalcs doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.

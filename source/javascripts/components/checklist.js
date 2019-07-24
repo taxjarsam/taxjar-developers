@@ -34,21 +34,15 @@
 })();
 
 // Add functionality to nested checkboxes:
-(function() {
+(function($) {
   'use-strict';
-  var parentCheckboxes = toArray(document.querySelectorAll('input[type="checkbox"]'))
-    .filter(function(checkbox) {
-      return checkbox.parentNode.parentNode.nextSibling
-        && checkbox.parentNode.parentNode.nextSibling.nextSibling
-        && checkbox.parentNode.parentNode.nextSibling.nextSibling
-          .querySelectorAll('ul input[type="checkbox"]').length > 1;
-    });
+  var parentCheckboxes = $('input[type="checkbox"]').toArray().filter(function(checkbox) {
+    return $(checkbox).parent().parent().next().find('input[type="checkbox"]').length > 1;
+  });
 
   parentCheckboxes.forEach(function(parentCheckbox) {
-    var childCheckboxes = toArray(
-      parentCheckbox.parentNode.parentNode.nextSibling.nextSibling
-        .querySelectorAll('input[type="checkbox"]')
-    );
+    var childCheckboxes = $(parentCheckbox).parent().parent().next()
+      .find('input[type="checkbox"]').toArray();
 
     // when parent is clicked, check/uncheck all children
     parentCheckbox.onclick = function() {
@@ -82,8 +76,4 @@
       };
     });
   });
-
-  function toArray(arr) {
-    return Array.prototype.slice.call(arr);
-  };
-})();
+})(jQuery);

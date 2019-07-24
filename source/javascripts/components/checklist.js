@@ -36,16 +36,18 @@
 // Add functionality to nested checkboxes:
 (function() {
   'use-strict';
-  var nestedCheckboxes = {
-    // [ID of parent]: [class of children]
-    'stc-line_items': 'stc-line_item',
-    'str-line_items': 'str-line_item'
-  };
+  var parentCheckboxes = toArray(document.querySelectorAll('input[type="checkbox"]'))
+    .filter(function(checkbox) {
+      return checkbox.parentNode.parentNode.nextSibling
+        && checkbox.parentNode.parentNode.nextSibling.nextSibling
+        && checkbox.parentNode.parentNode.nextSibling.nextSibling
+          .querySelectorAll('ul input[type="checkbox"]').length > 1;
+    });
 
-  Object.keys(nestedCheckboxes).forEach(function(id) {
-    var parentCheckbox = document.getElementById(id);
-    var childCheckboxes = Array.prototype.slice.call(
-      document.getElementsByClassName(nestedCheckboxes[id])
+  parentCheckboxes.forEach(function(parentCheckbox) {
+    var childCheckboxes = toArray(
+      parentCheckbox.parentNode.parentNode.nextSibling.nextSibling
+        .querySelectorAll('input[type="checkbox"]')
     );
 
     // when parent is clicked, check/uncheck all children
@@ -68,10 +70,10 @@
           parentCheckbox.checked = true;
           parentCheckbox.indeterminate = false;
         }
-        else if (numChecked)
+        else if (numChecked) {
           // some children checked, indeterminate parent
           parentCheckbox.indeterminate = true;
-        else {
+        } else {
           // all children unchecked, uncheck parent
           parentCheckbox.checked = false;
           parentCheckbox.indeterminate = false;
@@ -80,4 +82,8 @@
       };
     });
   });
+
+  function toArray(arr) {
+    return Array.prototype.slice.call(arr);
+  };
 })();

@@ -70,8 +70,6 @@ We've provided a list of testing scenarios for both sales tax calculations and r
 
 <label><input type="checkbox">&nbsp;&nbsp; Calculations for each product type (e.g. configurable / variable, bundle, virtual, etc)</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; No calculation for non-taxable or exempt products using `99999` tax code</label>
-
 <label><input type="checkbox">&nbsp;&nbsp; [No shipping / freight tax](https://blog.taxjar.com/sales-tax-and-shipping/) for orders in CA, AZ, MA, VA, etc</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; Calculation for Canada `from_` and `to_` address in same province / region</label>

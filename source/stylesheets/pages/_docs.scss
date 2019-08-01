@@ -288,6 +288,9 @@ body.integrations {
       font-style: normal;
       color: #999;
     }
+    input[type="checkbox"], input[type="radio"] {
+      vertical-align: 2px;
+    }
   }
 
   .docs-badge {

@@ -105,26 +105,26 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 
 Pass the following required params for transactions:
 
-- <label><input type="checkbox">&nbsp;&nbsp; Unique `id` for each [order](/integrations/sales-tax-reporting/#section-order-transactions) and [refund](/integrations/sales-tax-reporting/#section-refund-transactions)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Unique `id` for each [order](/integrations/sales-tax-reporting/#section-order-transactions) and [refund](/integrations/sales-tax-reporting/#section-refund-transactions)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [Transaction reference ID](/integrations/sales-tax-reporting/#section-refund-transactions) for refunds</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Transaction reference ID](/integrations/sales-tax-reporting/#section-refund-transactions) for refunds</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; `transaction_date` for each transaction</label>
+<label><input type="checkbox">&nbsp;&nbsp; `transaction_date` for each transaction</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [Full from address via **from_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Full from address via **from_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [Full to address via **to_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Full to address via **to_** params](/integrations/sales-tax-reporting/#section-from-and-to-address)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [Order-level **amount** param](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Order-level **amount** param](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 <ul style="list-style-type: none; margin-left: -1.5rem">
   <li><small>Reminder: <code>amount</code> should equal the total amount of the order, including <code>shipping</code>. Exclude <code>sales_tax</code>.</small></li>
 </ul>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [**shipping**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [**shipping**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [Order-level **sales_tax**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Order-level **sales_tax**](/integrations/sales-tax-reporting/#section-amount-shipping-and-sales-tax)</label>
 
-- <label><input type="checkbox">&nbsp;&nbsp; [**line_items[]** including:](/integrations/sales-tax-reporting/#section-line-items)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [**line_items[]** including:](/integrations/sales-tax-reporting/#section-line-items)</label>
 
   - <label><input type="checkbox">&nbsp;&nbsp; `quantity`</label>
 

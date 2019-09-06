@@ -79,7 +79,7 @@ Similar to charges, you can use the `metadata` attribute to break down the sales
 
 Stripe provides a couple ways of handling payments in your application or website. You can either use an embedded form via [Stripe Checkout](https://stripe.com/docs/checkout) or a [custom form with Stripe.js](https://stripe.com/docs/stripe.js) to collect and tokenize a customer’s credit card. Checkout is beautifully designed and mobile-friendly, but it's fairly high-level and difficult to customize. Although it now supports billing/shipping addresses, you'll have more control over displaying order tax and totals with a custom form.
 
-![Stripe Checkout vs. Stripe Custom Checkout](/images/blog/handling-sales-tax-with-stripe/stripe-checkouts.jpg) 
+![Stripe Checkout vs. Stripe Custom Checkout](/images/blog/handling-sales-tax-with-stripe/stripe-checkouts.jpg)
 
 Sales tax calculation can be done on the client-side via AJAX or entirely on the server-side. It’s your call. For a great user experience, you’ll probably want to show the amount of sales tax immediately after an address is provided and prior to completing the purchase. After generating a single-use token with the customer’s credit card, you can send the token and custom form parameters to your server to complete the charge or subscription using Stripe’s API.
 
@@ -92,8 +92,12 @@ Several sales tax automation companies provide a script alongside Stripe.js to m
 The request should hit an endpoint on your server with the necessary data params to calculate sales tax and return a JSON response. TaxJar offers the following REST API clients to get up and going quickly:
 
 - [taxjar-ruby](https://github.com/taxjar/taxjar-ruby) via RubyGems as `taxjar-ruby`
+- [taxjar-python](https://github.com/taxjar/taxjar-python) via PyPI as `taxjar`
 - [taxjar-php](https://github.com/taxjar/taxjar-php) via Composer as `taxjar/taxjar-php`
 - [taxjar-node](https://github.com/taxjar/taxjar-node) via NPM as `taxjar`
+- [taxjar.net](https://github.com/taxjar/taxjar.net) via NuGet as `TaxJar`
+- [taxjar-java](https://github.com/taxjar/taxjar-java) via Maven & Gradle as `com.taxjar:taxjar-java`
+- [taxjar-go](https://github.com/taxjar/taxjar-go) as `taxjar` from `github.com/taxjar/taxjar-go`
 
 If there’s a language you’d like us to support, leave a comment. There’s also many [generic REST clients](https://github.com/marmelab/awesome-rest#clients) that make it easy to connect to SmartCalcs or any REST API:
 
@@ -130,7 +134,7 @@ This is an end-to-end solution using Rails and [taxjar-ruby](https://github.com/
 4. Customer submits the order and Stripe generates a single-use token based on the credit card.
 5. Our Rails app creates a new subscription using Stripe’s API client based on the submitted form fields (including the tax).
 
-![Winebox Checkout](/images/blog/handling-sales-tax-with-stripe/winebox-checkout.jpg) 
+![Winebox Checkout](/images/blog/handling-sales-tax-with-stripe/winebox-checkout.jpg)
 
 Check out the [example app](https://github.com/taxjar/rails-stripe-sales-tax-sample) and learn how to calculate and apply sales tax for recurring subscriptions in Stripe.
 

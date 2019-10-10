@@ -15,6 +15,10 @@
     <% end %>
     <%= stylesheet_link_tag "main" %>
     <%= yield_content :css %>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+    />
   </head>
   <body class="<%= page_classes %>">
     <div class="wrap">
@@ -75,6 +79,16 @@
 
       ga('create', 'UA-32676850-1', 'auto');
       ga('send', 'pageview');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+      docsearch({
+        // temporary API key for testing; will replace with actual key
+        apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+        indexName: 'docsearch',
+        inputSelector: '#docsearch',
+        debug: true
+      });
     </script>
   </body>
 </html>

@@ -2,7 +2,6 @@
 //= require esprima
 //= require lodash
 //= require clipboard
-//= require env
 //= require ./demo/data
 //= require_tree ./demo/vendor
 //= require_tree ./demo/components

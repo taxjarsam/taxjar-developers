@@ -39,7 +39,7 @@ description: Learn how to add sales tax to charges and subscriptions in Stripe a
 author: jake_johnson
 date: 2015-12-14 00:11 UTC
 category: Stripe
-tags: smartcalcs, stripe, api 
+tags: smartcalcs, stripe, api
 published: true
 ---
 ```
@@ -47,6 +47,26 @@ published: true
 If you're a brand new author, update `data/authors.json` with your name, avatar, and Twitter account.
 
 For new categories you'll also want to update `data/categories.json`.
+
+## Update Search Index
+
+Requirements:
+- [jq](https://stedolan.github.io/jq/download/)
+- [Docker](https://docs.docker.com/install/overview/)
+
+We utilize [Algolia](https://www.algolia.com/)/[DocSearch](https://community.algolia.com/docsearch/) for full-site search on developers.taxjar.com. If you need to manually update the search index, you'll need a `.env` file in the root directory with the following rows set to the appropriate values:
+
+```
+APPLICATION_ID=<Application ID>
+API_KEY=<Admin API Key for Indexing>
+```
+
+Then, start up Docker and run this command from the root directory:
+```bash
+docker run -it --env-file=.env -e "CONFIG=$(cat $(pwd)/docsearch.json | jq -r tostring)" algolia/docsearch-scraper
+```
+
+After a minute or two, the crawler should complete and the search index will be updated.
 
 ## Deployment
 

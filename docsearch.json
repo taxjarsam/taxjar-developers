@@ -9,9 +9,15 @@
     "lvl3": "h4",
     "lvl4": "h5",
     "lvl5": "h6",
-    "text": "p, li"
+    "text": "p, li, td"
   },
-  "selectors_exclude": [".docs-sidebar"],
+  "selectors_exclude": [
+    ".docs-sidebar",
+    "#request",
+    "#parameters",
+    "#response",
+    "#attributes"
+  ],
   "scrape_start_urls": false,
   "custom_settings": {
     "separatorsToIndex": "_",

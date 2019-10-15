@@ -1,0 +1,36 @@
+{
+  "index_name": "developers.taxjar.com",
+  "start_urls": ["https://developers.taxjar.com"],
+  "stop_urls": ["https://developers.taxjar.com/api/reference/\\?"],
+  "selectors": {
+    "lvl0": "h1",
+    "lvl1": "h2",
+    "lvl2": "h3",
+    "lvl3": "h4",
+    "lvl4": "h5",
+    "lvl5": "h6",
+    "text": "p, li"
+  },
+  "selectors_exclude": [".docs-sidebar"],
+  "scrape_start_urls": false,
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "synonyms": [
+      [
+        "node",
+        "js",
+        "javascript"
+      ],
+      [
+        ".net",
+        "dotnet",
+        "c#",
+        "csharp"
+      ],
+      [
+        "go",
+        "golang"
+      ]
+    ]
+  }
+}

@@ -76,21 +76,6 @@ body.integrations {
       background: #ccc;
     }
 
-    #docsearch {
-      top: -0.75rem;
-      border-radius: 5px;
-      width: 21.1rem;
-      height: 3.2rem;
-      text-indent: 0.8rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    // green highlights in docsearch dropdown
-    .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-      color: #3EB049;
-    }
-
     .docs-sidebar-footer {
       position: absolute;
       bottom: 10px;
@@ -353,20 +338,5 @@ body.integrations {
     .docs-content {
       margin-left: 0;
     }
-  }
-
-  #docsearch-mobile {
-    top: -1.2rem;
-    border-radius: 5px;
-    width: 20.2rem;
-    height: 3.2rem;
-    text-indent: 0.8rem;
-    font-size: 1.4rem;
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
-  }
-
-  // green highlights in docsearch dropdown
-  .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    color: #3EB049;
   }
 }

@@ -14,11 +14,8 @@
       <link rel="alternate" type="application/rss+xml" title="TaxJar Dev Blog RSS Feed" href="https://developers.taxjar.com/blog/feed.xml">
     <% end %>
     <%= stylesheet_link_tag "main" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
     <%= yield_content :css %>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
-    />
   </head>
   <body class="<%= page_classes %>">
     <div class="wrap">
@@ -88,8 +85,6 @@
         indexName: 'developers.taxjar.com',
         inputSelector: '#docsearch'
       });
-    </script>
-    <script>
       docsearch({
         appId: '7ZBSP80X0K',
         apiKey: '2a9d77b7d7b611725a62fd9ffb522880',

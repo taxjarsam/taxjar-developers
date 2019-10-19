@@ -1,0 +1,53 @@
+#docsearch, #docsearch-mobile {
+  top: -0.75rem;
+  left: -0.1rem;
+  border-radius: 5px;
+  width: 21rem;
+  height: 3rem;
+  text-indent: 0.8rem;
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  background: #fff;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.16);
+  border: 1px solid #ccc;
+  outline: none;
+
+  &::placeholder {
+    color: #999;
+  }
+
+  &:focus {
+    border-color: #b3b3b3;
+  }
+}
+
+#docsearch-mobile {
+  top: -1.2rem;
+  left: 0rem;
+  width: 19.9rem;
+  height: 3.03rem;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+.ds-suggestions {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 15px;
+  color: #333;
+  letter-spacing: 0px;
+  text-transform: none;
+  top: -6px;
+}
+
+.algolia-docsearch-suggestion--category-header-lvl0 {
+  text-decoration: underline;
+}
+
+.ds-dropdown-menu {
+  margin-left: 10px !important;
+}
+
+// green highlights in docsearch dropdown
+.algolia-docsearch-suggestion--highlight {
+  color: #3EB049 !important;
+}

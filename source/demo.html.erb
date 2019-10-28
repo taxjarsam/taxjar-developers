@@ -16,5 +16,8 @@
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/codemirror.min.js" %>
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/addon/scroll/simplescrollbars.js" %>
   <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.10.0/mode/javascript/javascript.min.js" %>
+  <script type="text/javascript">
+    window.apiToken = "<%= ENV['DEMO_API_TOKEN'] %>";
+  </script>
   <%= javascript_include_tag "demo" %>
 <% end %>

@@ -30,7 +30,7 @@ We also want to ensure certified integrations only make API calculations when ab
  - Only make calculations when a merchant has nexus; send in all transactions
  - Cache API calls until order details change
 
-Certified integrations should leverage their TaxJar partnership effectively and include the necessary code to track API usage across one or more API tokens. Referral links should be set up properly to track commission in PartnerStack (formerly known as GrowSumo). Later, the `plugin` param will be used for transactions shown in the TaxJar app to differentiate them from other API transactions:
+Certified integrations should leverage their TaxJar partnership effectively and include the necessary code to track API usage across one or more API tokens. Referral links should be set up properly to track commissions. Later, the `plugin` param will be used for transactions shown in the TaxJar app to differentiate them from other API transactions:
 
 - Partner tracking and analytics
  - Private `plugin` and `store_url` API params

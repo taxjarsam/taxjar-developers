@@ -195,6 +195,14 @@ body.integrations {
       margin-bottom: 10px;
     }
 
+    li ul li {
+      margin-top: 5px;
+    }
+
+    li ul li:first-child  {
+      margin-top: 10px;
+    }
+
     a {
       color: #3FAE2A;
 

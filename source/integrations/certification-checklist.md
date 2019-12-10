@@ -105,9 +105,9 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 
 Pass the following required params for transactions:
 
-<label><input type="checkbox">&nbsp;&nbsp; Unique `id` for each [order](/integrations/sales-tax-reporting/#section-order-transactions) and [refund](/integrations/sales-tax-reporting/#section-refund-transactions)</label>
+<label><input type="checkbox">&nbsp;&nbsp; Unique `transaction_id` for each [order](/integrations/sales-tax-reporting/#section-order-transactions) and [refund](/integrations/sales-tax-reporting/#section-refund-transactions)</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; [Transaction reference ID](/integrations/sales-tax-reporting/#section-refund-transactions) for refunds</label>
+<label><input type="checkbox">&nbsp;&nbsp; `transaction_reference_id` [for refunds](/integrations/sales-tax-reporting/#section-refund-transactions)</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; `transaction_date` for each transaction</label>
 
@@ -136,7 +136,7 @@ Pass the following required params for transactions:
 
   - <label><input type="checkbox">&nbsp;&nbsp; Line item `discount`</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Include **customer_id** for exempt customers](/integrations/sales-tax-calculations/#section-customer-exemptions)</label>
+<label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Pass **customer_id**](/integrations/sales-tax-calculations/#section-customer-exemptions)&nbsp;<small>(required if supporting customer exemptions)</small></label>
 
 <label><input type="checkbox">&nbsp;&nbsp; [Distribute order-level discounts across line items](/integrations/sales-tax-reporting/#section-line-items)</label>
 

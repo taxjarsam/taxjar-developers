@@ -36,6 +36,104 @@
       [
         "go",
         "golang"
+      ],
+      [
+        "tax for order",
+        "taxForOrder",
+        "tax_for_order"
+      ],
+      [
+        "GET List order transactions",
+        "listOrders",
+        "list_orders"
+      ],
+      [
+        "GET Show an order transaction",
+        "showOrder",
+        "show_order"
+      ],
+      [
+        "POST Create an order transaction",
+        "createOrder",
+        "create_order"
+      ],
+      [
+        "PUT Update an order transaction",
+        "updateOrder",
+        "update_order"
+      ],
+      [
+        "DELETE Delete an order transaction",
+        "deleteOrder",
+        "delete_order"
+      ],
+      [
+        "GET List refund transactions",
+        "listRefunds",
+        "list_refunds"
+      ],
+      [
+        "GET Show a refund transaction",
+        "showRefund",
+        "show_refund"
+      ],
+      [
+        "POST Create a refund transaction",
+        "createRefund",
+        "create_refund"
+      ],
+      [
+        "PUT Update a refund transaction",
+        "updateRefund",
+        "update_refund"
+      ],
+      [
+        "DELETE Delete a refund transaction",
+        "deleteRefund",
+        "delete_refund"
+      ],
+      [
+        "GET List customers",
+        "listCustomers",
+        "list_customers"
+      ],
+      [
+        "GET Show a customer",
+        "showCustomer",
+        "show_customer"
+      ],
+      [
+        "POST Create a customer",
+        "createCustomer",
+        "create_customer"
+      ],
+      [
+        "PUT update a customer",
+        "updateCustomer",
+        "update_customer"
+      ],
+      [
+        "DELETE Delete a customer",
+        "deleteCustomer",
+        "delete_customer"
+      ],
+      [
+        "GET Show tax rates for a location",
+        "ratesForLocation",
+        "rates_for_location"
+      ],
+      [
+        "GET List nexus regions",
+        "nexus_regions"
+      ],
+      [
+        "Validate an address",
+        "validateAddress",
+        "validate_address"
+      ],
+      [
+        "summary_rates",
+        "summaryRates"
       ]
     ]
   }

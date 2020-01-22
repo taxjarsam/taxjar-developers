@@ -93,6 +93,30 @@ Since transactions are shown directly in the TaxJar app for merchants to review,
 
 The first line item you send in an API request will always be used for the transaction’s title in TaxJar.  If multiple line items are included, the merchant will see a “[+ X more]” appended to the title.
 
+In addition to order-level `sales_tax`, include the amount of sales tax that applies to each line item by passing the line item `sales_tax` param. If this is not technically feasible, we recommend proportionally distributing the tax across taxable line items.
+
+```json
+{
+  "amount": 20,
+  "shipping": 5,
+  "sales_tax": 1.35,
+  "line_items": [
+    {
+      "id": "1",
+      "quantity": 1,
+      "unit_price": 10,
+      "sales_tax": 0.90
+    },
+    {
+      "id": "2",
+      "quantity": 1,
+      "unit_price": 5,
+      "sales_tax": 0.45
+    }
+  ]
+}
+```
+
 Remember, discounts are provided at the line item level factoring in the quantity, **not per unit.**
 
 <pre>
@@ -127,13 +151,15 @@ Discount: 50%
       "id": "1",
       "quantity": 2,
       "unit_price": 5,
-      "discount": 5
+      "discount": 5,
+      "sales_tax": 0.45
     },
     {
       "id": "2",
       "quantity": 1,
       "unit_price": 10,
-      "discount": 5
+      "discount": 5,
+      "sales_tax": 0.45
     }
   ]
 }

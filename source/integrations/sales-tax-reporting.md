@@ -139,6 +139,8 @@ Discount: 50%
 }
 ```
 
+**Note:** If an order is paid for with a gift card or store credit, the amount should **not** be included in `discount`. Gift cards are tax-exempt when purchased, but do not reduce tax when applied to an order.
+
 ### Customer Exemptions
 
 When exempting orders from sales tax for a given customer, your merchants will expect TaxJar to recognize the order as exempt for reporting and filing as well. To support customer exemptions, use our [customer endpoints](https://developers.taxjar.com/api/reference/#customers) to sync a merchant's customers when they're created or updated. After creating a customer in TaxJar with a designated exemption type such as `wholesale` or `government`, you can pass a `customer_id` to our tax calculation and transaction endpoints. This allows us to determine whether or not the customer should be exempt from sales tax.

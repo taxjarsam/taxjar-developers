@@ -142,6 +142,12 @@ Pass the following required params for transactions:
 
 <label><input type="checkbox">&nbsp;&nbsp; [Deduct shipping discounts from the **shipping** param](/integrations/sales-tax-reporting/#section-shipping-discounts)</label>
 
+<label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; Do **not** include gift cards or store credit in the `discount` param</label>
+
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small>Gift cards are tax-exempt when purchased, but do not reduce tax when applied to an order.</small></li>
+</ul>
+
 <label><input type="checkbox">&nbsp;&nbsp; Use positive decimals in monetary values for order transactions</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; Use negative decimals in monetary values for refund transactions</label>

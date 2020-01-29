@@ -132,7 +132,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Update the same refund by fully refunding the shipping cost.<br><br>
 
-### Other Tests:
+### Other Tests
 
 - To save customers on [billing](https://developers.taxjar.com/api/reference/#billing), we will also test if tax calculations are [cached until order details change](/integrations/sales-tax-calculations/#section-api-guidelines).
 

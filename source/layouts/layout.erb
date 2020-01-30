@@ -65,6 +65,7 @@
         <%= partial "partials/sidebar" %>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" %>
     <%= javascript_include_tag "all" %>
     <%= yield_content :js %>
@@ -76,21 +77,6 @@
 
       ga('create', 'UA-32676850-1', 'auto');
       ga('send', 'pageview');
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-    <script>
-      docsearch({
-        appId: '7ZBSP80X0K',
-        apiKey: '2a9d77b7d7b611725a62fd9ffb522880',
-        indexName: 'developers.taxjar.com',
-        inputSelector: '#docsearch'
-      });
-      docsearch({
-        appId: '7ZBSP80X0K',
-        apiKey: '2a9d77b7d7b611725a62fd9ffb522880',
-        indexName: 'developers.taxjar.com',
-        inputSelector: '#docsearch-mobile'
-      });
     </script>
   </body>
 </html>

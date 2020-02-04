@@ -140,7 +140,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
 <label><input type="checkbox">&nbsp;&nbsp; To test for [nexus sync or management](/integrations/certification-checklist/#section-configuration), we will check that a request to [v2/nexus/regions](https://developers.taxjar.com/api/reference/#get-list-nexus-regions) was made, or that all tax calculations pass the `nexus_addresses` param containing a merchant's nexus locations. If the integration supports multiple international business addresses, the `nexus_addresses` param should be used for [international support](https://developers.taxjar.com/api/reference/#countries).</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; If you haven't already, you may [submit your integration](/integrations/submit/) and we'll then certify other aspects of the integration, such as:</label>
+<label><input type="checkbox">&nbsp;&nbsp; After you [submit your integration](/integrations/submit/), we'll then certify other aspects of it, such as:</label>
 
  - [Branding guidelines](/integrations/onboarding/#section-branding-guidelines)
  - [UX guidelines](/integrations/authentication/#section-ux-guidelines)
@@ -149,3 +149,11 @@ Perform the following calculations/transactions from within the platform:<br><br
  - [Enable / disable calculations and reporting separately](/integrations/sales-tax-reporting/#section-ux-guidelines)
  - [Provide client-side logging for support](/integrations/certification-checklist/#section-configuration)
  - [Transaction backfill support](/integrations/sales-tax-reporting/#section-backfilling-transactions)
+
+<div class="callout">
+  <div class="callout-header">All finished?</div>
+  <span class="close-callout-btn">&times;</span>
+  <div class="callout-container">
+    <a href="/integrations/submit/">Submit your integration today!</a>
+  </div>
+</div>

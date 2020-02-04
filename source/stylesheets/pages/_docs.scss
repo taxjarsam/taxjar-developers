@@ -326,6 +326,42 @@ body.integrations {
       background: red;
     }
   }
+
+  .callout {
+    display: none;
+    position: fixed;
+    bottom: 35px;
+    max-width: 300px;
+  }
+
+  .callout-header {
+    padding: 25px 15px;
+    background: rgb(63, 174, 42);
+    font-size: 30px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .callout-container {
+    padding: 15px;
+    background-color: #efefef;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .close-callout-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .close-callout-btn:hover {
+    color: lightgrey;
+  }
 }
 
 @media (max-width: 1180px) {

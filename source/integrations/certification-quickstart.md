@@ -9,26 +9,28 @@ By performing specific [calculations and transactions](#section-calculations-and
 
 ### Prerequisites
 
-- Set up nexus in New York (NY) in the [TaxJar app](https://app.taxjar.com/account#states) or within the platform's nexus management view.
-    - If supporting [multiple international business addresses](/integrations/sales-tax-calculations/#section-international-limitations) for a merchant, add NY in the nexus management view within the platform, which should send NY as a nexus state via the `nexus_addresses` param when [calculating tax](https://developers.taxjar.com/api/reference/#post-calculate-sales-tax-for-an-order).
+<label><input type="checkbox">&nbsp;&nbsp; Set up nexus in New York (NY) in the [TaxJar app](https://app.taxjar.com/account#states) or within the platform's nexus management view.</label>
+
+- If supporting [multiple international business addresses](/integrations/sales-tax-calculations/#section-international-limitations) for a merchant, add NY in the nexus management view within the platform, which should send NY as a nexus state via the `nexus_addresses` param when [calculating tax](https://developers.taxjar.com/api/reference/#post-calculate-sales-tax-for-an-order).
 ​
 
-- Ensure Maine (ME) is NOT a nexus state.
+<label><input type="checkbox">&nbsp;&nbsp; Ensure Maine (ME) is NOT a nexus state.</label>
 
-- Add product tax code `20010` (Clothing) to an item priced at $109 or less.
+<label><input type="checkbox">&nbsp;&nbsp; Add product tax code `20010` (Clothing) to an item priced at $109 or less.</label>
 
-- Create a coupon that discounts a single item by $5.
+<label><input type="checkbox">&nbsp;&nbsp; Create a coupon that discounts a single item by $5.</label>
 
-- Create an order-level coupon that discounts an entire order by 50%.
+<label><input type="checkbox">&nbsp;&nbsp; Create an order-level coupon that discounts an entire order by 50%.</label>
 
-- Create a coupon that enables free shipping. Or, if unavailable:
-    - Create a shipping coupon of a fixed amount that equals the cost of shipping for the product set up earlier with product tax code `20010`.<br><br>
+<label><input type="checkbox">&nbsp;&nbsp; Create a coupon that enables free shipping. Or, if unavailable:</label>
+
+- Create a shipping coupon of a fixed amount that equals the cost of shipping for the product set up earlier with product tax code `20010`.<br><br>
 
 ### Calculations & Transactions
 
 Perform the following calculations/transactions from within the platform:<br><br>
 
-1. **Check out / complete an order with the following details:**
+1. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; **Check out / complete an order with the following details:**</label>
 
     Ship-to Address
 
@@ -46,7 +48,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Include any non-zero amount for shipping.<br><br>
 
-2. **Check out / complete an order with the following details:**
+2. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; **Check out / complete an order with the following details:**&nbsp;</label>
 
     Ship-to Address
 
@@ -64,7 +66,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Include any non-zero amount for shipping and apply the shipping coupon created earlier.<br><br>
 
-3. **Check out / complete an order with the following details:**
+3. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; **Check out / complete an order with the following details:**&nbsp;&nbsp;</label>
 
     Ship-to Address
 
@@ -84,7 +86,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Include any non-zero amount for shipping.<br><br>
 
-4. **Check out / complete an order with the following details:**
+4. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; **Check out / complete an order with the following details:**&nbsp;&nbsp;&nbsp;</label>
 
     Ship-to Address _(New Address)_
 
@@ -100,7 +102,7 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Add any taxable item and complete the order.<br><br>
 
-5. <small>**_(optional)_**</small> **_If_ the platform supports customer exemptions:**
+5. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; <small>**_(optional)_**</small> **_If_ the platform supports customer exemptions:**</label>
 
     Create a tax-exempt customer who is exempt from sales tax in NY. The exemption type should be `government`, `wholesale`, or `other`.
 
@@ -120,25 +122,26 @@ Perform the following calculations/transactions from within the platform:<br><br
 
     Add any item and complete the order.<br><br>
 
-6. <small>**_(optional)_**</small> **_If_ the platform has the option to update orders _after pushing_ to TaxJar:**
+6. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; <small>**_(optional)_**</small> **_If_ the platform has the option to update orders _after pushing_ to TaxJar:**</label>
 
     Update the first order (`certify taxable order`) by adding a different taxable item so that the total line items included in the order is more than the original order.
 
     Also, update the ship-to street address to `certify update order`.<br><br>
 
-7. **Refund _one_ item from the third order (`certify discounted order`), making sure to leave the other item(s) in the order.**<br><br>
+7. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; **Refund _one_ item from the third order (`certify discounted order`), making sure to leave the other item(s) in the order.**<br><br></label>
 
-8. <small>**_(optional)_**</small> **_If_ the platform has the option to update refunds _after pushing_ to TaxJar:**
+8. <label>&nbsp;&nbsp;<input type="checkbox">&nbsp;&nbsp; <small>**_(optional)_**</small> **_If_ the platform has the option to update refunds _after pushing_ to TaxJar:**</label>
 
     Update the same refund by fully refunding the shipping cost.<br><br>
 
 ### Other Tests
 
-- To save customers on [billing](https://developers.taxjar.com/api/reference/#billing), we will also test if tax calculations are [cached until order details change](/integrations/sales-tax-calculations/#section-api-guidelines).
+<label><input type="checkbox">&nbsp;&nbsp; To save customers on [billing](https://developers.taxjar.com/api/reference/#billing), we will also test if tax calculations are [cached until order details change](/integrations/sales-tax-calculations/#section-api-guidelines).</label>
 
-- To test for [nexus sync or management](/integrations/certification-checklist/#section-configuration), we will check that a request to [v2/nexus/regions](https://developers.taxjar.com/api/reference/#get-list-nexus-regions) was made, or that all tax calculations pass the `nexus_addresses` param containing a merchant's nexus locations. If the integration supports multiple international business addresses, the `nexus_addresses` param should be used for [international support](https://developers.taxjar.com/api/reference/#countries).
+<label><input type="checkbox">&nbsp;&nbsp; To test for [nexus sync or management](/integrations/certification-checklist/#section-configuration), we will check that a request to [v2/nexus/regions](https://developers.taxjar.com/api/reference/#get-list-nexus-regions) was made, or that all tax calculations pass the `nexus_addresses` param containing a merchant's nexus locations. If the integration supports multiple international business addresses, the `nexus_addresses` param should be used for [international support](https://developers.taxjar.com/api/reference/#countries).</label>
 
-- If you haven't already, you may [submit your integration](/integrations/submit/) and we'll then certify other aspects of the integration, such as:
+<label><input type="checkbox">&nbsp;&nbsp; If you haven't already, you may [submit your integration](/integrations/submit/) and we'll then certify other aspects of the integration, such as:</label>
+
  - [Branding guidelines](/integrations/onboarding/#section-branding-guidelines)
  - [UX guidelines](/integrations/authentication/#section-ux-guidelines)
  - [Verify API token after save](/integrations/authentication/#section-api-guidelines) <small>_(optional)_</small>

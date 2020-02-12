@@ -151,7 +151,7 @@ Perform the following calculations/transactions from within the platform:<br><br
  - [Transaction backfill support](/integrations/sales-tax-reporting/#section-backfilling-transactions)
 
 <div class="callout">
-  <div class="callout-header">All finished?</div>
+  <div class="callout-header">All finished? 🎉</div>
   <span class="close-callout-btn">&times;</span>
   <div class="callout-container">
     <a href="/integrations/submit/">Submit your integration today!</a>

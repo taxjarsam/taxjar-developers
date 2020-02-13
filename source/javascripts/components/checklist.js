@@ -21,7 +21,7 @@
   function getHash(checkbox) {
     // concatenate pathname (e.g., /integrations/testing/) and checkbox label
     // in case the same label appears on multiple checklists
-    return window.location.pathname + checkbox.parentNode.innerText.trim();
+    return window.location.pathname + checkbox.parentNode.innerText;
   };
 
   function updateState(checkbox) {

@@ -24,6 +24,8 @@ jobs:
         CF_DISTRIBUTION_ID: ${{ secrets.CF_DISTRIBUTION_ID }}
       run: |
         gem install bundler -v '~> 1.1'
+        sudo npm install -g bower
         bundle install
+        bower install
         middleman build
         s3_website push

@@ -5,7 +5,7 @@ description: "FAQs for custom integrations using TaxJar's sales tax API."
 
 ## How do I get a sandbox account?
 
-TaxJar provides a sandbox environment on all [TaxJar Plus](https://www.taxjar.com/plus/) plans. You can generate a sandbox API token inside the TaxJar app under **Account > SmartCalcs API**. From there, you can [point your API client](/api/reference/#sandbox-environment) to our sandbox URL at `https://api.sandbox.taxjar.com`.
+TaxJar provides a sandbox environment on all [TaxJar Professional](https://www.taxjar.com/request-demo/) or higher plans. You can generate a sandbox API token inside the TaxJar app under **Account > TaxJar API**. From there, you can [point your API client](/api/reference/#sandbox-environment) to our sandbox URL at `https://api.sandbox.taxjar.com`.
 
 ---
 
@@ -19,8 +19,8 @@ Our sales tax API clocks in at sub-75ms with 99.99% uptime. Check our [status pa
 
 Yes, we do enforce rate limits for SmartCalcs API requests:
 
-- 500 requests per minute on [TaxJar Basic](https://www.taxjar.com/pricing/)
-- 10,000 requests per minute on [TaxJar Plus](https://www.taxjar.com/plus/)
+- 10,000 requests per minute on [TaxJar Professional](https://www.taxjar.com/request-demo/)
+- 25,000 requests per minute on [TaxJar Premium](https://www.taxjar.com/request-demo/)
 
 If you have any concerns about rate limiting, please [contact us](https://www.taxjar.com/contact/).
 

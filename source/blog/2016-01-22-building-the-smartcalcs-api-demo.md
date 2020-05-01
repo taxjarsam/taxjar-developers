@@ -1,16 +1,16 @@
 ---
-title: Building the SmartCalcs API Demo
+title: Building the TaxJar API Demo
 description: In-depth walkthrough of how TaxJar's API demo was built with React to create a component-based, single-page app.
 author: jake_johnson
 date: 2016-01-22 00:11 UTC
-category: SmartCalcs
-tags: smartcalcs, api, demo
+category: API
+tags: api, demo
 published: true
 ---
 
-Recently I built TaxJar's [new API demo](https://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](https://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](https://www.taxjar.com/smartcalcs/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
+Recently I built TaxJar's [new API demo](https://developers.taxjar.com/demo/) to demonstrate how we calculate sales tax for orders and the [gotchas](https://developers.taxjar.com/api/guides/#product-exemptions) you may come across in states such as New York with product exemptions. Using the presets panel you can select a nexus address, product, and destination address to generate an editable API call on the fly. Upon clicking the "Run" button, the call is parsed into a JSON object to make a request to our [sales tax API](https://www.taxjar.com/api/). On top of that, I added a map with tooltips explaining specific sales tax rules based on the location.
 
-![TaxJar API Demo](/images/blog/building-the-smartcalcs-api-demo/api-demo.jpg) 
+![TaxJar API Demo](/images/blog/building-the-taxjar-api-demo/api-demo.jpg)
 
 Using [React](https://facebook.github.io/react/docs/why-react.html), [CodeMirror](https://codemirror.net/), and [Mapbox](https://www.mapbox.com/) I created an incredible first impression for developers new to our platform. In this article I'm going to show you how it was built and the tools I used to make it happen. If you'd like to check it out for yourself, it's completely open source and [available on GitHub](https://github.com/taxjar/taxjar-developers).
 
@@ -43,7 +43,7 @@ To prototype the demo, I first implemented a container component called `<Sandbo
 </Sandbox>
 ```
 
-![React Component Tree](/images/blog/building-the-smartcalcs-api-demo/react-tree.jpg) 
+![React Component Tree](/images/blog/building-the-taxjar-api-demo/react-tree.jpg)
 
 The sandbox generates code from preset changes and intercepts changes from the request panel to update the map and response. I used an `onChange` prop for both `<Presets>` and `<Request>` that were called once data was ready to be passed back to the sandbox:
 
@@ -101,7 +101,7 @@ editor.doc.markText(startPos, endPos, {
 });
 ```
 
-The code inside the editor is automatically stored in the component state for retrieval once the "Run" button is clicked. From there, the code is parsed through [Rocambole](https://github.com/millermedeiros/rocambole) to make an AJAX request to the SmartCalcs API. Rocambole is used on top of Esprima to recursively walk through Esprima's [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree):
+The code inside the editor is automatically stored in the component state for retrieval once the "Run" button is clicked. From there, the code is parsed through [Rocambole](https://github.com/millermedeiros/rocambole) to make an AJAX request to the TaxJar API. Rocambole is used on top of Esprima to recursively walk through Esprima's [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree):
 
 ```javascript
 rocambole.moonwalk(ast, function(node) {
@@ -128,7 +128,7 @@ From there, I just had to make an AJAX request to our [sales tax API](https://ww
 
 On a successful AJAX call, the response is displayed in a separate, read-only CodeMirror instance. For the map I extended [MapboxMap](https://github.com/iamale/MapboxMap) to render markers and tooltips. Mapbox's geocoder was used to determine the marker coordinates.
 
-![TaxJar API Demo Map](/images/blog/building-the-smartcalcs-api-demo/api-demo-map.jpg) 
+![TaxJar API Demo Map](/images/blog/building-the-taxjar-api-demo/api-demo-map.jpg)
 
 Depending on the locations provided in the API call, the demo will show contextual sales tax info. Currently we explain how sales tax is calculated in our preset states: New York, California, and Florida. These are all pulled from the presets data file.
 

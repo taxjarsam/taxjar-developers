@@ -5,7 +5,7 @@ description: "Speed up the certification review process! 🚀"
 
 To expedite the certification review process, you may follow the instructions below once initial development on the integration is complete.
 
-By performing specific [calculations and transactions](#section-calculations-and-transactions) from within the platform you're integrating with TaxJar, our Integrations team will more quickly be able to test that the integration is utilizing the [SmartCalcs Sales Tax API](https://developers.taxjar.com/api/reference) properly and satisfies the [Certification Guidelines](/integrations/certification-guidelines) as well as the [Certification Checklist](/integrations/certification-checklist).<br><br>
+By performing specific [calculations and transactions](#section-calculations-and-transactions) from within the platform you're integrating with TaxJar, our Integrations team will more quickly be able to test that the integration is utilizing the [TaxJar Sales Tax API](https://developers.taxjar.com/api/reference) properly and satisfies the [Certification Guidelines](/integrations/certification-guidelines) as well as the [Certification Checklist](/integrations/certification-checklist).<br><br>
 
 ### Prerequisites
 

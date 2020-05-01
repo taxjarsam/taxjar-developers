@@ -3,8 +3,8 @@ title: Summarized Sales Tax Rates & VAT Validation
 description: Learn more about our new endpoints to calculate sales tax during downtime and validating VAT identification numbers.
 author: jake_johnson
 date: 2016-03-10 00:11 UTC
-category: SmartCalcs
-tags: smartcalcs, vat, api
+category: API
+tags: vat, api
 published: true
 ---
 

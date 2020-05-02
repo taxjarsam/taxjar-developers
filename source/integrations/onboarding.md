@@ -25,15 +25,13 @@ Clearly state which TaxJar features you provide for merchants. First, let’s di
 
 ### Sales Tax Calculations
 
-Most integrations provide sales tax calculations at checkout. This functionality is provided completely through [SmartCalcs](https://www.taxjar.com/smartcalcs/), our sales tax API. When a customer visits a cart or checkout page, your platform will make a request to SmartCalcs with the merchant and customer’s details to calculate the right amount of sales tax. You’ll use that data to collect sales tax for the merchant during the checkout process.
-
-This product is branded as **[TaxJar SmartCalcs](https://www.taxjar.com/smartcalcs/)**.
+Most integrations provide sales tax calculations at checkout. This functionality is provided completely through the [TaxJar API](https://www.taxjar.com/api/), our sales tax API. When a customer visits a cart or checkout page, your platform will make a request to the API with the merchant and customer’s details to calculate the right amount of sales tax. You’ll use that data to collect sales tax for the merchant during the checkout process.
 
 ---
 
 ### Sales Tax Reporting
 
-You can also import transactions (orders and refunds) into TaxJar directly from your platform through SmartCalcs. Merchants can see their transactions by logging into the TaxJar app at [https://app.taxjar.com](https://app.taxjar.com). At this time, TaxJar provides reporting for US merchants.
+You can also import transactions (orders and refunds) into TaxJar directly from your platform through the TaxJar API. Merchants can see their transactions by logging into the TaxJar app at [https://app.taxjar.com](https://app.taxjar.com). At this time, TaxJar provides reporting for US merchants.
 
 This product is branded as **[TaxJar Reports](https://www.taxjar.com/sales-tax-reporting/)**.
 
@@ -84,7 +82,7 @@ This call to action button should stand out from other elements on the page to e
 * Adhere to the following terms for TaxJar’s products:
 	* TaxJar AutoFile (Filing)
 	* TaxJar Reports (Reporting)
-	* TaxJar SmartCalcs (Calculations)
+	* TaxJar API (Calculations)
 
 * Use the logos provided on our branding page at [TaxJar.com](https://www.taxjar.com/brand/).
 

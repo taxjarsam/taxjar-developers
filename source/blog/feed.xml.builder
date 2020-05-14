@@ -2,7 +2,7 @@ xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   site_url = "https://developers.taxjar.com/blog/"
   xml.title "TaxJar Dev Blog"
-  xml.subtitle "Updates from the TaxJar product development team behind SmartCalcs, a sales tax API."
+  xml.subtitle "Updates from the TaxJar product development team behind the TaxJar API, a sales tax API."
   xml.id URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, blog.options.prefix.to_s)
   xml.link "href" => URI.join(site_url, 'feed.xml'), "rel" => "self"

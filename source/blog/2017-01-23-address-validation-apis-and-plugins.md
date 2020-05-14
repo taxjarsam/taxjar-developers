@@ -3,12 +3,12 @@ title: Address Validation APIs and Plugins
 description: Guide to the best free and paid address validation APIs, services, and plugins on the market.
 author: jake_johnson
 date: 2017-01-23 12:00 UTC
-category: SmartCalcs
+category: API
 tags: address-validation
 published: true
 ---
 
-Here at TaxJar, customers occasionally ask us if we support address validation through our SmartCalcs API or cart integrations such as WooCommerce or Magento. In order to provide the most affordable and fastest sales tax calculations, we opted to keep this out of our API in favor of lighter validation around states and zip codes. This way you have the opportunity to save money and take advantage of free or low-cost address validation APIs already on the market, usually provided by shipping services such as Shippo and carriers like UPS / USPS.
+Here at TaxJar, customers occasionally ask us if we support address validation through the TaxJar API or cart integrations such as WooCommerce or Magento. In order to provide the most affordable and fastest sales tax calculations, we opted to keep this out of our API in favor of lighter validation around states and zip codes. This way you have the opportunity to save money and take advantage of free or low-cost address validation APIs already on the market, usually provided by shipping services such as Shippo and carriers like UPS / USPS.
 
 In this guide I’ll show you where to find these address verification APIs for your eCommerce website or app. I’ll also cover several plugins / extensions for handling address verification on popular eCommerce platforms.
 

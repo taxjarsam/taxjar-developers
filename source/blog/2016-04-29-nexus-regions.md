@@ -3,14 +3,14 @@ title: Nexus Regions
 description: Learn more about our new nexus regions endpoint to use TaxJar as the source of truth for all things nexus.
 author: jake_johnson
 date: 2016-04-29 00:11 UTC
-category: SmartCalcs
-tags: smartcalcs, vat, api
+category: API
+tags: vat, api
 published: true
 ---
 
 *Here’s some important advice I always give to developers unfamiliar with the intricacies of sales tax:*
 
-**You only have to collect sales tax in states where you have [nexus](https://developers.taxjar.com/api/guides/#handling-nexus) if you're based in the United States.** When calculating sales tax using one of our endpoints, first compare the customer’s shipping state with your nexus states. Skip the call if it's not in one of your nexus states. This ensures you only calculate sales tax when necessary and comes with the added benefit of saving money. Our new [Magento SmartCalcs integration](https://www.taxjar.com/guides/integrations/magento/#how-smartcalcs-works) does this out of the box and even caches API responses until the order or checkout details change.
+**You only have to collect sales tax in states where you have [nexus](https://developers.taxjar.com/api/guides/#handling-nexus) if you're based in the United States.** When calculating sales tax using one of our endpoints, first compare the customer’s shipping state with your nexus states. Skip the call if it's not in one of your nexus states. This ensures you only calculate sales tax when necessary and comes with the added benefit of saving money. Our new [Magento integration](https://www.taxjar.com/guides/integrations/magento/#how-smartcalcs-works) does this out of the box and even caches API responses until the order or checkout details change.
 
 END_SUMMARY
 

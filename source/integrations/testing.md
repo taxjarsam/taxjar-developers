@@ -3,10 +3,10 @@ title: Testing & Scenarios
 description: "Learn best practices for testing your custom integration with TaxJar's sales tax API."
 ---
 
-When testing an integration with SmartCalcs, we want to be confident that your platform correctly handles sales tax both ways:
+When testing an integration with TaxJar, we want to be confident that your platform correctly handles sales tax both ways:
 
-* Passing the correct data to SmartCalcs in the API request
-* Returning the correct data from SmartCalcs using the API response
+* Passing the correct data to the TaxJar API in each request
+* Returning the correct data from TaxJar using the API response
 
 In this guide, we'll provide some high-level guidelines on how to test your integration effectively and a checklist of common testing scenarios.
 
@@ -20,15 +20,15 @@ TaxJar provides a sandbox environment on all [TaxJar Professional](https://www.t
 
 ## Integration Testing
 
-Your platform has a separate checkout calculation process to handle order details and return back totals. Typically, SmartCalcs extends or overrides your existing calculation process to provide sales tax. For this reason, the best way to test calculations involves integration testing:
+Your platform has a separate checkout calculation process to handle order details and return back totals. Typically, the TaxJar API extends or overrides your existing calculation process to provide sales tax. For this reason, the best way to test calculations involves integration testing:
 
 1. Create a mock order using details around a unique tax scenario.
-2. Ensure the SmartCalcs integration is enabled or included programmatically.
-3. Call your platform's checkout calculation process with SmartCalcs to get the order totals with sales tax included.
-4. Capture the SmartCalcs API response as a fixture using your mocking or stubbing library and using it for ongoing tests (optional).
+2. Ensure the TaxJar integration is enabled or included programmatically.
+3. Call your platform's checkout calculation process with the TaxJar API to get the order totals with sales tax included.
+4. Capture the TaxJar API response as a fixture using your mocking or stubbing library and using it for ongoing tests (optional).
 5. Assert the order and line item totals equal their expected values.
 
-We recommend logging both the API request and response during this process so you can determine exactly what was passed to SmartCalcs and the resulting calculation.
+We recommend logging both the API request and response during this process so you can determine exactly what was passed to the TaxJar API and the resulting calculation.
 
 **Verify a specific tax rate by using our [sales tax calculator](https://www.taxjar.com/sales-tax-calculator/).** Keep in mind that different rates may apply based on sourcing rules for individual states and where the merchant has nexus. If something doesn't look right, [send us](https://www.taxjar.com/contact/) the API request and response to review.
 

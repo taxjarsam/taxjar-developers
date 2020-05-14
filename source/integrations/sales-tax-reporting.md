@@ -11,9 +11,9 @@ Transactions are imported into TaxJar either one of two ways:
 ![TaxJar Welcome Dialog](/images/guides/taxjar-welcome.png)
 <small>**Note:** Only in-house integrations are shown in the TaxJar welcome dialog. Custom integrations can be found on our [sales tax integrations](https://www.taxjar.com/sales-tax-integrations/) page. We hope to provide more opportunities for exposure inside the TaxJar app soon. [Contact us](https://www.taxjar.com/contact/) for more information.</small>
 
-* In real-time through SmartCalcs using the API transaction endpoints. When to import a merchant’s transactions and supporting backfills is provided at the discretion of the platform.
+* In real-time through the TaxJar API using the API transaction endpoints. When to import a merchant’s transactions and supporting backfills is provided at the discretion of the platform.
 
-**If you’re building a custom integration with SmartCalcs, you’ll want to use our API to import transactions into TaxJar.** The biggest advantage of this method involves *real-time importing* — the moment a transaction is paid and shipped, you can import it into TaxJar. It’s also the fastest way to get transactions into our system.
+**If you’re building a custom integration with TaxJar, you’ll want to use our API to import transactions into TaxJar.** The biggest advantage of this method involves *real-time importing* — the moment a transaction is paid and shipped, you can import it into TaxJar. It’s also the fastest way to get transactions into our system.
 
 ---
 
@@ -187,7 +187,7 @@ One use case is to mark a single transaction as taxable for an otherwise exempt 
 
 ### Shipping Discounts
 
-SmartCalcs doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.
+The API doesn’t provide an order-level discount param for shipping. To handle a shipping discount, simply deduct the amount from the `shipping` param. Given a free shipping discount, set `shipping` to zero.
 
 ```json
 {
@@ -246,7 +246,7 @@ If you’re integrating TaxJar into an established platform, your merchants may 
 
 Alternatively, you can allow them export their old transactions to a CSV file and they can upload it manually through the TaxJar app.
 
-To backfill transactions through SmartCalcs, you should filter a collection of order transactions by an `updated_at` or `created_at` date range and based on the API guidelines mentioned below. Using `updated_at` ensures you’ll catch older orders that may have taken longer to process, whereas `created_at` allows you to import orders created on a specific date or date range. Typically we use `updated_at` to find transactions.
+To backfill transactions through the TaxJar API, you should filter a collection of order transactions by an `updated_at` or `created_at` date range and based on the API guidelines mentioned below. Using `updated_at` ensures you’ll catch older orders that may have taken longer to process, whereas `created_at` allows you to import orders created on a specific date or date range. Typically we use `updated_at` to find transactions.
 
 Our in-house Magento 2 integration is a good example to follow for backfilling transactions. For each transaction, we set a sync date for each order and credit memo (refund) in the merchant’s database:
 
@@ -288,9 +288,9 @@ Along the way, we check each transaction to ensure it adheres to the API guideli
 
 * Use a separate TaxJar account for testing transactions.
 
-* Write integration tests between your platform and SmartCalcs integration to ensure your transaction import process properly handles order and refund transactions. [Review a checklist of scenarios to test.](/integrations/testing/)
+* Write integration tests between your platform and the TaxJar API integration to ensure your transaction import process properly handles order and refund transactions. [Review a checklist of scenarios to test.](/integrations/testing/)
 
-* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing SmartCalcs responses for ongoing use. If a transaction already exists in TaxJar, you'll receive an error if you attempt to re-create it using a `POST` request.
+* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing TaxJar API responses for ongoing use. If a transaction already exists in TaxJar, you'll receive an error if you attempt to re-create it using a `POST` request.
 
 ---
 

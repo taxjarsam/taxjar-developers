@@ -5,9 +5,9 @@ description: "Set up sales tax calculations in your eCommerce platform using Tax
 
 Every platform handles sales tax calculations differently with a varying degree of accuracy. Most commonly you’ll find zip-based tax rates, allowing merchants to set up a tax rate by 5-digit postal code. These rates [work fine in certain scenarios](https://blog.taxjar.com/zip-codes-sales-tax/), but ideally you want to collect sales tax based on the street address for US calculations:
 
-<img src="/images/guides/accuracy.png" width="75%" alt="SmartCalcs Accuracy">
+<img src="/images/guides/accuracy.png" width="75%" alt="TaxJar API Accuracy">
 
-Beyond that, there’s plenty of other decisions most platforms don't natively support around sales tax. Given the necessary data, SmartCalcs automatically handles the following for you:
+Beyond that, there’s plenty of other decisions most platforms don't natively support around sales tax. Given the necessary data, the TaxJar API automatically handles the following for you:
 
 * Street-level rooftop calculations
 * Line item taxability and itemized discounts
@@ -135,13 +135,13 @@ At this time we only provide a `shipping` param to cover freight tax. If you nee
 
 Shipping discounts should be deducted from the `shipping` param. For free shipping, pass $0 in the `shipping` param.
 
-[Shipping taxability](https://blog.taxjar.com/sales-tax-and-shipping/) is automatically determined by state / region in SmartCalcs. If you need to override this functionality to always collect freight tax, consider using a separate line item for shipping and passing $0 in the `shipping` param.
+[Shipping taxability](https://blog.taxjar.com/sales-tax-and-shipping/) is automatically determined by state / region in the TaxJar API. If you need to override this functionality to always collect freight tax, consider using a separate line item for shipping and passing $0 in the `shipping` param.
 
 ---
 
 ## Nexus Addresses
 
-Without providing nexus addresses, SmartCalcs will assume the merchant only has nexus based on their `from_` address or any nexus states on file in their TaxJar account.
+Without providing nexus addresses, the TaxJar API will assume the merchant only has nexus based on their `from_` address or any nexus states on file in their TaxJar account.
 
 ```json
 {
@@ -160,7 +160,7 @@ Without providing nexus addresses, SmartCalcs will assume the merchant only has 
 
 Depending on your requirements, it may be fine to only support one nexus address per merchant using the `from_` address. Merchants with multiple nexus addresses will need to sign up for a TaxJar account and manage their nexus states inside the TaxJar app.
 
-In order to support `nexus_addresses[]` on your platform, you may need to introduce a way for merchants to manage multiple business addresses. Ideally, provide a way to manage nexus addresses directly through SmartCalcs similar to our Magento integrations:
+In order to support `nexus_addresses[]` on your platform, you may need to introduce a way for merchants to manage multiple business addresses. Ideally, provide a way to manage nexus addresses directly through the TaxJar API similar to our Magento integrations:
 
 ![Magento 2 Nexus Addresses](/images/guides/nexus-addresses.png)
 
@@ -170,7 +170,7 @@ Use our [nexus regions endpoint](https://developers.taxjar.com/api/reference/#ge
 
 At this time, the TaxJar app is oriented toward US merchants. We only support one international address on file per account from the TaxJar app.
 
-This means that if your platform relies heavily on merchants outside of the US, you’ll want to use the `nexus_addresses[]` param to ensure all of their nexus addresses can be sent through SmartCalcs.
+This means that if your platform relies heavily on merchants outside of the US, you’ll want to use the `nexus_addresses[]` param to ensure all of their nexus addresses can be sent through the TaxJar API.
 
 ---
 
@@ -194,7 +194,7 @@ To support product taxability and itemized discounts, **we always recommend usin
 
 The `id` param should always be unique. If multiple line items share the same `id`, you may receive an incorrect calculation. Avoid using a product ID for this param if it’s possible to add multiple line items with the same product, such as customizable products with variations. Consider using a unique ID associated with the line item itself.
 
-The `unit_price` should be the base price of the line item before taking into account the `quantity`. We’ll multiply the `unit_price` by `quantity` in SmartCalcs.
+The `unit_price` should be the base price of the line item before taking into account the `quantity`. We’ll multiply the `unit_price` by `quantity` in the TaxJar API.
 
 Pay special attention to the `discount` param. Pass the **total** discount of the line item and factor in the quantity. For example:
 
@@ -281,7 +281,7 @@ Another way is to distribute the discount across line items proportionally.
 
 If the platform does not distribute order-level discounts across line items, or if you're not sure, apply either method consistently.
 
-For example, some platforms might add the total discount as a separate line item rather than distributing it. In this case, distribute the discount proportionally or evenly in requests to the SmartCalcs API.
+For example, some platforms might add the total discount as a separate line item rather than distributing it. In this case, distribute the discount proportionally or evenly in requests to the TaxJar API.
 
 ---
 
@@ -309,7 +309,7 @@ In most of our integrations we associate our tax codes with the notion of a tax 
 
 Currently we provide a [subset of common product categories](https://developers.taxjar.com/api/reference/#get-list-tax-categories) and we’re planning to expand the list over time. Fully taxable products don’t require a `product_tax_code`. We’ll automatically assume it’s taxable.
 
-If a product category is non-taxable and TaxJar does not yet support a specific `product_tax_code` for that type of product, `99999` `Other Exempt` may be used. However, usage of `product_tax_code` `99999` [prevents merchants from using AutoFile](https://support.taxjar.com/article/362-smartcalcs-product-categories) so we advise to use a more specific `product_tax_code`, if available.
+If a product category is non-taxable and TaxJar does not yet support a specific `product_tax_code` for that type of product, `99999` `Other Exempt` may be used. However, usage of `product_tax_code` `99999` [prevents merchants from using AutoFile](https://support.taxjar.com/article/362-taxjar-api-product-categories) so we advise to use a more specific `product_tax_code`, if available.
 
 ---
 
@@ -364,7 +364,7 @@ This guideline may save your merchants some money on API calculations, so take n
 
 * Provide as much data as you can to ensure accurate calculations.
 * If possible, cache your calculation API responses until an order detail changes (line item, address, shipping, etc).
-* Review your code to ensure you’re conservatively making requests to SmartCalcs and avoiding duplicate calls.
+* Review your code to ensure you’re conservatively making requests to the TaxJar API and avoiding duplicate calls.
 * Always catch API request errors. Ideally, fall back to your tax rate system so merchants can utilize their own backup rates. If you see an ongoing problem, [reach out to our support team](https://www.taxjar.com/contact/).
 * Log API requests and responses on your end for easy debugging.
 
@@ -374,9 +374,7 @@ As a backup we also provide minimum and average sales tax rates by region, in ca
 
 ## Branding Guidelines
 
-* Sales tax calculations are powered by TaxJar SmartCalcs. Generally, we use "SmartCalcs by TaxJar" or "TaxJar SmartCalcs" for headlines. Feel free to use "powered by TaxJar SmartCalcs" in explanation text.
-
-* Always capitalize the "S" and "C" in SmartCalcs. Combine the "Smart" and "Calcs" into one word. Do not use "Smartcalcs", "Smart calcs", or "Smart Calcs".
+* Sales tax calculations are powered by the TaxJar API. Generally, we use "Sales Tax API by TaxJar" or "TaxJar API" for headlines. Feel free to use "powered by TaxJar API" in explanation text.
 
 * For calculation checkbox and toggle switch fields, we generally use "Enabled for Checkout", "Sales Tax Calculations", or "Checkout Calculations" as the field label:
 ![TaxJar Calculations Config](/images/guides/taxjar-calculations-config.png)
@@ -387,9 +385,9 @@ As a backup we also provide minimum and average sales tax rates by region, in ca
 
 * Use a separate TaxJar account for testing calculations.
 
-* Write integration tests between your platform and SmartCalcs integration to ensure your checkout process properly handles sales tax. [Review a checklist of scenarios to test.](/integrations/testing/)
+* Write integration tests between your platform and the TaxJar API integration to ensure your checkout process properly handles sales tax. [Review a checklist of scenarios to test.](/integrations/testing/)
 
-* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing SmartCalcs responses for ongoing use. Tax rates are subject to change, so using fixtures will help prevent tests from randomly breaking.
+* Consider using HTTP response fixtures instead of making an API request for each test. Mocking and stubbing libraries may assist with capturing TaxJar API responses for ongoing use. Tax rates are subject to change, so using fixtures will help prevent tests from randomly breaking.
 
 ---
 
@@ -397,11 +395,11 @@ As a backup we also provide minimum and average sales tax rates by region, in ca
 
 * Try your best to use the settings and data already provided by the merchant on your platform for populating `from_` parameters, such as their store location.
 
-* Respect your platform’s existing tax settings and implement ways for SmartCalcs to handle them. For example, adding a separate line item for handling fees or fixed product taxes.
+* Respect your platform’s existing tax settings and implement ways for the TaxJar API to handle them. For example, adding a separate line item for handling fees or fixed product taxes.
 
-* If SmartCalcs doesn’t support all of your existing tax settings, make sure you communicate that to your merchants. For example, disabling specific settings if the TaxJar integration is enabled or adding a note to each field.
+* If the TaxJar API doesn’t support all of your existing tax settings, make sure you communicate that to your merchants. For example, disabling specific settings if the TaxJar integration is enabled or adding a note to each field.
 
-* Set some intelligent defaults if certain settings don’t apply to SmartCalcs. For example, the merchant should usually use the customer’s shipping address when calculating tax, not the billing address or store location.
+* Set some intelligent defaults if certain settings don’t apply. For example, the merchant should usually use the customer’s shipping address when calculating tax, not the billing address or store location.
 
 * In addition to all of the above, make enabling sales tax calculations as simple as possible. It should only require a checkbox or toggle switch to activate.
 

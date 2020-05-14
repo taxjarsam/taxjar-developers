@@ -4,7 +4,7 @@ description: Learn how to add sales tax to subscriptions and single charges usin
 author: jake_johnson
 date: 2017-05-18 12:00 UTC
 category: Laravel
-tags: smartcalcs, laravel, api
+tags: laravel, api
 published: true
 ---
 

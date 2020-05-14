@@ -14,7 +14,7 @@ In this guide, we'll provide some high-level guidelines on how to test your inte
 
 ## Sandbox Environment
 
-TaxJar provides a sandbox environment on all [TaxJar Plus](https://www.taxjar.com/plus/) plans for automated testing and development. You can generate a sandbox API token inside the TaxJar app under **Account > TaxJar API**. From there, you can [point your API client](/api/reference/#sandbox-environment) to our sandbox URL at `https://api.sandbox.taxjar.com`.
+TaxJar provides a sandbox environment on all [TaxJar Professional](https://www.taxjar.com/request-demo/) or higher plans for automated testing and development. You can generate a sandbox API token inside the TaxJar app under **Account > TaxJar API**. From there, you can [point your API client](/api/reference/#sandbox-environment) to our sandbox URL at `https://api.sandbox.taxjar.com`.
 
 ---
 

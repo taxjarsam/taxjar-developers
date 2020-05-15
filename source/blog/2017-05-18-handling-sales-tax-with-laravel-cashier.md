@@ -24,7 +24,7 @@ composer require taxjar/taxjar-php
 
 ### TaxJar API Token
 
-You’ll also need a way to authenticate with our sales tax API to request rates. [Sign up for a TaxJar account](https://app.taxjar.com/api_sign_up/basic/) to generate a new API token. From there, copy and paste the API token into your project’s `.env` file:
+You’ll also need a way to authenticate with our sales tax API to request rates. [Sign up for a TaxJar account](https://app.taxjar.com/api_sign_up/) to generate a new API token. From there, copy and paste the API token into your project’s `.env` file:
 
 ```
 TAXJAR_API_TOKEN=[Your API Token]

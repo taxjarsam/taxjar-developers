@@ -5,7 +5,7 @@ author: pat_wentz
 date: 2020-11-16 17:09 UTC
 category: JavaScript
 tags: javascript
-published: false
+published: true
 ---
 
 You've seen it, but maybe you don't fully understand it. Perhaps you know how to work around it, but not sure why it's a problem in the first place. That's right, I'm talking about `this`. There's a lot of controversy surrounding `this` because, aside from the ambiguous naming, it can be confusing if you don't know what to look for. I get a lot of questions about `this` in JavaScript so I'm going to try and introduce the most common problems you will run into with regards to `this` in a short blog post.

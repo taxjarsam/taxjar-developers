@@ -87,6 +87,12 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 
 <label><input type="checkbox">&nbsp;&nbsp; [Deduct shipping discounts directly from the **shipping** param](/integrations/sales-tax-calculations/#section-shipping)</label>
 
+<label><input type="checkbox">&nbsp;&nbsp; Only send a request to [**v2/taxes**](/api/reference/#taxes) when an invoice/order is ready to be submitted</label>
+
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small>Avoid unnecessary API calls to <strong>v2/taxes</strong> by only submitting requests when an invoice/order has been completely built for the sale. Dynamically calling <strong>v2/taxes</strong> as line items are added or removed may result in overages and slow the user experience.</small></li>
+</ul>
+
 <label><input type="checkbox">&nbsp;&nbsp; Only send a request to [**v2/taxes**](/api/reference/#taxes) when a merchant has nexus</label>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">

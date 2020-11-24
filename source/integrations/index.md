@@ -5,7 +5,14 @@ description: "Learn how to build custom integrations with TaxJar's sales tax API
 
 Building a custom integration with TaxJar? In these guides, we’ll cover everything you need to know about handling sales tax calculations, reporting, and filing for your own platform. Before you build a new integration from scratch, we recommend reading these guides and browsing our [API documentation](/api/reference/) so you fully understand what can be accomplished through the [TaxJar API](https://www.taxjar.com/api/), our sales tax API.
 
-If you have any technical or partnership questions before getting started, reach out and [schedule a call](/integrations/contact/) with our integration team.
+If you have any questions before getting started, reach out to us:
+
+* For general partnership questions, email [partners@taxjar.com](mailto:partners@taxjar.com)
+* For technical questions, email [integrations@taxjar.com](mailto:integrations@taxjar.com)
+
+For general account or customer support inquiries:
+
+* [support@taxjar.com](mailto:support@taxjar.com)
 
 Thanks for choosing TaxJar!
 

@@ -7,3 +7,6 @@
   from = "/api/*"
   to = "https://taxjar-api-docs.netlify.app/:splat"
   status = 200
+
+[build]
+  command = "bundle _1.17.3_ install && middleman build --verbose"

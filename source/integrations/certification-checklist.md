@@ -24,6 +24,23 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 - <small>**Allow merchants to sign up for TaxJar** if embedded within your solution.</small>
 - <small>**Hide TaxJar settings** until an API token is provided.</small>
 
+<label><input type="checkbox">&nbsp;&nbsp; Specify the TaxJar API version in all API request headers</label>
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small><strong><code>'x-api-version': '2020-08-07'</code></strong> is required at minimum and ensures uniformity across your integration and customers. See [TaxJar's API Reference](/api/reference/#api-version).</small></li>
+</ul>
+
+<label><input type="checkbox">&nbsp;&nbsp; Specify a 'plugin' parameter in /v2/taxes and /v2/transactions/* API requests</label>
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small><code>'plugin': '[yoursoftware]'</code> is required and allows our API to identify your software integration in logging.</small></li>
+  <li><small><strong>Ensure the value of 'plugin' meets the following specifications:</strong>
+    <ul>
+      <li><small>All lowercase</small></li>
+      <li><small>No spaces, hyphens (-), or underscores (_) separating multiple words</small></li>
+      <li><small>The value represents your product or business name</small></li>
+    </ul>
+  </small></li>
+</ul>
+
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Verify API token](/integrations/authentication/#section-api-guidelines) after save</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; Allow users/merchants to enter a [sandbox API token](/integrations/testing/#section-sandbox-environment) for testing</label>

@@ -194,3 +194,33 @@ Update transaction details if they're changed after being pushed to TaxJar via:
 - <label><input type="checkbox">&nbsp;&nbsp; PUT to [**v2/transactions/refunds/:transaction_id**](/api/reference/#put-update-a-refund-transaction) for refunds</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; Provide [transaction backfill support via the API](/integrations/sales-tax-reporting/#section-backfilling-transactions) or, at a minimum, via CSV export so merchants can <a href="https://blog.taxjar.com/import-transactions-to-taxjar/" target=_blank>import transactions manually</a>.</label>
+
+## Integration Documentation
+
+<strong>Any approved integration limitations to certification requirements should be clearly indicated in documentation.</strong>
+
+Ensure public or customer-facing documentation is easily accessible and, at minimum, covers the following:
+
+<label><input type="checkbox">&nbsp;&nbsp; Integration Configuration</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to enter a TaxJar API token</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How to enable/disable sales tax calculations &amp; transaction sync, as applicable</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to sync or review nexus states</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to review API request logging, as applicable</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Exemptions</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How and where to configure Product Tax Codes on products, services, or inventory</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How and where to configure customer exemptions, as applicable</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Sales Tax Calculation</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Describe when or what event triggers a sales tax calculation request</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Transactions</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Describe when or what event triggers an order or refund to be sent to TaxJar</label>

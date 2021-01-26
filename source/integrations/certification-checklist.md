@@ -24,6 +24,23 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 - <small>**Allow merchants to sign up for TaxJar** if embedded within your solution.</small>
 - <small>**Hide TaxJar settings** until an API token is provided.</small>
 
+<label><input type="checkbox">&nbsp;&nbsp; Specify the TaxJar API version in all API request headers</label>
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small><strong><code>'x-api-version': '2020-08-07'</code></strong> is required at minimum and ensures uniformity across your integration and customers. See [TaxJar's API Reference](/api/reference/#api-version).</small></li>
+</ul>
+
+<label><input type="checkbox">&nbsp;&nbsp; Specify a 'plugin' parameter in /v2/taxes and /v2/transactions/* API requests</label>
+<ul style="list-style-type: none; margin-left: -1.5rem">
+  <li><small><code>'plugin': '[yoursoftware]'</code> is required and allows our API to identify your software integration in logging.</small></li>
+  <li><small><strong>Ensure the value of 'plugin' meets the following specifications:</strong>
+    <ul>
+      <li><small>All lowercase</small></li>
+      <li><small>No spaces, hyphens (-), or underscores (_) separating multiple words</small></li>
+      <li><small>The value represents your product or business name</small></li>
+    </ul>
+  </small></li>
+</ul>
+
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Verify API token](/integrations/authentication/#section-api-guidelines) after save</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; Allow users/merchants to enter a [sandbox API token](/integrations/testing/#section-sandbox-environment) for testing</label>
@@ -177,3 +194,33 @@ Update transaction details if they're changed after being pushed to TaxJar via:
 - <label><input type="checkbox">&nbsp;&nbsp; PUT to [**v2/transactions/refunds/:transaction_id**](/api/reference/#put-update-a-refund-transaction) for refunds</label>
 
 <label><input type="checkbox">&nbsp;&nbsp; Provide [transaction backfill support via the API](/integrations/sales-tax-reporting/#section-backfilling-transactions) or, at a minimum, via CSV export so merchants can <a href="https://blog.taxjar.com/import-transactions-to-taxjar/" target=_blank>import transactions manually</a>.</label>
+
+## Integration Documentation
+
+<strong>Any approved integration limitations to certification requirements should be clearly indicated in documentation.</strong>
+
+Ensure public or customer-facing documentation is easily accessible and, at minimum, covers the following:
+
+<label><input type="checkbox">&nbsp;&nbsp; Integration Configuration</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to enter a TaxJar API token</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How to enable/disable sales tax calculations &amp; transaction sync, as applicable</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to sync or review nexus states</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Where to review API request logging, as applicable</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Exemptions</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How and where to configure Product Tax Codes on products, services, or inventory</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; How and where to configure customer exemptions, as applicable</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Sales Tax Calculation</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Describe when or what event triggers a sales tax calculation request</label>
+
+<label><input type="checkbox">&nbsp;&nbsp; Transactions</label>
+
+- <label><input type="checkbox">&nbsp;&nbsp; Describe when or what event triggers an order or refund to be sent to TaxJar</label>

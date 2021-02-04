@@ -68,11 +68,13 @@ TaxJar supports identification via `provider` for the following values:
 
 * `'ebay'`
 
-* `'etsy'`; or
+* `'etsy'`
+
+* `'facebook'`; or
 
 * `'walmart'`.
 
-These e-commerce channels are marketplaces, and therefore marketplace exempt. The platform handles sales tax calculation and remittance on behalf of the seller.
+State laws vary in whether or not the merchant or marketplace platform are responsible for sales tax filing and remittance. TaxJar's software logic handles marketplace facilitator law determination by state, in addition to the date the law has taken effect. For more details and a list of details by state and date, see [State by State: Marketplace Facilitator Laws Explained](https://blog.taxjar.com/marketplace-facilitator-explained/).
 
 If a software integration meets all of the following conditions, these transactions should be created in TaxJar along with the appropriate `provider`:
 
@@ -85,8 +87,6 @@ If a software integration meets all of the following conditions, these transacti
 Not taking advantage of the `provider` parameter could result in transaction duplication in TaxJar.
 
 In the event of marketplace sales being made on a platform outside of the above, ensure your software passes an [order-level exemption type](/integrations/sales-tax-reporting/#section-order-level-exemptions) with a value of `'marketplace'`. If one of the supported provider values is provided, it is not necessary to specify an `exemption_type`.
-
-**Note:** It is not necessary to call for sales tax calculations of marketplace orders or refunds. Because they are collected and remitted on behalf of the merchant by the marketplace platform, avoid calling /v2/taxes for known marketplace transactions.
 
 ### From & To Address
 

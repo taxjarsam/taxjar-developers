@@ -70,9 +70,9 @@ TaxJar supports identification via `provider` for the following values:
 
 * `'etsy'`
 
-* `'facebook'`; or
+* `'facebook'`
 
-* `'walmart'`.
+* `'walmart'`
 
 State laws vary in whether or not the merchant or marketplace platform are responsible for sales tax filing and remittance. TaxJar's software logic handles marketplace facilitator law determination by state, in addition to the date the law has taken effect. For more information and a list of details by state and date, see [State by State: Marketplace Facilitator Laws Explained](https://blog.taxjar.com/marketplace-facilitator-explained/).
 

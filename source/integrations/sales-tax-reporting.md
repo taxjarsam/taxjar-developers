@@ -48,6 +48,46 @@ Next you’ll need to provide the `transaction_date` parameter. We recommend usi
 }
 ```
 
+### Provider
+
+The `provider` parameter provides a pivotal role in sending TaxJar order and refund transactions. By default, the `provider` parameter will always have a value of `'api'` unless otherwise specified.
+
+The purpose of a `provider` value serves two purposes:
+
+1. Identify the source of the order or refund; and
+
+2. Exempt the order or refund from sales tax, if it includes a supported value.
+
+#### Identify the source of the order or refund
+It is sometimes helpful to track the source of a sale for record purposes. TaxJar accounts have the ability to export transaction data and see the source via the `provider` parameter. For example, `'provider': 'pos'` for on-site sales, or `'provider': 'conference_booth'` for events.
+
+#### Exempting Order or Refund Transactions by Provider
+TaxJar supports identification via `provider` for the following values:
+
+* `'amazon'`
+
+* `'ebay'`
+
+* `'etsy'`
+
+* `'facebook'`
+
+* `'walmart'`
+
+State laws vary in whether or not the merchant or marketplace platform are responsible for sales tax filing and remittance. TaxJar's software logic handles marketplace facilitator law determination by state, in addition to the date the law has taken effect. For more information and a list of details by state and date, see [State by State: Marketplace Facilitator Laws Explained](https://blog.taxjar.com/marketplace-facilitator-explained/).
+
+If a software integration meets all of the following conditions, these transactions should be created in TaxJar along with the appropriate `provider`:
+
+1. The merchant sells on one of the supported marketplace platforms listed above
+
+2. The software supports importing transactions from any of the marketplace platforms above
+
+3. The merchant **is not** connecting a marketplace platform directly to TaxJar, but wants the software to unify sending all transactions to TaxJar
+
+Not taking advantage of the `provider` parameter could result in transaction duplication in TaxJar.
+
+In the event of marketplace sales being made on a platform outside of the above, ensure your software passes an [order-level exemption type](/integrations/sales-tax-reporting/#section-order-level-exemptions) with a value of `'marketplace'`. If one of the supported provider values is provided, it is not necessary to specify an `exemption_type`.
+
 ### From & To Address
 
 * Use the store’s location or shipping origin for the `from_` parameters.

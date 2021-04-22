@@ -7,3 +7,6 @@
   from = "/api/*"
   to = "https://taxjar-api-docs.netlify.app/:splat"
   status = 200
+
+[functions]
+  directory = "functions"

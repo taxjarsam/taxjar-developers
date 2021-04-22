@@ -1,51 +1,8 @@
 (function (window, document) {
   window.apiData = {
     "tasks": {
-      "ratesForLocation": {
-        "method": "GET",
-        "url": "https://api.taxjar.com/v2/rates",
-        "docs": "https://developers.taxjar.com/api/#get-show-tax-rates-for-a-location",
-        "args": ["zip"],
-        "presets": {
-          "location": {
-            "_name": "Location",
-            "_description": "Tell TaxJar where to calculate sales tax.",
-            "data": [
-              {
-                "_name": "New York",
-                "_type": "location",
-                "zip": "10118",
-                "city": "New York",
-                "country": "US"
-              },
-              {
-                "_name": "California",
-                "_type": "location",
-                "zip": "90404",
-                "city": "Santa Monica",
-                "country": "US"
-              },
-              {
-                "_name": "Florida",
-                "_type": "location",
-                "zip": "33132",
-                "city": "Miami",
-                "country": "US"
-              },
-              {
-                "_name": "Illinois",
-                "_type": "location",
-                "zip": "60613",
-                "city": "Chicago",
-                "country": "US"
-              }
-            ]
-          }
-        }
-      },
       "taxForOrder": {
         "method": "POST",
-        "url": "https://api.taxjar.com/v2/taxes",
         "docs": "https://developers.taxjar.com/api/#post-calculate-sales-tax-for-an-order",
         "defaults": {
           "amount": 19.95,

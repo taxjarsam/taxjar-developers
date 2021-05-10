@@ -16,8 +16,9 @@ var Map = React.createClass({
         options[k] = props[k];
       }
     }
-    
-    this.map = L.mapbox.map(ReactDOM.findDOMNode(this), mapId, options);
+
+    this.map = L.mapbox.map(ReactDOM.findDOMNode(this))
+                       .addLayer(L.mapbox.styleLayer('mapbox://styles/jaketaxjar/cko342yyy10a617p8m6jszach'));
     this.layer = L.mapbox.featureLayer().addTo(this.map);
     this.geocoder = L.mapbox.geocoder('mapbox.places');
     this.features = [];

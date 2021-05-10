@@ -1,10 +1,12 @@
 /*jshint node:true */
 "use strict";
 
+window.rocambole = {};
+
 // ---
 
 // we expose the flags so other tools can tweak the values (#8)
-exports.BYPASS_RECURSION = {
+window.rocambole.BYPASS_RECURSION = {
     root : true,
     comments : true,
     tokens : true,
@@ -40,28 +42,28 @@ var _addLocInfo;
 
 // ---
 
-exports.parseFn = esprima.parse;
-exports.parseContext = esprima;
+window.rocambole.parseFn = esprima.parse;
+window.rocambole.parseContext = esprima;
 // we need range/tokens/comment info to build the tokens linked list!
-exports.parseOptions = {
+window.rocambole.parseOptions = {
     range: true,
     tokens: true,
     comment: true
 };
 
 // parse string and return an augmented AST
-exports.parse = function parse(source, opts){
+window.rocambole.parse = function parse(source, opts){
     opts = opts || {};
     _addLocInfo = Boolean(opts.loc);
     source = source.toString();
 
-    Object.keys(exports.parseOptions).forEach(function(key) {
+    Object.keys(window.rocambole.parseOptions).forEach(function(key) {
         if (!(key in opts)) {
-            opts[key] = exports.parseOptions[key];
+            opts[key] = window.rocambole.parseOptions[key];
         }
     });
 
-    var ast = exports.parseFn.call(exports.parseContext, source, opts);
+    var ast = window.rocambole.parseFn.call(window.rocambole.parseContext, source, opts);
 
     // we augment just root node since program is "empty"
     // can't check `ast.body.length` because it might contain just comments
@@ -358,7 +360,7 @@ function getWhiteSpaces(source) {
 
 
 
-exports.walk = exports.recursive = recursiveWalk;
+window.rocambole.walk = window.rocambole.recursive = recursiveWalk;
 
 // heavily inspired by node-falafel
 // walk nodes recursively starting from root
@@ -380,7 +382,7 @@ function recursiveWalk(node, fn, parent, prev, next){
 
         // only need to recurse real nodes and arrays
         // ps: typeof null == 'object'
-        if (!child || typeof child !== 'object' || exports.BYPASS_RECURSION[key]) {
+        if (!child || typeof child !== 'object' || window.rocambole.BYPASS_RECURSION[key]) {
             continue;
         }
 
@@ -401,9 +403,9 @@ function recursiveWalk(node, fn, parent, prev, next){
 
 
 // walk AST starting from leaf nodes
-exports.moonwalk = function moonwalk(ast, fn){
+window.rocambole.moonwalk = function moonwalk(ast, fn){
     if (typeof ast === 'string') {
-        ast = exports.parse(ast);
+        ast = window.rocambole.parse(ast);
     }
 
     // we create a separate array for each depth and than we flatten it to

@@ -1,5 +1,3 @@
-var fmt = require('demo/vendor/fmt');
-
 var Sandbox = React.createClass({
   getInitialState: function() {
     return {

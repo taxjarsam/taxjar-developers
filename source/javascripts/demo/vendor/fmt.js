@@ -7,12 +7,6 @@ var toString = window.JSON
   : String;
 
 /**
- * Export `fmt`
- */
-
-module.exports = fmt;
-
-/**
  * Formatters
  */
 
@@ -39,3 +33,9 @@ function fmt(str){
       : _ + f;
   });
 }
+
+/**
+ * Export `fmt`
+ */
+
+ window.fmt = fmt;

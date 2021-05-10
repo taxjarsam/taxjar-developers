@@ -1,6 +1,3 @@
-var rocambole = require('demo/vendor/rocambole');
-var fmt = require('demo/vendor/fmt');
-
 var Request = React.createClass({
   getInitialState: function() {
     return {

@@ -22,7 +22,7 @@ exports.handler = async function(event, context) {
   let res = {};
 
   try {
-    res = await client.taxForOrder(event.body);
+    res = await client.taxForOrder(JSON.parse(event.body));
   } catch (err) {
     return {
       statusCode: err.status,

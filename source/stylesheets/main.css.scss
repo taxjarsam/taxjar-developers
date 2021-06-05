@@ -21,6 +21,11 @@
 @import "pages/docs";
 @import "pages/support";
 
+@font-face {
+  font-family: "reckless-regular";
+  src:font-url("Reckless-Regular.woff") format('woff');
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -32,7 +37,7 @@ html {
 }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "reckless-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 1.7rem;
   color: #333;
   margin: 0;
@@ -47,7 +52,7 @@ body {
   background: #EFEFEF;
 
   &.index {
-    background: linear-gradient(darken(#3EB049, 14%), #3EB049);
+    background: linear-gradient(darken(#22C855, 14%), #22C855);
   }
 }
 
@@ -65,7 +70,7 @@ header {
 
 .logo {
   float: left;
-  padding: 16px 20px;
+  padding: 4px 20px;
 }
 
 .logo span {
@@ -277,7 +282,7 @@ header {
 
 .home__toc__item {
   position: relative;
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.5));
+  background: linear-gradient(rgba(0,115,35,.45), rgba(0,115,35,.5));
   margin: 0 0 4px;
   border-radius: 5px;
   border: 1px solid darken(#3EB049, 28%);
@@ -286,7 +291,7 @@ header {
 }
 
 .home__toc__item:hover {
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6));
+  background: linear-gradient(rgba(0,115,35,.45), rgba(0,115,35,.6));
 }
 
 .home__toc__item a {

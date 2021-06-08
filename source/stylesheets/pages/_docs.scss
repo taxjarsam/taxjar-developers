@@ -80,7 +80,7 @@ body.integrations {
 
     .docs-sidebar-footer {
       position: relative;
-      margin-top: 0px;
+      margin-top: 0;
       bottom: 10px;
       padding: 10px 20px 10px 10px;
       font-size: 1.5rem;
@@ -171,8 +171,6 @@ body.integrations {
   .docs-title {
     margin: 0 0 0 230px;
     padding: 10px 30px;
-    background: url('/images/logo-float-shadow.svg') 100% 50% no-repeat;
-    background-size: 50%;
     border-bottom: 1px solid #f7f7f7;
   }
 
@@ -202,7 +200,7 @@ body.integrations {
       margin-top: 5px;
     }
 
-    li ul li:first-child  {
+    li ul li:first-child {
       margin-top: 10px;
     }
 
@@ -239,12 +237,13 @@ body.integrations {
       border-radius: 3px;
     }
 
-    code, pre {
+    code,
+    pre {
       font-family: "Source Code Pro";
     }
 
     code {
-      font-size: .9em;
+      font-size: 0.9em;
       font-weight: normal;
       color: #000;
       padding: 0 3px;
@@ -259,7 +258,7 @@ body.integrations {
     }
 
     .highlight {
-      font-size: .9em;
+      font-size: 0.9em;
       margin: 20px 0;
       padding: 20px;
       background: #343434;
@@ -288,7 +287,7 @@ body.integrations {
       position: absolute;
       display: block;
       content: '';
-      background: url(/images/quote.svg) top left no-repeat;
+      background: url("/images/quote.svg") top left no-repeat;
       background-size: 100%;
       width: 22px;
       height: 45px;
@@ -300,7 +299,9 @@ body.integrations {
       font-style: normal;
       color: #999;
     }
-    input[type="checkbox"], input[type="radio"] {
+
+    input[type="checkbox"],
+    input[type="radio"] {
       vertical-align: 2px;
     }
   }
@@ -366,7 +367,6 @@ body.integrations {
     color: lightgrey;
   }
 }
-
 @media (max-width: 1180px) {
   .docs {
     .docs-toc {
@@ -374,15 +374,14 @@ body.integrations {
     }
   }
 }
-
 @media (max-width: 820px) {
   .docs {
     .docs-sidebar {
       display: none;
     }
 
-    .docs-title,
-    .docs-content {
+    .docs-content,
+    .docs-title {
       margin-left: 0;
     }
   }

@@ -74,6 +74,8 @@ header {
 }
 
 .logo {
+  font-family: "Matter", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  text-transform: uppercase;
   float: left;
   padding: 4px 20px;
 }
@@ -150,7 +152,7 @@ header {
 
 .btn {
   display: inline-block;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "Matter", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   padding: 7px 15px;
   color: #1A1A1A;

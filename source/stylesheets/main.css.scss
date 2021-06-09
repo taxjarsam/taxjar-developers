@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  font-family: "reckless-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 1.7rem;
   color: #333;
   margin: 0;
@@ -57,8 +57,16 @@ body {
   background: #EFEFEF;
 
   &.index {
-    background: linear-gradient(darken(#22C855, 14%), #22C855);
+    background: linear-gradient(darken(#F5F5F7, 14%), #F5F5F7);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "reckless-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+p, span {
+  font-family: "matter-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
 header {
@@ -74,7 +82,7 @@ header {
 }
 
 .logo {
-  font-family: "Matter", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
   float: left;
   padding: 4px 20px;
@@ -84,10 +92,12 @@ header {
   position: absolute;
   top: 10px;
   left: 158px;
-  margin-top: 13px;
-  font-size: 18px;
+  margin-left: -15px;
+  margin-right: 35px;
+  margin-top: 16px;
+  font-size: 20px;
   font-weight: 300;
-  color: #999;
+  color: #1A1A1A;
 }
 
 .logo .short {
@@ -152,34 +162,36 @@ header {
 
 .btn {
   display: inline-block;
-  font-family: "Matter", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   padding: 7px 15px;
   color: #1A1A1A;
   text-decoration: none;
   line-height: 20px;
-  border: 1px solid #1A1A1A;
+  background-color: #22C855;
+  border: 1px solid #22C855;
   border-radius: 7px;
   font-weight: bold;
   text-transform: uppercase;
 
   &:hover {
-    color: #1A1A1A !important;
+    color: #22C855 !important;
+    background-color: #1A1A1A;
     box-sizing: border-box;
     border-radius: 7px;
-    border: 2px solid #22C855;
+    border: 2px solid #1A1A1A;
   }
 }
 
 .btn.cta {
   color: #1A1A1A;
-  border: 1px solid #1A1A1A;
+  border: 1px solid #22C855;
 
   &:hover {
-    color: #1A1A1A;
+    color: #22C855;
     box-sizing: border-box;
     border-radius: 7px;
-    border: 2px solid #22C855;
+    border: 2px solid #1A1A1A;
   }
 }
 
@@ -245,32 +257,34 @@ header {
   margin: 0 auto 20px;
   background: transparent;
   border-radius: 50%;
-  background: #fff;
+  background: #22C855;
 }
 
 .hero__icon svg {
   width: 60px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .hero__icon svg path {
   stroke: #fff;
   stroke-width: 0;
-  fill: #22C855;
+  fill: #1A1A1A;
 }
 
 .hero h1 {
-  font-size: 50px;
-  color: #fff;
+  font-family: "Reckless-Regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 56px;
+  color: #1A1A1A;
   margin: 0 0 10px;
   padding: 0;
   text-shadow: 0 1px 2px rgba(0,0,0,.12);
 }
 
 .hero h2 {
-  font-size: 20px;
+  font-family: "matter-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  color: #a6e0ac;
+  color: #1A1A1A;
   margin: 0;
   padding: 0;
   text-shadow: 0 1px 1px rgba(0,0,0,.12);
@@ -282,17 +296,18 @@ header {
 }
 
 .home__toc__item {
+  font-family: "matter-regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   position: relative;
-  background: linear-gradient(rgba(0,115,35,.45), rgba(0,115,35,.5));
+  background: linear-gradient(rgba(26,26,26,.95), rgba(26,26,26,.97));
   margin: 0 0 4px;
   border-radius: 5px;
-  border: 1px solid darken(#3EB049, 28%);
+  border: 1px solid darken(#1A1A1A, 28%);
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
   transition: background 250ms ease-out;
 }
 
 .home__toc__item:hover {
-  background: linear-gradient(rgba(0,115,35,.45), rgba(0,115,35,.6));
+  background: linear-gradient(rgba(26,26,26,.93), rgba(26,26,26,.95));
 }
 
 .home__toc__item a {

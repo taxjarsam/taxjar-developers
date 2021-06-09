@@ -27,6 +27,11 @@
 }
 
 @font-face {
+  font-family: 'reckless-bold';
+  src:font-url('Reckless-Bold.woff') format('woff');
+}
+
+@font-face {
   font-family: "matter-regular";
   src: font-url("Matter-Regular.woff") format('woff');
 }
@@ -57,7 +62,7 @@ body {
   background: #EFEFEF;
 
   &.index {
-    background: linear-gradient(darken(#F5F5F7, 14%), #F5F5F7);
+    background-image: url(/images/mask_group.png);
   }
 }
 
@@ -92,9 +97,9 @@ header {
   position: absolute;
   top: 10px;
   left: 158px;
-  margin-left: -15px;
+  margin-left: 15px;
   margin-right: 35px;
-  margin-top: 16px;
+  margin-top: 15px;
   font-size: 20px;
   font-weight: 300;
   color: #1A1A1A;
@@ -106,7 +111,7 @@ header {
 
 .menu--main {
   float: left;
-  margin: 0 0 0 110px;
+  margin: 0 0 0 150px;
   padding: 0 0 0 10px;
   border-left: 1px solid #f7f7f7;
 }
@@ -172,7 +177,7 @@ header {
   border: 1px solid #22C855;
   border-radius: 7px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:hover {
     color: #22C855 !important;
@@ -272,7 +277,7 @@ header {
 }
 
 .hero h1 {
-  font-family: "Reckless-Regular", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "reckless-bold", "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 56px;
   color: #1A1A1A;
   margin: 0 0 10px;
@@ -374,6 +379,14 @@ footer {
   padding: 10px 20px;
   font-size: 12px;
   color: rgba(255,255,255,.8);
+}
+
+span.logo-divider {
+  font-family: "Montserrat";
+  margin: 4px 22px 0 -7px;
+  color: #22C855;
+  font-size: 32px;
+  font-weight: lighter;
 }
 
 @media (max-width: 1446px) {

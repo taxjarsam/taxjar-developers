@@ -22,18 +22,45 @@
 @import "pages/support";
 
 @font-face {
-  font-family: "reckless-regular";
+  font-family: "reckless";
   src:font-url("Reckless-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'reckless-bold';
-  src:font-url('Reckless-Bold.woff') format('woff');
+  font-family: "reckless";
+  src:font-url("Reckless-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "matter-regular";
+  font-family: "reckless";
+  src:font-url("Reckless-RegularItalic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "matter";
   src: font-url("Matter-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "matter";
+  src: font-url("Matter-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "matter";
+  src: font-url("Matter-RegularItalic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
 }
 
 html {
@@ -47,7 +74,7 @@ html {
 }
 
 body {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 1.7rem;
   color: #333;
   margin: 0;
@@ -67,11 +94,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "reckless-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "reckless", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
 p, span {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
 header {
@@ -87,7 +114,7 @@ header {
 }
 
 .logo {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   text-transform: uppercase;
   float: left;
   padding: 4px 20px;
@@ -135,7 +162,7 @@ header {
 }
 
 .menu nav li {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   display: inline-block;
   padding: 0 10px 0 0;
   list-style: none;
@@ -167,7 +194,7 @@ header {
 
 .btn {
   display: inline-block;
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   padding: 7px 15px;
   color: #1A1A1A;
@@ -286,7 +313,7 @@ header {
 }
 
 .hero h2 {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: #1A1A1A;
@@ -301,7 +328,7 @@ header {
 }
 
 .home__toc__item {
-  font-family: "matter-regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   position: relative;
   background: linear-gradient(rgba(26,26,26,.95), rgba(26,26,26,.97));
   margin: 0 0 4px;

@@ -21,6 +21,48 @@
 @import "pages/docs";
 @import "pages/support";
 
+@font-face {
+  font-family: "reckless";
+  src:font-url("Reckless-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "reckless";
+  src:font-url("Reckless-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "reckless";
+  src:font-url("Reckless-RegularItalic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "matter";
+  src: font-url("Matter-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "matter";
+  src: font-url("Matter-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "matter";
+  src: font-url("Matter-RegularItalic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -32,7 +74,7 @@ html {
 }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 1.7rem;
   color: #333;
   margin: 0;
@@ -47,8 +89,16 @@ body {
   background: #EFEFEF;
 
   &.index {
-    background: linear-gradient(darken(#3EB049, 14%), #3EB049);
+    background-image: url(/images/mask_group.png);
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "reckless", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+p, span {
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 }
 
 header {
@@ -64,18 +114,22 @@ header {
 }
 
 .logo {
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  text-transform: uppercase;
   float: left;
-  padding: 16px 20px;
+  padding: 4px 20px;
 }
 
 .logo span {
   position: absolute;
   top: 10px;
   left: 158px;
-  margin-top: 13px;
-  font-size: 18px;
+  margin-left: 15px;
+  margin-right: 35px;
+  margin-top: 15px;
+  font-size: 20px;
   font-weight: 300;
-  color: #999;
+  color: #1A1A1A;
 }
 
 .logo .short {
@@ -84,7 +138,7 @@ header {
 
 .menu--main {
   float: left;
-  margin: 0 0 0 110px;
+  margin: 0 0 0 150px;
   padding: 0 0 0 10px;
   border-left: 1px solid #f7f7f7;
 }
@@ -108,6 +162,7 @@ header {
 }
 
 .menu nav li {
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   display: inline-block;
   padding: 0 10px 0 0;
   list-style: none;
@@ -125,56 +180,51 @@ header {
   display: block;
   font-size: 15px;
   padding: 6px 15px;
-  color: #333;
+  color: #1A1A1A;
   text-decoration: none;
-
-  &.btn {
-    font-size: 14px;
-    padding: 7px 15px;
-  }
 }
 
 .menu nav li .active {
-  color: #3FAE2A;
+  color: #22C855;
 }
 
 .menu nav li a:hover {
-  color: #3FAE2A;
+  color: #22C855;
 }
 
 .btn {
   display: inline-block;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   font-size: 14px;
   padding: 7px 15px;
-  color: #333;
+  color: #1A1A1A;
   text-decoration: none;
   line-height: 20px;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  background-color: #22C855;
+  border: 1px solid #22C855;
+  border-radius: 7px;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
 
   &:hover {
-    color: #3FAE2A;
-    border-color: #3FAE2A;
+    color: #22C855 !important;
+    background-color: #1A1A1A;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: 1px solid #1A1A1A;
   }
 }
 
 .btn.cta {
-  color: #fff;
-  background: linear-gradient(#f39c12, darken(#f39c12, 3%));
-  border: 1px solid #CE8512;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #1A1A1A;
+  border: 1px solid #22C855;
 
   &:hover {
-    color: #fff;
-    background: linear-gradient(#f5ac39, #ea940c);
+    color: #22C855;
+    box-sizing: border-box;
+    border-radius: 7px;
+    border: 1px solid #1A1A1A;
   }
-}
-
-.menu nav li .cta:hover {
-  color: #fff;
 }
 
 .text-center {
@@ -239,32 +289,34 @@ header {
   margin: 0 auto 20px;
   background: transparent;
   border-radius: 50%;
-  background: #fff;
+  background: #22C855;
 }
 
 .hero__icon svg {
   width: 60px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .hero__icon svg path {
   stroke: #fff;
   stroke-width: 0;
-  fill: #3FAE2A;
+  fill: #1A1A1A;
 }
 
 .hero h1 {
-  font-size: 50px;
-  color: #fff;
+  font-family: "reckless-bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 56px;
+  color: #1A1A1A;
   margin: 0 0 10px;
   padding: 0;
   text-shadow: 0 1px 2px rgba(0,0,0,.12);
 }
 
 .hero h2 {
-  font-size: 20px;
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  color: #a6e0ac;
+  color: #1A1A1A;
   margin: 0;
   padding: 0;
   text-shadow: 0 1px 1px rgba(0,0,0,.12);
@@ -276,17 +328,18 @@ header {
 }
 
 .home__toc__item {
+  font-family: "matter", "Helvetica Neue", Helvetica, Arial, Sans-serif;
   position: relative;
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.5));
+  background: linear-gradient(rgba(26,26,26,.95), rgba(26,26,26,.97));
   margin: 0 0 4px;
   border-radius: 5px;
-  border: 1px solid darken(#3EB049, 28%);
+  border: 1px solid darken(#1A1A1A, 28%);
   box-shadow: 0 1px 3px rgba(0,0,0,.2);
   transition: background 250ms ease-out;
 }
 
 .home__toc__item:hover {
-  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6));
+  background: linear-gradient(rgba(26,26,26,.93), rgba(26,26,26,.95));
 }
 
 .home__toc__item a {
@@ -353,6 +406,14 @@ footer {
   padding: 10px 20px;
   font-size: 12px;
   color: rgba(255,255,255,.8);
+}
+
+span.logo-divider {
+  font-family: Sans-serif;
+  margin: 4px 22px 0 -7px;
+  color: #22C855;
+  font-size: 32px;
+  font-weight: lighter;
 }
 
 @media (max-width: 1446px) {

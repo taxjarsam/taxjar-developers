@@ -81,7 +81,7 @@ var Request = React.createClass({
       this.setState({ runStatus: 'Running' });
 
       reqwest({
-        url: '/.netlify/functions/demo',
+        url: 'https://taxjar-developers.netlify.app/.netlify/functions/demo',
         type: 'json',
         method: request.method,
         contentType: 'application/json',

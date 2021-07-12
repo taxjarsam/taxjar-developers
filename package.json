@@ -1,0 +1,9 @@
+{
+  "name": "taxjar-developers",
+  "version": "1.0.0",
+  "description": "Developer portal for TaxJar's sales tax API",
+  "private": true,
+  "dependencies": {
+    "taxjar": "^3.2.2"
+  }
+}

@@ -1,6 +1,3 @@
-var rocambole = require('demo/vendor/rocambole');
-var fmt = require('demo/vendor/fmt');
-
 var Request = React.createClass({
   getInitialState: function() {
     return {
@@ -84,15 +81,11 @@ var Request = React.createClass({
       this.setState({ runStatus: 'Running' });
 
       reqwest({
-        url: request.url,
+        url: 'https://taxjar-developers.netlify.app/.netlify/functions/demo',
         type: 'json',
         method: request.method,
         contentType: 'application/json',
         data: params,
-        headers: {
-          'Authorization': 'Bearer ' + window.apiToken,
-          'User-Agent': 'TaxJarAPIDemo/1.0'
-        },
         error: function(err) {
           err = JSON.parse(err.responseText);
           self.props.onChange({ errorResponse: err.detail, loadingResponse: false });

@@ -12,12 +12,25 @@ bundle install && bower install
 
 This should install the Ruby and Bower dependencies you need to get up and going.
 
-## Development
-
-To develop and preview the documentation locally, use the following Middleman command:
+Additionally, we make use of Netlify proxy scripts to issue API requests. You'll need to install the Netlify CLI via the following command:
 
 ```
-middleman server
+npm install netlify-cli -g
+```
+
+Create a `.env` file in your project root, and supply it with the following values:
+
+```
+DEMO_API_TOKEN=YOUR_API_TOKEN
+DEMO_ALLOW_ORIGIN=*
+```
+
+## Development
+
+To develop and preview the documentation locally, use the following Netlify CLI command:
+
+```
+netlify dev
 ```
 
 This will watch for changes and compile them on the fly.

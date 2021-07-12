@@ -14,6 +14,10 @@
 
   function createSearchInputs(/* ...selectors */) {
     $.each(arguments, function(_, selector) {
+      if (!$(selector).length) {
+        return;
+      }
+
       docsearch({
         appId: '7ZBSP80X0K',
         apiKey: '2a9d77b7d7b611725a62fd9ffb522880',

@@ -25,3 +25,5 @@
 
 # Ignore Env.js
 /source/javascripts/env.js
+
+/node_modules

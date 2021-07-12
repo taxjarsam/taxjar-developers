@@ -100,7 +100,7 @@ var Map = React.createClass({
                 coordinates: [data.latlng[1], data.latlng[0]]
               },
               properties: {
-                'marker-color': '#3FAE2A',
+                'marker-color': '#22C855',
                 'marker-symbol': 'circle'
               }
             };
@@ -169,7 +169,7 @@ var Map = React.createClass({
         },
         properties: {
           'tooltip': (this.state.metadata) ? this.state.metadata.location.tooltip : null,
-          'marker-color': '#3FAE2A',
+          'marker-color': '#22C855',
           'marker-symbol': 'industrial'
         }
       });

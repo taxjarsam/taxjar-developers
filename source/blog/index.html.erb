@@ -13,7 +13,7 @@
   <div class="blog-list">
     <% blog.articles.each do |article| %>
       <article class="post post--preview">
-        <div class="post__banner" style="background-color: <%= data['categories'][article.data.category]['color'] %>">
+        <div class="post__banner">
           <div class="post__avatar">
             <img src="<%= data['authors'][article.data.author]['avatar'] %>" width="60" height="60">
           </div>

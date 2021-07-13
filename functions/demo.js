@@ -15,7 +15,7 @@ exports.handler = async function(event, context) {
 
   const headers = {
     'Access-Control-Allow-Origin': process.env.DEMO_ALLOW_ORIGIN,
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With',
     'Access-Control-Allow-Methods': 'POST, OPTION'
   };
 

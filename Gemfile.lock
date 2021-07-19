@@ -185,6 +185,7 @@ PLATFORMS
 DEPENDENCIES
   breakpoint
   builder (~> 3.0)
+  kramdown
   middleman (~> 3.3.11)
   middleman-autoprefixer (~> 2.4.4)
   middleman-blog

@@ -32,3 +32,6 @@ gem "s3_website", "~> 3.4.0"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+# For integration guides - md classes
+gem "kramdown"

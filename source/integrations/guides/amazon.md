@@ -237,16 +237,13 @@ Every state that Amazon has a warehouse in <a class='links' href='https://blog.t
 
 Now that you’ve recognized the need to comply in multiple states, the next step is to correctly setup sales tax collection in Seller Central. And that’s what this guide is all about. The following pages will give you an overview of how to use Tax Settings and, most importantly, apply the correct settings for each of the FBA states.
 
-<div class="panel panel-success">
-  <div class="panel-heading">
-    <div class="panel-title"><b>Before you get started, make sure you have all of the following.</b></div>
-  </div>
-  <div class="panel-body">
-    <p><img src="/images/lander/checkmark.svg" class="panel-checkmark" width="20"/>&nbsp;&nbsp;&nbsp; <b>A Professional Seller Account </b> – *Note: Individual Accounts cannot use the Amazon tax service. At the bottom of this page is information Amazon provides on how to upgrade from an Individual Account to a Pro Account.</p>
-    <p><img src="/images/lander/checkmark.svg" class="panel-checkmark" width="20"/>&nbsp;&nbsp;&nbsp;<b>Know the states in which you have nexus.</b> – <a class="links" href="https://blog.taxjar.com/fba-sales-tax-nexus/" title="Amazon FBA Sales Tax Nexus" target="_blank">Here’s a link to a page explaining which states Amazon FBA sellers have nexus in.</a></p>
-    <p><img src="/images/lander/checkmark.svg" class="panel-checkmark" width="20"/>&nbsp;&nbsp;&nbsp;<b>State registration numbers in each state you want to collect sales tax.</b> – This assumes you have registered your business in each state. Remember that most states consider it to be unlawful to collect sales tax without a license.</p>
-  </div>
-</div>
+**Before you get started, make sure you have all of the following.**
+
+**A Professional Seller Account** – *Note: Individual Accounts cannot use the Amazon tax service. At the bottom of this page is information Amazon provides on how to upgrade from an Individual Account to a Pro Account.
+
+**Know the states in which you have nexus.** – [Here’s a link to a page explaining which states Amazon FBA sellers have nexus in.](https://blog.taxjar.com/fba-sales-tax-nexus/)
+
+**State registration numbers in each state you want to collect sales tax.** – This assumes you have registered your business in each state. Remember that most states consider it to be unlawful to collect sales tax without a license.
 
 ## Upgrade to Professional Seller
 
@@ -444,9 +441,7 @@ Here’s the way it works: if you choose to tax shipping, handling, or gift wrap
 
 ## Tax Settings for FBA States
 
-**Click the image below to expand to full chart:**
-
-<a class="w-inline-block expand-image" href="/images/guides/amazon/fba-sales-tax-chart.png" target="_blank"><img src="/images/Screenshot_2015-05-29_11.20.38.png"/></a>
+<a class="w-inline-block expand-image" href="/images/guides/amazon/fba-sales-tax-chart.png" target="_blank"><img src="/images/guides/amazon/fba-sales-tax-chart.png"/></a>
 
 **Next Steps**
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="10px" viewBox="0 0 8 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Pricing" sketch:type="MSArtboardGroup" transform="translate(-616.000000, -824.000000)" fill="#3EB049">
+            <g id="TaxJar-AutoFile-+-Automatic-sales-tax--+-Polygon-1" sketch:type="MSLayerGroup" transform="translate(232.000000, 769.000000)">
+                <polygon id="Polygon-1" sketch:type="MSShapeGroup" transform="translate(387.000000, 60.000000) scale(-1, 1) rotate(-90.000000) translate(-387.000000, -60.000000) " points="387 55 391.330127 62.5 382.669873 62.5 "></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

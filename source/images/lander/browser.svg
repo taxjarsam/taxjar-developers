@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="529px" viewBox="0 0 600 529" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>browser</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="browser" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <g id="Page-1" sketch:type="MSShapeGroup">
+                <g id="Homepage-Copy">
+                    <g id="Group">
+                        <g id="Bitmap-+-Rectangle-150-+-Top-Bar-Copy">
+                            <rect id="Rectangle-148" fill="#FAFAFA" x="1" y="0" width="596" height="32"></rect>
+                            <rect id="Rectangle-150" stroke="#F2F2F2" stroke-width="2" x="0" y="0" width="598" height="527" rx="6"></rect>
+                            <g id="Top-Bar-Copy" transform="translate(11.000000, 7.000000)">
+                                <g id="URL-Field-+-https://app.taxjar.c-copy" transform="translate(43.175084, 0.000000)" fill="#FFFFFF">
+                                    <rect id="URL-Field" x="0.236794613" y="0.918181818" width="533.791246" height="17.75" rx="3"></rect>
+                                </g>
+                                <g id="contols" transform="translate(0.162747, 6.244545)" fill="#DEDEDE">
+                                    <ellipse id="max" cx="28.7043232" cy="3.55090909" rx="3.5880404" ry="3.55090909"></ellipse>
+                                    <ellipse id="min" cx="16.1461818" cy="3.55090909" rx="3.5880404" ry="3.55090909"></ellipse>
+                                    <ellipse id="close" cx="3.5880404" cy="3.55090909" rx="3.5880404" ry="3.55090909"></ellipse>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

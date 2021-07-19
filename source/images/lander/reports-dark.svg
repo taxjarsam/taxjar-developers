@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="58px" height="66px" viewBox="0 0 58 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape + % Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Full-Service" sketch:type="MSArtboardGroup" transform="translate(-725.000000, -1024.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(140.000000, 988.000000)">
+                <g id="Shape-+-%-Copy-2-+-TaxJar-SmartCalcs-+-Calculate-sales-tax--Copy-+-Covers-transactions-" transform="translate(585.000000, 36.000000)">
+                    <g id="Shape-+-%-Copy-2">
+                        <path d="M43.292352,0 L8.28560681,0 C3.70907487,0 0,3.69384257 0,8.25065547 L0,57.7500936 C0,62.3054083 3.70907487,66 8.28560681,66 L49.7143932,66 C54.2894204,66 58,62.3054083 58,57.7500936 L58,16.2705862 L43.292352,0 L43.292352,0 Z M40.3542682,18.5628511 C39.8038085,18.5628511 39.3575728,18.1149331 39.3575728,17.5705017 L39.3575728,5.11767719 C39.3575728,4.56961772 39.7968239,4.12532773 40.3567782,4.12532773 L40.429581,4.12532773 C40.9814269,4.12532773 41.4287864,4.56576887 41.4287864,5.11712595 L41.4287864,15.5087636 C41.4287864,16.0565186 41.8711602,16.5005618 42.4249368,16.5005618 L52.8621747,16.5005618 C53.4123334,16.5005618 53.8583251,16.9582507 53.8583251,17.507541 L53.8583251,17.555872 C53.8583251,18.1120112 53.4084454,18.5628511 52.8616297,18.5628511 L40.3542682,18.5628511 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                        <text id="%" sketch:type="MSTextLayer" font-family="Krungthep" font-size="37.2403983" font-weight="bold" fill="#3EB049">
+                            <tspan x="11.6" y="50.4864865">%</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

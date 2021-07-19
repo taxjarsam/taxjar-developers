@@ -1,0 +1,65 @@
+// Typography
+$mainFont: 'Lato', Helvetica, Roboto, Arial, sans-serif;
+$secondaryFont: 'Matter', Helvetica, Roboto, Arial, sans-serif;
+
+$heroicFontSize: 42px;
+$heroicLineHeight: 54px;
+
+$bodyFontSize: 15px;
+$bodyLineHeight: (26/15);
+$bodyLargeFontSize: 17px;
+$bodyLargeLineHeight: (28/17);
+$bodyXtraLargeFontSize: 21px;
+$bodyXtraLargeLineHeight: (34/21);
+$bodySmallFontSize: 13px;
+$bodySmallLineHeight: (24/13);
+
+$h1FontSize: 27px;
+$h2FontSize: 25px;
+$h3FontSize: 19px;
+
+// Colors
+$blue: #1190EE;
+$blue_accent: #0D69AE;
+$blue_alt: #0092f5;
+$blue_light: #F5FAFD;
+$blue_slate: #2D3047;
+$tj_grey: #55565A;
+$green: #3FAE2A;
+$green_accent: #399C47;
+$green_alt: #33B143;
+$new_green: #22C855;
+$green_light: #F5FAF6;
+$green_alt_light: #EEF8EE;
+$grey_1: #FAFAFA;
+$grey_2: #E2E2E2;
+$grey_3: #B7B7B8;
+$grey_4: #7A7B7D;
+$grey_5: #1A1A1A;
+$new_grey: #F5F5F7;
+$medium_grey: #666666;
+$orange: #EE9711;
+$orange_accent: #D98D28;
+$purple: #67597A;
+$purple_accent: #5D506D;
+$red: #AE4646;
+$red_accent: #9D3F3F;
+$red_light: #FBF6F6;
+$red_light_alt: #f6c0c0;
+$slate_blue: #363C42;
+$yellow: #E7C447;
+$yellow_accent: #D0B13E;
+$white: #FFFFFF;
+$black: #000000;
+
+// Screen Sizes
+$screenXXSmall: 360px;
+$screenXSmall: 480px;
+$screenSmall: 768px;
+$screenMedium: 992px;
+$screenLarge: 1200px;
+$screenXLarge: 1600px;
+
+// Borders
+$borderWidth: 2px;
+$borderRadius: 6px;

@@ -34,7 +34,7 @@ resources: {
 
 We put together this integration guide for Magento 1.x merchants and developers looking to better understand TaxJar's extension for sales tax calculations. **Using Magento 2?** Check out our official [Magento 2 sales tax extension guide](/guides/integrations/magento2/).
 
-You'll learn how TaxJar provides checkout calculations with our [API](/how-it-works/) and zip-based rates for native Magento calculations as a fallback. Along the way, we'll configure your store to collect sales tax where you have nexus, handle product exemptions, import orders into TaxJar, and much more. For a primer on everything sales tax, read our [Magento sales tax guide](/guides/sales-tax-guide-for-magento/) before getting started.
+You'll learn how TaxJar provides checkout calculations with our API and zip-based rates for native Magento calculations as a fallback. Along the way, we'll configure your store to collect sales tax where you have nexus, handle product exemptions, import orders into TaxJar, and much more.
 
 ## Getting Started with TaxJar
 
@@ -166,7 +166,7 @@ With TaxJar's API enabled you'll get the most accurate sales tax rates based on 
 
 <img src="/images/guides/integrations/magento/checkout-tax.png" alt="API Checkout Tax"/>
 
-Set **Enabled for Checkout** to `Yes` for live checkout calculations. Click the orange **Save Config** button. Upon saving, TaxJar's API will be used for calculations instead of Magento's rate-based tables. However, we can still [use those rate-based tables as a fallback](#backup-sales-tax-rates) just in case.
+Set **Enabled for Checkout** to `Yes` for live checkout calculations. Click the orange **Save Config** button. Upon saving, TaxJar's API will be used for calculations instead of Magento's rate-based tables. However, we can still [use those rate-based tables as a fallback](#section-backup-sales-tax-rates) just in case.
 
 <img src="/images/guides/integrations/magento/taxjar-config-api.png" alt="Magento TaxJar API Config"/>
 

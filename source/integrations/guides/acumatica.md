@@ -32,12 +32,12 @@ You’ll learn how TaxJar provides calculations and syncs invoices for reporting
 TaxJar for Acumatica utilizes the External Tax Calculation feature in Acumatica. Tax will be calculated when documents, such as Sales Orders or Invoices, are saved. The following conditions are required for tax to be calculated:
 
 1. [Add nexus states](https://www.taxjar.com/guides/sales-tax-guide-for-onboarding/#add-your-nexus-states)
-1. [Enable External Tax Calculation](#enable-external-tax-calculation)
-1. [Install the Customization Project](#install-the-customization-project)
-1. [Configure the Tax Provider](#configure-the-tax-provider)
-1. [Add a Vendor Profile for TaxJar](#create-the-vendor-profile)
-1. [Create a TaxJar Tax Zone](#create-the-tax-zone)
-1. [Set the Tax Zone to **TaxJar**](#assign-the-tax-zone)
+1. [Enable External Tax Calculation](#section-enable-external-tax-calculation)
+1. [Install the Customization Project](#section-install-the-customization-project)
+1. [Configure the Tax Provider](#section-configure-the-tax-provider)
+1. [Add a Vendor Profile for TaxJar](#section-create-the-vendor-profile)
+1. [Create a TaxJar Tax Zone](#section-create-the-tax-zone)
+1. [Set the Tax Zone to **TaxJar**](#section-assign-the-tax-zone)
 
 <hr />
 

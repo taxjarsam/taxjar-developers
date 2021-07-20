@@ -65,7 +65,7 @@ Next you'll want to configure your tax settings. Enable calculations and/or repo
 
 As TaxJar only provides sales tax calculations at this time (not use tax calculations), the payables sales tax account will be used to record the amount of sales tax you collect as a liability. If you'd like to use a different payables account for each nexus, you'll need to edit the generated tax types under **Setup > Accounting > Tax Types** after performing initial calculations.
 
-For [sales tax reporting](#sales-tax-reporting) we support accrual or cash basis accounting methods. For accrual basis accounting, **open** invoices and credit memos will be synced to TaxJar. If you prefer syncing **paid in full** invoices and **fully applied** credit memos, choose **Cash Basis** accounting:
+For [sales tax reporting](#section-sales-tax-reporting) we support accrual or cash basis accounting methods. For accrual basis accounting, **open** invoices and credit memos will be synced to TaxJar. If you prefer syncing **paid in full** invoices and **fully applied** credit memos, choose **Cash Basis** accounting:
 
 <img src="/images/guides/integrations/netsuite/taxjar-configuration-accounting-method.png" alt="TaxJar Configuration Accounting Method"/>
 
@@ -121,7 +121,7 @@ Next you'll want to configure your tax settings. Enable calculations and/or repo
 
 <img src="/images/guides/integrations/netsuite/taxjar-configuration-legacy.png" alt="TaxJar Configuration"/>
 
-For [sales tax reporting](#sales-tax-reporting) we support accrual or cash basis accounting methods. For accrual basis accounting, **open** invoices and credit memos will be synced to TaxJar. If you prefer syncing **paid in full** invoices and **fully applied** credit memos, choose **Cash Basis** accounting:
+For [sales tax reporting](#section-sales-tax-reporting) we support accrual or cash basis accounting methods. For accrual basis accounting, **open** invoices and credit memos will be synced to TaxJar. If you prefer syncing **paid in full** invoices and **fully applied** credit memos, choose **Cash Basis** accounting:
 
 <img src="/images/guides/integrations/netsuite/taxjar-configuration-accounting-method.png" alt="TaxJar Configuration Accounting Method"/>
 

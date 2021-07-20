@@ -61,7 +61,7 @@ These commands will enable the TaxJar extension, perform necessary database upda
 
 ### Transitioning from Magento 1 to Magento 2
 
-**Already using TaxJar for Magento 1?** Both of our extensions handle sales tax calculations similarly, but if you've been using TaxJar for sales tax reporting and filing you'll need to make a quick change. Log in to your TaxJar account and go to **Account > Linked Accounts**. Click **Unlink** to remove your existing Magento 1 connection. In Magento 2, [transactions are imported directly through our extension](#how-reporting-works) using the TaxJar API. We'll set up transaction sync shortly.
+**Already using TaxJar for Magento 1?** Both of our extensions handle sales tax calculations similarly, but if you've been using TaxJar for sales tax reporting and filing you'll need to make a quick change. Log in to your TaxJar account and go to **Account > Linked Accounts**. Click **Unlink** to remove your existing Magento 1 connection. In Magento 2, [transactions are imported directly through our extension](#section-how-reporting-works) using the TaxJar API. We'll set up transaction sync shortly.
 
 ### Pre-Import Checklist
 
@@ -209,7 +209,7 @@ With the TaxJar API enabled you'll get the most accurate sales tax rates based o
 
 <img src="/images/guides/integrations/magento2/checkout-tax.png" alt="TaxJar API Checkout Tax"/>
 
-Set **Enabled for Checkout** to `Yes` for live checkout calculations. Click the orange **Save Config** button. Upon saving, the TaxJar API will be used for calculations instead of Magento's rate-based tables. However, we can still [use those rate-based tables as a fallback](#backup-sales-tax-rates) just in case.
+Set **Enabled for Checkout** to `Yes` for live checkout calculations. Click the orange **Save Config** button. Upon saving, the TaxJar API will be used for calculations instead of Magento's rate-based tables. However, we can still [use those rate-based tables as a fallback](#section-backup-sales-tax-rates) just in case.
 
 <img src="/images/guides/integrations/magento2/taxjar-config-api.png" alt="Magento TaxJar API Config"/>
 

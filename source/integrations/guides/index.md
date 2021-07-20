@@ -25,9 +25,9 @@ You have better ways to spend your limited time and money than on an unprofitabl
 
 In this Online Seller's Guide to eCommerce Sales Tax, you'll learn:
 
-* [What is sales tax?](#what-is-sales-tax)
-* [The 6 steps to sales tax compliance.](#steps-to-sales-tax-compliance)
-* [How to automate sales tax.](#automate-sales-tax-with-taxjar)
+* [What is sales tax?](#section-what-is-sales-tax)
+* [The 6 steps to sales tax compliance.](#section-steps-to-sales-tax-compliance)
+* [How to automate sales tax.](#section-automate-sales-tax-with-taxjar)
 
 This eBook and our quick videos about sales tax will show you how to collect, report and file sales tax on your online sales.
 
@@ -85,12 +85,12 @@ __Sales tax fact:__ You can easily remember the five states with no sales tax by
 
 To get the full picture of sales tax for online sellers, work through these steps or jump ahead if you have a specific question:
 
-1. [Determine where you have sales tax nexus.](#determine-where-you-have-sales-tax-nexus)
-2. [Verify if your products are subject to sales tax.](#verify-if-your-products-are-taxable)
-3. [Get legal by registering for a sales tax permit.](#register-for-a-sales-tax-permit)
-4. [Set up sales tax collection on your online shopping carts and marketplaces.](#set-up-sales-tax-collection-on-your-online-shopping-carts-and-marketplaces)
-5. [Report how much sales tax you collected.](#report-how-much-sales-tax-you-collected)
-6. [File your sales tax returns.](#file-your-sales-tax-returns)
+1. [Determine where you have sales tax nexus.](#section-determine-where-you-have-sales-tax-nexus)
+2. [Verify if your products are subject to sales tax.](#section-verify-if-your-products-are-taxable)
+3. [Get legal by registering for a sales tax permit.](#section-register-for-a-sales-tax-permit)
+4. [Set up sales tax collection on your online shopping carts and marketplaces.](#section-set-up-sales-tax-collection-on-your-online-shopping-carts-and-marketplaces)
+5. [Report how much sales tax you collected.](#section-report-how-much-sales-tax-you-collected)
+6. [File your sales tax returns.](#section-file-your-sales-tax-returns)
 
 Is your plate already full? You’ll also learn how to automate sales tax compliance with [TaxJar](https://www.taxjar.com)!
 

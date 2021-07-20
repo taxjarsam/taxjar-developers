@@ -28,7 +28,7 @@ We put together this guide to sales tax for sellers who need a better way to man
 
 After reading this guide, you’ll understand the basics of sales tax for eCommerce, and we’ll present you with the solution for all of your sales tax troubles.
 
-And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#sales-tax-for-paypal-users) where we solve all of our sales tax problems with the TaxJar for PayPal users!
+And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#section-sales-tax-for-paypal-users) where we solve all of our sales tax problems with the TaxJar for PayPal users!
 
 ## Sales Tax 101 for PayPal Users
 

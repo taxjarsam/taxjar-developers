@@ -39,15 +39,15 @@ If you’re a Stripe-only user, we recommend you explore Stripe Tax (invite-only
 
 ## Table of Contents
 
-1. [Stripe Services](#stripe-services)
-1. [Linking Your Account](#linking-your-account)
-1. [Sales Tax Reporting](#sales-tax-reporting)
-1. [Sales Tax Calculations](#sales-tax-calculations)
-1. [Understanding Invoice's Sales Tax](#understanding-invoice-sales-tax)
-1. [Product Exemptions](#product-exemptions)
-1. [Customer Exemptions](#customer-exemptions)
-1. [Limitations](#limitations)
-1. [Testing](#testing)
+1. [Stripe Services](#section-stripe-services)
+1. [Linking Your Account](#section-linking-your-account)
+1. [Sales Tax Reporting](#section-sales-tax-reporting)
+1. [Sales Tax Calculations](#section-sales-tax-calculations)
+1. [Understanding Invoice's Sales Tax](#section-understanding-invoice-sales-tax)
+1. [Product Exemptions](#section-product-exemptions)
+1. [Customer Exemptions](#section-customer-exemptions)
+1. [Limitations](#section-limitations)
+1. [Testing](#section-testing)
 
 ## Stripe Services
 

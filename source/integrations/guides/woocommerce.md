@@ -28,7 +28,7 @@ We put together this guide to sales tax for sellers who need a better way to man
 
 Whether you are an online seller or a Wordpress developer, after reading this guide, you’ll understand the basics of sales tax for eCommerce, and we’ll present you with the solution for all of your sales tax troubles. 
 
-And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar) where we solve all of our sales tax problems with the TaxJar for WooCommerce plugin!
+And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#section-how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar) where we solve all of our sales tax problems with the TaxJar for WooCommerce plugin!
 
 ## Sales Tax 101 for WooCommerce Sellers and Developers
 
@@ -98,7 +98,7 @@ Example #4 can be especially cumbersome for 3rd party sellers, whose inventory m
 
 ## Collecting Sales Tax from Buyers
 
-Every eCommerce business owner wants their business to grow and thrive. Growth can’t be achieved if you have to manually calculate how much sales tax to collect every time you make a sale. That’s why most online sales platforms must include a sales tax component. One of WooCommerce’s sales tax components is a plugin powered by TaxJar. We’ll get to that in [part 2](#how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar).
+Every eCommerce business owner wants their business to grow and thrive. Growth can’t be achieved if you have to manually calculate how much sales tax to collect every time you make a sale. That’s why most online sales platforms must include a sales tax component. One of WooCommerce’s sales tax components is a plugin powered by TaxJar. We’ll get to that in [part 2](#section-how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar).
 
 A note on sales tax rates: States set a rate, and then localities can add a percentage on top of those rates. For example, in the 90210 zip code, the tax rate is the 6.5% California statewide rate, a 1% Los Angeles County rate, and an additional 1.5% local rate, for a total of 9.0% sales tax rate. 
 
@@ -236,14 +236,14 @@ TaxJar takes the following input from your store:
 
 And returns an accurate sales tax rate (including state, county, city, special tax) based on:
 
-* [Seller’s nexus](#determining-sales-tax-nexus) – does Buyer’s city and zip-code cause nexus?
-* [Local sales tax sourcing laws](#collecting-sales-tax-from-buyers) (if the buyer’s state is origin-based or destination based)
+* [Seller’s nexus](#section-determining-sales-tax-nexus) – does Buyer’s city and zip-code cause nexus?
+* [Local sales tax sourcing laws](#section-collecting-sales-tax-from-buyers) (if the buyer’s state is origin-based or destination based)
 * [Shipping taxability laws](https://blog.taxjar.com/sales-tax-and-shipping/?utm_source=TaxJar&utm_medium=whitepaper&utm_campaign=WooCommerceWPJuly2015) (shipping is not taxable in every state)
 
 Based on that information, TaxJar for WooCommerce also automatically determines:
 
-* [Sales Tax Nexus](#determining-sales-tax-nexus)
-* [Origin vs. Destination sourcing](#collecting-sales-tax-from-buyers)
+* [Sales Tax Nexus](#section-determining-sales-tax-nexus)
+* [Origin vs. Destination sourcing](#section-collecting-sales-tax-from-buyers)
 * [Shipping taxability](https://blog.taxjar.com/sales-tax-and-shipping/?utm_source=TaxJar&utm_medium=whitepaper&utm_campaign=WooCommerceWPJuly2015)
 * [Sales tax rate](https://www.taxjar.com/sales-tax-calculator/?utm_source=TaxJar&utm_medium=whitepaper&utm_campaign=WooCommerceWPJuly2015) (state county, city, special)
 <div class="alert alert-danger">

@@ -26,7 +26,7 @@ resources: {
 
 After reading this guide, you’ll understand the basics of sales tax for Square merchants, and we’ll present you with the solution for all of your sales tax troubles. 
 
-And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#how-to-install-the-taxjar-sales-tax-plugin-from-the-square-app-store) where we solve all of our sales tax problems with the TaxJar for Square app!
+And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#section-how-to-install-the-taxjar-sales-tax-plugin-from-the-square-app-store) where we solve all of our sales tax problems with the TaxJar for Square app!
 
 If you already know the basics and just want to cut to the chase, we hear you. Skip down to part 2 where we solve all of our sales tax problems with TaxJar!
 

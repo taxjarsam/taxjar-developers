@@ -28,7 +28,7 @@ We put together this guide to sales tax for sellers who need a better way to man
 
 After reading this guide, you’ll understand the basics of sales tax for online sellers, and we’ll present you with the solution for all of your sales tax troubles. 
 
-And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#how-to-install-the-shopify-sales-tax-plugin-from-the-shopify-app-store) where we solve all of our sales tax problems with the TaxJar for Shopify plugin!
+And hey, if you’re busy and just want to cut to the chase, we hear you. [Skip down to part 2](#section-how-to-install-the-shopify-sales-tax-plugin-from-the-shopify-app-store) where we solve all of our sales tax problems with the TaxJar for Shopify plugin!
 
 If you already know the basics and just want to cut to the chase, we hear you. Skip down to part 2 where we solve all of our sales tax problems with TaxJar!
 
@@ -98,7 +98,7 @@ Example #4 can be especially cumbersome for 3rd party sellers, whose inventory m
 
 ## Collecting Sales Tax from Buyers
 
-Every eCommerce business owner wants their business to grow and thrive. Growth can’t be achieved if you have to manually calculate how much sales tax to collect every time you make a sale. That’s why most online sales platforms must include a sales tax component. One of Shopify sales tax components is a plugin powered by TaxJar. We’ll get to that in [part 2](#how-to-install-the-shopify-sales-tax-plugin-from-taxjar).
+Every eCommerce business owner wants their business to grow and thrive. Growth can’t be achieved if you have to manually calculate how much sales tax to collect every time you make a sale. That’s why most online sales platforms must include a sales tax component. One of Shopify sales tax components is a plugin powered by TaxJar. We’ll get to that in [part 2](#section-how-to-install-the-shopify-sales-tax-plugin-from-taxjar).
 
 A note on sales tax rates: States set a rate, and then localities can add a percentage on top of those rates. For example, in the 90210 zip code, the tax rate is the 6.5% California statewide rate, a 1% Los Angeles County rate, and an additional 1.5% local rate, for a total of 9.0% sales tax rate. 
 

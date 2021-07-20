@@ -11,13 +11,13 @@ reference: {
   "Last Updated": "June 14, 2016"
 }
 toc: {
-  "Basics of Sales Tax": "#the-basics-of-sales-tax",
-  "Determining Nexus": "#determining-sales-tax-nexus",
-  "Collecting Sales Tax": "#collecting-sales-tax-from-buyers",
-  "Remitting Sales Tax": "#remitting-sales-tax-to-nexus-states",
-  "Sales Tax Basics Summary": "#summary-of-the-basics-of-sales-tax-for-online-sellers",
-  "Sales Tax for Shopify": "#a-sales-tax-calculation-solution-for-shopify-sellers",
-  "Install TaxJar for Shopify": "#how-to-install-the-shopify-sales-tax-plugin-from-the-shopify-app-store"
+  "Basics of Sales Tax": "#section-the-basics-of-sales-tax",
+  "Determining Nexus": "#section-determining-sales-tax-nexus",
+  "Collecting Sales Tax": "#section-collecting-sales-tax-from-buyers",
+  "Remitting Sales Tax": "#section-remitting-sales-tax-to-nexus-states",
+  "Sales Tax Basics Summary": "#section-summary-of-the-basics-of-sales-tax-for-online-sellers",
+  "Sales Tax for Shopify": "#section-a-sales-tax-calculation-solution-for-shopify-sellers",
+  "Install TaxJar for Shopify": "#section-how-to-install-the-shopify-sales-tax-plugin-from-the-shopify-app-store"
 }
 resources: {
   "Shopify App Store": "https://apps.shopify.com/taxjar"

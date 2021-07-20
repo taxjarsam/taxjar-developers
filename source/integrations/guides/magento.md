@@ -11,13 +11,13 @@ reference: {
   "Last Updated": "March 03, 2020"
 }
 toc: {
-  "Getting Started": "#getting-started-with-taxjar",
-  "Sales Tax Calculations": "#sales-tax-calculations",
-  "Sales Tax Reporting": "#sales-tax-reporting",
-  "How TaxJar's API Works": "#how-taxjars-api-works",
-  "How Reporting Works": "#how-reporting-works",
-  "International Stores": "#international-stores",
-  "Extension Changelog": "#extension-changelog"
+  "Getting Started": "#section-getting-started-with-taxjar",
+  "Sales Tax Calculations": "#section-sales-tax-calculations",
+  "Sales Tax Reporting": "#section-sales-tax-reporting",
+  "How TaxJar's API Works": "#section-how-taxjars-api-works",
+  "How Reporting Works": "#section-how-reporting-works",
+  "International Stores": "#section-international-stores",
+  "Extension Changelog": "#section-extension-changelog"
 }
 articles: {
   "Sales Tax Nexus Defined": "https://blog.taxjar.com/sales-tax-nexus-definition/",

@@ -11,15 +11,15 @@ reference: {
   "&nbsp;  ": "&nbsp;"
 }
 toc: {
-  "What is sales tax anyway?": "#what-is-sales-tax-anyway",
-  "How is sales tax calculated?": "#how-is-sales-tax-calculated",
-  "What items are taxable?": "#what-items-are-taxable",
-  "Who collects sales tax?": "#who-collects-sales-tax",
-  "How does sales tax work online?": "#how-does-sales-tax-work-when-buying-online",
-  "When do you pay sales tax online?": "#why-do-you-sometimes-pay-no-sales-tax-on-online-purchases",
-  "What if you're charged the wrong amount?": "#what-if-you-are-charged-the-wrong-amount-of-sales-tax",
-  "When are the Tax Free Weekends?": "#when-are-the-tax-free-weekends",
-  "What is the future of sales tax in the US?": "#what-is-the-future-of-sales-tax-in-the-united-states",
+  "What is sales tax anyway?": "#section-what-is-sales-tax-anyway",
+  "How is sales tax calculated?": "#section-how-is-sales-tax-calculated",
+  "What items are taxable?": "#section-what-items-are-taxable",
+  "Who collects sales tax?": "#section-who-collects-sales-tax",
+  "How does sales tax work online?": "#section-how-does-sales-tax-work-when-buying-online",
+  "When do you pay sales tax online?": "#section-why-do-you-sometimes-pay-no-sales-tax-on-online-purchases",
+  "What if you're charged the wrong amount?": "#section-what-if-you-are-charged-the-wrong-amount-of-sales-tax",
+  "When are the Tax Free Weekends?": "#section-when-are-the-tax-free-weekends",
+  "What is the future of sales tax in the US?": "#section-what-is-the-future-of-sales-tax-in-the-united-states",
 }
 resources: {
   "State Government Pages": "/states"

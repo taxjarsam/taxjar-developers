@@ -12,9 +12,9 @@ reference: {
   "Last Updated": "April 10, 2020"
 }
 toc: {
-  "Getting Started": "#getting-started",
-  "Sales Tax Calculations": "#sales-tax-calculations",
-  "Sales Tax Reporting": "#sales-tax-reporting"
+  "Getting Started": "#section-getting-started",
+  "Sales Tax Calculations": "#section-sales-tax-calculations",
+  "Sales Tax Reporting": "#section-sales-tax-reporting"
 }
 ---
 

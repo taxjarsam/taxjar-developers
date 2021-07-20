@@ -12,12 +12,12 @@ reference: {
   "Last Updated": "August 19, 2020"
 }
 toc: {
-  "How it Works": "#how-it-works",
-  "Basic Configuration": "#basic-configuration",
-  "Exemptions": "#exemptions",
-  "Updating the Integration": "#updating-the-integration",
-  "Frequently Asked Questions": "#frequently-asked-questions",
-  "Integration Changelog": "#integration-changelog"
+  "How it Works": "#section-how-it-works",
+  "Basic Configuration": "#section-basic-configuration",
+  "Exemptions": "#section-exemptions",
+  "Updating the Integration": "#section-updating-the-integration",
+  "Frequently Asked Questions": "#section-frequently-asked-questions",
+  "Integration Changelog": "#section-integration-changelog"
 }
 extra: "<div class='text-center'><a href='https://www.acumatica.com/acumatica-marketplace/taxjar-sales-tax-automation/' target='_blank'><img src='/images/guides/integrations/acumatica/acumatica_certified_application_retina.png' width='160'></a></div>"
 ---

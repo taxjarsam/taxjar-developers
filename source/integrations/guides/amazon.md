@@ -11,15 +11,15 @@ reference: {
   "Last Updated": "June 14, 2016"
 }
 toc: {
-  "Basics of Sales Tax": "#the-basics-of-sales-tax",
-  "Determining Nexus": "#determining-sales-tax-nexus",
-  "Collecting Sales Tax": "#collecting-sales-tax-from-buyers",
-  "Remitting Sales Tax": "#remitting-sales-tax-to-nexus-states",
-  "Sales Tax Basics Summary": "#summary-of-the-basics-of-sales-tax-for-online-sellers",
-  "Sales Tax for Amazon": "#a-sales-tax-calculation-solution-for-amazon-sellers",
-  "Install TaxJar for Amazon": "#here-are-the-steps-to-begin-collecting-sales-tax-through-amazon",
-  "Tax Settings Overview": "#tax-settings-overview",
-  "Tax Settings for FBA States": "#tax-settings-for-fba-states"
+  "Basics of Sales Tax": "#section-the-basics-of-sales-tax",
+  "Determining Nexus": "#section-determining-sales-tax-nexus",
+  "Collecting Sales Tax": "#section-collecting-sales-tax-from-buyers",
+  "Remitting Sales Tax": "#section-remitting-sales-tax-to-nexus-states",
+  "Sales Tax Basics Summary": "#section-summary-of-the-basics-of-sales-tax-for-online-sellers",
+  "Sales Tax for Amazon": "#section-a-sales-tax-calculation-solution-for-amazon-sellers",
+  "Install TaxJar for Amazon": "#section-here-are-the-steps-to-begin-collecting-sales-tax-through-amazon",
+  "Tax Settings Overview": "#section-tax-settings-overview",
+  "Tax Settings for FBA States": "#section-tax-settings-for-fba-states"
 
 }
 resources: {

@@ -11,14 +11,14 @@ reference: {
   "&nbsp; ": "&nbsp;"
 }
 toc: {
-  "Basics of Sales Tax": "#the-basics-of-sales-tax",
-  "Determining Nexus": "#determining-sales-tax-nexus",
-  "Collecting Sales Tax": "#collecting-sales-tax-from-buyers",
-  "Remitting Sales Tax": "#remitting-sales-tax-to-nexus-states",
-  "Sales Tax Basics Summary": "#summary-of-the-basics-of-sales-tax-for-online-sellers",
-  "Sales Tax for Xero": "#sales-tax-management-for-xero-users",
-  "TaxJar for Xero Advisors": "#taxjar-for-xero-bookkeeping-and-accounting-advisors",
-  "Install TaxJar for Xero": "#installing-taxjar-as-a-xero-add-on"
+  "Basics of Sales Tax": "#section-the-basics-of-sales-tax",
+  "Determining Nexus": "#section-determining-sales-tax-nexus",
+  "Collecting Sales Tax": "#section-collecting-sales-tax-from-buyers",
+  "Remitting Sales Tax": "#section-remitting-sales-tax-to-nexus-states",
+  "Sales Tax Basics Summary": "#section-summary-of-the-basics-of-sales-tax-for-online-sellers",
+  "Sales Tax for Xero": "#section-sales-tax-management-for-xero-users",
+  "TaxJar for Xero Advisors": "#section-taxjar-for-xero-bookkeeping-and-accounting-advisors",
+  "Install TaxJar for Xero": "#section-installing-taxjar-as-a-xero-add-on"
 }
 ---
 

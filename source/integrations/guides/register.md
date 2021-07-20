@@ -11,15 +11,15 @@ reference: {
   "&nbsp;": "&nbsp;"
 }
 toc: {
-  "Introduction": "#introduction",
-  "Where Do You Have Nexus": "#where-does-your-business-have-sales-tax-nexus",
-  "When Did Nexus Start?": "#when-did-sales-tax-nexus-start",
-  "How Much You Owe": "#how-much-do-i-owe-to-each-state",
-  "About Materiality": "#what-you-need-to-know-about-materiality",
-  "What Date to Enter": "#what-date-should-you-enter-on-the-sales-tax-registration-form",
-  "How to Register": "#how-to-register",
-  "How to File": "#how-to-file",
-  "Conclusion": "#conclusion",
+  "Introduction": "#section-introduction",
+  "Where Do You Have Nexus": "#section-where-does-your-business-have-sales-tax-nexus",
+  "When Did Nexus Start?": "#section-when-did-sales-tax-nexus-start",
+  "How Much You Owe": "#section-how-much-do-i-owe-to-each-state",
+  "About Materiality": "#section-what-you-need-to-know-about-materiality",
+  "What Date to Enter": "#section-what-date-should-you-enter-on-the-sales-tax-registration-form",
+  "How to Register": "#section-how-to-register",
+  "How to File": "#section-how-to-file",
+  "Conclusion": "#section-conclusion",
 }
 
 ---

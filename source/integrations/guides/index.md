@@ -11,9 +11,9 @@ reference: {
   "&nbsp;": "&nbsp;"
 }
 toc: {
-  "What Is Sales Tax": "#what-is-sales-tax",
-  "6 Steps to Sales Tax Compliance": "#steps-to-sales-tax-compliance",
-  "Automate Sales Tax": "#automate-sales-tax-with-taxjar"
+  "What Is Sales Tax": "#section-what-is-sales-tax",
+  "6 Steps to Sales Tax Compliance": "#section-steps-to-sales-tax-compliance",
+  "Automate Sales Tax": "#section-automate-sales-tax-with-taxjar"
 }
 ---
 

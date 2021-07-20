@@ -12,8 +12,8 @@ reference: {
   "Last Updated": "February 17, 2021"
 }
 toc: {
-  "How to Connect Your BigCommerce Store": "#how-to-connect-your-bigcommerce-store",
-  "Calculate how much sales tax you've collected": "#calculate-how-much-sales-tax-you-ve-collected"
+  "How to Connect Your BigCommerce Store": "#section-how-to-connect-your-bigcommerce-store",
+  "Calculate how much sales tax you've collected": "#section-calculate-how-much-sales-tax-you-have-collected"
 }
 ---
 
@@ -48,7 +48,7 @@ Not only can you configure BigCommerce to collect sales tax from buyers in multi
 
 Find out more about setting up sales tax in BigCommerce at the [BigCommerce tax settings support page](https://support.bigcommerce.com/articles/Public/tax-settings#Step1).
 
-## Calculate how much sales tax you've collected
+## Calculate How Much Sales Tax You Have Collected
 
 Now that you’ve configured your sales tax settings in BigCommerce and collected sales tax from customers, it’s time to figure out how much you’ve collected in order to prepare a sales tax return.
 

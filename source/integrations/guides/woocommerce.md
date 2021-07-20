@@ -11,13 +11,13 @@ reference: {
   "Last Updated": "April 8, 2016"
 }
 toc: {
-  "Basics of Sales Tax": "#the-basics-of-sales-tax",
-  "Determining Nexus": "#determining-sales-tax-nexus",
-  "Collecting Sales Tax": "#collecting-sales-tax-from-buyers",
-  "Remitting Sales Tax": "#remitting-sales-tax-to-nexus-states",
-  "Sales Tax Basics Summary": "#summary-of-the-basics-of-sales-tax-for-online-sellers",
-  "Sales Tax for Woo": "#a-sales-tax-calculation-solution-for-woocommerce-sellers-and-developers",
-  "Install TaxJar for Woo": "#how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar"
+  "Basics of Sales Tax": "#section-the-basics-of-sales-tax",
+  "Determining Nexus": "#section-determining-sales-tax-nexus",
+  "Collecting Sales Tax": "#section-collecting-sales-tax-from-buyers",
+  "Remitting Sales Tax": "#section-remitting-sales-tax-to-nexus-states",
+  "Sales Tax Basics Summary": "#section-summary-of-the-basics-of-sales-tax-for-online-sellers",
+  "Sales Tax for Woo": "#section-a-sales-tax-calculation-solution-for-woocommerce-sellers-and-developers",
+  "Install TaxJar for Woo": "#section-how-to-install-the-woocommerce-sales-tax-plugin-from-taxjar"
 }
 resources: {
   "WooCommerce Sales Tax Plugin": "https://wordpress.org/plugins/taxjar-simplified-taxes-for-woocommerce/"

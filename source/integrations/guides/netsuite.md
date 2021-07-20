@@ -12,13 +12,13 @@ reference: {
   "Last Updated": "February 17, 2021"
 }
 toc: {
-  "Getting Started with SuiteTax": "#getting-started-with-suitetax",
-  "Getting Started with Legacy Tax": "#getting-started-with-legacy-tax",
-  "Common Configuration": "#common-configuration",
-  "Sales Tax Calculations": "#sales-tax-calculations",
-  "Sales Tax Reporting": "#sales-tax-reporting",
-  "Current Limitations": "#current-limitations",
-  "Integration Changelog": "#integration-changelog"
+  "Getting Started with SuiteTax": "#section-getting-started-with-suitetax",
+  "Getting Started with Legacy Tax": "#section-getting-started-with-legacy-tax",
+  "Common Configuration": "#section-common-configuration",
+  "Sales Tax Calculations": "#section-sales-tax-calculations",
+  "Sales Tax Reporting": "#section-sales-tax-reporting",
+  "Current Limitations": "#section-current-limitations",
+  "Integration Changelog": "#section-integration-changelog"
 }
 extra: "<div class='text-center'><a href='http://www.netsuite.com/portal/developers/built-for-netsuite.shtml' target='_blank'><img src='/images/guides/integrations/netsuite/bfn-badge-2021.jpg' width='210' height='111'></a></div>"
 ---

@@ -12,15 +12,15 @@ reference: {
   "&nbsp; ": "&nbsp;"
 }
 toc: {
-  "Stripe services": "#stripe-services",
-  "Linking Your Account": "#linking-your-account",
-  "Sales Tax Reporting": "#sales-tax-reporting",
-  "Sales Tax Calculations": "#sales-tax-calculations",
-  "Understanding Invoices": "#understanding-invoices-sales-tax",
-  "Product Exemptions": "#product-exemptions",
-  "Customer Exemptions": "#customer-exemptions",
-  "Limitations": "#limitations",
-  "Testing": "#testing"
+  "Stripe services": "#section-stripe-services",
+  "Linking Your Account": "#section-linking-your-account",
+  "Sales Tax Reporting": "#section-sales-tax-reporting",
+  "Sales Tax Calculations": "#section-sales-tax-calculations",
+  "Understanding Invoices": "#section-understanding-invoices-sales-tax",
+  "Product Exemptions": "#section-product-exemptions",
+  "Customer Exemptions": "#section-customer-exemptions",
+  "Limitations": "#section-limitations",
+  "Testing": "#section-testing"
 }
 ---
 

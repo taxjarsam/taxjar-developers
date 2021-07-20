@@ -11,13 +11,13 @@ reference: {
   "&nbsp; ": "&nbsp;"
 }
 toc: {
-  "Sales Tax 101": "#sales-tax-101-for-ebay-sellers",
-  "Basics of Sales Tax": "#the-basics-of-sales-tax-in-the-us",
-  "Determining Nexus": "#determining-sales-tax-nexus",
-  "Collecting Sales Tax": "#collecting-sales-tax-from-buyers",
-  "Remitting Sales Tax": "#remitting-sales-tax-to-nexus-states",
-  "Sales Tax Basics Summary": "#summary-of-the-basics-of-sales-tax-for-online-sellers",
-  "Sales Tax for eBay": "#sales-tax-for-ebay-sellers"
+  "Sales Tax 101": "#section-sales-tax-101-for-ebay-sellers",
+  "Basics of Sales Tax": "#section-the-basics-of-sales-tax-in-the-us",
+  "Determining Nexus": "#section-determining-sales-tax-nexus",
+  "Collecting Sales Tax": "#section-collecting-sales-tax-from-buyers",
+  "Remitting Sales Tax": "#section-remitting-sales-tax-to-nexus-states",
+  "Sales Tax Basics Summary": "#section-summary-of-the-basics-of-sales-tax-for-online-sellers",
+  "Sales Tax for eBay": "#section-sales-tax-for-ebay-sellers"
 }
 resources: {
   "eBay Sales Tax Rates": "/ebay-tax-rates/"

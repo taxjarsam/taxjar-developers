@@ -32,7 +32,7 @@ resources: {
 }
 ---
 
-We put together this integration guide for Magento 1.x merchants and developers looking to better understand TaxJar's extension for sales tax calculations. **Using Magento 2?** Check out our official [Magento 2 sales tax extension guide](/guides/integrations/magento2/).
+We put together this integration guide for Magento 1.x merchants and developers looking to better understand TaxJar's extension for sales tax calculations. **Using Magento 2?** Check out our official [Magento 2 sales tax extension guide](/integrations/guides/magento2/).
 
 You'll learn how TaxJar provides checkout calculations with our API and zip-based rates for native Magento calculations as a fallback. Along the way, we'll configure your store to collect sales tax where you have nexus, handle product exemptions, import orders into TaxJar, and much more.
 

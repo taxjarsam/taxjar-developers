@@ -47,7 +47,7 @@ Well-written documentation is a requirement for certification. It needs to conci
 - Configuring products for exemptions
 - Screenshots and/or video
 
-Examples would include our [Magento](https://www.taxjar.com/guides/integrations/magento2/) and [WooCommerce](https://docs.woocommerce.com/document/taxjar/) documentation.
+Examples would include our [Magento](/integrations/guides/magento2/) and [WooCommerce](https://docs.woocommerce.com/document/taxjar/) documentation.
 
 ### Commitment to Support
 

@@ -78,4 +78,4 @@ When it comes time for you to file your sales tax return, TaxJax has created a r
 
 If you want to take sales tax completely off your plate, TaxJar will also [AutoFile](https://www.taxjar.com/how-it-works) your sales tax returns for you in most states.
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your eBay and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

@@ -241,4 +241,4 @@ Here’s the way it works: if you choose to tax shipping, handling, or gift wrap
 
 <a class="w-inline-block expand-image" href="/images/guides/amazon/fba-sales-tax-chart.png" target="_blank"><img src="/images/guides/amazon/fba-sales-tax-chart.png"/></a>
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your Amazon FBA and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

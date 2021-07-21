@@ -73,4 +73,4 @@ TaxJar also helps you troubleshoot sales tax compliance issues.
 
 For example, your TaxJar dashboard shows you when no sales tax was collected. TaxJar’s “Detailed sales tax analysis report” will show you how much you SHOULD have collected vs. how much you did collect. You can use this information to determine whether you should pay that sales tax out of pocket to the state yourself.
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your Square and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

@@ -51,4 +51,4 @@ And remember:
 
 2. Full reporting of your sales tax collected, AutoFile and more available in your TaxJar account. Login to [TaxJar today.](https://www.taxjar.com/?utm_source=TaxJar&utm_medium=whitepaper&utm_campaign=WooCommerceWPJuly2015)
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your WooCommerce and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

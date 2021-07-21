@@ -84,4 +84,4 @@ If you prefer to install the shopify plugin from your TaxJar account, follow the
 6. Now you are set up with TaxJar and ready to view your the reporting of your sales tax collected, AutoFile and more available in your TaxJar account. <a href="http://app.taxjar.com"> Login to TaxJar Today</a>.
 
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your Shopify and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

@@ -418,4 +418,4 @@ If you would like to test [tax calculations](#sales-tax-calculations), you may
 test it by creating draft invoices in live mode, and then discarding those draft
 invoices.
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your Stripe and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

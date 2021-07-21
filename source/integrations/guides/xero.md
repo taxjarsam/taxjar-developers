@@ -55,4 +55,4 @@ Xero and TaxJar work together seamlessly. When it comes time for you to actually
 
 From there, Xero accounts for your sales tax payment. Your business books are accurate, your balance sheet reflects the true status of your business, and an hours-long sales tax hassle was taken care of in a matter of minutes!
 
-If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.
+If you have additional questions or need help integrating your Xero and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

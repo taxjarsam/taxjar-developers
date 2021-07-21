@@ -27,7 +27,7 @@ This guide will take you step by step how to integrate TaxJar with your NetSuite
 
 Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-Please note that TaxJar for Amazon requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
+Please note that TaxJar for NetSuite requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
 
 ## Getting Started with SuiteTax
 

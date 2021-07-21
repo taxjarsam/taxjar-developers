@@ -12,17 +12,19 @@ reference: {
   "Last Updated": "April 10, 2020"
 }
 toc: {
-  "Getting Started": "#section-getting-started",
+  "How to Connect Your Salesforce Commerce Cloud Store": "#section-how-to-connect-your-salesforce-commerce-cloud-store",
   "Sales Tax Calculations": "#section-sales-tax-calculations",
   "Sales Tax Reporting": "#section-sales-tax-reporting"
 }
 ---
 
-We put together this integration guide for Salesforce Commerce Cloud (B2C Commerce) users looking to better understand TaxJar's integration for sales tax calculations, reporting, and filing.
+This guide will take you step by step through how to integrate TaxJar with your Salesforce account. You’ll learn how to configure your Salesforce B2B Commerce site to collect sales tax, handle product and customer exemptions, view detailed sales tax reporting and more.
 
-You'll learn how TaxJar provides calculations through our [API](/api/) and syncs orders to TaxJar for reporting and filing. Along the way, we'll configure your Salesforce B2C Commerce site to collect sales tax where you have nexus, handle product and customer exemptions, and much more. For a primer on everything sales tax, read our [Sales Tax 101 guides](/learn-sales-tax/) before getting started.
+Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-## Getting Started
+Please note that TaxJar for Salesforce Commerce Cloud requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
+
+## How to Connect Your Salesforce Commerce Cloud Store
 
 After downloading the integration, upload the cartridges into your B2C Commerce instance. The **int_taxjar_sfra** cartridge is required for SFRA storefronts, the **int_taxjar_sg** cartridge is required for Site Genesis, and the **int_taxjar** cartridge is required for both types of storefronts.
 
@@ -93,3 +95,5 @@ In order for TaxJar to accurately report and file your returns, we must have acc
 If you have decided to sync transaction data directly from Commerce Cloud into TaxJar, this can be done using a custom job included in the integration. This job is imported with the rest of the metadata. In order to use this job you will need to add the `int_taxjar` cartridge to the Business Manager cartridge path. This can be done by going to **Administration > Sites > Manage Sites** and then clicking on the **Manage the business manager site** link. Then simply append `:int_taxjar` to the end of the cartridge path.
 
 To enable the custom job, navigate to **Administration > Operations > Jobs** and select the **TaxJar Transaction Sync** job. Open the **Job Steps** tab and then under scope, configure the job for the sites you would like to sync transaction data from. When you are ready for the job to run, open the **Schedule and History** tab, configure the recurring schedule you would like the job to run on, and enable the job. Each time the job runs, it will query for all the orders that have been updated since the last run, determine if they need to be synced to TaxJar and then sync them.
+
+If you have additional questions on how to integrate TaxJar and Salesforce Commerce Cloud, please [contact](https://www.taxjar.com/contact/) our support team.

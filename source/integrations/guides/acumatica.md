@@ -12,7 +12,7 @@ reference: {
   "Last Updated": "August 19, 2020"
 }
 toc: {
-  "How it Works": "#section-how-it-works",
+  "How to Connect TaxJar with Acumatica": "#section-how-to-connect-taxjar-with-acumatica",
   "Basic Configuration": "#section-basic-configuration",
   "Exemptions": "#section-exemptions",
   "Updating the Integration": "#section-updating-the-integration",
@@ -22,13 +22,13 @@ toc: {
 extra: "<div class='text-center'><a href='https://www.acumatica.com/acumatica-marketplace/taxjar-sales-tax-automation/' target='_blank'><img src='/images/guides/integrations/acumatica/acumatica_certified_application_retina.png' width='160'></a></div>"
 ---
 
-We put together this integration guide for Acumatica customers looking to better understand TaxJar’s integration for sales tax calculations, reporting, and filing.
+This guide will take you step by step through how to integrate TaxJar with your Acumatica account. You’ll learn about calculations, invoicing syncs, reporting, filing, product and customer exemptions and more.
 
-You’ll learn how TaxJar provides calculations and syncs invoices for reporting / filing. Along the way, we’ll configure your Acumatica instance to collect sales tax where you have nexus, handle product / customer exemptions, and much more. For a primer on everything sales tax, read our [Sales Tax 101](https://www.taxjar.com/learn-sales-tax/) guides before getting started.
+Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-**TaxJar for Acumatica requires a [TaxJar Professional or Premium](https://www.taxjar.com/pricing/) subscription**. To sign up, or to upgrade your existing account, please contact our sales team.
+Please note that TaxJar for Acumatica requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
 
-## How it Works
+## How to Connect TaxJar with Acumatica
 TaxJar for Acumatica utilizes the External Tax Calculation feature in Acumatica. Tax will be calculated when documents, such as Sales Orders or Invoices, are saved. The following conditions are required for tax to be calculated:
 
 1. [Add nexus states](https://www.taxjar.com/guides/sales-tax-guide-for-onboarding/#add-your-nexus-states)
@@ -300,3 +300,5 @@ Curious to see what's changed with our integration lately? Read on to learn more
 
 ### v1.0.0 - 2020-06-26
 - Initial release.
+
+If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

@@ -13,7 +13,7 @@ reference: {
 }
 toc: {
   "Stripe services": "#section-stripe-services",
-  "Linking Your Account": "#section-linking-your-account",
+  "Connecting to Your Stripe Account": "#section-connecting-to-your-stripe-account",
   "Sales Tax Reporting": "#section-sales-tax-reporting",
   "Sales Tax Calculations": "#section-sales-tax-calculations",
   "Understanding Invoices": "#section-understanding-invoices-sales-tax",
@@ -37,65 +37,9 @@ If you’re a Stripe-only user, we recommend you explore Stripe Tax (invite-only
   <a class="u-display--inline-block u--learn-more" href="https://go.taxjar.com/2021-WR-Stripe-Integration_LP-01-Request.html" title="TaxJar Sales Tax API">Request access</a>
 </div>
 
-## Table of Contents
+Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-1. [Stripe Services](#section-stripe-services)
-1. [Linking Your Account](#section-linking-your-account)
-1. [Sales Tax Reporting](#section-sales-tax-reporting)
-1. [Sales Tax Calculations](#section-sales-tax-calculations)
-1. [Understanding Invoice's Sales Tax](#section-understanding-invoice-sales-tax)
-1. [Product Exemptions](#section-product-exemptions)
-1. [Customer Exemptions](#section-customer-exemptions)
-1. [Limitations](#section-limitations)
-1. [Testing](#section-testing)
-
-## Stripe Services
-
-Before we explore TaxJar's integration, it's good to understand Stripe's many
-offerings, and how TaxJar's integration may support those solutions.
-
-### Stripe Payments and Stripe Checkout
-
-[Stripe Checkout](https://stripe.com/payments/checkout) is a Stripe-hosted
-checkout solution, where the business would collect a list of items into a cart
-and send that cart and customer to Stripe where the payment is collected. If the
-business wants to customize or self-host this checkout process, then [Stripe
-Payments](https://stripe.com/payments) is the solution which allows businesses
-to use Stripe's simplified API. Stripe Checkout and Stripe Payments offers three
-modes:
-
-In **both payment and subscription modes**, it's **important to require billing
-address collection**.
-
-If the checkout is using **payment mode** "One-time payments", then **tax
-calculations are not supported**. TaxJar will be able to import these charges but
-does not receive the line items from the charges. Stripe is creating charges in
-this mode, which does not have enough information for accurate tax calculations.
-
-If the checkout is using **subscription mode** "Recurring payments", then tax
-calculations and imports are supported. Stripe is creating invoices which
-contains line items and enough information for tax calculations.
-
-If the checkout is using **setup mode**, then you likely have a more thorough
-integration with Stripe that requires you to set up the payment method in
-advance to charging the end-user. In this mode, your integration with Stripe
-collects the payment method in advance, and later creates the charge, invoice,
-or subscription after checkout is complete. In this case, it may be beneficial
-for this integration to also consider using [TaxJar's
-API](https://developers.taxjar.com/api/reference/) to get the taxes required for
-the invoice before checkout is complete. This also implies that you should
-collect the billing address in advance as well for accurate sales tax
-calculation.
-
-### Stripe Billing
-
-[Stripe Billing](https://stripe.com/billing) offers businesses a way to bill
-customers by creating invoices and emailing invoices to customers. It's the
-basic building blocks that Stripe Checkout and Stripe Payments use as well.
-
-The rest of this guide is using Stripe Billing as the example solution.
-
-## Linking Your Account
+## Connecting to Your Stripe Account
 
 Once you have a Stripe account and TaxJar account, log into your TaxJar account.
 Navigate to **[Account → Linked
@@ -473,3 +417,5 @@ are in live mode. Test mode is not supported for imports.
 If you would like to test [tax calculations](#sales-tax-calculations), you may
 test it by creating draft invoices in live mode, and then discarding those draft
 invoices.
+
+If you have additional questions or need help integrating your Acumatica and TaxJar accounts, please [contact](https://www.taxjar.com/contact/) our support team.

@@ -29,7 +29,7 @@ Please note that TaxJar for BigCommerce requires a [TaxJar Professional or Premi
 
 To set up the TaxJar integration with BigCommerce store, log in, go to **Store Setup > Tax**, then select **Add Tax Service**.
 
-(BigC Screenshot goes here)
+<!-- (BigC Screenshot goes here) -->
 
 Then click **install** next to TaxJar and simply **Confirm** TaxJar access. You may then need to log in to your TaxJar account.
 
@@ -37,7 +37,7 @@ Then click **install** next to TaxJar and simply **Confirm** TaxJar access. You 
 
 To allow TaxJar to power real-time sales tax calculations for your BigCommerce store, go to **Store Setup > Tax**, then select **Enable** next to TaxJar. A [TaxJar Professional](https://www.taxjar.com/pricing/) account will be required for real-time sales calculations on most stores.
 
-(BigC Screenshot goes here)
+<!-- (BigC Screenshot goes here) -->
 
 Not only can you configure BigCommerce to collect sales tax from buyers in multiple states, you can also configure your sales tax collection however you want, including:
 
@@ -56,6 +56,6 @@ Often, states want to know how much sales tax you collected from buyers in each 
 
 If you sell on more channels than just BigCommerce, such as eBay, Amazon, Etsy, or Walmart, [integrated sales tax reporting](https://www.taxjar.com/sales-tax-integrations/) can be especially helpful, so you can see sales tax collected in one dashboard rather than tediously running reports one by one by one.
 
-(BigC Screenshot goes here)
+<!-- (BigC Screenshot goes here) -->
 
 If you have additional questions about how to integrate BigCommerce and TaxJar, please [contact](mailto:support@taxjar.com) our customer support team.

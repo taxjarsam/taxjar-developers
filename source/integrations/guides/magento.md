@@ -11,7 +11,7 @@ reference: {
   "Last Updated": "March 03, 2020"
 }
 toc: {
-  "Getting Started": "#section-getting-started-with-taxjar",
+  "How to Connect Your Magento Store": "#section-how-to-connect-your-magento-store",
   "Sales Tax Calculations": "#section-sales-tax-calculations",
   "Sales Tax Reporting": "#section-sales-tax-reporting",
   "How TaxJar's API Works": "#section-how-taxjars-api-works",
@@ -32,11 +32,13 @@ resources: {
 }
 ---
 
-We put together this integration guide for Magento 1.x merchants and developers looking to better understand TaxJar's extension for sales tax calculations. **Using Magento 2?** Check out our official [Magento 2 sales tax extension guide](/integrations/guides/magento2/).
+This guide will take you step by step through how to integrate TaxJar into your Magento  account. You’ll learn how to configure Magento to automate sales tax calculations as well as what you need to do when it comes time to file.
 
-You'll learn how TaxJar provides checkout calculations with our API and zip-based rates for native Magento calculations as a fallback. Along the way, we'll configure your store to collect sales tax where you have nexus, handle product exemptions, import orders into TaxJar, and much more.
+Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-## Getting Started with TaxJar
+Please note that TaxJar for Magento requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
+
+## How to Connect Your Magento Store
 
 First install the Magento sales tax extension. The Magento 1 TaxJar Extension is no longer listed in the Magento marketplace (Magento Connect) and we share 3 options for installation in our [GitHub ReadMe](https://github.com/taxjar/taxjar-magento-extension#getting-started).
 

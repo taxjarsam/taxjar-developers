@@ -23,11 +23,11 @@ toc: {
 extra: "<div class='text-center'><a href='http://www.netsuite.com/portal/developers/built-for-netsuite.shtml' target='_blank'><img src='/images/guides/integrations/netsuite/bfn-badge-2021.jpg' width='210' height='111'></a></div>"
 ---
 
-We put together this integration guide for NetSuite users looking to better understand TaxJar's integration for sales tax calculations, reporting, and filing.
+This guide will take you step by step how to integrate TaxJar with your NetSuite account. You’ll learn how to configure NetSuite for calculations, invoices, cash sales, credit memos, reporting, filing and more.
 
-You'll learn how TaxJar provides calculations and syncs invoices, cash sales, and credit memos for reporting / filing. Along the way, we'll configure your NetSuite account to collect sales tax where you have nexus, handle product / customer exemptions, and much more. For a primer on everything sales tax, read our [Sales Tax 101 guides](https://www.taxjar.com/learn-sales-tax/) before getting started.
+Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
 
-**TaxJar for NetSuite requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription.** To sign up, or to upgrade your existing account, please contact our sales team.
+Please note that TaxJar for Amazon requires a [TaxJar Professional or Premium](https://www.taxjar.com/how-it-works/) subscription. To sign up, or to upgrade your existing account, please [contact](https://www.taxjar.com/contact/) our sales team.
 
 ## Getting Started with SuiteTax
 
@@ -840,3 +840,5 @@ Curious to see what's changed with our integration lately? Read on to learn more
 ### v0.5.0 - 2019-01-10
 
 - **Initial release of our NetSuite integration.** Sales tax calculations powered by SuiteTax for rooftop-accurate rates down to the jurisdiction level. Transaction sync and backfilling. Supports product exemptions, customer exemptions, shipping taxability, sourcing logic, and address validation.
+
+If you have additional questions or need help integrating NetSuite and TaxJar, please [contact](https://www.taxjar.com/contact/) our support team.

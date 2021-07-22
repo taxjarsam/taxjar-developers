@@ -1,0 +1,31 @@
+<% set_meta_tags title: current_page.data.title %>
+<% set_meta_tags description: current_page.data.description %>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<% wrap_layout :docs do %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="guide__content">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="/images/guides/intros/<%= current_page.data.guide_name.downcase.gsub(" ", "_")%>.svg" class="img-responsive" alt="<%= current_page.data.guide_name %>">
+          </div>
+          <div class="col-sm-6">
+            <% if current_page.data[:reference] %>
+              <dl class="guide__reference">
+                <% current_page.data[:reference].each do |dt, dd| %>
+                  <dt><%= dt %></dt>
+                  <dd><%= dd %></dd>
+                  <br/>
+                <% end %>
+              </dl>
+            <% end %>
+
+          </div>
+        </div>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+<% end %>

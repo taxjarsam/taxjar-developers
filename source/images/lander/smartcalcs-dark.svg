@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="68px" viewBox="0 0 90 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape + % Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Full-Service" sketch:type="MSArtboardGroup" transform="translate(-209.000000, -1023.000000)">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(140.000000, 988.000000)">
+                <g id="TaxJar-SmartCalcs-+-Calculate-sales-tax--+-Shape-+-%-Copy" transform="translate(69.000000, 35.000000)">
+                    <g id="Shape-+-%-Copy">
+                        <path d="M22.3882286,22.5768723 C10.0747029,22.5768723 0,32.7364648 0,45.1537446 C0,57.5710243 10.0747029,67.7306169 22.3882286,67.7306169 L72.7617431,67.7306169 C82.052858,67.7306169 89.5529145,60.1673646 89.5529145,50.7979626 C89.5529145,43.4604792 84.8513865,36.23588 78.3588002,33.8653084 L78.3588002,28.2210904 C78.3588002,12.6430485 65.8213922,0 50.3735144,0 C36.8286361,0 24.9628749,9.70805508 22.3882286,22.5768723 Z" id="Shape" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                        <text id="%" sketch:type="MSTextLayer" font-family="Krungthep" font-size="41.754386" font-weight="bold" fill="#3EB049">
+                            <tspan x="27.1578947" y="54.171879">%</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

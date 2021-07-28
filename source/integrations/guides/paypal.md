@@ -32,8 +32,8 @@ To connect TaxJar and PayPal, your first step is to set up sales tax collection 
     ![](/images/guides/paypal/paypal-sales-tax.png)
 2. Under “Set Up Domestic Sales Tax Rates” click “Add New Sales Tax.”
 3. From here, you can choose whether to set up sales tax by state or by zip code.
-4. Choose either state or zip code (more on that below), and select a sales tax rate. (Refer to our [PayPal Average Sales Tax Rates chart](https://www.taxjar.com/paypal-tax-rates/) page for rates).
-5. Choose whether or not you want to charge sale tax on shipping charges. You can also find this information on our [PayPal Average Sales Tax Rates chart](https://www.taxjar.com/paypal-tax-rates/).
+4. Choose either state or zip code (more on that below), and select a sales tax rate. (Refer to our [PayPal Average Sales Tax Rates chart](https://www.taxjar.com/sales-tax/find-your-paypal-sales-tax-rates-by-state) page for rates).
+5. Choose whether or not you want to charge sale tax on shipping charges. You can also find this information on our [PayPal Average Sales Tax Rates chart](https://www.taxjar.com/sales-tax/find-your-paypal-sales-tax-rates-by-state).
 
 ![](/images/guides/paypal/ga-paypal-sales-tax-example.png)
 

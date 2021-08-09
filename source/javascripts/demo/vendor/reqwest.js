@@ -2,6 +2,8 @@
   * Reqwest! A general purpose XHR connection manager
   * license MIT (c) Dustin Diaz 2015
   * https://github.com/ded/reqwest
+  *
+  * 2021-08-03 - Removed `eval`s.
   */
 
 !function (name, context, definition) {
@@ -327,13 +329,10 @@
         switch (type) {
         case 'json':
           try {
-            resp = context.JSON ? context.JSON.parse(r) : eval('(' + r + ')')
+            resp = context.JSON.parse(r)
           } catch (err) {
             return error(resp, 'Could not parse JSON in response', err)
           }
-          break
-        case 'js':
-          resp = eval(r)
           break
         case 'html':
           resp = r

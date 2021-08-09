@@ -501,7 +501,7 @@ For skipping transactions in bulk, use the [mass update](https://system.netsuite
 
 Import transactions using a connector via SuiteTalk / web services? You can programmatically set the transaction body custom field `custbody_tj_sync_skip` to true (T) or false (F) based on your given logic or criteria.
 
-### Skipping Subsidiary Transaction Calculations or Sync Process
+### Skipping Subsidiary Transaction Calculations or Transaction Sync Process
 
 If you'd like to prevent a specific subsidiary's transactions from syncing with TaxJar, you can use the "Disable TaxJar Sync" checkbox on a specific subsidiary record:
 

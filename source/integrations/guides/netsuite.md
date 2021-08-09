@@ -501,6 +501,16 @@ For skipping transactions in bulk, use the [mass update](https://system.netsuite
 
 Import transactions using a connector via SuiteTalk / web services? You can programmatically set the transaction body custom field `custbody_tj_sync_skip` to true (T) or false (F) based on your given logic or criteria.
 
+### Skipping Subsidiary Transaction Calculations or Sync Process
+
+If you'd like to prevent a specific subsidiary's transactions from syncing with TaxJar, you can use the "Disable TaxJar Sync" checkbox on a specific subsidiary record:
+
+<img src="/images/guides/integrations/netsuite/taxjar-subsidiary-sync-checkbox.png" alt="TaxJar Disable TaxJar Sync Checkbox"/>
+
+For Legacy Tax environments, if you'd like to prevent tax calculations from being carried out for a specific subsidiary's transactions, you can use the "Disable TaxJar Calculations" checkbox on a specific subsidiary record:
+
+<img src="/images/guides/integrations/netsuite/taxjar-subsidiary-calc-checkbox.png" alt="TaxJar Disable TaxJar Calculations Checkbox"/>
+
 ### Sync Permissions
 
 If you receive `INSUFFICIENT_PERMISSION` error notifications from NetSuite after installing the TaxJar bundle, you may need to update access for non-administrator roles or update script deployments to execute as a specific role under **Customization > Scripting > Script Deployments**. For security reasons, our integration defaults the execution to "Current Role" for script deployments instead of "Administrator".
@@ -535,6 +545,34 @@ If you are using SuiteTax, please review the [known limitations of SuiteTax](htt
 ## Integration Changelog
 
 Curious to see what's changed with our integration lately? Read on to learn more!
+
+### v2.5.1 - 2021-08-04
+- Shipping and handling tax added for transaction external tax rate calculations.
+- Updated bundle SHA-1 signature method usage to SHA-256 as required for NetSuite 2021.2 release.
+
+### v2.5.0 - 2021-07-23
+- Updated Legacy Tax and SuiteTax external tax calculation for child transactions when external tax amount is set to proportionally reduce taxes.
+- Added "Disable TaxJar Calculations" checkbox to subsidiary records to disable Legacy Tax calculations for specific subsidiaries.
+- Fixed issue with TaxJar configuration wizard "Cancel" button.
+
+### v2.4.1 - 2021-06-29
+- Fixed an issue with order sync process in which NetSuite Standard Edition accounts cannot lookup subsidiary ID, causing error.
+
+### v2.4.0 - 2021-06-15
+- Legacy Tax calculations will no longer be performed for transactions in which the applicable address is within a non-nexus state.
+- Added "Disable Transaction Sync" checkbox to subsidiary records to disable transaction and customer sync for specific subsidiaries.
+- Skip line item validation for opportunity records in SuiteTax and Legacy Tax.
+- Fixed issue in which pending approval invoices are synced with TaxJar when accrual accounting is enabled.
+- Fixed preview tax functionality for Legacy Tax when calculations are disabled or a customer does not have a TaxJar tax item.
+- Added validation to accounts receivable and accounts payable account values within TaxJar configuration assistant for SuiteTax.
+
+### v2.3.0 - 2021-03-31
+- Added Legacy Tax calculation fallbacks to use native tax codes in NetSuite if TaxJar calculations are disabled or tax code for the customer is not set to "TaxJar".
+- Updated [TaxJar API version](https://developers.taxjar.com/api/reference/#api-version) to `2020-08-07` for improved transaction sync validation.
+- Fixed handling costs for Legacy Tax calculations and transaction sync.
+- Fixed unexpected error for Legacy Tax international (non-US/CA) calculations.
+- Fixed an error with empty carts for SuiteTax calculations and SuiteCommerce 2020.2.
+- Fixed errors from being returned in SuiteCommerce when TaxJar calculations are disabled or an invalid TaxJar API response is returned for SuiteTax calculations.
 
 ### v2.2.1 - 2021-02-17
 - Integration support for NetSuite 2021.1.

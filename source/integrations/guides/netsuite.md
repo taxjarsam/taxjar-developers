@@ -103,7 +103,7 @@ When adding a new nexus, make sure you choose **TaxJar** when selecting the tax 
 
 ## Getting Started with Legacy Tax
 
-Configuring the TaxJar integration in environments where SuiteTax is not available is currently in a **beta** status. The process involves installing and configuring the TaxJar bundle, setting up nexuses, and creating tax codes which will be assigned to your customers for tax calculations.
+Configuring the TaxJar integration in environments where SuiteTax is not available, involves installing and configuring the TaxJar bundle, setting up nexuses, and creating tax codes which will be assigned to your customers for tax calculations.
 
 <div class="alert alert-warning" role="alert">Before installing our bundle, please ensure the <b>Advanced Taxes</b> feature is enabled under <b>Setup > Company > Enable Features</b> inside the <b>Tax</b> tab.</div>
 
@@ -535,7 +535,7 @@ The following items are currently unsupported by TaxJar in NetSuite:
 
 - If "Item Line Shipping" is enabled, TaxJar will use the first line item shipping address for calculations and reporting. At this time, TaxJar does not support multiple shipping addresses through our API.
 - TaxJar does not currently support use tax calculations for the following record types: Credit card charge, credit card refund, purchase order, vendor bill, vendor credit, vendor return authorization. Calculations will be skipped for these record types when attempting to estimate or record tax via SuiteTax.
-- Support for Legacy Tax is currently in a Beta status and has the following known limitations:
+- Legacy Tax environments currently have the following known limitations:
     - Only partial support for Site Builder.  Sales tax is calculated with the order is submitted but is not shown when the shopping cart is viewed before checkout.
     - It does not currently support SuiteCommerce or SuiteCommerce Advanced.
     - It does not currently support separate G/L accounts for individual tax agencies.

@@ -1,0 +1,10 @@
+.github
+README.md
+CHANGELOG.md
+docker-compose*
+.env
+.env.test
+dockerfiles
+test-results
+node_modules/
+log/

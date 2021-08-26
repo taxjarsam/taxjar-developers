@@ -15,7 +15,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-activate :livereload
+activate :livereload, host: '0.0.0.0', port: '1234'
 activate :meta_tags
 activate :react
 activate :syntax

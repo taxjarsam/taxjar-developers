@@ -2,7 +2,8 @@
 
 Developer portal for TaxJar, powered by Middleman. Our v2 API docs are hosted on a [separate repo](https://github.com/taxjar/taxjar-api-docs) to keep things organized and located at [/api](https://developers.taxjar.com/api).
 
-## Getting Started
+## Local Development
+### Getting Started
 
 Clone the repo and simply run the following command:
 
@@ -25,7 +26,7 @@ DEMO_API_TOKEN=YOUR_API_TOKEN
 DEMO_ALLOW_ORIGIN=*
 ```
 
-## Development
+### Development
 
 To develop and preview the documentation locally, use the following Netlify CLI command:
 
@@ -34,6 +35,29 @@ netlify dev
 ```
 
 This will watch for changes and compile them on the fly.
+
+## Development with Docker
+
+To develop and preview the documentation locally with docker, use the following command.
+
+```
+docker-compose up -d
+```
+You can now access a live preview of the site at http://localhost:4567/integrations/ some links on the top bar will not work as they depend on other sites.
+
+When running middleman commands as the blogging one below preference the command with `docker-compose run web` such as:
+
+```
+docker-compose run web middleman article "My Article Title"
+```
+
+You can also add a middleman alias to your shell instead (in .bashrc or .zshrc):
+
+```
+alias middleman="docker-compose run web middleman"
+```
+
+Middleman commands will then run as normal only using the container.
 
 ## Blogging
 

@@ -74,7 +74,7 @@ articles, webinars and videos for beginners and experts alike.
 </tr>
 <tr>
 <td><a href="https://stripe.com/docs/payments/accept-a-payment?integration=checkout">Checkout in Payment Mode</a></td>
-<td class="center">x</td>
+<td class="center">x<sup>4</sup></td>
 <td class="center"> </td>
 <td class="center">x</td>
 </tr>
@@ -110,13 +110,13 @@ Notes:
 1. Subscriptions and TaxJar Calculations do not work on the first invoice of a
    subscription. Use [Stripe Tax](https://stripe.com/tax) instead, which also
    has the benefit of displaying the taxes to end-users.
-2. Checkout in setup mode, depending on your integration, may be creating
-   PaymentIntents which are not supported. If you're collecting payment methods
-   and using them later when creating Subscriptions or Invoices or Checkout
-   Sessions, then this is supported.
+2. Checkout Sessions in setup mode end up creating PaymentIntents which are not 
+   supported.
 3. Charges and Payment Intents are supported only if they're created by Stripe
    products, such as Stripe Billing or Checkout. Direct charges and payment
    intents are not supported.
+4. Checkout Session support began on 2021-09-16. Previous to this date, charges
+   would be imported that resulted from these Checkout Sessions.
 
 ## Connecting to Your Stripe Account
 

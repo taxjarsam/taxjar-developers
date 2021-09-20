@@ -302,3 +302,19 @@
     }
   }
 }
+
+.support-table {
+  margin: 1em;
+  width: 100%;
+
+  tr:nth-child(even) { background-color: #f3f3f3; }
+  td:not(:last-child),
+  th:not(:last-child) { border-right: solid 1px #e0e0e0; }
+  th { padding: 0.5em; }
+  td {
+    padding: 0.5em;
+    vertical-align: middle;
+  }
+  td.center { text-align: center }
+  th.center { text-align: center }
+}

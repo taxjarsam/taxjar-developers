@@ -24,12 +24,16 @@ toc: {
 }
 ---
 
-TaxJar’s integration for Stripe (beta) allows Stripe Billing and Checkout users to calculate, collect, report and file sales tax.
+TaxJar’s integration for Stripe (beta) allows Stripe Billing users to calculate,
+collect, report and file sales tax.
 
+If you’re a Stripe user who sells on multiple platforms like Amazon, Ebay, and
+Shopify in addition to Stripe, we recommend creating a TaxJar account and
+utilizing this integration.
 
-If you’re a Stripe user who sells on multiple platforms like Amazon, Ebay, and Shopify in addition to Stripe, we recommend creating a TaxJar account and utilizing this integration.
-
-If you’re a Stripe-only user, we recommend you explore Stripe Tax (invite-only) which integrates directly with Stripe Checkout, Billing, Invoicing, and Connect. Learn more about Stripe Tax and request to join [here](https://stripe.com/tax).
+If you’re a Stripe-only user, we recommend you explore Stripe Tax which
+integrates directly with Stripe Checkout, Billing, Invoicing, and Connect.
+[Learn more about Stripe Tax](https://stripe.com/tax).
 
 <div class="alert alert-info" role="alert">
   <p><strong>Request access for TaxJar Integration for Stripe</strong></p>
@@ -37,7 +41,82 @@ If you’re a Stripe-only user, we recommend you explore Stripe Tax (invite-only
   <a class="u-display--inline-block u--learn-more" href="https://go.taxjar.com/2021-WR-Stripe-Integration_LP-01-Request.html" title="TaxJar Sales Tax API">Request access</a>
 </div>
 
-Sales tax is complex, with regulations changing constantly. For a primer on the basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus), [registration](https://www.taxjar.com/resources/sales-tax/registration), filing, reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take a look at our [Resource Center](https://www.taxjar.com/resources/), with articles, webinars and videos for beginners and experts alike.
+Sales tax is complex, with regulations changing constantly. For a primer on the
+basics of sales tax, including [nexus](https://www.taxjar.com/resources/sales-tax/nexus),
+[registration](https://www.taxjar.com/resources/sales-tax/registration), filing,
+reporting, calculations and more, please visit [Sales Tax Fundamentals](https://www.taxjar.com/resources/sales-tax). Also, be sure to take
+a look at our [Resource Center](https://www.taxjar.com/resources/), with
+articles, webinars and videos for beginners and experts alike.
+
+## Support
+
+<table class="support-table">
+<thead>
+<tr>
+<th>Service</th>
+<th class="center">Imports</th>
+<th class="center">TaxJar Calculations</th>
+<th class="center">Stripe Tax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://stripe.com/docs/billing">Stripe Billing (Subscriptions)</a></td>
+<td class="center">x</td>
+<td class="center">x<sup>1</sup></td>
+<td class="center">x</td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/invoicing">Stripe Invoicing</a></td>
+<td class="center">x</td>
+<td class="center">x</td>
+<td class="center">x</td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/payments/accept-a-payment?integration=checkout">Checkout in Payment Mode</a></td>
+<td class="center">x<sup>4</sup></td>
+<td class="center"> </td>
+<td class="center">x</td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/billing/subscriptions/checkout">Checkout in Subscription Mode</a></td>
+<td class="center">x</td>
+<td class="center">x<sup>1</sup></td>
+<td class="center">x</td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/payments/save-and-reuse?platform=checkout">Checkout in Setup Mode</a><sup>2</sup></td>
+<td class="center"> </td>
+<td class="center"> </td>
+<td class="center"> </td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/payments/payment-intents">Payment Intents</a><sup>3</sup></td>
+<td class="center"> </td>
+<td class="center"> </td>
+<td class="center"> </td>
+</tr>
+<tr>
+<td><a href="https://stripe.com/docs/payments/charges-api">Charges</a><sup>3</sup></td>
+<td class="center"> </td>
+<td class="center"> </td>
+<td class="center"> </td>
+</tr>
+</tbody>
+</table>
+
+Notes:
+
+1. Subscriptions and TaxJar Calculations do not work on the first invoice of a
+   subscription. Use [Stripe Tax](https://stripe.com/tax) instead, which also
+   has the benefit of displaying the taxes to end-users.
+2. Checkout Sessions in setup mode end up creating PaymentIntents which are not 
+   supported.
+3. Charges and Payment Intents are supported only if they're created by Stripe
+   products, such as Stripe Billing or Checkout. Direct charges and payment
+   intents are not supported.
+4. Checkout Session support began on 2021-09-16. Previous to this date, charges
+   would be imported that resulted from these Checkout Sessions.
 
 ## Connecting to Your Stripe Account
 

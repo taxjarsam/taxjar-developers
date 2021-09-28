@@ -217,19 +217,27 @@ Set **Enabled for Checkout** to `Yes` for live checkout calculations. Click the 
 
 ### Backup Sales Tax Rates
 
-We provide a fallback to Magento's native zip-based rates in case our API becomes unresponsive. While that's [unlikely to happen](https://status.taxjar.com/), it's always good to have a backup plan. Upon setting **Backup Rates** to `Yes` for the first time, you'll be shown a screen similar to this:
+We provide a fallback to Magento’s native zip-based rates in case our API becomes unresponsive. While that’s  [unlikely to happen](https://status.taxjar.com/), it’s always good to have a backup plan. Upon setting Backup Rates to **Yes** for the first time, you’ll be shown a screen similar to this:
 
-<img src="/images/guides/integrations/magento2/taxjar-import-success.png" alt="Magento TaxJar Import Success"/>
+<img src="/images/guides/integrations/magento2/taxjar-backup-rates-enabled.png" alt="Magento TaxJar Backup Rates Enabled"/>
 
-You'll notice we imported zip-based sales tax rates for each US state where you have nexus. Since we're downloading thousands of rates into your database at once, this can take several minutes. For [destination-based](https://blog.taxjar.com/charging-sales-tax-rates/) states, TaxJar always returns the highest rate for each zip code to ensure you're not under-collecting sales tax. For [origin-based](https://blog.taxjar.com/charging-sales-tax-rates/) states we do the same for wildcard rates. **We only provide backup rates for US states at this time.**
+Since we’re typically downloading thousands of rates into your database at once, this process can take several minutes.  To provide a better user-experience, backup sales tax rates are handled asynchronously using Magento’s [message queues](https://devdocs.magento.com/guides/v2.4/config-guide/mq/rabbitmq-overview.html)  and [bulk operations](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/message-queues/bulk-operations.html). After starting the backup rate sync process by enabling the feature, you should receive a notification similar to this:
 
-If you decide to add a new nexus state under **Stores > Nexus Addresses** and would like to refresh your rates manually, just click the **Sync Backup Rates** button. It's that simple. We'll automatically refresh your backup rates on the first of each month to make sure they're up to date.
+<img src="/images/guides/integrations/magento2/taxjar-backup-rates-create.png" alt="Magento TaxJar Backup Rates Create"/>
+
+Magento 2 comes pre-configured to handle message queue consumers (since v2.2), so generally, you should only need to confirm that the default `consumers_runner` cron job is enabled. If you require a more granular configuration of message queues and particular consumers, read more on how to [manage message queues](https://devdocs.magento.com/guides/v2.4/config-guide/mq/manage-message-queues.html).
+
+Remember, you can always check the status of any bulk operation, including Backup Tax Rate operations, via the **Bulk Actions Log** under **System > Bulk Actions**.
+
+You may notice that we import zip-based sales tax rates for each US state where you have nexus. If you decide to add a new nexus state under **Stores > Nexus Addresses** and would like to refresh your rates manually, just click the **Sync Backup Rates** button. It’s that simple. Otherwise, we’ll automatically refresh your backup rates on the first of each month to make sure they’re up-to-date.
 
 To verify sales tax rates and rules are loaded, go to **Stores > Tax Rules**. You should see your imported rates attached to a couple of sales tax rules:
 
 <img src="/images/guides/integrations/magento2/tax-rules.png" alt="Magento Tax Rules"/>
 
-When turning off nexus for a state, please keep in mind that **we never remove tax rates for non-nexus states/regions**. This allows our merchants to use their own custom zip-based rates in Magento if needed. After removing a nexus state, you'll need to manually remove the rates for that state and re-sync your backup rates to refresh the tax rules.
+Please keep in mind that **we never remove non-TaxJar rates**. This allows our merchants to use their own custom zip-based rates in Magento if needed. After removing a nexus state, if you had previously configured custom rates for the state in addition to TaxJar's rates, you’ll still need to manually remove the custom rates because only TaxJar-imported rates will be removed automatically.
+
+Also keep in mind, backup sales tax rates are configured globally for your Magento 2 installation. If you have multiple stores, there is currently no way to define separate backup tax rate behavior for separate store configurations. As such, only the global “default config” setting will be applied.
 
 ### Backup Sales Tax Classes
 

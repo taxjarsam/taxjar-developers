@@ -407,7 +407,7 @@ If your platform records sales tax at the line level, you can use one of the fol
 - `custcol_tj_external_tax_amount` for line-level sales tax amounts
 - `custcol_tj_external_tax_rate` for line-level sales tax rates
 
-In order to prevent the external tax amount or rate (order-level or line-level) from being included in the transaction total, and prevent it from impacting GL, check off the transaction body checkbox `custbody_tj_exclude_external_tax` for a particular transaction.
+Regarding marketplace-facilitated transactions, for which a marketplace (e.g. Amazon) collects taxes and remits them on your behalf, external tax can be excluded from transaction total. In order to prevent the external tax amount or rate (order-level or line-level) from being included in the transaction total, and prevent it from impacting GL, check off the transaction body checkbox `custbody_tj_exclude_external_tax` for a particular transaction.
 
 ### Will Call Shipping
 

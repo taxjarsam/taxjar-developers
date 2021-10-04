@@ -9,7 +9,7 @@ reference: {
   "Platform": "NetSuite",
   "Versions": "2018.2+",
   "Extension": "<a href='http://suiteapp.com/TaxJar-Sales-Tax-Automation-for-NetSuite'>SuiteApp.com</a>",
-  "Last Updated": "February 17, 2021"
+  "Last Updated": "October 4, 2021"
 }
 toc: {
   "Getting Started with SuiteTax": "#section-getting-started-with-suitetax",
@@ -407,6 +407,8 @@ If your platform records sales tax at the line level, you can use one of the fol
 - `custcol_tj_external_tax_amount` for line-level sales tax amounts
 - `custcol_tj_external_tax_rate` for line-level sales tax rates
 
+In order to prevent the external tax amount or rate (order-level or line-level) from being included in the transaction total, and prevent it from impacting GL, check off the transaction body checkbox `custbody_tj_exclude_external_tax` for a particular transaction.
+
 ### Will Call Shipping
 
 If you allow customers to pick up orders at your storefront or warehouse, use the "Will Call" shipping option to calculate sales tax based on the location of the order instead of the shipping address:
@@ -545,6 +547,16 @@ If you are using SuiteTax, please review the [known limitations of SuiteTax](htt
 ## Integration Changelog
 
 Curious to see what's changed with our integration lately? Read on to learn more!
+
+### v2.6.1 - 2021-09-16
+- Excluded shipping and handling changes during dynamic external tax recalculation process.
+- Fixed issue with customer deletion process in which customer ID was not properly passed to TaxJar endpoint which was causing failed deletion calls.
+- Fixed issue when a custom SuiteScript voids a transaction in which TaxJar validation was causing void process to fail.
+
+### v2.6.0 - 2021-08-31
+- External tax can now be excluded from the transaction total and GL for marketplace transactions using the `custbody_tj_exclude_external_tax` transaction body field.
+- Synced transactions report criteria fixed to now properly display all synced transactions.
+- Added customer exemption type field validation process.
 
 ### v2.5.1 - 2021-08-04
 - Shipping and handling tax added for transaction external tax rate calculations.

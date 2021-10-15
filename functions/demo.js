@@ -5,6 +5,8 @@
 const Taxjar = require('taxjar');
 
 exports.handler = async function(event, context) {
+  console.log(event);
+
   const client = new Taxjar({
     apiKey: process.env.DEMO_API_TOKEN
   });
@@ -24,6 +26,7 @@ exports.handler = async function(event, context) {
   try {
     res = await client.taxForOrder(JSON.parse(event.body));
   } catch (err) {
+    console.log(err);
     return {
       statusCode: err.status,
       headers: headers,

@@ -26,7 +26,7 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 
 <label><input type="checkbox">&nbsp;&nbsp; Specify the TaxJar API version in all API request headers</label>
 <ul style="list-style-type: none; margin-left: -1.5rem">
-  <li><small><strong><code>'x-api-version': '2020-08-07'</code></strong> is required at minimum and ensures uniformity across your integration and customers. See [TaxJar's API Reference](/api/reference/#api-version).</small></li>
+  <li><small><strong><code>'x-api-version': '2020-08-07'</code></strong> is required at minimum and ensures uniformity across your integration and customers. See <a href="/api/reference/#api-version">TaxJar's API Reference</a>.</small></li>
 </ul>
 
 <label><input type="checkbox">&nbsp;&nbsp; Specify a 'plugin' parameter in /v2/taxes and /v2/transactions/* API requests</label>
@@ -53,16 +53,22 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 - <small>Minimum: Single option to turn on/off reporting only (calculations assumed with an API token)</small>
 
 
-<label><input type="checkbox">&nbsp;&nbsp; [Support nexus sync or management](/integrations/sales-tax-calculations/#section-nexus-addresses)</label>
+<label><input type="checkbox">&nbsp;&nbsp; [Support nexus display](/integrations/sales-tax-calculations/#section-nexus-addresses)</label>
 
-- <small>Preferred: Provide a nexus management view where users can update their nexus addresses in the platform, [similar to our Magento integrations](/integrations/sales-tax-calculations/#section-nexus-addresses).</small>
-  - <small>Pass nexus addresses to the `nexus_addresses[]` param for [calculations](/api/reference/#taxes).</small>
-  - <small>This method allows for full control over nexus addresses with international support.</small>
-- <small>Minimum: User's nexus regions are synced from TaxJar via [v2/nexus/regions](/api/reference/#nexus)</small>
-  - <small>List TaxJar nexus regions somewhere in the platform: TaxJar settings or another appropriate view.</small>
-  - <small>Allow user to manually sync nexus regions from TaxJar.</small>
+- <small>Present nexus states in your integration as they are configured by users under their account State settings.</small>
+  - <small>Provide a link to their TaxJar account State settings (https://app.taxjar.com/account#states).</small>
+  - <small>This allows users to see which states they have enabled and will receive calculations for.</small>
+  - <small>Results retrieved from TaxJar via GET request to [/v2/nexus/regions](/api/reference/#nexus)</small>.
 
-<label><input type="checkbox">&nbsp;&nbsp; Provide client-side logging for support</label>
+<label><input type="checkbox">&nbsp;&nbsp; Provide logging for support</label>
+
+- <small>Preferred: Provide log management/export capabilities to users with retention of at least 30 days.</small>
+- <small>Minimum: Provide log management/export capabilities to your internal support team (s) with retention of at least 30 days.</small>
+- <small>Logged properties should, at minimum, include the following:
+  - <small>Date/timestamp of request</small>
+  - <small>Method and endpoint (i.e., POST - /v2/transactions/orders, POST - /v2/taxes, etc.)</small>
+  - <small>Status code of response (i.e., 200, 201, 400, etc.)</small>
+  - <small>Error description of response, if any (see [API Reference - Errors](/api/reference/#errors) for error message details).</small>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">
   <li><small><strong>API requests / responses should be logged</strong> to a local file or somewhere in the platform for a merchant to view so they can more easily receive support for technical or tax-related issues.</small></li>
@@ -70,8 +76,8 @@ When building a TaxJar integration, use this checklist as a guide to what we loo
 
 <label><input type="checkbox">&nbsp;&nbsp; [Assign products to a category](/integrations/sales-tax-calculations/#section-product-exemptions)</label>
 
-- <small>Preferred: Users should be able to select a category using a dropdown synced with [v2/categories](/api/reference/#categories) either manually or on a recurring basis.</small>
-- <small>Minimum: Provide a field for users to enter a `product_tax_code`.</small>
+- <small>Preferred: Users should be able to select a category using a dropdown, "type-ahead", or saved-search functionality synced with [v2/categories](/api/reference/#categories) either manually or on a recurring basis.</small>
+- <small>Minimum: Provide a field for users to enter a `product_tax_code` and link to our [v2/categories](/api/reference/#categories) datatable reference.</small>
 
 <label><input type="checkbox">&nbsp;&nbsp; <small style="color: grey">optional</small>&nbsp; [Support customer exemptions](/integrations/sales-tax-calculations/#section-customer-exemptions)</label>
 
@@ -184,7 +190,7 @@ Push [**all US-based transactions to TaxJar**](/integrations/sales-tax-reporting
 - <label><input type="checkbox">&nbsp;&nbsp; Orders from tax-exempt customers and orders with only tax-exempt purchases</label>
 
 <ul style="list-style-type: none; margin-left: -1.5rem">
-  <li><small>We require <strong>ALL</strong> transactions be pushed to TaxJar regardless of nexus or taxability. TaxJar customers use our <a href="https://www.taxjar.com/sales-and-transactions-checker/" target=_blank>Sales and Transactions Checker</a> to see their aggregated order data and determine if they've hit an economic nexus threshold in a given state.</small></li>
+  <li><small>We require <strong>ALL</strong> transactions be pushed to TaxJar regardless of nexus or taxability. TaxJar customers use our <a href="https://www.taxjar.com/product/nexus-insights" target="_blank">Nexus Insights</a> product to see their aggregated order data and determine if they've hit an economic nexus threshold in a given state.</small></li>
 </ul>
 
 Update transaction details if they're changed after being pushed to TaxJar via:
@@ -193,7 +199,7 @@ Update transaction details if they're changed after being pushed to TaxJar via:
 
 - <label><input type="checkbox">&nbsp;&nbsp; PUT to [**v2/transactions/refunds/:transaction_id**](/api/reference/#put-update-a-refund-transaction) for refunds</label>
 
-<label><input type="checkbox">&nbsp;&nbsp; Provide [transaction backfill support via the API](/integrations/sales-tax-reporting/#section-backfilling-transactions) or, at a minimum, via CSV export so merchants can <a href="https://blog.taxjar.com/import-transactions-to-taxjar/" target=_blank>import transactions manually</a>.</label>
+<label><input type="checkbox">&nbsp;&nbsp; Provide [transaction backfill support via the API](/integrations/sales-tax-reporting/#section-backfilling-transactions) or, at a minimum, via CSV export so merchants can import transactions manually.</label>
 
 ## Integration Documentation
 

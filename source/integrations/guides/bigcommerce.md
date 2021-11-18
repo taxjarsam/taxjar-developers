@@ -58,4 +58,8 @@ If you sell on more channels than just BigCommerce, such as eBay, Amazon, Etsy, 
 
 <!-- (BigC Screenshot goes here) -->
 
+## Current Limitations
+
+  * **Shipping to Multiple Addresses**. Shipping to multiple addresses as part of a single transaction is currently not supported with TaxJar's BigCommerce integration.
+
 If you have additional questions about how to integrate BigCommerce and TaxJar, please [contact](mailto:support@taxjar.com) our customer support team.

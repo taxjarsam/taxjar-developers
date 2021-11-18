@@ -309,8 +309,6 @@ In most of our integrations we associate our tax codes with the notion of a tax 
 
 Currently we provide a [subset of common product categories](https://developers.taxjar.com/api/reference/#get-list-tax-categories) and we’re planning to expand the list over time. Fully taxable products don’t require a `product_tax_code`. We’ll automatically assume it’s taxable.
 
-If a product category is non-taxable and TaxJar does not yet support a specific `product_tax_code` for that type of product, `99999` `Other Exempt` may be used. However, usage of `product_tax_code` `99999` [prevents merchants from using AutoFile](https://support.taxjar.com/article/362-taxjar-api-product-categories) so we advise to use a more specific `product_tax_code`, if available.
-
 ---
 
 ## Customer Exemptions

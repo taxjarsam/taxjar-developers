@@ -281,7 +281,7 @@ Creating a Tax Group allows you to use multiple tax codes on a single transactio
 
 ## Legacy Tax SuiteCommerce/SuiteCommerce Advanced Cart Tax
 
-In order to enable SuiteCommerce or SuiteCommerce advanced cart calculations, please follow the steps below:
+In order to enable SuiteCommerce or SuiteCommerce Advanced cart calculations, please follow the steps below:
 
 First, please navigate to **TaxJar > Setup > Configuration**.
 
@@ -300,7 +300,7 @@ In order to enable scriptable cart for each applicable website:
 In order to ensure no custom item column fields are exposed (otherwise TaxJar custom category field will be exposed to users):
 * Navigate to **Commerce > Websites > Configuration**.
 * Select the web store (this step will need to be followed for each web store).
-* Under the **Shopping Catalog** tab, under select the **Item Options** sub-tab, and check off the "Show Only Items Listed In: Item Options and Custom Transaction Column Fields" checkbox.
+* Under the **Shopping Catalog** tab, select the **Item Options** sub-tab, and check off the "Show Only Items Listed In: Item Options and Custom Transaction Column Fields" checkbox.
 * Click the "Save" button.
 
 ## Common Configuration

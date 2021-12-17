@@ -292,12 +292,14 @@ First, please navigate to **TaxJar > Setup > Configuration**.
 <img src="/images/guides/integrations/netsuite/taxjar-enable-cart-calculations.png" alt="Enable TaxJar SuiteCommerce Cart Calculations"/>
 
 In order to enable scriptable cart for each applicable website:
+
 * Navigate to **Commerce > Websites > Website List**.
 * Click "Edit" next to the site in which to activate the TaxJar script.
 * On the **Setup** tab in the **Preferences** section, check off the "Scriptable Cart and Checkout" checkbox.
 * Click the "Save" button.
 
 In order to ensure no custom item column fields are exposed (otherwise TaxJar custom category field will be exposed to users):
+
 * Navigate to **Commerce > Websites > Configuration**.
 * Select the web store (this step will need to be followed for each web store).
 * Under the **Shopping Catalog** tab, select the **Item Options** sub-tab, and check off the "Show Only Items Listed In: Item Options and Custom Transaction Column Fields" checkbox.
@@ -571,6 +573,9 @@ If you are using SuiteTax, please review the [known limitations of SuiteTax](htt
 ## Integration Changelog
 
 Curious to see what's changed with our integration lately? Read on to learn more!
+
+### v2.7.1 - 2021-12-17
+- Fixed bundle installation issue caused by inaccessible module.
 
 ### v2.7.0 - 2021-12-15
 - SuiteCommerce/SuiteCommerce Advanced real-time cart sales tax calculations now available in Legacy Tax environments.

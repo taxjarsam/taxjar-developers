@@ -565,7 +565,6 @@ The following items are currently unsupported by TaxJar in NetSuite:
 - TaxJar does not currently support use tax calculations for the following record types: Credit card charge, credit card refund, purchase order, vendor bill, vendor credit, vendor return authorization. Calculations will be skipped for these record types when attempting to estimate or record tax via SuiteTax.
 - Legacy Tax environments currently have the following known limitations:
     - Only partial support for Site Builder.  Sales tax is calculated with the order is submitted but is not shown when the shopping cart is viewed before checkout.
-    - It does not currently support SuiteCommerce or SuiteCommerce Advanced.
     - It does not currently support separate G/L accounts for individual tax agencies.
 
 If you are using SuiteTax, please review the [known limitations of SuiteTax](https://system.netsuite.com/app/help/helpcenter.nl?fid=section_4683973968.html) in the NetSuite Help Center prior to installing SuiteTax.
@@ -573,6 +572,10 @@ If you are using SuiteTax, please review the [known limitations of SuiteTax](htt
 ## Integration Changelog
 
 Curious to see what's changed with our integration lately? Read on to learn more!
+
+### v2.7.2 - 2021-12-22
+- Resolved issue with zero-subtotal child transaction external tax amount calculations.
+- Fixed issue encountered when copying customer payment transactions.
 
 ### v2.7.1 - 2021-12-17
 - Fixed bundle installation issue caused by inaccessible module.

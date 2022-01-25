@@ -6,7 +6,7 @@ plus: true
 priority: 0.7
 guide_name: Stripe
 reference: {
-  "Last Updated": "2021-06-10",
+  "Last Updated": "2022-01-25",
   "Platform": "Stripe Billing",
   "&nbsp;": "&nbsp;",
   "&nbsp; ": "&nbsp;"
@@ -110,7 +110,7 @@ Notes:
 1. Subscriptions and TaxJar Calculations do not work on the first invoice of a
    subscription. Use [Stripe Tax](https://stripe.com/tax) instead, which also
    has the benefit of displaying the taxes to end-users.
-2. Checkout Sessions in setup mode end up creating PaymentIntents which are not 
+2. Checkout Sessions in setup mode end up creating PaymentIntents which are not
    supported.
 3. Charges and Payment Intents are supported only if they're created by Stripe
    products, such as Stripe Billing or Checkout. Direct charges and payment
@@ -168,6 +168,27 @@ A charge represents the movement of money, either collected from the buyer or
 refunded from the seller to the buyer. These charges can be associated with
 invoices to represent payments or refunds on that invoice. Charges may also
 stand alone, without being attached to an invoice.
+
+<div class="alert alert-info" role="alert">
+<p><strong>Stripe Tax users with Sales Tax reporting should use Credit Notes
+Instead</strong></p>
+
+<p>Money movement in Stripe is designed to be easy and straight-forward, but the
+trade-off is that charges and payment refunds work without features such as tax
+calculations. Tax calculation is critical for sales tax reporting, so it's
+important to use Stripe features that perform tax calculations, such as
+invoices and other objects that work off of invoices.</p>
+
+<p>Payments made via charges or bare payment intents (those not attached to
+invoices) do not calculate taxes, and therefore refunds to those payments also
+do not calculate taxes. <strong>Payment refunds do not decrease liability and
+therefore will not appear in TaxJar for reporting. To refund a payment, please
+instead issue credit notes which will decrease liability and will appear in
+TaxJar for reporting.</strong></p>
+
+<p>Please review <a href="https://stripe.com/docs/tax/faq" title="Stripe Tax FAQs"
+rel="nofollow" target="_blank">Stripe Tax FAQs</a></p>
+</div>
 
 ### Credit Notes issued before payment
 

@@ -170,20 +170,19 @@ invoices to represent payments or refunds on that invoice. Charges may also
 stand alone, without being attached to an invoice.
 
 <div class="alert alert-info" role="alert">
-<p><strong>Stripe Tax users with Sales Tax reporting should use Credit Notes
-Instead</strong></p>
+<p><strong>Stripe Tax users with sales tax reporting should use Credit Notes
+instead</strong></p>
 
-<p>Money movement in Stripe is designed to be easy and straight-forward, but the
-trade-off is that charges and payment refunds work without features such as tax
-calculations. Tax calculation is critical for sales tax reporting, so it's
-important to use Stripe features that perform tax calculations, such as
-invoices and other objects that work off of invoices.</p>
+<p>Money movement in Stripe is designed to be easy and straight-forward, but a
+trade-off is that charges and payment refunds can work without features such as
+tax calculations. Tax calculation is critical for sales tax reporting, so it's
+important to use Stripe features that support tax, such as invoices.</p>
 
-<p>Payments made via charges or bare payment intents (those not attached to
+<p>Payments made via Charges or bare Payment Intents (those not attached to
 invoices) do not calculate taxes, and therefore refunds to those payments also
 do not calculate taxes. <strong>Payment refunds do not decrease liability and
 therefore will not appear in TaxJar for reporting. To refund a payment, please
-instead issue credit notes which will decrease liability and will appear in
+instead issue Credit Notes which will decrease liability and will appear in
 TaxJar for reporting.</strong></p>
 
 <p>Please review <a href="https://stripe.com/docs/tax/faq" title="Stripe Tax FAQs"

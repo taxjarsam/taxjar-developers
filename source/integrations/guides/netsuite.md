@@ -1,5 +1,5 @@
 ---
-title: "NetSuite Sales Tax Integration Guide"
+title: "DOING A THING"
 description: "In-depth guide on how to use TaxJar's NetSuite integration with SuiteTax."
 layout: guide
 plus: true
